@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Pal | Full Stack Web Developer & CSE Student</title>
+    <meta name="description"
+        content="Portfolio of Rohit Pal - B.Tech CSE Student, Full Stack Web Developer specializing in React.js, Node.js, JavaScript, Python, web development, and AI integrations.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Devicon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-terminal">&lt;/&gt;</span> Rohit<span class="logo-accent">Pal</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link active">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#hackathons" class="nav-link">Hackathons</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li><a href="#contact" class="nav-link nav-cta">Get in Touch</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for Web Dev Roles</span>
+                </div>
+                
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="sun" class="theme-icon-light"></i>
+                    <i data-lucide="moon" class="theme-icon-dark"></i>
+                </button>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-grid"></div>
+            <canvas id="hero-particle-canvas" class="hero-particle-canvas"></canvas>
+            <div class="hero-glow-1"></div>
+            <div class="hero-glow-2"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="dash-accent-bar"></span>
+                    <div class="badge hero-badge">
+                        <i data-lucide="code-2" class="badge-icon"></i>
+                        <span>Full-Stack Web Developer</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="text-gradient">Rohit Pal</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle">
+                        I am a <span id="typewriter" class="typewriter-text"></span><span
+                            class="typewriter-cursor">|</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        Pre-final year B.Tech Computer Science student at <strong>United Institute of Technology,
+                            Prayagraj</strong>. I build full-stack web applications using React, Node.js, Express,
+                        MongoDB, and JavaScript to solve real-world problems.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Hire / Connect</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span>Explore Projects</span>
+                            <i data-lucide="code-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com/rohitpal00015-prog" target="_blank" rel="noopener"
+                            class="social-link" aria-label="GitHub Profile">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                </path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/rohit-pal-98230131a" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LinkedIn Profile">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/rohitpal08_/" target="_blank" rel="noopener"
+                            class="social-link" aria-label="Instagram Profile">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="mailto:rohitpal.work@example.com" class="social-link" aria-label="Email Address">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Hero Profile Image -->
+                <div class="hero-image-container">
+                    <div class="hero-image-wrapper">
+                        <!-- Futuristic Cyber Corner Decorations -->
+                        <div class="hero-image-corner corner-tl"></div>
+                        <div class="hero-image-corner corner-tr"></div>
+                        <div class="hero-image-corner corner-bl"></div>
+                        <div class="hero-image-corner corner-br"></div>
+                        
+                        <div class="hero-image-inner">
+                            <img src="rohit.png" alt="Rohit Pal" class="hero-profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section section-padding" id="about">
+            <div class="bg-glow-orb orb-indigo" style="top: 20%; left: -10%;"></div>
+            
+            <!-- Floating Highlights (Air Movement Effect) -->
+            <div class="floating-badge floating-badge-left">
+                <div class="floating-badge-icon">
+                    <i data-lucide="globe"></i>
+                </div>
+                <div class="floating-badge-text">
+                    <h4>Wikimedia Contributor</h4>
+                    <p>Global Open Source Contributions</p>
+                </div>
+            </div>
+            
+            <div class="floating-badge floating-badge-right">
+                <div class="floating-badge-icon">
+                    <i data-lucide="trophy"></i>
+                </div>
+                <div class="floating-badge-text">
+                    <h4>3x Hackathon Finalist</h4>
+                    <p>SRM Builds & TechSprint</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="about-section-header">
+                    <div class="badge badge-accent about-badge">
+                        <i data-lucide="user-check"></i>
+                        <span>Get To Know Me</span>
+                    </div>
+                    <h2 class="about-main-title">
+                        About <span class="text-gradient-glow">Me</span>
+                    </h2>
+                    <div class="about-title-underline"></div>
+                    <div class="about-text-container" data-glow>
+                        <p class="about-short-desc">
+                            I'm a Pre-final year Computer Science student at United Institute of Technology with a strong
+                            interest in <strong class="highlight-text glow-text">full-stack web development</strong>. I enjoy designing and developing web applications using
+                            modern technologies while learning through real projects, team collaborations, and hackathons.
+                            My goal is to build software that is reliable, secure, scalable, and easy to use.<br><br>
+                            Beyond academics, I am <strong class="highlight-text glow-text">actively involved in developer communities like TechEraa, UDTech India, and many more</strong>, where I collaborate on initiatives and help foster technical growth. Additionally, I am a <strong class="highlight-text glow-text">Wikimedia Open Source Contributor</strong> using tools like <strong>Gerrit</strong> and <strong>Phabricator</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-cards-container">
+                    <!-- Cards Grid -->
+                    <div class="focus-grid-vercel">
+                        <!-- Card 1: Full-Stack -->
+                        <div class="vercel-card gradient-border border-blue-cyan" data-glow>
+                            <div class="vercel-card-glow"></div>
+                            <div class="vercel-card-inner">
+                                <div class="icon-header-glow bg-blue-cyan">
+                                    <i data-lucide="code-2"></i>
+                                </div>
+                                <h3>Full-Stack Web Development</h3>
+                                <p>React.js frontend interfaces, Node.js/Express backend APIs, and responsive user
+                                    experiences.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: AI Integrations -->
+                        <div class="vercel-card gradient-border border-purple-pink" data-glow>
+                            <div class="vercel-card-glow"></div>
+                            <div class="vercel-card-inner">
+                                <div class="icon-header-glow bg-purple-pink">
+                                    <i data-lucide="bot"></i>
+                                </div>
+                                <h3>AI & Web Automation</h3>
+                                <p>Integrating AI APIs and custom intelligent assistants (Zynoq) into functional web
+                                    tools.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Community & Leadership -->
+                        <div class="vercel-card gradient-border border-orange-red" data-glow>
+                            <div class="vercel-card-glow"></div>
+                            <div class="vercel-card-inner">
+                                <div class="icon-header-glow bg-orange-red">
+                                    <i data-lucide="users"></i>
+                                </div>
+                                <h3>Open Source & Community</h3>
+                                <p>Campus Ambassador at Cloud Junction, TechEraa & UDTech associate, Wikimedia Open Source Contributor (Gerrit, Phabricator), and hackathon finalist.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: What I Work On & Quick Facts -->
+                    <div class="about-focus-facts-grid">
+                        <!-- What I Work On Column -->
+                        <div class="focus-timeline-card vercel-card gradient-border border-indigo-blue" data-glow>
+                            <div class="vercel-card-inner">
+                                <h3 class="focus-card-title"><i data-lucide="target" class="focus-icon-accent"></i> What
+                                    I Work On</h3>
+                                <div class="focus-timeline">
+                                    <div class="focus-timeline-item">
+                                        <div class="focus-number">01</div>
+                                        <div class="focus-content">
+                                            <h4>Full-Stack Web Applications</h4>
+                                            <p>Building clean, responsive, and maintainable web applications.</p>
+                                        </div>
+                                    </div>
+                                    <div class="focus-timeline-item">
+                                        <div class="focus-number">02</div>
+                                        <div class="focus-content">
+                                            <h4>REST APIs & Database Design</h4>
+                                            <p>Designing backend architecture with MongoDB, Express, and MySQL.</p>
+                                        </div>
+                                    </div>
+                                    <div class="focus-timeline-item">
+                                        <div class="focus-number">03</div>
+                                        <div class="focus-content">
+                                            <h4>AI API Integrations</h4>
+                                            <p>Integrating intelligent responses and workflow automation.</p>
+                                        </div>
+                                    </div>
+                                    <div class="focus-timeline-item">
+                                        <div class="focus-number">04</div>
+                                        <div class="focus-content">
+                                            <h4>Open Source Collaboration</h4>
+                                            <p>Participating in developer communities and open-source initiatives.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Facts Column -->
+                        <div class="quick-facts-panel">
+                            <h3 class="facts-title">Quick Facts</h3>
+                            <div class="quick-facts-grid">
+                                <div class="fact-mini-card" data-glow-mini>
+                                    <div class="fact-icon-wrapper">
+                                        <i data-lucide="graduation-cap" class="fact-icon"></i>
+                                    </div>
+                                    <div class="fact-text-group">
+                                        <h4 class="fact-card-heading">Pre-Final Year CSE @ UIT</h4>
+                                        <p class="fact-card-desc">Building strong core CS fundamentals, algorithms, and practical web software engineering at United Institute of Technology.</p>
+                                    </div>
+                                </div>
+                                <div class="fact-mini-card" data-glow-mini>
+                                    <div class="fact-icon-wrapper">
+                                        <i data-lucide="code" class="fact-icon"></i>
+                                    </div>
+                                    <div class="fact-text-group">
+                                        <h4 class="fact-card-heading">Full-Stack Developer</h4>
+                                        <p class="fact-card-desc">Building scalable, responsive web applications using React.js, Node.js, Express, MongoDB, and RESTful APIs.</p>
+                                    </div>
+                                </div>
+                                <div class="fact-mini-card" data-glow-mini>
+                                    <div class="fact-icon-wrapper">
+                                        <i data-lucide="layers" class="fact-icon"></i>
+                                    </div>
+                                    <div class="fact-text-group">
+                                        <h4 class="fact-card-heading">Web App Builder</h4>
+                                        <p class="fact-card-desc">Architecting real-world tools like Prayagraj Rooms & AgriVerse with sleek design and practical backend utility.</p>
+                                    </div>
+                                </div>
+                                <div class="fact-mini-card" data-glow-mini>
+                                    <div class="fact-icon-wrapper">
+                                        <i data-lucide="git-pull-request" class="fact-icon"></i>
+                                    </div>
+                                    <div class="fact-text-group">
+                                        <h4 class="fact-card-heading">Open Source Contributor</h4>
+                                        <p class="fact-card-desc">Active in the Wikimedia ecosystem utilizing tools like Gerrit and Phabricator for code collaboration and reviews.</p>
+                                    </div>
+                                </div>
+                                <div class="fact-mini-card" data-glow-mini>
+                                    <div class="fact-icon-wrapper">
+                                        <i data-lucide="award" class="fact-icon"></i>
+                                    </div>
+                                    <div class="fact-text-group">
+                                        <h4 class="fact-card-heading">Campus Ambassador</h4>
+                                        <p class="fact-card-desc">Selected at Cloud Junction (10k+ applicants) & technical associate in communities like TechEraa and UDTech India.</p>
+                                    </div>
+                                </div>
+                                <div class="fact-mini-card" data-glow-mini>
+                                    <div class="fact-icon-wrapper">
+                                        <i data-lucide="trophy" class="fact-icon"></i>
+                                    </div>
+                                    <div class="fact-text-group">
+                                        <h4 class="fact-card-heading">Hackathon Finalist</h4>
+                                        <p class="fact-card-desc">Top 10 in TechSprint Hackathon; Team Lead & Finalist in SRM BUILDS 7.0 (36h sprint) and UHack 4.0 (Top 65).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience-section section-padding bg-darker" id="experience">
+            <div class="bg-glow-orb orb-cyan" style="bottom: 10%; right: -10%;"></div>
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge badge-accent">
+                        <i data-lucide="briefcase"></i>
+                        <span>Professional Timeline</span>
+                    </div>
+                    <h2 class="section-title">My Experience & Roles</h2>
+                    <p class="section-subtitle">A timeline of my web development internships, leadership roles, and
+                        technical growth.</p>
+                </div>
+
+                <div class="timeline-journey">
+
+                    <!-- Item 1: Heisyn Full Stack Intern -->
+                    <div class="timeline-journey-item">
+                        <div class="timeline-journey-dot" style="border-color: var(--primary); box-shadow: 0 0 12px var(--primary-glow);"></div>
+                        <div class="timeline-journey-content">
+                            <div class="glass-card timeline-journey-card gradient-border border-blue-cyan" data-glow-mini>
+                                <div class="timeline-card-header">
+                                    <span class="timeline-journey-date">Present</span>
+                                    <span class="timeline-status-chip chip-active"><i data-lucide="zap" class="chip-icon"></i> Active Role</span>
+                                </div>
+                                <h3>Full-Stack Developer Intern</h3>
+                                <div class="timeline-journey-org">
+                                    <i data-lucide="code-2" class="inline-icon" style="color: var(--accent-cyan);"></i>
+                                    <span>Heisyn Pvt. Ltd.</span>
+                                </div>
+                                <p class="timeline-journey-short">Developing responsive frontend interfaces & scalable Node.js APIs with clean, production-ready JavaScript code.</p>
+                                <div class="timeline-tech-chips">
+                                    <span class="t-chip">React.js</span>
+                                    <span class="t-chip">Node.js</span>
+                                    <span class="t-chip">REST APIs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Wikimedia Open Source Contributor -->
+                    <div class="timeline-journey-item">
+                        <div class="timeline-journey-dot" style="border-color: var(--accent-sec); box-shadow: 0 0 12px var(--accent-sec-glow);"></div>
+                        <div class="timeline-journey-content">
+                            <div class="glass-card timeline-journey-card gradient-border border-green-teal" data-glow-mini>
+                                <div class="timeline-card-header">
+                                    <span class="timeline-journey-date">Present</span>
+                                    <span class="timeline-status-chip chip-open-source"><i data-lucide="git-pull-request" class="chip-icon"></i> Global Open Source</span>
+                                </div>
+                                <h3>Wikimedia Open Source Contributor</h3>
+                                <div class="timeline-journey-org">
+                                    <i data-lucide="globe" class="inline-icon" style="color: var(--accent-sec);"></i>
+                                    <span>Wikimedia Ecosystem</span>
+                                </div>
+                                <p class="timeline-journey-short">Delivering code reviews, technical contributions, and localization improvements using Gerrit & Phabricator.</p>
+                                <div class="timeline-tech-chips">
+                                    <span class="t-chip">Gerrit</span>
+                                    <span class="t-chip">Phabricator</span>
+                                    <span class="t-chip">TranslateWiki</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Cloud Junction Campus Ambassador -->
+                    <div class="timeline-journey-item">
+                        <div class="timeline-journey-dot" style="border-color: var(--accent-cyan); box-shadow: 0 0 12px rgba(6, 182, 212, 0.4);"></div>
+                        <div class="timeline-journey-content">
+                            <div class="glass-card timeline-journey-card gradient-border border-purple-pink" data-glow-mini>
+                                <div class="timeline-card-header">
+                                    <span class="timeline-journey-date">Present</span>
+                                    <span class="timeline-status-chip chip-featured"><i data-lucide="award" class="chip-icon"></i> Selected (10k+ Applicants)</span>
+                                </div>
+                                <h3>Cloud Junction Campus Ambassador</h3>
+                                <div class="timeline-journey-org">
+                                    <i data-lucide="award" class="inline-icon" style="color: var(--accent-cyan);"></i>
+                                    <span>Cloud Junction</span>
+                                </div>
+                                <p class="timeline-journey-short">Leading student developer initiatives, technical workshops, and cloud networking across campus networks.</p>
+                                <div class="timeline-tech-chips">
+                                    <span class="t-chip">Tech Ambassador</span>
+                                    <span class="t-chip">Community Growth</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Technical Associate TechEraa & UDTech -->
+                    <div class="timeline-journey-item">
+                        <div class="timeline-journey-dot" style="border-color: var(--primary); box-shadow: 0 0 12px var(--primary-glow);"></div>
+                        <div class="timeline-journey-content">
+                            <div class="glass-card timeline-journey-card gradient-border border-indigo-blue" data-glow-mini>
+                                <div class="timeline-card-header">
+                                    <span class="timeline-journey-date">Present</span>
+                                    <span class="timeline-status-chip chip-community"><i data-lucide="users" class="chip-icon"></i> Hackathon Builder</span>
+                                </div>
+                                <h3>Technical Associate</h3>
+                                <div class="timeline-journey-org">
+                                    <i data-lucide="layout" class="inline-icon" style="color: var(--primary);"></i>
+                                    <span>TechEraa & UDTech India</span>
+                                </div>
+                                <p class="timeline-journey-short">Building frontend UI platforms for national hackathons and collaborating on developer community initiatives.</p>
+                                <div class="timeline-tech-chips">
+                                    <span class="t-chip">Hackathon Platform</span>
+                                    <span class="t-chip">React UI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Cyber Security Internship -->
+                    <div class="timeline-journey-item">
+                        <div class="timeline-journey-dot" style="border-color: var(--accent-sec); box-shadow: 0 0 12px var(--accent-sec-glow);"></div>
+                        <div class="timeline-journey-content">
+                            <div class="glass-card timeline-journey-card gradient-border border-orange-red" data-glow-mini>
+                                <div class="timeline-card-header">
+                                    <span class="timeline-journey-date">Completed</span>
+                                    <span class="timeline-status-chip chip-govt"><i data-lucide="shield-check" class="chip-icon"></i> UP Police Internship</span>
+                                </div>
+                                <h3>Cyber Security Intern</h3>
+                                <div class="timeline-journey-org">
+                                    <i data-lucide="shield" class="inline-icon" style="color: var(--accent-sec);"></i>
+                                    <span>Uttar Pradesh Police (APCSIP-2026)</span>
+                                </div>
+                                <p class="timeline-journey-short">Trained in OSINT investigations, mobile security concepts, digital evidence fundamentals, and cyber security.</p>
+                                <div class="timeline-tech-chips">
+                                    <span class="t-chip">OSINT</span>
+                                    <span class="t-chip">Digital Forensics</span>
+                                    <span class="t-chip">Security</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: UIT Academic -->
+                    <div class="timeline-journey-item">
+                        <div class="timeline-journey-dot" style="border-color: var(--primary); box-shadow: 0 0 12px var(--primary-glow);"></div>
+                        <div class="timeline-journey-content">
+                            <div class="glass-card timeline-journey-card gradient-border border-blue-cyan" data-glow-mini>
+                                <div class="timeline-card-header">
+                                    <span class="timeline-journey-date">2024 - 2028</span>
+                                    <span class="timeline-status-chip chip-edu"><i data-lucide="graduation-cap" class="chip-icon"></i> Pre-Final Year</span>
+                                </div>
+                                <h3>B.Tech Computer Science & Engineering</h3>
+                                <div class="timeline-journey-org">
+                                    <i data-lucide="graduation-cap" class="inline-icon" style="color: var(--primary);"></i>
+                                    <span>United Institute of Technology</span>
+                                </div>
+                                <p class="timeline-journey-short">Strengthening core CS fundamentals, algorithms, and practical full-stack web software engineering.</p>
+                                <div class="timeline-tech-chips">
+                                    <span class="t-chip">Core CS</span>
+                                    <span class="t-chip">Algorithms</span>
+                                    <span class="t-chip">Full Stack</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack & Skills Section -->
+        <section class="skills-section section-padding" id="skills">
+            <div class="bg-glow-orb orb-indigo" style="bottom: 20%; left: -5%;"></div>
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge badge-accent">
+                        <i data-lucide="cpu"></i>
+                        <span>Tech Stack</span>
+                    </div>
+                    <h2 class="section-title">Technical Skillset</h2>
+                    <p class="section-subtitle">Web development technologies, frameworks, and developer tools I build
+                        with.</p>
+                </div>
+
+                <div class="skills-dashboard-grid">
+
+                    <!-- Box 1: Web & Full-Stack Development (Featured Main Card) -->
+                    <div class="skill-dash-card card-featured glass-card glow-primary">
+                        <div class="skill-dash-header">
+                            <div class="skill-dash-icon-box">
+                                <i data-lucide="layout"></i>
+                            </div>
+                            <h3>Full-Stack & Web Engineering</h3>
+                        </div>
+                        <p class="skill-dash-desc">End-to-end web development spanning frontend user interfaces, server logic, database design, and API architectures.</p>
+                        <div class="skill-dash-badges">
+                            <span class="skill-item-badge"
+                                style="--hover-color: #06b6d4; --hover-glow: rgba(6, 182, 212, 0.25);">
+                                <i class="devicon-react-original colored"></i> React.js Framework
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #eab308; --hover-glow: rgba(234, 179, 8, 0.25);">
+                                <i class="devicon-javascript-plain colored"></i> JavaScript (ES6+)
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #16a34a; --hover-glow: rgba(22, 163, 74, 0.25);">
+                                <i class="devicon-nodejs-plain colored"></i> Node.js Runtime
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #16a34a; --hover-glow: rgba(22, 163, 74, 0.25);">
+                                <i class="devicon-express-original colored"></i> Express.js Backend
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #16a34a; --hover-glow: rgba(22, 163, 74, 0.25);">
+                                <i class="devicon-mongodb-plain colored"></i> MongoDB & Mongoose
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #0284c7; --hover-glow: rgba(2, 132, 199, 0.25);">
+                                <i class="devicon-mysql-plain colored"></i> MySQL Database
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #ea580c; --hover-glow: rgba(234, 88, 12, 0.25);">
+                                <i class="devicon-html5-plain colored"></i> HTML5 & Semantic Web
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #2563eb; --hover-glow: rgba(37, 99, 235, 0.25);">
+                                <i class="devicon-css3-plain colored"></i> CSS3 / Modern Flex & Grid
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #ea580c; --hover-glow: rgba(234, 88, 12, 0.25);">
+                                <i data-lucide="arrow-left-right"></i> RESTful API Architecture
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #ea580c; --hover-glow: rgba(234, 88, 12, 0.25);">
+                                <i class="devicon-firebase-plain colored"></i> Firebase BaaS & Auth
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #38bdf8; --hover-glow: rgba(56, 189, 248, 0.25);">
+                                <i data-lucide="smartphone"></i> Responsive UI/UX Design
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #6366f1; --hover-glow: rgba(99, 102, 241, 0.25);">
+                                <i data-lucide="layers"></i> Single Page Applications (SPA)
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Box 2: Coding Languages -->
+                    <div class="skill-dash-card glass-card glow-cyan">
+                        <div class="skill-dash-header">
+                            <div class="skill-dash-icon-box">
+                                <i data-lucide="code-2"></i>
+                            </div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <p class="skill-dash-desc">Core languages used for building web apps, scripts, and algorithms.
+                        </p>
+                        <div class="skill-dash-badges">
+                            <span class="skill-item-badge"
+                                style="--hover-color: #eab308; --hover-glow: rgba(234, 179, 8, 0.25);">
+                                <i class="devicon-javascript-plain colored"></i> JavaScript
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #38bdf8; --hover-glow: rgba(56, 189, 248, 0.25);">
+                                <i class="devicon-python-plain colored"></i> Python
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #ea580c; --hover-glow: rgba(234, 88, 12, 0.25);">
+                                <i class="devicon-java-plain colored"></i> Java
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #6366f1; --hover-glow: rgba(99, 102, 241, 0.25);">
+                                <i class="devicon-c-plain colored"></i> C Language
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Box 3: AI & Web Tools -->
+                    <div class="skill-dash-card glass-card glow-primary">
+                        <div class="skill-dash-header">
+                            <div class="skill-dash-icon-box">
+                                <i data-lucide="bot"></i>
+                            </div>
+                            <h3>AI & Web Tools</h3>
+                        </div>
+                        <p class="skill-dash-desc">Tooling, API platforms, AI integrations, and deployment services.</p>
+                        <div class="skill-dash-badges">
+                            <span class="skill-item-badge"
+                                style="--hover-color: #06b6d4; --hover-glow: rgba(6, 182, 212, 0.25);">
+                                <i data-lucide="bot"></i> Zynoq AI Assistant
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #38bdf8; --hover-glow: rgba(56, 189, 248, 0.25);">
+                                <i data-lucide="server"></i> Postman API Testing
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #cbd5e1; --hover-glow: rgba(255, 255, 255, 0.15);">
+                                <i class="devicon-git-plain colored"></i> Git & GitHub
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #6366f1; --hover-glow: rgba(99, 102, 241, 0.25);">
+                                <i data-lucide="globe"></i> Vercel & Netlify
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Box 4: Backend & Database -->
+                    <div class="skill-dash-card glass-card glow-cyan">
+                        <div class="skill-dash-header">
+                            <div class="skill-dash-icon-box">
+                                <i data-lucide="database"></i>
+                            </div>
+                            <h3>Backend & Databases</h3>
+                        </div>
+                        <p class="skill-dash-desc">Server-side logic, database design, and API architectures.</p>
+                        <div class="skill-dash-badges">
+                            <span class="skill-item-badge"
+                                style="--hover-color: #16a34a; --hover-glow: rgba(22, 163, 74, 0.25);">
+                                <i class="devicon-express-original colored"></i> Express.js
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #16a34a; --hover-glow: rgba(22, 163, 74, 0.25);">
+                                <i class="devicon-mongodb-plain colored"></i> MongoDB & Mongoose
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #0284c7; --hover-glow: rgba(2, 132, 199, 0.25);">
+                                <i class="devicon-mysql-plain colored"></i> MySQL
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: #ea580c; --hover-glow: rgba(234, 88, 12, 0.25);">
+                                <i data-lucide="arrow-left-right"></i> RESTful API Design
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Box 5: Cybersecurity Exposure (Internship) -->
+                    <div class="skill-dash-card glass-card glow-sec">
+                        <div class="skill-dash-header">
+                            <div class="skill-dash-icon-box">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <h3>Cybersecurity Exposure</h3>
+                        </div>
+                        <p class="skill-dash-desc">Practical security exposure gained during UP Police internship.</p>
+                        <div class="skill-dash-badges">
+                            <span class="skill-item-badge"
+                                style="--hover-color: var(--accent-sec); --hover-glow: var(--accent-sec-glow);">
+                                <i data-lucide="search"></i> OSINT & Digital Footprints
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: var(--accent-sec); --hover-glow: var(--accent-sec-glow);">
+                                <i data-lucide="shield-alert"></i> Web Security Basics
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: var(--accent-sec); --hover-glow: var(--accent-sec-glow);">
+                                <i data-lucide="smartphone"></i> Mobile Safety & APK Awareness
+                            </span>
+                            <span class="skill-item-badge"
+                                style="--hover-color: var(--accent-sec); --hover-glow: var(--accent-sec-glow);">
+                                <i data-lucide="lock"></i> Digital Hygiene & Ethics
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section section-padding bg-darker" id="projects">
+            <div class="bg-glow-orb orb-cyan" style="top: 15%; right: -5%;"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects Showcase</h2>
+                    <p class="section-subtitle">Real-world web applications and intelligent systems I have founded,
+                        built, and actively develop.</p>
+                </div>
+
+                <!-- Projects Filter -->
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="fullstack">Web / Fullstack</button>
+                    <button class="filter-btn" data-filter="python-ai">Python & AI</button>
+                    <button class="filter-btn" data-filter="community-tools">Community Platforms</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid-container" id="projects-grid">
+
+                    <!-- Project: Prayagraj Rooms -->
+                    <div class="project-card glass-card" data-category="fullstack">
+                        <div class="project-img-wrapper">
+                            <div class="project-badge live-badge"><span class="dot-blink"></span> Live Project</div>
+                            <img src="prayagrajrooms_logo.png" alt="Prayagraj Rooms Logo" class="project-img">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5/CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">MongoDB/MySQL</span>
+                            </div>
+                            <h3 class="project-card-title">Prayagraj Rooms</h3>
+                            <p class="project-desc">
+                                A web platform designed to simplify accommodation discovery for students and working
+                                professionals in Prayagraj with room browsing, custom filters, and database management.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/rohitpal00015-prog/prayagraj-rooms" target="_blank"
+                                    rel="noopener" class="project-link-btn">
+                                    <i class="devicon-github-original"></i> Repository
+                                </a>
+                                <a href="https://prayagrajrooms.in/" target="_blank" rel="noopener"
+                                    class="project-link-btn primary-project-link">
+                                    <i data-lucide="external-link"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: Zynoq -->
+                    <div class="project-card glass-card" data-category="python-ai">
+                        <div class="project-img-wrapper">
+                            <div class="project-badge live-badge"><span class="dot-blink"></span> AI Assistant</div>
+                            <img src="ok.png" alt="Zynoq AI Assistant Logo" class="project-img">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">AI APIs</span>
+                                <span class="tech-tag">Workflow Automation</span>
+                            </div>
+                            <h3 class="project-card-title">Zynoq AI Assistant</h3>
+                            <p class="project-desc">
+                                An AI-powered assistant developed to experiment with API integrations, intelligent
+                                responses, and practical workflow automation within web applications.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/rohitpal00015-prog" target="_blank" rel="noopener"
+                                    class="project-link-btn">
+                                    <i class="devicon-github-original"></i> Repository
+                                </a>
+                                <a href="https://znoq.netlify.app/" target="_blank" rel="noopener"
+                                    class="project-link-btn primary-project-link">
+                                    <i data-lucide="external-link"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: CampusLink -->
+                    <div class="project-card glass-card" data-category="fullstack">
+                        <div class="project-img-wrapper">
+                            <div class="project-badge status-badge">GDG MoByte</div>
+                            <i data-lucide="globe" class="project-placeholder-icon"></i>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">React/Web</span>
+                                <span class="tech-tag">Full-Stack</span>
+                            </div>
+                            <h3 class="project-card-title">CampusLink</h3>
+                            <p class="project-desc">
+                                Developed during GDG Prayagraj MoByte to preserve college memories, showcase student
+                                projects, and strengthen alumni engagement through a centralized digital platform.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/rohitpal00015-prog/CampusLink" target="_blank"
+                                    rel="noopener" class="project-link-btn">
+                                    <i class="devicon-github-original"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: TechEra National Hackathon Portal -->
+                    <div class="project-card glass-card" data-category="community-tools">
+                        <div class="project-img-wrapper">
+                            <div class="project-badge code-badge">TechEraa Platform</div>
+                            <i data-lucide="layout" class="project-placeholder-icon"></i>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tech">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                            </div>
+                            <h3 class="project-card-title">TechEraa Hackathon Platform</h3>
+                            <p class="project-desc">
+                                A web platform developed for managing registrations, event information, problem
+                                statements, and participant workflows for a national-level hackathon.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/rohitpal00015-prog/tech-era" target="_blank" rel="noopener"
+                                    class="project-link-btn">
+                                    <i class="devicon-github-original"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: AgriVerse -->
+                    <div class="project-card glass-card" data-category="fullstack">
+                        <div class="project-img-wrapper">
+                            <div class="project-badge status-badge">Coming Soon</div>
+                            <img src="logo.png" alt="AgriVerse Logo" class="project-img">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                            <h3 class="project-card-title">AgriVerse</h3>
+                            <p class="project-desc">
+                                A concept-driven platform supporting farmers by delivering agricultural information,
+                                market prices, government schemes, and digital services in a single interface.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/rohitpal00015-prog" target="_blank" rel="noopener"
+                                    class="project-link-btn">
+                                    <i class="devicon-github-original"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Hackathons & Leadership Section -->
+        <section class="achievements-section section-padding" id="hackathons">
+            <div class="bg-glow-orb orb-emerald" style="bottom: 10%; left: 80%;"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Hackathons, Events & Leadership</h2>
+                    <p class="section-subtitle">Hackathon milestones, national conclaves, developer summits, and community leadership experiences. Click any card to read full details.</p>
+                </div>
+
+                <div class="achievements-grid">
+
+                    <!-- 1. BECon 2026 @ IIT Delhi -->
+                    <div class="achievement-card glass-card" onclick="openEventModal('becon-2026')">
+                        <div class="achievement-icon-box"><i data-lucide="rocket" class="trophy-gold"></i></div>
+                        <h3>BECon 2026 @ IIT Delhi</h3>
+                        <p class="location-badge">IIT Delhi | 3-Day Conclave</p>
+                        <p class="achievement-description">
+                            Attended 3-day Business & Entrepreneurship Conclave at IIT Delhi. Explored AI futures, VC panels, founder workshops, and startup clinic zones.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- FOSS UNITED UIT Chapter Launch -->
+                    <div class="achievement-card glass-card" onclick="openEventModal('foss-united-uit')">
+                        <div class="achievement-icon-box"><i data-lucide="globe" class="trophy-gold"></i></div>
+                        <h3>FOSS UNITED – UIT Chapter</h3>
+                        <p class="location-badge">UIT Campus | Open Source Chapter</p>
+                        <p class="achievement-description">
+                            Attended official launch of FOSS UNITED - UIT Chapter. Dedicated to Free & Open Source Software, technical collaboration, and student-led open source contributions.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 2. SRM BUILDS 7.0 -->
+                    <div class="achievement-card glass-card" onclick="openEventModal('srm-builds')">
+                        <div class="achievement-icon-box"><i data-lucide="trophy" class="trophy-gold"></i></div>
+                        <h3>Finalist: SRM BUILDS 7.0</h3>
+                        <p class="location-badge">SRM Sonipat | 36-Hour Hackathon</p>
+                        <p class="achievement-description">
+                            Led 4-member team in 36-hour non-stop national offline hackathon at SRM University Sonipat. Built solution from scratch across 6 evaluation rounds.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- TechSprint Hackathon Top 10 -->
+                    <div class="achievement-card glass-card" onclick="openEventModal('techsprint-top10')">
+                        <div class="achievement-icon-box"><i data-lucide="trophy" class="trophy-gold"></i></div>
+                        <h3>Top 10: TechSprint Hackathon</h3>
+                        <p class="location-badge">TechSprint | National Offline Hackathon</p>
+                        <p class="achievement-description">
+                            Secured Top 10 rank among nationwide competing teams in TechSprint Hackathon, building and pitching an innovative web prototype under intense sprint timeline.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 3. UHack 4.0 -->
+                    <div class="achievement-card glass-card" onclick="openEventModal('uhack-4')">
+                        <div class="achievement-icon-box"><i data-lucide="award" class="trophy-silver"></i></div>
+                        <h3>Finalist: UHack 4.0 (Top 65)</h3>
+                        <p class="location-badge">UGI | 24-Hour Grand Finale</p>
+                        <p class="achievement-description">
+                            Advanced to Top 65 teams out of nationwide applicants for 24-hour Grand Finale sprint. Built and pitched prototype after 2 AM evaluation rounds.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 4. Cloud Junction Campus Ambassador -->
+                    <div class="achievement-card glass-card" onclick="openEventModal('cloud-junction')">
+                        <div class="achievement-icon-box"><i data-lucide="award" class="trophy-gold"></i></div>
+                        <h3>Cloud Junction Ambassador</h3>
+                        <p class="location-badge">Selected out of 10,000+ Applicants</p>
+                        <p class="achievement-description">
+                            Selected as Campus Ambassador among 10,000+ applicants across India to lead student developer initiatives and foster technical networking.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 5. GDG Build with AI -->
+                    <div class="achievement-card glass-card" onclick="openEventModal('build-with-ai')">
+                        <div class="achievement-icon-box"><i data-lucide="bot" class="trophy-gold"></i></div>
+                        <h3>GDG "Build with AI" (12th Rank)</h3>
+                        <p class="location-badge">UIT Campus | GDG Event</p>
+                        <p class="achievement-description">
+                            Participated in GDG Build with AI session on Generative AI. Scored 12th out of 56 participants in the Wayground Epic Quiz Challenge.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 7. DevFest Prayagraj 2024 -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('devfest-2024')">
+                        <div class="achievement-icon-box"><i data-lucide="globe" class="trophy-silver"></i></div>
+                        <h3>DevFest Prayagraj 2024</h3>
+                        <p class="location-badge">UIT Auditorium | GDG Flagship</p>
+                        <p class="achievement-description">
+                            Attended flagship developer gathering featuring AI experts and Google Developer Experts (GDE) discussing Generative AI, Cloud & Flutter.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 8. Startup Confluence 2024 -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('startup-confluence')">
+                        <div class="achievement-icon-box"><i data-lucide="briefcase" class="trophy-silver"></i></div>
+                        <h3>Startup Confluence 2024</h3>
+                        <p class="location-badge">United Incubation Hub | 2-Day Event</p>
+                        <p class="achievement-description">
+                            2-day summit graced by UP Minister Nand Gopal Nandi. Mastered market sizing (TAM/SAM/SOM), SLIP framework, and IPR fundamentals.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 9. Meeting Prof. H.C. Verma Sir -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('hc-verma-visit')">
+                        <div class="achievement-icon-box"><i data-lucide="heart" class="trophy-gold"></i></div>
+                        <h3>Meeting Prof. H.C. Verma Sir</h3>
+                        <p class="location-badge">UGI Campus | Lifetime Moment</p>
+                        <p class="achievement-description">
+                            Once-in-a-lifetime chance at age 20 to meet and listen to living legend Prof. H.C. Verma Sir, author of 'Concepts of Physics'.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 10. SANKALP 2026 Summit -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('sankalp-2026')">
+                        <div class="achievement-icon-box"><i data-lucide="compass" class="trophy-silver"></i></div>
+                        <h3>SANKALP 2026 Summit</h3>
+                        <p class="location-badge">MNNIT Allahabad | 3-Day Summit</p>
+                        <p class="achievement-description">
+                            3-day national leadership summit at MNNIT Allahabad focusing on Aatmanirbhar leadership, startup exhibitions, and networking with VIT Vellore peers.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 11. FlowJam 2026 -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('flowjam-2026')">
+                        <div class="achievement-icon-box"><i data-lucide="zap" class="trophy-silver"></i></div>
+                        <h3>FlowJam 2026 (SIET Prayagraj)</h3>
+                        <p class="location-badge">SIET Prayagraj | Team Shuffle</p>
+                        <p class="achievement-description">
+                            Participated in FlutterFlow hackathon with dynamically reshuffled teams. Built rapid low-code web app with new team members.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 12. GDG MoByte & CampusLink -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('gdg-mobyte')">
+                        <div class="achievement-icon-box"><i data-lucide="layers" class="trophy-silver"></i></div>
+                        <h3>GDG MoByte & CampusLink</h3>
+                        <p class="location-badge">UIT Campus | Project Showcase</p>
+                        <p class="achievement-description">
+                            Showcased 'CampusLink' web app connecting college legacy & alumni. Interacted with GDG Prayagraj & GDG Lucknow mentors.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 13. NHRD UNITED Talks Session -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('nhrd-talks')">
+                        <div class="achievement-icon-box"><i data-lucide="users" class="trophy-bronze"></i></div>
+                        <h3>NHRD UNITED Talks Session</h3>
+                        <p class="location-badge">UIT Auditorium | Leadership</p>
+                        <p class="achievement-description">
+                            Attended NHRD session by Mr. Advait Dikshit on action-oriented mindset, consistency, and adapting to AI in software careers.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 14. PW Sankalp Session -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('pw-sankalp')">
+                        <div class="achievement-icon-box"><i data-lucide="sparkles" class="trophy-silver"></i></div>
+                        <h3>PhysicsWallah Alakh Sir Session</h3>
+                        <p class="location-badge">UGI Campus | Educational Leaders</p>
+                        <p class="achievement-description">
+                            Met Alakh Pandey Sir, Sumit Rewati Sir, and PW Only IAS educators live on campus during Sankalp batch interactive event.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 15. NxtWave Generative AI Workshop -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('nxtwave-ai')">
+                        <div class="achievement-icon-box"><i data-lucide="cpu" class="trophy-bronze"></i></div>
+                        <h3>NxtWave Generative AI Workshop</h3>
+                        <p class="location-badge">Online Workshop | AI Models</p>
+                        <p class="achievement-description">
+                            Completed hands-on workshop covering Generative AI architecture, LLM prompt engineering, and building custom generative models.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                    <!-- 16. Open Source & Wikipedia -->
+                    <div class="achievement-card glass-card event-card-hidden hidden" onclick="openEventModal('open-source-wiki')">
+                        <div class="achievement-icon-box"><i data-lucide="code-2" class="trophy-bronze"></i></div>
+                        <h3>Open Source & Wikipedia</h3>
+                        <p class="location-badge">TranslateWiki & Wikipedia</p>
+                        <p class="achievement-description">
+                            Active contributor to TranslateWiki and Wikipedia, delivering technical documentation & localization edits to global open-source platforms.
+                        </p>
+                        <div class="card-click-hint"><i data-lucide="maximize-2"></i> Read Full Story</div>
+                    </div>
+
+                </div>
+
+                <!-- View More Events Toggle Button -->
+                <div class="view-more-container">
+                    <button class="btn btn-secondary view-more-btn" id="toggle-events-btn" onclick="toggleMoreEvents()">
+                        <span>View More Events (10 More)</span>
+                        <i data-lucide="chevron-down" id="toggle-events-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section class="certificates-section section-padding bg-darker" id="certificates">
+            <div class="bg-glow-orb orb-purple" style="top: 30%; left: 80%;"></div>
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge badge-accent">
+                        <i data-lucide="award"></i>
+                        <span>Credentials</span>
+                    </div>
+                    <h2 class="section-title">Certifications & Credentials</h2>
+                    <p class="section-subtitle">Verified professional credentials, hackathon accomplishments, and technical milestones.</p>
+                </div>
+
+                <div class="certificates-grid">
+                    <!-- Certificate 1: SRM Builds 7.0 Offline Round -->
+                    <div class="certificate-card glass-card" data-glow onclick="openCertificateLightbox(0)">
+                        <div class="certificate-img-wrapper">
+                            <img src="1.png" alt="SRM Builds 7.0 (Offline Round) Certificate" class="certificate-img" loading="lazy">
+                            <div class="certificate-hover-overlay">
+                                <div class="zoom-icon-box">
+                                    <i data-lucide="zoom-in"></i>
+                                </div>
+                                <span class="zoom-text">View Certificate</span>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <span class="cert-category">Hackathon</span>
+                            <h3>SRM Builds 7.0 (Offline Round)</h3>
+                            <p class="cert-issuer">SRM University, Sonepat</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2: Codefront 2.0 Hackathon Participation -->
+                    <div class="certificate-card glass-card" data-glow onclick="openCertificateLightbox(1)">
+                        <div class="certificate-img-wrapper">
+                            <img src="3.png" alt="Codefront 2.0 Hackathon Participation Certificate" class="certificate-img" loading="lazy">
+                            <div class="certificate-hover-overlay">
+                                <div class="zoom-icon-box">
+                                    <i data-lucide="zoom-in"></i>
+                                </div>
+                                <span class="zoom-text">View Certificate</span>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <span class="cert-category">Google Developer Groups</span>
+                            <h3>Codefront 2.0 Participation</h3>
+                            <p class="cert-issuer">GDG on Campus J.K. Institute</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3: TechSprint Hackathon 2025 -->
+                    <div class="certificate-card glass-card" data-glow onclick="openCertificateLightbox(2)">
+                        <div class="certificate-img-wrapper">
+                            <img src="2.png" alt="TechSprint Hackathon 2025 Certificate" class="certificate-img" loading="lazy">
+                            <div class="certificate-hover-overlay">
+                                <div class="zoom-icon-box">
+                                    <i data-lucide="zoom-in"></i>
+                                </div>
+                                <span class="zoom-text">View Certificate</span>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <span class="cert-category">Google Developer Groups</span>
+                            <h3>TechSprint Hackathon 2025</h3>
+                            <p class="cert-issuer">GDG on Campus REC Ramgarh</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4: Codefront 2.0 Top 10 Merit -->
+                    <div class="certificate-card glass-card" data-glow onclick="openCertificateLightbox(3)">
+                        <div class="certificate-img-wrapper">
+                            <img src="4.png" alt="Codefront 2.0 Top 10 Merit Certificate" class="certificate-img" loading="lazy">
+                            <div class="certificate-hover-overlay">
+                                <div class="zoom-icon-box">
+                                    <i data-lucide="zoom-in"></i>
+                                </div>
+                                <span class="zoom-text">View Certificate</span>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <span class="cert-category">Google Developer Groups</span>
+                            <h3>Codefront 2.0 Top 10 Merit</h3>
+                            <p class="cert-issuer">GDG on Campus J.K. Institute</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 5: Google Student Ambassador Pitch Night -->
+                    <div class="certificate-card glass-card" data-glow onclick="openCertificateLightbox(4)">
+                        <div class="certificate-img-wrapper">
+                            <img src="5.png" alt="Google Student Ambassador Pitch Night Certificate" class="certificate-img" loading="lazy">
+                            <div class="certificate-hover-overlay">
+                                <div class="zoom-icon-box">
+                                    <i data-lucide="zoom-in"></i>
+                                </div>
+                                <span class="zoom-text">View Certificate</span>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <span class="cert-category">Leadership / Pitch</span>
+                            <h3>Google Student Ambassador Pitch Night</h3>
+                            <p class="cert-issuer">Google Student Ambassador Program</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 6: TechSprint NCU Appreciation -->
+                    <div class="certificate-card glass-card" data-glow onclick="openCertificateLightbox(5)">
+                        <div class="certificate-img-wrapper">
+                            <img src="6.png" alt="TechSprint NCU Hackathon Appreciation Certificate" class="certificate-img" loading="lazy">
+                            <div class="certificate-hover-overlay">
+                                <div class="zoom-icon-box">
+                                    <i data-lucide="zoom-in"></i>
+                                </div>
+                                <span class="zoom-text">View Certificate</span>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <span class="cert-category">Google Developer Groups</span>
+                            <h3>TechSprint NCU Appreciation</h3>
+                            <p class="cert-issuer">GDG on Campus NCU (Gautam Kumar)</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 7: SRM Builds 7.0 Verge 2026 -->
+                    <div class="certificate-card glass-card" data-glow onclick="openCertificateLightbox(6)">
+                        <div class="certificate-img-wrapper">
+                            <img src="7.png" alt="SRM Builds 7.0 (Verge 2026) Certificate" class="certificate-img" loading="lazy">
+                            <div class="certificate-hover-overlay">
+                                <div class="zoom-icon-box">
+                                    <i data-lucide="zoom-in"></i>
+                                </div>
+                                <span class="zoom-text">View Certificate</span>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <span class="cert-category">Hackathon</span>
+                            <h3>SRM Builds 7.0 of Verge 2026</h3>
+                            <p class="cert-issuer">SRM University, Sonepat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Let's Work Together Section -->
+        <section class="work-together-section section-padding bg-darker" id="contact">
+            <div class="bg-glow-orb orb-indigo" style="top: 10%; left: -10%;"></div>
+            <div class="bg-glow-orb orb-cyan" style="bottom: 15%; right: -10%;"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient">Let's Work Together</h2>
+                    <p class="section-subtitle">Interested in hiring, collaborating on web apps, or technical
+                        mentorship? Let's connect.</p>
+                </div>
+
+                <!-- 4 Large Action Cards Grid -->
+                <div class="collaboration-hub-grid">
+                    <!-- Card 1: Recruiters -->
+                    <div class="collab-action-card gradient-border border-blue-cyan" data-glow>
+                        <div class="collab-card-inner">
+                            <div class="collab-card-header">
+                                <div class="collab-icon-box box-blue-cyan">
+                                    <i data-lucide="briefcase"></i>
+                                </div>
+                                <span class="card-badge bg-blue-cyan">FOR RECRUITERS</span>
+                            </div>
+                            <h3>Looking for a Web Developer?</h3>
+                            <p>Explore my web projects, React/Node skills, and engineering experience.</p>
+                            
+                            <!-- Features / Tech Chips -->
+                            <div class="collab-card-tags">
+                                <span class="collab-tag">Resume PDF</span>
+                                <span class="collab-tag">React & Node</span>
+                                <span class="collab-tag">B.Tech CSE</span>
+                            </div>
+                            
+                            <a href="rohit%20resume%20(1).pdf" download="Rohit_Pal_Resume.pdf" class="btn-collab btn-blue-cyan">
+                                <span>Download Resume</span>
+                                <i data-lucide="download-cloud"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Founders -->
+                    <div class="collab-action-card gradient-border border-purple-pink" data-glow>
+                        <div class="collab-card-inner">
+                            <div class="collab-card-header">
+                                <div class="collab-icon-box box-purple-pink">
+                                    <i data-lucide="rocket"></i>
+                                </div>
+                                <span class="card-badge bg-purple-pink">FOR FOUNDERS</span>
+                            </div>
+                            <h3>Building a Web Product?</h3>
+                            <p>Let's discuss full-stack web architecture, MVP design, and smart AI API integrations.</p>
+                            
+                            <!-- Features / Tech Chips -->
+                            <div class="collab-card-tags">
+                                <span class="collab-tag">MVP Builds</span>
+                                <span class="collab-tag">AI Assistants</span>
+                                <span class="collab-tag">REST APIs</span>
+                            </div>
+                            
+                            <a href="https://linkedin.com/in/rohit-pal-98230131a" target="_blank" rel="noopener" class="btn-collab btn-purple-pink">
+                                <span>Connect on LinkedIn</span>
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Developers -->
+                    <div class="collab-action-card gradient-border border-green-teal" data-glow>
+                        <div class="collab-card-inner">
+                            <div class="collab-card-header">
+                                <div class="collab-icon-box box-green-teal">
+                                    <i data-lucide="terminal"></i>
+                                </div>
+                                <span class="card-badge bg-green-teal">FOR DEVELOPERS</span>
+                            </div>
+                            <h3>Let's Build Web Apps Together</h3>
+                            <p>Collaborate on open-source projects, React web platforms, and national hackathons.</p>
+                            
+                            <!-- Features / Tech Chips -->
+                            <div class="collab-card-tags">
+                                <span class="collab-tag">Open Source</span>
+                                <span class="collab-tag">Hackathons</span>
+                                <span class="collab-tag">Wikimedia</span>
+                            </div>
+                            
+                            <a href="https://github.com/rohitpal00015-prog" target="_blank" rel="noopener" class="btn-collab btn-green-teal">
+                                <span>View GitHub</span>
+                                <i data-lucide="git-pull-request"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Campus & Community -->
+                    <div class="collab-action-card gradient-border border-orange-red" data-glow>
+                        <div class="collab-card-inner">
+                            <div class="collab-card-header">
+                                <div class="collab-icon-box box-orange-red">
+                                    <i data-lucide="users"></i>
+                                </div>
+                                <span class="card-badge bg-orange-red">CAMPUS & COMMUNITY</span>
+                            </div>
+                            <h3>Tech Events & Ambassadors</h3>
+                            <p>Collaborate for Cloud Junction initiatives, local workshops, and student networking.</p>
+                            
+                            <!-- Features / Tech Chips -->
+                            <div class="collab-card-tags">
+                                <span class="collab-tag">Cloud Junction</span>
+                                <span class="collab-tag">Workshops</span>
+                                <span class="collab-tag">Networking</span>
+                            </div>
+                            
+                            <a href="https://linkedin.com/in/rohit-pal-98230131a" target="_blank" rel="noopener" class="btn-collab btn-orange-red">
+                                <span>Get in Touch</span>
+                                <i data-lucide="send"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Connect Bar / Horizontal Dock -->
+                <div class="connect-dock-container">
+                    <div class="connect-dock">
+                        <a href="https://github.com/rohitpal00015-prog" target="_blank" rel="noopener" class="dock-item"
+                            data-tooltip="GitHub">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/rohit-pal-98230131a" target="_blank" rel="noopener"
+                            class="dock-item" data-tooltip="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/rohitpal08_/" target="_blank" rel="noopener"
+                            class="dock-item" data-tooltip="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="mailto:rohitpal.work@example.com" class="dock-item" data-tooltip="Email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="rohit%20resume%20(1).pdf" download="Rohit_Pal_Resume.pdf" class="dock-item"
+                            data-tooltip="Resume">
+                            <i data-lucide="file-text"></i>
+                        </a>
+                        <a href="#hero" class="dock-item" data-tooltip="Portfolio">
+                            <i data-lucide="home"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Final Huge CTA Card -->
+                <div class="final-cta-card gradient-border border-indigo-blue" data-glow>
+                    <div class="vercel-card-inner">
+                        <h2>Let's Build Something Meaningful</h2>
+                        <p>I enjoy building responsive web applications, integrating smart AI tools, and collaborating
+                            with passionate developers.</p>
+                        <div class="final-cta-btns">
+                            <a href="#projects" class="btn btn-primary">
+                                <span>View Projects</span>
+                                <i data-lucide="code"></i>
+                            </a>
+                            <a href="rohit%20resume%20(1).pdf" download="Rohit_Pal_Resume.pdf"
+                                class="btn btn-secondary">
+                                <span>Download Resume</span>
+                                <i data-lucide="download"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/rohit-pal-98230131a" target="_blank" rel="noopener"
+                                class="btn btn-secondary">
+                                <span>Connect</span>
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Rohit Pal. Built with HTML, CSS, and JavaScript.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Event Details Modal System -->
+    <div class="event-modal-overlay" id="event-modal-overlay" onclick="closeEventModal(event)">
+        <div class="event-modal-card glass-card" onclick="event.stopPropagation()">
+            <button class="event-modal-close" onclick="closeEventModalDirect()">&times;</button>
+            <div class="event-modal-header">
+                <span class="badge badge-accent" id="modal-category">Hackathon</span>
+                <h3 id="modal-title">Event Title</h3>
+                <p class="modal-location" id="modal-location"><i data-lucide="map-pin"></i> Venue</p>
+            </div>
+            <div class="event-modal-body" id="modal-body">
+                <!-- Detailed content dynamically populated via script.js -->
+            </div>
+            <div class="event-modal-footer">
+                <button class="btn btn-secondary" onclick="closeEventModalDirect()">Close Details</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Lightbox Modal System -->
+    <div class="certificate-lightbox" id="certificate-lightbox" onclick="closeCertificateLightbox(event)">
+        <div class="lightbox-container" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeCertificateLightboxDirect()">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="changeCertificate(-1)"><i data-lucide="chevron-left"></i></button>
+            <button class="lightbox-nav lightbox-next" onclick="changeCertificate(1)"><i data-lucide="chevron-right"></i></button>
+            
+            <div class="lightbox-content">
+                <img src="" alt="Certificate Preview" id="lightbox-img">
+                <div class="lightbox-caption">
+                    <h3 id="lightbox-title">Certificate Title</h3>
+                    <p id="lightbox-issuer">Issuer Name</p>
+                    <span id="lightbox-counter">1 of 7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification (Initially Hidden) -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i data-lucide="check-circle" class="toast-icon"></i>
+            <div class="toast-message">
+                <h5>Message Dispatched</h5>
+                <p>Your message has been sent successfully!</p>
+            </div>
+        </div>
+        <button class="toast-close" onclick="closeToast()">&times;</button>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
