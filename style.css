@@ -179,36 +179,36 @@ img, svg {
 /* 3. Header & Navigation Menu */
 .header {
     position: fixed;
-    top: 0;
+    top: 14px;
     left: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid var(--header-border);
-    background: var(--header-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: transparent;
+    pointer-events: none;
     transition: var(--transition-normal);
 }
 
-.header.scrolled {
-    padding: 0.5rem 0;
-    background: var(--header-scrolled-bg);
-    border-bottom: 1px solid var(--header-scrolled-border);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-}
-
 .header-container {
+    pointer-events: auto;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 8px 22px;
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.2rem 1.5rem;
     transition: var(--transition-normal);
 }
 
 .header.scrolled .header-container {
-    padding: 0.8rem 1.5rem;
+    background: rgba(7, 10, 16, 0.94);
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
 .logo {
