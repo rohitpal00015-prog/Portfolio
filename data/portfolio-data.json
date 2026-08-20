@@ -1,0 +1,151 @@
+{
+  "profile": {
+    "name": "Rohit Pal",
+    "title": "Full-Stack Web Developer & AI Enthusiast",
+    "location": "Prayagraj, Uttar Pradesh, India",
+    "email": "rohitpal.dev.in@gmail.com",
+    "github": "https://github.com/rohitpal00015-prog",
+    "linkedin": "https://linkedin.com/in/rohitpal00015",
+    "twitter": "https://twitter.com/rohitpal00015",
+    "avatar": "assets/images/profile/rohit.png",
+    "resume": "assets/docs/rohit resume (1).pdf"
+  },
+  "projects": [
+    {
+      "id": "apcsip-2026",
+      "title": "UP Police Cyber Security Fellowship (APCSIP-2026)",
+      "badge": "UP Police Cyber Cell",
+      "category": "cybersecurity",
+      "image": "assets/images/up-police/logos/APCSIP -2026.jpg",
+      "techStack": ["Cyber Forensics", "OSINT & CDR", "Malware Analysis"],
+      "description": "15-day official state law enforcement fellowship with Amroha Police Cyber Crime Cell. Awarded Best Content Creator by DSP Anjali Kataria Ma'am.",
+      "github": null,
+      "demo": "up-police-internship.html"
+    },
+    {
+      "id": "palbasket",
+      "title": "PalGrocery (PalBasket)",
+      "badge": "Grocery Platform",
+      "category": "fullstack",
+      "image": "assets/images/projects/Palbasket logo.png",
+      "techStack": ["HTML5/CSS3", "JavaScript", "PHP/MySQL"],
+      "description": "An online grocery ordering platform featuring product catalog management, smart shopping cart, customer checkout, user authentication, and admin management dashboard.",
+      "github": "https://github.com/rohitpal00015-prog/PalGrocery",
+      "demo": "https://palbasket.vercel.app/"
+    },
+    {
+      "id": "prayagraj-rooms",
+      "title": "Prayagraj Rooms",
+      "badge": "Live Project",
+      "category": "fullstack",
+      "image": "assets/images/projects/prayagrajrooms_logo.png",
+      "techStack": ["HTML5/CSS3", "JavaScript", "MongoDB/MySQL"],
+      "description": "A web platform designed to simplify accommodation discovery for students and working professionals in Prayagraj with room browsing, custom filters, and database management.",
+      "github": "https://github.com/rohitpal00015-prog/prayagraj-rooms",
+      "demo": "https://prayagrajrooms.in/"
+    },
+    {
+      "id": "zynoq",
+      "title": "Zynoq AI Assistant",
+      "badge": "AI Assistant",
+      "category": "python-ai",
+      "image": "assets/images/projects/ok.png",
+      "techStack": ["Python", "AI APIs", "Workflow Automation"],
+      "description": "An AI-powered assistant developed to experiment with API integrations, intelligent responses, and practical workflow automation within web applications.",
+      "github": "https://github.com/rohitpal00015-prog",
+      "demo": "https://znoq.netlify.app/"
+    },
+    {
+      "id": "campuslink",
+      "title": "CampusLink",
+      "badge": "GDG MoByte",
+      "category": "fullstack",
+      "image": null,
+      "techStack": ["JavaScript", "React/Web", "Full-Stack"],
+      "description": "Developed during GDG Prayagraj MoByte to preserve college memories, showcase student projects, and strengthen alumni engagement through a centralized digital platform.",
+      "github": "https://github.com/rohitpal00015-prog/CampusLink",
+      "demo": null
+    },
+    {
+      "id": "techeraa",
+      "title": "TechEraa Hackathon Platform",
+      "badge": "TechEraa Platform",
+      "category": "community-tools",
+      "image": null,
+      "techStack": ["React.js", "Node.js", "Express"],
+      "description": "A web platform developed for managing registrations, event information, problem statements, and participant workflows for a national-level hackathon.",
+      "github": "https://github.com/rohitpal00015-prog/tech-era",
+      "demo": null
+    },
+    {
+      "id": "agriverse",
+      "title": "AgriVerse",
+      "badge": "Coming Soon",
+      "category": "fullstack",
+      "image": "assets/images/projects/logo.png",
+      "techStack": ["Node.js", "JavaScript", "Firebase"],
+      "description": "A concept-driven platform supporting farmers by delivering agricultural information, marketplace access, and weather updates.",
+      "github": "https://github.com/rohitpal00015-prog",
+      "demo": null
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "title": "SRM Builds 7.0 (Offline Round)",
+      "issuer": "SRM University, Sonepat",
+      "category": "Hackathon",
+      "image": "assets/images/certificates/1.png"
+    },
+    {
+      "id": 2,
+      "title": "Codefront 2.0 Participation",
+      "issuer": "GDG on Campus J.K. Institute",
+      "category": "Google Developer Groups",
+      "image": "assets/images/certificates/3.png"
+    },
+    {
+      "id": 3,
+      "title": "TechSprint Hackathon 2025",
+      "issuer": "GDG on Campus REC Ramgarh",
+      "category": "Google Developer Groups",
+      "image": "assets/images/certificates/2.png"
+    },
+    {
+      "id": 4,
+      "title": "Codefront 2.0 Top 10 Merit",
+      "issuer": "GDG on Campus J.K. Institute",
+      "category": "Google Developer Groups",
+      "image": "assets/images/certificates/4.png"
+    },
+    {
+      "id": 5,
+      "title": "Google Student Ambassador Pitch Night",
+      "issuer": "Google Student Ambassador Program",
+      "category": "Leadership / Pitch",
+      "image": "assets/images/certificates/5.png"
+    },
+    {
+      "id": 6,
+      "title": "TechSprint NCU Appreciation",
+      "issuer": "GDG on Campus NCU (Gautam Kumar)",
+      "category": "Google Developer Groups",
+      "image": "assets/images/certificates/6.png"
+    },
+    {
+      "id": 7,
+      "title": "SRM Builds 7.0 of Verge 2026",
+      "issuer": "SRM University, Sonepat",
+      "category": "Hackathon",
+      "image": "assets/images/certificates/7.png"
+    },
+    {
+      "id": 8,
+      "title": "GDG Vibe-Coding Hackathon",
+      "issuer": "Google Developer Group Prayagraj",
+      "category": "Google Developer Groups",
+      "image": "assets/images/certificates/8.png",
+      "date": "31 July 2026"
+    }
+  ]
+}

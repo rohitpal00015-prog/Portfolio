@@ -810,13 +810,14 @@ function initCardGlowTracker() {
 // 18. Certificate Lightbox Slideshow Engine
 // ==========================================
 const certificatesData = [
-    { img: '1.png', title: 'SRM Builds 7.0 (Offline Round)', issuer: 'SRM University, Sonepat', category: 'Hackathon' },
-    { img: '3.png', title: 'Codefront 2.0 Participation', issuer: 'GDG on Campus J.K. Institute', category: 'Google Developer Groups' },
-    { img: '2.png', title: 'TechSprint Hackathon 2025', issuer: 'GDG on Campus REC Ramgarh', category: 'Google Developer Groups' },
-    { img: '4.png', title: 'Codefront 2.0 Top 10 Merit', issuer: 'GDG on Campus J.K. Institute', category: 'Google Developer Groups' },
-    { img: '5.png', title: 'Google Student Ambassador Pitch Night', issuer: 'Google Student Ambassador Program', category: 'Leadership / Pitch' },
-    { img: '6.png', title: 'TechSprint NCU Appreciation', issuer: 'GDG on Campus NCU (Gautam Kumar)', category: 'Google Developer Groups' },
-    { img: '7.png', title: 'SRM Builds 7.0 of Verge 2026', issuer: 'SRM University, Sonepat', category: 'Hackathon' }
+    { img: 'assets/images/certificates/1.png', title: 'SRM Builds 7.0 (Offline Round)', issuer: 'SRM University, Sonepat', category: 'Hackathon' },
+    { img: 'assets/images/certificates/3.png', title: 'Codefront 2.0 Participation', issuer: 'GDG on Campus J.K. Institute', category: 'Google Developer Groups' },
+    { img: 'assets/images/certificates/2.png', title: 'TechSprint Hackathon 2025', issuer: 'GDG on Campus REC Ramgarh', category: 'Google Developer Groups' },
+    { img: 'assets/images/certificates/4.png', title: 'Codefront 2.0 Top 10 Merit', issuer: 'GDG on Campus J.K. Institute', category: 'Google Developer Groups' },
+    { img: 'assets/images/certificates/5.png', title: 'Google Student Ambassador Pitch Night', issuer: 'Google Student Ambassador Program', category: 'Leadership / Pitch' },
+    { img: 'assets/images/certificates/6.png', title: 'TechSprint NCU Appreciation', issuer: 'GDG on Campus NCU (Gautam Kumar)', category: 'Google Developer Groups' },
+    { img: 'assets/images/certificates/7.png', title: 'SRM Builds 7.0 of Verge 2026', issuer: 'SRM University, Sonepat', category: 'Hackathon' },
+    { img: 'assets/images/certificates/8.png', title: 'GDG Vibe-Coding Hackathon', issuer: 'Google Developer Group Prayagraj', category: 'Google Developer Groups' }
 ];
 
 let currentCertIndex = 0;
