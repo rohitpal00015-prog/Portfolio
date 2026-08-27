@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Certificates & Credentials | Rohit Pal</title>
+    <meta name="author" content="Rohit Pal">
+    <meta name="description"
+        content="Verified credentials, hackathon certificates, Google Developer Group achievements, and tech leadership licenses for Rohit Pal — Full-Stack Developer.">
+    <meta name="keywords"
+        content="Rohit Pal Certificates, GDG Prayagraj Vibe Coding, SRM BUILDS 7.0, TechSprint, Codefront 2.0, Google Student Ambassador">
+    <link rel="canonical" href="certificates.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome & Lucide -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .cert-hero {
+            position: relative;
+            padding: 9rem 0 3.5rem 0;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 20%, rgba(168, 85, 247, 0.09), transparent 60%);
+        }
+
+        .cert-hero-title {
+            font-family: var(--font-heading);
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .cert-grid-detailed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .cert-card-full {
+            border-radius: var(--radius-lg);
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .cert-card-full:hover {
+            transform: translateY(-6px);
+            border-color: rgba(168, 85, 247, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(168, 85, 247, 0.15);
+        }
+
+        .cert-img-box {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            background: rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .cert-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .cert-card-full:hover .cert-img-box img {
+            transform: scale(1.04);
+        }
+
+        .cert-overlay-hover {
+            position: absolute;
+            inset: 0;
+            background: rgba(8, 12, 22, 0.75);
+            backdrop-filter: blur(4px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #fff;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+        }
+
+        .cert-card-full:hover .cert-overlay-hover {
+            opacity: 1;
+        }
+
+        .cert-card-content {
+            padding: 1.5rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            flex-grow: 1;
+        }
+
+        .cert-meta-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .cert-tag-pill {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.65rem;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .tag-gdg {
+            background: rgba(59, 130, 246, 0.15);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.35);
+        }
+
+        .tag-hackathon {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+
+        .tag-leadership {
+            background: rgba(168, 85, 247, 0.15);
+            color: #c084fc;
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+
+        .cert-title-full {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+            line-height: 1.35;
+        }
+
+        .cert-issuer-text {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .cert-desc-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        .cert-view-btn-row {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .cert-grid-detailed {
+                grid-template-columns: 1fr;
+            }
+            .cert-hero-title {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="internship-page">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Sticky Command Header -->
+    <header class="cyber-header">
+        <div class="container header-container">
+            <div class="cyber-brand">
+                <a href="index.html" title="Go to Rohit Pal Portfolio Home" class="brand-avatar-link">
+                    <img src="assets/images/profile/rohit.png" alt="Rohit Pal Logo" class="brand-avatar-img">
+                </a>
+                <a href="certificates.html" class="brand-title-group">
+                    <i data-lucide="award" style="color: var(--accent-gold); font-size: 1.2rem;"></i>
+                    <div class="brand-text">
+                        <span class="brand-title">Verified Credentials</span>
+                        <span class="brand-subtitle">Rohit Pal Archive</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav>
+                <ul class="cyber-nav">
+                    <li><a href="#cert-list" class="nav-link active">Certificates</a></li>
+                    <li><a href="hackathons-leadership.html" class="nav-link">Hackathons</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right-actions">
+                <a href="index.html#certificates" class="btn-back-portfolio">
+                    <i data-lucide="arrow-left"></i>
+                    <span>Portfolio Home</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="cert-hero">
+            <div class="container text-center">
+                <div class="gov-badge" style="border-color: rgba(168, 85, 247, 0.35); background: rgba(168, 85, 247, 0.08); color: #c084fc; margin: 0 auto 1rem auto; display: inline-flex;">
+                    <span class="live-pulse-dot" style="background: #c084fc;"></span>
+                    <span>Verified Professional Credentials & Honors</span>
+                </div>
+
+                <h1 class="cert-hero-title">
+                    CERTIFICATES &<br>
+                    <span class="text-gradient" style="background: linear-gradient(135deg, #c084fc 0%, #38bdf8 50%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">VERIFIED LICENSES</span>
+                </h1>
+
+                <p style="color: var(--text-secondary); max-width: 800px; margin: 0 auto 2rem auto; font-size: 1.15rem; line-height: 1.7;">
+                    A comprehensive repository of verified hackathon merit awards, Google Developer Groups credentials, leadership recognition, and technical competencies.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="hero-stats-grid" style="max-width: 850px; margin: 0 auto;">
+                    <div class="stat-cyber-card glass-card">
+                        <div class="stat-num purple">8+</div>
+                        <div class="stat-label">Verified Licenses</div>
+                    </div>
+                    <div class="stat-cyber-card glass-card">
+                        <div class="stat-num cyan">4</div>
+                        <div class="stat-label">Google Dev Groups</div>
+                    </div>
+                    <div class="stat-cyber-card glass-card">
+                        <div class="stat-num gold">3</div>
+                        <div class="stat-label">Hackathon Awards</div>
+                    </div>
+                    <div class="stat-cyber-card glass-card">
+                        <div class="stat-num emerald">100%</div>
+                        <div class="stat-label">Verified Records</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATES DETAILED GRID -->
+        <section id="cert-list" class="section-padding bg-darker" style="padding-top: 2rem;">
+            <div class="container">
+
+                <div class="cert-grid-detailed">
+
+                    <!-- 1. GDG Vibe-Coding Hackathon 2026 -->
+                    <div class="cert-card-full glass-card gradient-border border-blue-cyan" onclick="openCertificateLightbox(7)" data-glow>
+                        <div class="cert-img-box">
+                            <img src="assets/images/certificates/8.png" alt="GDG Vibe-Coding Hackathon 2026 Certificate" loading="lazy">
+                            <div class="cert-overlay-hover">
+                                <i data-lucide="zoom-in" style="width: 28px; height: 28px;"></i>
+                                <span>Click to View Full High-Res</span>
+                            </div>
+                        </div>
+                        <div class="cert-card-content">
+                            <div class="cert-meta-row">
+                                <span class="cert-tag-pill tag-gdg">GDG · Hackathon</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">31 July 2026</span>
+                            </div>
+                            <h3 class="cert-title-full">GDG Vibe-Coding Hackathon 2026</h3>
+                            <div class="cert-issuer-text">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                                <span>GDG Prayagraj · University of Allahabad</span>
+                            </div>
+                            <p class="cert-desc-text">
+                                Awarded Certificate of Achievement for outstanding performance in developing an Agentic AI Browser Extension in a high-pressure 2-hour sprint with teammate Praveen Singh.
+                            </p>
+                            <div class="cert-view-btn-row">
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold);">Achievement Award</span>
+                                <span class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.75rem;">View Full</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. SRM Builds 7.0 Offline Round -->
+                    <div class="cert-card-full glass-card gradient-border border-orange-red" onclick="openCertificateLightbox(0)" data-glow>
+                        <div class="cert-img-box">
+                            <img src="assets/images/certificates/1.png" alt="SRM Builds 7.0 Certificate" loading="lazy">
+                            <div class="cert-overlay-hover">
+                                <i data-lucide="zoom-in" style="width: 28px; height: 28px;"></i>
+                                <span>Click to View Full High-Res</span>
+                            </div>
+                        </div>
+                        <div class="cert-card-content">
+                            <div class="cert-meta-row">
+                                <span class="cert-tag-pill tag-hackathon">National Hackathon</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">Verge 2026</span>
+                            </div>
+                            <h3 class="cert-title-full">SRM BUILDS 7.0 (Offline Round)</h3>
+                            <div class="cert-issuer-text">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                                <span>SRM University, Sonipat (Delhi-NCR)</span>
+                            </div>
+                            <p class="cert-desc-text">
+                                Certificate of participation and national finalist achievement in 36-hour non-stop offline sprint, defending product across 6 evaluator panels.
+                            </p>
+                            <div class="cert-view-btn-row">
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">Finalist Team</span>
+                                <span class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.75rem;">View Full</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. TechSprint Hackathon 2025 -->
+                    <div class="cert-card-full glass-card gradient-border border-green-teal" onclick="openCertificateLightbox(2)" data-glow>
+                        <div class="cert-img-box">
+                            <img src="assets/images/certificates/2.png" alt="TechSprint Hackathon Certificate" loading="lazy">
+                            <div class="cert-overlay-hover">
+                                <i data-lucide="zoom-in" style="width: 28px; height: 28px;"></i>
+                                <span>Click to View Full High-Res</span>
+                            </div>
+                        </div>
+                        <div class="cert-card-content">
+                            <div class="cert-meta-row">
+                                <span class="cert-tag-pill tag-gdg">Google Developer Groups</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">National 2025</span>
+                            </div>
+                            <h3 class="cert-title-full">TechSprint Hackathon 2025</h3>
+                            <div class="cert-issuer-text">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                                <span>GDG on Campus REC Ramgarh</span>
+                            </div>
+                            <p class="cert-desc-text">
+                                Official verification credential for nationwide hackathon participation and Top 10 national ranking prototype pitch.
+                            </p>
+                            <div class="cert-view-btn-row">
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #34d399;">Top 10 Finalist</span>
+                                <span class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.75rem;">View Full</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Codefront 2.0 Top 10 Merit -->
+                    <div class="cert-card-full glass-card gradient-border border-indigo-blue" onclick="openCertificateLightbox(3)" data-glow>
+                        <div class="cert-img-box">
+                            <img src="assets/images/certificates/4.png" alt="Codefront 2.0 Top 10 Merit Certificate" loading="lazy">
+                            <div class="cert-overlay-hover">
+                                <i data-lucide="zoom-in" style="width: 28px; height: 28px;"></i>
+                                <span>Click to View Full High-Res</span>
+                            </div>
+                        </div>
+                        <div class="cert-card-content">
+                            <div class="cert-meta-row">
+                                <span class="cert-tag-pill tag-gdg">Merit Award</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">Top 10</span>
+                            </div>
+                            <h3 class="cert-title-full">Codefront 2.0 Top 10 Merit</h3>
+                            <div class="cert-issuer-text">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                                <span>GDG on Campus J.K. Institute of Applied Physics</span>
+                            </div>
+                            <p class="cert-desc-text">
+                                Top 10 Certificate of Merit for stellar algorithmic problem solving and technical implementation during Codefront 2.0.
+                            </p>
+                            <div class="cert-view-btn-row">
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold);">Merit Distinction</span>
+                                <span class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.75rem;">View Full</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Google Student Ambassador Pitch Night -->
+                    <div class="cert-card-full glass-card gradient-border border-purple-pink" onclick="openCertificateLightbox(4)" data-glow>
+                        <div class="cert-img-box">
+                            <img src="assets/images/certificates/5.png" alt="Google Student Ambassador Pitch Night Certificate" loading="lazy">
+                            <div class="cert-overlay-hover">
+                                <i data-lucide="zoom-in" style="width: 28px; height: 28px;"></i>
+                                <span>Click to View Full High-Res</span>
+                            </div>
+                        </div>
+                        <div class="cert-card-content">
+                            <div class="cert-meta-row">
+                                <span class="cert-tag-pill tag-leadership">Leadership & Pitch</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">Google GSA</span>
+                            </div>
+                            <h3 class="cert-title-full">GSA Pitch Night Recognition</h3>
+                            <div class="cert-issuer-text">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                                <span>Google Student Ambassador Program</span>
+                            </div>
+                            <p class="cert-desc-text">
+                                Certificate of recognition for product presentation, tech leadership, and startup pitch delivery during Google Ambassador Pitch Night.
+                            </p>
+                            <div class="cert-view-btn-row">
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #c084fc;">Leadership</span>
+                                <span class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.75rem;">View Full</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Codefront 2.0 Participation -->
+                    <div class="cert-card-full glass-card gradient-border border-blue-cyan" onclick="openCertificateLightbox(1)" data-glow>
+                        <div class="cert-img-box">
+                            <img src="assets/images/certificates/3.png" alt="Codefront 2.0 Participation Certificate" loading="lazy">
+                            <div class="cert-overlay-hover">
+                                <i data-lucide="zoom-in" style="width: 28px; height: 28px;"></i>
+                                <span>Click to View Full High-Res</span>
+                            </div>
+                        </div>
+                        <div class="cert-card-content">
+                            <div class="cert-meta-row">
+                                <span class="cert-tag-pill tag-gdg">GDG Hackathon</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">Participation</span>
+                            </div>
+                            <h3 class="cert-title-full">Codefront 2.0 Participation</h3>
+                            <div class="cert-issuer-text">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                                <span>GDG on Campus J.K. Institute</span>
+                            </div>
+                            <p class="cert-desc-text">
+                                Official participation credential for frontend & algorithmic sprint in Codefront 2.0 hackathon competition.
+                            </p>
+                            <div class="cert-view-btn-row">
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">Verified</span>
+                                <span class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.75rem;">View Full</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. TechSprint NCU Appreciation -->
+                    <div class="cert-card-full glass-card gradient-border border-green-teal" onclick="openCertificateLightbox(5)" data-glow>
+                        <div class="cert-img-box">
+                            <img src="assets/images/certificates/6.png" alt="TechSprint NCU Hackathon Certificate" loading="lazy">
+                            <div class="cert-overlay-hover">
+                                <i data-lucide="zoom-in" style="width: 28px; height: 28px;"></i>
+                                <span>Click to View Full High-Res</span>
+                            </div>
+                        </div>
+                        <div class="cert-card-content">
+                            <div class="cert-meta-row">
+                                <span class="cert-tag-pill tag-gdg">GDG NCU</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">Appreciation</span>
+                            </div>
+                            <h3 class="cert-title-full">TechSprint NCU Appreciation</h3>
+                            <div class="cert-issuer-text">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                                <span>GDG on Campus NCU (Gautam Kumar)</span>
+                            </div>
+                            <p class="cert-desc-text">
+                                Certificate of Appreciation for technical contribution and collaboration in TechSprint hackathon circuits.
+                            </p>
+                            <div class="cert-view-btn-row">
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #34d399;">Appreciation</span>
+                                <span class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.75rem;">View Full</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. SRM BUILDS 7.0 Verge 2026 -->
+                    <div class="cert-card-full glass-card gradient-border border-orange-red" onclick="openCertificateLightbox(6)" data-glow>
+                        <div class="cert-img-box">
+                            <img src="assets/images/certificates/7.png" alt="SRM BUILDS 7.0 Verge 2026 Certificate" loading="lazy">
+                            <div class="cert-overlay-hover">
+                                <i data-lucide="zoom-in" style="width: 28px; height: 28px;"></i>
+                                <span>Click to View Full High-Res</span>
+                            </div>
+                        </div>
+                        <div class="cert-card-content">
+                            <div class="cert-meta-row">
+                                <span class="cert-tag-pill tag-hackathon">VERGE 2026</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">36-Hour Sprint</span>
+                            </div>
+                            <h3 class="cert-title-full">SRM BUILDS 7.0 of Verge 2026</h3>
+                            <div class="cert-issuer-text">
+                                <i data-lucide="check-circle" style="width: 14px; height: 14px; color: var(--primary);"></i>
+                                <span>SRM University, Sonipat</span>
+                            </div>
+                            <p class="cert-desc-text">
+                                Certificate of excellence in engineering prototype building during national Verge 2026 technical festival.
+                            </p>
+                            <div class="cert-view-btn-row">
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold);">National Fest</span>
+                                <span class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.75rem;">View Full</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="section-padding" style="background: var(--bg-dark); border-top: 1px solid rgba(255, 255, 255, 0.06);">
+            <div class="container text-center">
+                <div class="final-cta-card gradient-border border-indigo-blue" style="max-width: 800px; margin: 0 auto;" data-glow>
+                    <div class="vercel-card-inner">
+                        <h2>Explore Technical Projects & Code</h2>
+                        <p>Explore production web applications, open source Gerrit patchsets, and AI tools built by Rohit Pal.</p>
+                        <div class="final-cta-btns" style="justify-content: center;">
+                            <a href="index.html#projects" class="btn btn-primary">
+                                <i data-lucide="code"></i>
+                                <span>View Projects</span>
+                            </a>
+                            <a href="hackathons-leadership.html" class="btn btn-secondary">
+                                <i data-lucide="trophy"></i>
+                                <span>Hackathons Archive</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Certificate Lightbox Slideshow Modal -->
+    <div id="cert-lightbox" class="cert-lightbox-backdrop" onclick="closeCertificateLightbox(event)">
+        <div class="cert-lightbox-dialog" onclick="event.stopPropagation()">
+            <button class="cert-lightbox-close" onclick="closeCertificateLightbox()" aria-label="Close Lightbox">&times;</button>
+            <div class="cert-lightbox-body">
+                <button class="cert-lightbox-nav prev" onclick="prevCertificate()" aria-label="Previous Certificate">&#10094;</button>
+                <div class="cert-lightbox-image-container">
+                    <img id="cert-lightbox-img" src="" alt="Verified Certificate" class="cert-lightbox-img">
+                </div>
+                <button class="cert-lightbox-nav next" onclick="nextCertificate()" aria-label="Next Certificate">&#10095;</button>
+            </div>
+            <div class="cert-lightbox-footer">
+                <div class="cert-lightbox-info">
+                    <span id="cert-lightbox-category" class="cert-category-badge"></span>
+                    <h3 id="cert-lightbox-title" class="cert-lightbox-heading"></h3>
+                    <p id="cert-lightbox-issuer" class="cert-lightbox-issuer-text"></p>
+                </div>
+                <div class="cert-lightbox-counter" id="cert-lightbox-counter">1 / 8</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Rohit Pal. Built with HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Site Scripts -->
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>

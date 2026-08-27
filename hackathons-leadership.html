@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathons & Leadership Milestones | Rohit Pal Portfolio</title>
+    <meta name="author" content="Rohit Pal">
+    <meta name="description"
+        content="Complete archive of national hackathon final placements, open-source competitions, campus leadership roles, and technical summits. Rohit Pal — Full-Stack Developer & Open Source Contributor.">
+    <meta name="keywords"
+        content="Rohit Pal Hackathons, SRM BUILDS 7.0, TechSprint Hackathon, UHack 4.0, SIH Organizer, Open Source Day WikiClubTech, BECon IIT Delhi, Cloud Junction Campus Ambassador">
+    <link rel="canonical" href="hackathons-leadership.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome & DevIcons & Lucide -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Dedicated Page Specific Styles */
+        .milestone-hero {
+            position: relative;
+            padding: 9rem 0 4rem 0;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.08), transparent 60%);
+        }
+
+        .milestone-hero-title {
+            font-family: var(--font-heading);
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .milestone-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .milestone-card-full {
+            border-radius: var(--radius-lg);
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 2.25rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            position: relative;
+            transition: all var(--transition-normal);
+        }
+
+        .milestone-card-full:hover {
+            transform: translateY(-5px);
+            border-color: rgba(245, 158, 11, 0.35);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(245, 158, 11, 0.12);
+        }
+
+        .milestone-card-full.featured-gold {
+            border-color: rgba(245, 158, 11, 0.35);
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.04) 0%, rgba(13, 20, 35, 0.6) 100%);
+        }
+
+        .milestone-top-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .milestone-badge-box {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .milestone-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+
+        .icon-gold-glow {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-gold);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .icon-emerald-glow {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--primary);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .icon-blue-glow {
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .icon-purple-glow {
+            background: rgba(168, 85, 247, 0.15);
+            color: #c084fc;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .milestone-heading-group h3 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 0.25rem 0;
+        }
+
+        .milestone-loc-badge {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--accent-cyan);
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-full);
+            display: inline-block;
+        }
+
+        .milestone-status-chip {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+        }
+
+        .chip-gold {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+
+        .chip-emerald {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+
+        .chip-blue {
+            background: rgba(59, 130, 246, 0.15);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.35);
+        }
+
+        .milestone-body {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            flex-grow: 1;
+        }
+
+        .milestone-body ul {
+            margin: 0.75rem 0 0 1.25rem;
+            padding: 0;
+        }
+
+        .milestone-body li {
+            margin-bottom: 0.45rem;
+            color: var(--text-secondary);
+        }
+
+        .milestone-body strong {
+            color: var(--text-primary);
+        }
+
+        .milestone-tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-top: 0.5rem;
+        }
+
+        .milestone-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-secondary);
+        }
+
+        .milestone-footer-btn {
+            margin-top: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 1rem;
+        }
+
+        .category-filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2.5rem 0 1rem 0;
+        }
+
+        .cat-btn {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            padding: 0.55rem 1.2rem;
+            border-radius: var(--radius-full);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .cat-btn:hover, .cat-btn.active {
+            background: rgba(245, 158, 11, 0.15);
+            border-color: rgba(245, 158, 11, 0.4);
+            color: #fbbf24;
+        }
+
+        @media (max-width: 900px) {
+            .milestone-grid {
+                grid-template-columns: 1fr;
+            }
+            .milestone-hero-title {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="internship-page">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Sticky Command Header -->
+    <header class="cyber-header">
+        <div class="container header-container">
+            <div class="cyber-brand">
+                <a href="index.html" title="Go to Rohit Pal Portfolio Home" class="brand-avatar-link">
+                    <img src="assets/images/profile/rohit.png" alt="Rohit Pal Logo" class="brand-avatar-img">
+                </a>
+                <a href="hackathons-leadership.html" class="brand-title-group">
+                    <i data-lucide="trophy" style="color: var(--accent-gold); font-size: 1.2rem;"></i>
+                    <div class="brand-text">
+                        <span class="brand-title">Hackathons & Leadership</span>
+                        <span class="brand-subtitle">Rohit Pal Archive</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav>
+                <ul class="cyber-nav">
+                    <li><a href="#hackathons-list" class="nav-link active">Milestones</a></li>
+                    <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                    <li><a href="#open-source-events" class="nav-link">Open Source</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right-actions">
+                <a href="index.html#hackathons" class="btn-back-portfolio">
+                    <i data-lucide="arrow-left"></i>
+                    <span>Portfolio Home</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section class="milestone-hero">
+            <div class="container text-center">
+                <div class="gov-badge" style="border-color: rgba(245, 158, 11, 0.35); background: rgba(245, 158, 11, 0.08); color: #fbbf24; margin: 0 auto 1rem auto; display: inline-flex;">
+                    <span class="live-pulse-dot" style="background: #fbbf24;"></span>
+                    <span>National Competitions · Leadership · Open Source</span>
+                </div>
+
+                <h1 class="milestone-hero-title">
+                    HACKATHONS &<br>
+                    <span class="text-gradient" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">LEADERSHIP MILESTONES</span>
+                </h1>
+
+                <p style="color: var(--text-secondary); max-width: 800px; margin: 0 auto 2rem auto; font-size: 1.15rem; line-height: 1.7;">
+                    A comprehensive chronicle of national hackathon sprints, open-source marathons, campus leadership appointments, and industry technology conclaves.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="hero-stats-grid" style="max-width: 900px; margin: 0 auto;">
+                    <div class="stat-cyber-card glass-card">
+                        <div class="stat-num gold">3x</div>
+                        <div class="stat-label">Hackathon Finalist</div>
+                    </div>
+                    <div class="stat-cyber-card glass-card">
+                        <div class="stat-num cyan">Top 10</div>
+                        <div class="stat-label">TechSprint Hackathon</div>
+                    </div>
+                    <div class="stat-cyber-card glass-card">
+                        <div class="stat-num emerald">Rank 6 & 2</div>
+                        <div class="stat-label">Open Source Day UIT</div>
+                    </div>
+                    <div class="stat-cyber-card glass-card">
+                        <div class="stat-num blue">SIH 2024</div>
+                        <div class="stat-label">Core Organizer</div>
+                    </div>
+                    <div class="stat-cyber-card glass-card">
+                        <div class="stat-num gold">10,000+</div>
+                        <div class="stat-label">Ambassador Pool</div>
+                    </div>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="category-filter-bar">
+                    <button class="cat-btn active" onclick="filterMilestones('all', this)">All Milestones (17)</button>
+                    <button class="cat-btn" onclick="filterMilestones('hackathons', this)">🏆 Hackathons</button>
+                    <button class="cat-btn" onclick="filterMilestones('opensource', this)">🌐 Open Source & Wiki</button>
+                    <button class="cat-btn" onclick="filterMilestones('leadership', this)">🚀 Leadership & Summits</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. FULL MILESTONES ARCHIVE GRID -->
+        <section id="hackathons-list" class="section-padding bg-darker" style="padding-top: 2rem;">
+            <div class="container">
+
+                <div class="milestone-grid">
+
+                    <!-- Milestone: GDG Prayagraj Vibe Coding Hackathon 2026 (NEW) -->
+                    <div class="milestone-card-full glass-card gradient-border border-blue-cyan featured-gold" data-category="hackathons" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-gold-glow">
+                                    <i data-lucide="bot"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>GDG Prayagraj Vibe Coding Hackathon</h3>
+                                    <span class="milestone-loc-badge">Univ of Allahabad · 31 July 2026</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-gold">Achievement 🏆</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Awarded <strong>Certificate of Achievement</strong> for outstanding performance and creativity in building an AI-native product:</p>
+                            <ul>
+                                <li>🤖 <strong>Agentic AI Browser Extension:</strong> Conceived under pressure and built an autonomous AI browser extension that understands natural language voice/text prompts and executes DOM actions autonomously.</li>
+                                <li>⏱️ <strong>2-Hour Rapid Build:</strong> Executed ~50% of the product vision within an aggressive 2-hour hackathon timer.</li>
+                                <li>👥 <strong>Team & Mentorship:</strong> Built alongside teammate Praveen Singh, with continuous ideation support from Gautam Kumar Maurya (GKM).</li>
+                                <li>🎓 <strong>Evaluation & Organizers:</strong> Evaluated by Shivansh Singh Sir, Atul Singh Sir, and the faculty panel from the University of Allahabad. Special thanks to GDG Organizer Ankit Kumar Verma Sir and Sanskar Dubey Sir.</li>
+                            </ul>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">GDG Prayagraj</span>
+                            <span class="milestone-tag">Agentic AI</span>
+                            <span class="milestone-tag">Browser Extension</span>
+                            <span class="milestone-tag">2-Hour Sprint</span>
+                            <span class="milestone-tag">Certificate of Achievement</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('gdg-vibe-coding')" class="btn btn-secondary btn-sm" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.35);">
+                                <i data-lucide="maximize-2"></i>
+                                <span>Read Full Story & Feedback</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">31 July 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: Open Source Day – WikiClubTech UIT (NEW LINKEDIN ITEM) -->
+                    <div class="milestone-card-full glass-card gradient-border border-green-teal featured-gold" data-category="opensource" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-emerald-glow">
+                                    <i data-lucide="trophy"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>Open Source Day – WikiClubTech UIT</h3>
+                                    <span class="milestone-loc-badge">WikiClubTech UIT Campus · 21 August</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-emerald">Double Winner 🏆🥈</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Celebrated a memorable milestone in the open-source journey with two major achievements on Open Source Day:</p>
+                            <ul>
+                                <li>🏆 <strong>Rank 6 in Open Source Marathon:</strong> Competed in the 1-week Open Source Marathon leading up to Open Source Day, securing 6th Rank and receiving official Wikimedia goodies and swag from Reeti Singh Ma’am and WikiClubTech UIT.</li>
+                                <li>🥈 <strong>Rank 2 in Live Technical Quiz:</strong> Secured 2nd Rank in the competitive on-spot Open Source Day technical quiz challenge.</li>
+                                <li><strong>Wikimedia Ecosystem Exploration:</strong> Explored Wikimedia Foundation, MediaWiki, Phabricator, GitLab, Wikimedia Commons, and Wikibooks contribution workflows.</li>
+                                <li><strong>Mentorship & Support:</strong> Special gratitude to Gautam Kumar Maurya (GKM), Reeti Singh Ma’am, and Ankit Kumar Verma Sir for continuous mentorship and workflow guidance.</li>
+                            </ul>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">Wikimedia Ecosystem</span>
+                            <span class="milestone-tag">Open Source Marathon</span>
+                            <span class="milestone-tag">Rank 6</span>
+                            <span class="milestone-tag">Quiz 2nd Rank</span>
+                            <span class="milestone-tag">WikiClubTech</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <a href="https://www.linkedin.com/posts/rohit-pal-98230131a_opensource-wikimedia-wikiclubtech-activity-7496991574824820737-8hC3" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>Read Full Story on LinkedIn</span>
+                            </a>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">21 Aug 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: SIH Internal Hackathon Core Organizing Team -->
+                    <div class="milestone-card-full glass-card gradient-border border-orange-red featured-gold" data-category="leadership" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-gold-glow">
+                                    <i data-lucide="shield"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>SIH Internal Hackathon</h3>
+                                    <span class="milestone-loc-badge">Smart India Hackathon · UIT Campus</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-gold">Core Organizer</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Contributed to the end-to-end organization and execution of the SIH Internal Hackathon, bridging student participants, faculty, and jury coordinators:</p>
+                            <ul>
+                                <li><strong>Event Logistics & Tech:</strong> Coordinated venue infrastructure, scheduling, network reliability, and problem statement dissemination for participating teams.</li>
+                                <li><strong>Squad Coordination:</strong> Managed participant help desks, communications, and on-ground assistance to competing hackathon teams.</li>
+                                <li><strong>Jury & Scoring:</strong> Facilitated smooth transition of project presentation slots and scoring evaluation pipelines.</li>
+                            </ul>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">SIH 2024</span>
+                            <span class="milestone-tag">Event Operations</span>
+                            <span class="milestone-tag">Leadership</span>
+                            <span class="milestone-tag">Coordination</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('sih-internal')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="camera"></i>
+                                <span>View Organizing Gallery & Brief</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Internal Hackathon</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: SRM BUILDS 7.0 -->
+                    <div class="milestone-card-full glass-card gradient-border border-blue-cyan" data-category="hackathons" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-cyan">
+                                    <i data-lucide="trophy"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>Finalist: SRM BUILDS 7.0</h3>
+                                    <span class="milestone-loc-badge">SRM University Sonipat · 36-Hour Offline</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-gold">National Finalist</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Travelled to SRM University Sonipat (Delhi-NCR) to lead a 4-member squad during the national VERGE 2026 tech fest:</p>
+                            <ul>
+                                <li><strong>36-Hour Non-Stop Sprint:</strong> Built full prototype from scratch with under 3 hours of sleep.</li>
+                                <li><strong>6 Evaluation Rounds:</strong> Successfully defended product across 3 different jury panels, including a high-pressure 1:00 AM midnight evaluation round.</li>
+                                <li><strong>Cross-State Logistics:</strong> Balanced college sessional exams while traveling across state lines to represent UIT.</li>
+                            </ul>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">36-Hour Hackathon</span>
+                            <span class="milestone-tag">Team Leader</span>
+                            <span class="milestone-tag">National Finalist</span>
+                            <span class="milestone-tag">VERGE Fest</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('srm-builds')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Sprint Briefing</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Offline Hackathon</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: TechSprint Hackathon Top 10 -->
+                    <div class="milestone-card-full glass-card gradient-border border-green-teal" data-category="hackathons" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-emerald-glow">
+                                    <i data-lucide="trophy"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>Top 10: TechSprint Hackathon</h3>
+                                    <span class="milestone-loc-badge">National Hackathon Sprint</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-gold">Top 10 Rank</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Secured a coveted Top 10 Rank among competitive engineering teams nationwide:</p>
+                            <ul>
+                                <li><strong>Rapid Architecture:</strong> Conceived, coded, and deployed a working web application within aggressive sprint timelines.</li>
+                                <li><strong>Jury Pitch:</strong> Presented database schema, live API responses, and UI responsive workflows before veteran tech judges.</li>
+                            </ul>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">Top 10 Finalist</span>
+                            <span class="milestone-tag">Web Prototype</span>
+                            <span class="milestone-tag">National Placement</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('techsprint-top10')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Briefing</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">National Hackathon</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: UHack 4.0 (Top 65) -->
+                    <div class="milestone-card-full glass-card gradient-border border-indigo-blue" data-category="hackathons" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-blue-glow">
+                                    <i data-lucide="award"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>Finalist: UHack 4.0</h3>
+                                    <span class="milestone-loc-badge">UGI Campus · 24-Hour Grand Finale</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-blue">Top 65 Finalist</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Selected among Top 65 teams nationwide to enter the 24-hour Grand Finale sprint:</p>
+                            <ul>
+                                <li>Built working application prototype from scratch with teammates Gautam, Praveen, and Anshuman.</li>
+                                <li>Cleared grueling 2:00 AM Round 1 jury review and iterated features live before final showcase.</li>
+                            </ul>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">UHack 4.0</span>
+                            <span class="milestone-tag">24h Sprint</span>
+                            <span class="milestone-tag">Top 65</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('uhack-4')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Briefing</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">17-18 March</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: Cloud Junction Campus Ambassador -->
+                    <div class="milestone-card-full glass-card gradient-border border-purple-pink" data-category="leadership" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-purple-glow">
+                                    <i data-lucide="users"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>Cloud Junction Campus Ambassador</h3>
+                                    <span class="milestone-loc-badge">Selected out of 10,000+ Applicants</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-gold">National Selection</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Handpicked from over 10,000+ applicants across Indian engineering institutions:</p>
+                            <ul>
+                                <li>Fostered campus developer initiatives, organizing peer workshops and sharing cloud/web dev roadmaps.</li>
+                                <li>Connected students with national hackathon circuits and technical learning opportunities.</li>
+                            </ul>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">Campus Ambassador</span>
+                            <span class="milestone-tag">10,000+ Pool</span>
+                            <span class="milestone-tag">Community Building</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('cloud-junction')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Details</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Pan-India</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: BECon 2026 @ IIT Delhi -->
+                    <div class="milestone-card-full glass-card gradient-border border-blue-cyan" data-category="leadership" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-cyan">
+                                    <i data-lucide="rocket"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>BECon 2026 @ IIT Delhi</h3>
+                                    <span class="milestone-loc-badge">IIT Delhi · 3-Day National Conclave</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-blue">Conclave</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Participated in 3-day Business & Entrepreneurship Conclave at Indian Institute of Technology, Delhi:</p>
+                            <ul>
+                                <li>Attended policy and innovation panels featuring Anil Agarwal (CCI) & Alok Kumar (ACS, Govt of UP).</li>
+                                <li>Engaged in VC masterclasses with Raghav Chandra (Urban Company) & Bipin Shah (Zeropearl VC).</li>
+                                <li>Explored TechnoVerse, Launchpad Startup Clinic, and Google Scaling Indian Startups workshop.</li>
+                            </ul>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">IIT Delhi</span>
+                            <span class="milestone-tag">BECon 2026</span>
+                            <span class="milestone-tag">Venture Capital</span>
+                            <span class="milestone-tag">Startups</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('becon-2026')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Details</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Jan-Feb 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: FOSS UNITED – UIT Chapter Launch -->
+                    <div class="milestone-card-full glass-card gradient-border border-green-teal" data-category="opensource" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-emerald-glow">
+                                    <i data-lucide="globe"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>FOSS UNITED – UIT Chapter Launch</h3>
+                                    <span class="milestone-loc-badge">UIT Campus · Open Source Chapter</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-emerald">FOSS Chapter</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Attended official launch of FOSS UNITED – UIT Chapter, promoting free and open-source software culture:</p>
+                            <ul>
+                                <li>Keynotes by Prof. (Dr.) Sanjay Srivastava & Dr. Manas Pandey on empowering student developers through open-source.</li>
+                                <li>Participated in interactive FOSS tech discussions and community developer quiz rounds.</li>
+                            </ul>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">FOSS United</span>
+                            <span class="milestone-tag">Open Source</span>
+                            <span class="milestone-tag">Student Community</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('foss-united-uit')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Details</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Open Source</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: GDG Build with AI -->
+                    <div class="milestone-card-full glass-card gradient-border border-indigo-blue" data-category="opensource" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-blue-glow">
+                                    <i data-lucide="bot"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>GDG "Build with AI" (12th Rank)</h3>
+                                    <span class="milestone-loc-badge">GDG on Campus UIT · Prayagraj</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-gold">12th / 56 Rank</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Participated in hands-on Generative AI workshop and secured 12th Rank out of 56 participants in the Wayground Epic Quiz Challenge.</p>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">GDG on Campus</span>
+                            <span class="milestone-tag">GenAI</span>
+                            <span class="milestone-tag">12th Rank</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('build-with-ai')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Details</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">GDG UIT</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: FlowJam 2026 SIET -->
+                    <div class="milestone-card-full glass-card gradient-border border-orange-red" data-category="hackathons" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-gold-glow">
+                                    <i data-lucide="zap"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>FlowJam 2026 (SIET Prayagraj)</h3>
+                                    <span class="milestone-loc-badge">SIET Prayagraj · Team Shuffle</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-gold">Hackathon</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>FlutterFlow hackathon with dynamically reshuffled teams. Built rapid low-code prototype with newly assigned teammates Palak Tiwari (SIET) and Mukesh Kumar (BBS).</p>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">FlutterFlow</span>
+                            <span class="milestone-tag">Rapid Prototyping</span>
+                            <span class="milestone-tag">Team Shuffle</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('flowjam-2026')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Details</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">SIET</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: Startup Confluence 2024 -->
+                    <div class="milestone-card-full glass-card gradient-border border-purple-pink" data-category="leadership" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-purple-glow">
+                                    <i data-lucide="briefcase"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>Startup Confluence 2024</h3>
+                                    <span class="milestone-loc-badge">United Incubation Hub · 2-Day Summit</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-blue">Incubation Summit</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>2-day summit inaugurated by UP Cabinet Minister Nand Gopal Nandi. Mastered TAM/SAM/SOM market sizing, SLIP framework, and Intellectual Property Rights (IPR) law.</p>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">Incubation Hub</span>
+                            <span class="milestone-tag">IPR Laws</span>
+                            <span class="milestone-tag">Market Sizing</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('startup-confluence')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Details</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Dec 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: SANKALP 2026 National Summit -->
+                    <div class="milestone-card-full glass-card gradient-border border-blue-cyan" data-category="leadership" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-cyan">
+                                    <i data-lucide="compass"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>SANKALP 2026 National Summit</h3>
+                                    <span class="milestone-loc-badge">MNNIT Allahabad · 3-Day Summit</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-blue">National Summit</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>3-day leadership summit at MNNIT Allahabad covering Aatmanirbhar leadership, startup exhibitions, media scaling, and cross-college networking with VIT Vellore peers.</p>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">MNNIT Allahabad</span>
+                            <span class="milestone-tag">Aatmanirbhar</span>
+                            <span class="milestone-tag">Leadership</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('sankalp-2026')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Details</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">MNNIT</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: Meeting Prof. H.C. Verma Sir -->
+                    <div class="milestone-card-full glass-card gradient-border border-orange-red" data-category="leadership" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-gold-glow">
+                                    <i data-lucide="heart"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>Meeting Prof. H.C. Verma Sir</h3>
+                                    <span class="milestone-loc-badge">UGI Campus · Lifetime Mentorship</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-gold">Historic Day</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Once-in-a-lifetime opportunity at age 20 to meet and listen to living legend Prof. H.C. Verma Sir, author of 'Concepts of Physics'.</p>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">HC Verma Sir</span>
+                            <span class="milestone-tag">UGI Campus</span>
+                            <span class="milestone-tag">Mentorship</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('hc-verma-visit')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Details</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Legendary</span>
+                        </div>
+                    </div>
+
+                    <!-- Milestone: DevFest Prayagraj 2024 -->
+                    <div class="milestone-card-full glass-card gradient-border border-green-teal" data-category="opensource" data-glow>
+                        <div class="milestone-top-row">
+                            <div class="milestone-badge-box">
+                                <div class="milestone-icon icon-emerald-glow">
+                                    <i data-lucide="globe"></i>
+                                </div>
+                                <div class="milestone-heading-group">
+                                    <h3>DevFest Prayagraj 2024</h3>
+                                    <span class="milestone-loc-badge">UIT Auditorium · GDG Flagship</span>
+                                </div>
+                            </div>
+                            <span class="milestone-status-chip chip-emerald">GDG DevFest</span>
+                        </div>
+
+                        <div class="milestone-body">
+                            <p>Attended flagship developer gathering featuring Google Developer Experts (GDE) discussing Generative AI, Cloud & Flutter development architectures.</p>
+                        </div>
+
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tag">DevFest</span>
+                            <span class="milestone-tag">GDG Prayagraj</span>
+                            <span class="milestone-tag">AI & Cloud</span>
+                        </div>
+
+                        <div class="milestone-footer-btn">
+                            <button onclick="openEventModal('devfest-2024')" class="btn btn-secondary btn-sm">
+                                <i data-lucide="maximize-2"></i>
+                                <span>View Details</span>
+                            </button>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Oct 2024</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. CALL TO ACTION -->
+        <section class="section-padding" style="background: var(--bg-dark); border-top: 1px solid rgba(255, 255, 255, 0.06);">
+            <div class="container text-center">
+                <div class="final-cta-card gradient-border border-indigo-blue" style="max-width: 800px; margin: 0 auto;" data-glow>
+                    <div class="vercel-card-inner">
+                        <h2>Let's Build & Win Together</h2>
+                        <p>Looking for a driven Full-Stack Developer, team lead, or hackathon collaborator? Let's connect and create high-impact software.</p>
+                        <div class="final-cta-btns" style="justify-content: center;">
+                            <a href="index.html#projects" class="btn btn-primary">
+                                <i data-lucide="code"></i>
+                                <span>Explore Projects</span>
+                            </a>
+                            <a href="index.html#contact" class="btn btn-secondary">
+                                <i data-lucide="mail"></i>
+                                <span>Contact Rohit</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Event Details Modal Container -->
+    <div id="event-modal" class="modal-backdrop">
+        <div class="modal-dialog glass-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span id="modal-category" class="modal-badge"></span>
+                    <h3 id="modal-title" class="modal-heading"></h3>
+                    <p id="modal-location" class="modal-loc"></p>
+                </div>
+                <button class="modal-close" onclick="closeEventModal()" aria-label="Close dialog">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Rohit Pal. Built with HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Site Scripts -->
+    <script src="script.js"></script>
+
+    <script>
+        // Category Filter Logic for Milestones Page
+        function filterMilestones(category, btn) {
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.milestone-card-full');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>

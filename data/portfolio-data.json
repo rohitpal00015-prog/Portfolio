@@ -3,12 +3,12 @@
     "name": "Rohit Pal",
     "title": "Full-Stack Web Developer & AI Enthusiast",
     "location": "Prayagraj, Uttar Pradesh, India",
-    "email": "rohitpal.dev.in@gmail.com",
+    "email": "rohitpal00015@gmail.com",
     "github": "https://github.com/rohitpal00015-prog",
-    "linkedin": "https://linkedin.com/in/rohitpal00015",
+    "linkedin": "https://linkedin.com/in/rohit-pal-98230131a",
     "twitter": "https://twitter.com/rohitpal00015",
     "avatar": "assets/images/profile/rohit.png",
-    "resume": "assets/docs/rohit resume (1).pdf"
+    "resume": "assets/docs/Rohit_Pal_Resume.pdf"
   },
   "projects": [
     {
@@ -18,7 +18,7 @@
       "category": "cybersecurity",
       "image": "assets/images/up-police/logos/APCSIP -2026.jpg",
       "techStack": ["Cyber Forensics", "OSINT & CDR", "Malware Analysis"],
-      "description": "15-day official state law enforcement fellowship with Amroha Police Cyber Crime Cell. Awarded Best Content Creator by DSP Anjali Kataria Ma'am.",
+      "description": "15-day official state law enforcement fellowship with Amroha Police Cyber Crime Cell under DSP Anjali Kataria Ma'am.",
       "github": null,
       "demo": "up-police-internship.html"
     },

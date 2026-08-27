@@ -153,179 +153,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Advanced Staggered Scroll Reveal Animation (Intersection Observer)
+    // 7. High-Performance Standard Scroll Reveal (Instant & Butter-Smooth)
     const revealElements = document.querySelectorAll(
-        '.glass-card, .section-header, .hero-content, .hero-dashboard-container, ' +
-        '.vercel-card, .skill-dash-card, .achievement-card, .project-card, ' +
-        '.timeline-journey-item, .fact-mini-card, .focus-timeline-item, ' +
-        '.collab-action-card, .final-cta-card, .certificate-card'
+        '.glass-card, .section-header, .vercel-card, .skill-dash-card, .achievement-card, .project-card, .timeline-journey-item, .collab-action-card, .certificate-card, .program-card'
     );
     
-    const revealCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Stagger delay based on sibling index
-                const parent = entry.target.parentElement;
-                const siblings = parent ? Array.from(parent.children).filter(
-                    c => c.matches('.glass-card, .vercel-card, .skill-dash-card, .achievement-card, .project-card, .timeline-journey-item, .fact-mini-card, .focus-timeline-item, .collab-action-card')
-                ) : [];
-                const index = siblings.indexOf(entry.target);
-                const staggerDelay = index >= 0 ? index * 80 : 0;
-                
-                setTimeout(() => {
+    // Natural visibility by default for zero scroll lag
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('revealed');
-                }, staggerDelay);
-                
-                observer.unobserve(entry.target);
-            }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.05,
+            rootMargin: '0px 0px 50px 0px'
         });
-    };
 
-    const revealObserver = new IntersectionObserver(revealCallback, {
-        root: null,
-        threshold: 0.08,
-        rootMargin: '0px 0px -40px 0px'
-    });
+        revealElements.forEach(el => {
+            el.classList.add('reveal-init');
+            revealObserver.observe(el);
+        });
+    }
 
-    revealElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px) scale(0.98)';
-        el.style.transition = 'opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)';
-        revealObserver.observe(el);
-    });
+    // 8. Optimized Magnetic Card Hover (RequestAnimationFrame Throttled)
+    const tiltCards = document.querySelectorAll('.vercel-card, .skill-dash-card, .project-card, .achievement-card, .collab-action-card, .program-card');
+    let ticking = false;
 
-    // Inject CSS for dynamic reveal
-    const styleSheet = document.createElement('style');
-    styleSheet.type = 'text/css';
-    styleSheet.innerText = `
-        .revealed {
-            opacity: 1 !important;
-            transform: translateY(0) scale(1) !important;
-        }
-    `;
-    document.head.appendChild(styleSheet);
-
-    // 8. Hero Parallax on Scroll
-    const heroContent = document.querySelector('.hero-content');
-    const heroDashboard = document.querySelector('.hero-dashboard-container');
-    const heroGlow1 = document.querySelector('.hero-glow-1');
-    const heroGlow2 = document.querySelector('.hero-glow-2');
-
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        const heroHeight = window.innerHeight;
-        
-        if (scrollY < heroHeight) {
-            const ratio = scrollY / heroHeight;
-            
-            if (heroContent) {
-                heroContent.style.transform = `translateY(${scrollY * 0.15}px)`;
-                heroContent.style.opacity = 1 - ratio * 0.6;
-            }
-            if (heroDashboard) {
-                heroDashboard.style.transform = `translateY(${scrollY * 0.08}px)`;
-                heroDashboard.style.opacity = 1 - ratio * 0.5;
-            }
-            if (heroGlow1) {
-                heroGlow1.style.transform = `translate(${scrollY * 0.05}px, ${scrollY * -0.1}px)`;
-            }
-            if (heroGlow2) {
-                heroGlow2.style.transform = `translate(${scrollY * -0.04}px, ${scrollY * 0.08}px)`;
-            }
-        }
-    }, { passive: true });
-
-    // 9. Magnetic Card Tilt Effect
-    const tiltCards = document.querySelectorAll('.vercel-card, .skill-dash-card, .project-card, .achievement-card, .collab-action-card');
-    
     tiltCards.forEach(card => {
         card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = ((y - centerY) / centerY) * -3;
-            const rotateY = ((x - centerX) / centerX) * 3;
-            
-            card.style.transform = `translateY(-6px) perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = ((y - centerY) / centerY) * -2.5;
+                    const rotateY = ((x - centerX) / centerX) * 2.5;
+                    
+                    card.style.transform = `translateY(-4px) perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
         
         card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) perspective(800px) rotateX(0) rotateY(0)';
-            card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
-        });
-
-        card.addEventListener('mouseenter', () => {
-            card.style.transition = 'transform 0.15s ease-out';
-        });
-    });
-});
-
-
-// 10. Skills Tab switcher (Global Function)
-function switchSkillsTab(category) {
-    // Buttons toggling
-    const tabButtons = document.querySelectorAll('.skills-tab-btn');
-    tabButtons.forEach(btn => {
-        if (btn.getAttribute('onclick').includes(category)) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-
-    // Grids display toggling
-    const grids = document.querySelectorAll('.skills-grid');
-    grids.forEach(grid => {
-        if (grid.getAttribute('id') === `skills-${category}`) {
-            grid.classList.add('active');
-        } else {
-            grid.classList.remove('active');
-        }
-    });
-}
-
-// 11. Mouse hover radial glow tracking for premium cards
-document.addEventListener('DOMContentLoaded', () => {
-    const glowElements = document.querySelectorAll('[data-glow], [data-glow-mini]');
-    
-    glowElements.forEach(element => {
-        element.addEventListener('mousemove', e => {
-            const rect = element.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            element.style.setProperty('--mouse-x', `${x}px`);
-            element.style.setProperty('--mouse-y', `${y}px`);
+            card.style.transform = '';
         });
     });
 
-    // 12. Smooth section background color temperature shift on scroll
-    const sectionElements = document.querySelectorAll('section');
-    
-    const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.transition = 'filter 1.2s ease';
-                entry.target.style.filter = 'brightness(1) saturate(1)';
-            } else {
-                entry.target.style.filter = 'brightness(0.95) saturate(0.9)';
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px'
-    });
-
-    sectionElements.forEach(section => {
-        section.style.filter = 'brightness(0.95) saturate(0.9)';
-        section.style.transition = 'filter 1.2s ease';
-        sectionObserver.observe(section);
-    });
-
-    // 12.1 Theme Toggle Handler
+    // 9. Theme Toggle Handler
     const themeToggle = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme');
     
@@ -344,6 +227,128 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 13. Event Details Modal Data & Handlers
 const eventDetailsData = {
+    'wiki-opensource-day': {
+        title: '🏆 Open Source Day – WikiClubTech UIT',
+        category: 'Open Source Double Achievement · Rank 6 Marathon & Rank 2 Quiz',
+        location: 'WikiClubTech UIT Campus · 21 August',
+        body: `
+            <p class="modal-lead">Celebrated a major milestone in the open-source journey on Open Source Day with two distinguished achievements:</p>
+            
+            <div class="modal-section-block">
+                <h4><i data-lucide="award"></i> Dual Open Source Honors</h4>
+                <ul>
+                    <li>🏆 <strong>Rank 6 in Open Source Marathon:</strong> Competed in the 1-week marathon leading up to Open Source Day, securing 6th Rank and receiving official Wikimedia goodies and swag from Reeti Singh Ma’am and WikiClubTech UIT.</li>
+                    <li>🥈 <strong>Rank 2 in Live Technical Quiz:</strong> Secured 2nd Rank in the competitive on-spot Open Source Day technical quiz challenge.</li>
+                </ul>
+            </div>
+
+            <div class="modal-section-block">
+                <h4><i data-lucide="globe"></i> Wikimedia Ecosystem Learnings</h4>
+                <p>Explored architecture, contribution channels, and review workflows for Wikimedia Foundation, MediaWiki, Phabricator, GitLab, Wikimedia Commons, and Wikibooks.</p>
+            </div>
+
+            <div class="modal-section-block">
+                <h4><i data-lucide="heart"></i> Mentorship & Community</h4>
+                <p>Heartfelt gratitude to <strong>Gautam Kumar Maurya (GKM)</strong>, <strong>Reeti Singh Ma'am</strong>, and <strong>Ankit Kumar Verma Sir</strong> for constant encouragement and workflow guidance.</p>
+            </div>
+
+            <div class="modal-actions" style="margin-top: 1.5rem;">
+                <a href="https://www.linkedin.com/posts/rohit-pal-98230131a_opensource-wikimedia-wikiclubtech-activity-7496991574824820737-8hC3" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>Read Full Post on LinkedIn</span>
+                </a>
+            </div>
+        `
+    },
+    'gdg-vibe-coding': {
+        title: '🏆 GDG Prayagraj Vibe Coding Hackathon 2026',
+        category: 'Agentic AI Project · Certificate of Achievement',
+        location: 'Institute of Professional Studies, University of Allahabad · 31 July 2026',
+        body: `
+            <p class="modal-lead">Awarded <strong>Certificate of Achievement</strong> for exceptional performance, creativity, and dedication in the GDG Vibe-Coding Hackathon 2026 organized by Google Developer Group Prayagraj.</p>
+            
+            <div class="modal-section-block">
+                <h4><i data-lucide="bot"></i> The Project: Agentic AI Browser Extension</h4>
+                <ul>
+                    <li><strong>Concept & Discovery:</strong> Walked in without a predefined idea and under pressure, decided to build an <strong>Agentic AI Browser Extension</strong> that understands natural language voice/text commands and performs browser actions autonomously.</li>
+                    <li><strong>2-Hour Sprint Execution:</strong> Despite a tight 2-hour build window, implemented ~50% of the full product vision to demonstrate autonomous agent execution and browser DOM manipulation.</li>
+                </ul>
+            </div>
+
+            <div class="modal-section-block">
+                <h4><i data-lucide="users"></i> Team & Guidance</h4>
+                <ul>
+                    <li><strong>Teammate:</strong> Praveen Singh — for being an amazing co-developer throughout the intense build sprint.</li>
+                    <li><strong>Ideation & Guidance:</strong> Gautam Kumar Maurya (GKM) — for continuously guiding the project ideation process.</li>
+                </ul>
+            </div>
+
+            <div class="modal-section-block">
+                <h4><i data-lucide="sparkles"></i> Evaluation Panel & Organizers</h4>
+                <ul>
+                    <li><strong>Jury Panel:</strong> Shivansh Singh Sir, Atul Singh Sir, and the faculty panel from the University of Allahabad for in-depth project evaluation and feedback.</li>
+                    <li><strong>Special Mention:</strong> Ankit Kumar Verma Sir (GDG Prayagraj Organizer), Sanskar Dubey Sir, and the entire GDG Prayagraj organizing team for an inspiring event.</li>
+                </ul>
+            </div>
+
+            <div class="modal-section-block">
+                <h4><i data-lucide="quote"></i> Key Takeaway</h4>
+                <p><em>"A great product isn't enough — you must communicate its vision just as effectively. Building under pressure taught me true engineering agility."</em></p>
+            </div>
+        `
+    },
+    'sih-internal': {
+        title: '🏆 SIH Internal Hackathon',
+        category: 'Core Organizing Team · Event Management · Leadership',
+        location: 'Smart India Hackathon — Internal Hackathon (UIT Campus)',
+        body: `
+            <p class="modal-lead">Contributed to the end-to-end organization of the SIH Internal Hackathon, from planning and participant coordination to on-ground execution. Worked closely with faculty, participants, and fellow organizers to manage logistics, communication, and event operations.</p>
+            
+            <div class="modal-section-block">
+                <h4><i data-lucide="award"></i> Key Event Details</h4>
+                <ul>
+                    <li><strong>Role:</strong> Core Organizing Team Member</li>
+                    <li><strong>Event:</strong> Smart India Hackathon — Internal Hackathon</li>
+                    <li><strong>Contribution:</strong> Planning · Coordination · Logistics · Event Execution · Team Collaboration</li>
+                </ul>
+            </div>
+
+            <div class="modal-section-block">
+                <h4><i data-lucide="camera"></i> Event Moments & Organizing Committee Gallery</h4>
+                <div class="modal-photo-gallery">
+                    <div class="modal-photo-item" title="SIH 2026 Core Organizing Team on Stage">
+                        <img src="assets/images/sih/sih_team_stage.jpg" alt="SIH Core Organizing Team on Stage">
+                        <div class="modal-photo-caption">Core Team on Stage</div>
+                    </div>
+                    <div class="modal-photo-item" title="Organizing Committee with Faculty Coordinators">
+                        <img src="assets/images/sih/sih_group_faculty.jpg" alt="SIH Faculty and Organizers">
+                        <div class="modal-photo-caption">Faculty & Organizers</div>
+                    </div>
+                    <div class="modal-photo-item" title="Hackathon Participants Seated in Auditorium">
+                        <img src="assets/images/sih/sih_participants_hall.jpg" alt="SIH Hackathon Participants">
+                        <div class="modal-photo-caption">Participating Squads</div>
+                    </div>
+                    <div class="modal-photo-item" title="Boardroom Coordination & Strategy Meeting">
+                        <img src="assets/images/sih/sih_meeting_discussion.jpg" alt="SIH Strategy Meeting">
+                        <div class="modal-photo-caption">Strategy & Alignment</div>
+                    </div>
+                    <div class="modal-photo-item" title="Core Organizing Student Committee Session">
+                        <img src="assets/images/sih/sih_boardroom_team.jpg" alt="SIH Organizing Committee Meeting">
+                        <div class="modal-photo-caption">Committee Boardroom</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section-block">
+                <h4><i data-lucide="check-circle-2"></i> On-Ground Operations & Responsibilities</h4>
+                <ul>
+                    <li><strong>Event Logistics:</strong> Coordinated venue setup, technical infrastructure, scheduling, and problem statement dissemination for participating teams.</li>
+                    <li><strong>Team Coordination:</strong> Managed communication channels, streamlined registration desks, and provided continuous on-ground assistance to student hackathon squads.</li>
+                    <li><strong>Evaluation & Jury Flow:</strong> Assisted faculty coordinators and jury members in managing project presentation slots and scoring pipelines.</li>
+                </ul>
+            </div>
+        `
+    },
     'becon-2026': {
         title: 'BECon 2026 @ IIT Delhi',
         category: 'Entrepreneurship Conclave',
@@ -647,6 +652,10 @@ function openEventModal(eventId) {
     }
 }
 
+// Global window aliases for modal triggers
+window.openEventModal = openEventModal;
+window.openEventDetailsModal = openEventModal;
+
 function closeEventModal(event) {
     if (event.target.id === 'event-modal-overlay') {
         closeEventModalDirect();
@@ -699,48 +708,73 @@ function toggleMoreEvents() {
     }
 }
 
-// 16. Tech Matrix Particle Canvas Engine
+// 16. Tech Matrix Particle Canvas Engine (Lightweight & Auto-Pausing)
 function initHeroParticleCanvas() {
     const canvas = document.getElementById('hero-particle-canvas');
     if (!canvas) return;
+    const heroSection = canvas.closest('.hero-section') || canvas.parentElement;
     const ctx = canvas.getContext('2d');
     
     let width = canvas.width = canvas.parentElement.offsetWidth || window.innerWidth;
     let height = canvas.height = canvas.parentElement.offsetHeight || window.innerHeight;
+    let isVisible = true;
+    let animationFrameId = null;
+
+    // Auto-pause canvas when hero is scrolled out of view
+    if ('IntersectionObserver' in window && heroSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isVisible = entry.isIntersecting;
+                if (isVisible && !animationFrameId) {
+                    animate();
+                } else if (!isVisible && animationFrameId) {
+                    cancelAnimationFrame(animationFrameId);
+                    animationFrameId = null;
+                }
+            });
+        }, { threshold: 0.05 });
+        observer.observe(heroSection);
+    }
 
     window.addEventListener('resize', () => {
         if (!canvas.parentElement) return;
         width = canvas.width = canvas.parentElement.offsetWidth || window.innerWidth;
         height = canvas.height = canvas.parentElement.offsetHeight || window.innerHeight;
-    });
+    }, { passive: true });
 
     const particles = [];
-    const particleCount = Math.min(Math.floor(width / 20), 65);
-    const mouse = { x: null, y: null, radius: 150 };
+    const particleCount = Math.min(Math.floor(width / 35), 35);
+    const mouse = { x: null, y: null, radius: 120 };
 
     window.addEventListener('mousemove', (e) => {
+        if (!isVisible) return;
         const rect = canvas.getBoundingClientRect();
         mouse.x = e.clientX - rect.left;
         mouse.y = e.clientY - rect.top;
-    });
+    }, { passive: true });
 
     window.addEventListener('mouseleave', () => {
         mouse.x = null;
         mouse.y = null;
-    });
+    }, { passive: true });
 
     for (let i = 0; i < particleCount; i++) {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.6,
-            vy: (Math.random() - 0.5) * 0.6,
-            size: Math.random() * 2 + 1,
-            alpha: Math.random() * 0.45 + 0.25
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            size: Math.random() * 1.8 + 1,
+            alpha: Math.random() * 0.4 + 0.2
         });
     }
 
     function animate() {
+        if (!isVisible) {
+            animationFrameId = null;
+            return;
+        }
+
         ctx.clearRect(0, 0, width, height);
 
         for (let i = 0; i < particles.length; i++) {
@@ -762,33 +796,20 @@ function initHeroParticleCanvas() {
                 const dy = p.y - p2.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
 
-                if (dist < 110) {
+                if (dist < 90) {
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `rgba(16, 185, 129, ${0.16 * (1 - dist / 110)})`;
+                    ctx.strokeStyle = `rgba(16, 185, 129, ${0.14 * (1 - dist / 90)})`;
                     ctx.lineWidth = 0.75;
-                    ctx.stroke();
-                }
-            }
-
-            if (mouse.x !== null && mouse.y !== null) {
-                const mdx = p.x - mouse.x;
-                const mdy = p.y - mouse.y;
-                const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
-                if (mdist < mouse.radius) {
-                    ctx.beginPath();
-                    ctx.moveTo(p.x, p.y);
-                    ctx.lineTo(mouse.x, mouse.y);
-                    ctx.strokeStyle = `rgba(0, 230, 153, ${0.35 * (1 - mdist / mouse.radius)})`;
-                    ctx.lineWidth = 1;
                     ctx.stroke();
                 }
             }
         }
 
-        requestAnimationFrame(animate);
+        animationFrameId = requestAnimationFrame(animate);
     }
+
     animate();
 }
 
