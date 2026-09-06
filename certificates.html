@@ -576,24 +576,21 @@
         </section>
     </main>
 
-    <!-- Certificate Lightbox Slideshow Modal -->
-    <div id="cert-lightbox" class="cert-lightbox-backdrop" onclick="closeCertificateLightbox(event)">
-        <div class="cert-lightbox-dialog" onclick="event.stopPropagation()">
-            <button class="cert-lightbox-close" onclick="closeCertificateLightbox()" aria-label="Close Lightbox">&times;</button>
-            <div class="cert-lightbox-body">
-                <button class="cert-lightbox-nav prev" onclick="prevCertificate()" aria-label="Previous Certificate">&#10094;</button>
-                <div class="cert-lightbox-image-container">
-                    <img id="cert-lightbox-img" src="" alt="Verified Certificate" class="cert-lightbox-img">
-                </div>
-                <button class="cert-lightbox-nav next" onclick="nextCertificate()" aria-label="Next Certificate">&#10095;</button>
+    <!-- Certificate Lightbox Modal -->
+    <div class="modal-overlay" id="cert-lightbox-modal" onclick="closeCertificateLightbox()">
+        <div class="modal-dialog glass-card lightbox-dialog" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closeCertificateLightbox()">&times;</button>
+            <div class="lightbox-img-wrap">
+                <img src="" alt="Verified Certificate" id="lightbox-cert-img">
             </div>
-            <div class="cert-lightbox-footer">
-                <div class="cert-lightbox-info">
-                    <span id="cert-lightbox-category" class="cert-category-badge"></span>
-                    <h3 id="cert-lightbox-title" class="cert-lightbox-heading"></h3>
-                    <p id="cert-lightbox-issuer" class="cert-lightbox-issuer-text"></p>
-                </div>
-                <div class="cert-lightbox-counter" id="cert-lightbox-counter">1 / 8</div>
+            <div class="lightbox-caption">
+                <h3 id="lightbox-cert-title">Certificate Title</h3>
+                <p id="lightbox-cert-issuer">Issuer Name</p>
+                <span id="lightbox-cert-counter" style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.4rem;">1 of 8</span>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.25rem;">
+                <button type="button" class="btn btn-secondary btn-sm" onclick="prevCertificate()"><i data-lucide="chevron-left"></i> Previous</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="nextCertificate()">Next <i data-lucide="chevron-right"></i></button>
             </div>
         </div>
     </div>
@@ -605,7 +602,8 @@
         </div>
     </footer>
 
-    <!-- Site Scripts -->
+    <!-- Master Data Module & Site Scripts -->
+    <script src="data/portfolio-data.js"></script>
     <script src="script.js"></script>
 
     <script>
