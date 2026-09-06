@@ -1157,13 +1157,111 @@ img {
     color: var(--text-primary);
 }
 
+/* Open-Source Spotlight Card (Crisp White Editorial Surface) */
+.open-source-spotlight-card {
+    margin-top: 1.75rem;
+    padding: 1.75rem 2rem;
+    background: #FFFFFF !important;
+    border: 1.5px solid var(--border-dark) !important;
+    box-shadow: 4px 4px 0px var(--border-dark) !important;
+    border-radius: var(--radius-xl);
+    transition: var(--transition);
+}
+
+.open-source-spotlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px var(--border-dark) !important;
+}
+
+.spotlight-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.spotlight-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    background: var(--blue-light);
+    border: 1.5px solid var(--blue-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-primary);
+    flex-shrink: 0;
+    font-size: 1.35rem;
+}
+
+.spotlight-content {
+    flex: 1;
+    min-width: 260px;
+}
+
+.spotlight-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.spotlight-desc {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 0.85rem;
+}
+
+.spotlight-desc strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.spotlight-tags {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.spotlight-tag-git {
+    background: var(--blue-light) !important;
+    border: 1px solid var(--blue-border) !important;
+    color: var(--blue-primary) !important;
+}
+
+.spotlight-tag-gitlab {
+    background: var(--yellow-light) !important;
+    border: 1px solid var(--yellow-border) !important;
+    color: var(--yellow-dark) !important;
+}
+
+.spotlight-tag-mediawiki {
+    background: var(--blue-light) !important;
+    border: 1px solid var(--blue-border) !important;
+    color: var(--blue-primary) !important;
+}
+
+.spotlight-tag-codex {
+    background: #ECFDF5 !important;
+    border: 1px solid #A7F3D0 !important;
+    color: #047857 !important;
+}
+
+.spotlight-tag-phabricator {
+    background: #FAF5FF !important;
+    border: 1px solid #E9D5FF !important;
+    color: #7E22CE !important;
+}
+
 /* --------------------------------------------------------------------------
    8. Growth Root Experience Timeline (Down-To-Top)
    College Base Foundation At Very Bottom -> Upward Sprouting Root
    -------------------------------------------------------------------------- */
 .growth-timeline-section, .timeline-growth-section {
     position: relative;
-    padding: 3.5rem 0 3rem;
+    padding: 2rem 0 2.25rem;
     overflow: hidden;
     background: var(--bg-surface-subtle);
 }
@@ -1171,8 +1269,8 @@ img {
 .growth-tree-wrapper {
     position: relative;
     max-width: 980px;
-    margin: 2rem auto 0 auto;
-    padding-bottom: 1.5rem;
+    margin: 1.25rem auto 0 auto;
+    padding-bottom: 1.25rem;
 }
 
 /* The Glowing Vertical Root Vine (Central Trunk) */

@@ -103,6 +103,8 @@
             position: relative;
             transition: var(--transition);
             box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         .milestone-card-full:hover {
@@ -122,12 +124,16 @@
             align-items: flex-start;
             justify-content: space-between;
             gap: 1rem;
+            flex-wrap: wrap;
+            width: 100%;
         }
 
         .milestone-badge-box {
             display: flex;
             align-items: center;
             gap: 0.85rem;
+            flex: 1 1 240px;
+            min-width: 0;
         }
 
         .milestone-icon {
@@ -435,12 +441,190 @@
         @media (max-width: 900px) {
             .milestone-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             .hero-stats-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            .hero-stats-grid .stat-cyber-card:last-child {
+                grid-column: span 2;
             }
             .milestone-hero-title {
                 font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .milestone-hero {
+                padding: 5rem 0 2.5rem 0;
+            }
+            .milestone-hero-title {
+                font-size: 2rem;
+            }
+            .milestone-card-full {
+                padding: 1.5rem 1.25rem;
+            }
+            .category-filter-bar {
+                gap: 0.5rem;
+                margin: 1.75rem 0 0.75rem 0;
+            }
+            .final-cta-card {
+                padding: 2.5rem 1.5rem;
+            }
+            .final-cta-card h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .milestone-top-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.85rem;
+            }
+            .milestone-status-chip {
+                align-self: flex-start;
+                font-size: 0.72rem;
+                padding: 0.3rem 0.75rem;
+            }
+            .milestone-badge-box {
+                width: 100%;
+                gap: 0.75rem;
+            }
+            .milestone-heading-group {
+                min-width: 0;
+                flex: 1;
+            }
+            .milestone-heading-group h3 {
+                font-size: 1.2rem;
+                word-break: break-word;
+            }
+            .cat-btn {
+                font-size: 0.82rem;
+                padding: 0.45rem 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .milestone-hero {
+                padding: 4.25rem 0 1.75rem 0;
+            }
+            .milestone-hero-title {
+                font-size: 1.65rem;
+                line-height: 1.2;
+            }
+            .milestone-card-full {
+                padding: 1.25rem 1rem;
+                gap: 1rem;
+            }
+            .milestone-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+                font-size: 1.15rem;
+            }
+            .milestone-heading-group h3 {
+                font-size: 1.08rem;
+            }
+            .milestone-loc-badge {
+                font-size: 0.72rem;
+                padding: 0.2rem 0.55rem;
+            }
+            .milestone-body {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            .milestone-body ul {
+                margin: 0.5rem 0 0 1rem;
+            }
+            .milestone-body li {
+                margin-bottom: 0.45rem;
+            }
+            .milestone-tags-row {
+                gap: 0.4rem;
+                margin-top: 0.65rem;
+            }
+            .milestone-tag {
+                font-size: 0.72rem;
+                padding: 0.25rem 0.6rem;
+            }
+            .milestone-footer-btn {
+                flex-direction: column-reverse;
+                align-items: stretch;
+                gap: 0.65rem;
+                padding-top: 1rem;
+            }
+            .milestone-footer-btn .btn {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                padding: 0.65rem 1rem;
+                font-size: 0.84rem;
+            }
+            .milestone-date {
+                align-self: flex-start;
+                font-size: 0.75rem;
+                padding: 0.25rem 0.65rem;
+            }
+            .category-filter-bar {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.4rem;
+            }
+            .cat-btn {
+                font-size: 0.78rem;
+                padding: 0.4rem 0.8rem;
+                flex: 1 1 calc(50% - 0.4rem);
+                text-align: center;
+            }
+            .final-cta-card {
+                padding: 2rem 1rem;
+            }
+            .final-cta-card h2 {
+                font-size: 1.5rem;
+            }
+            .final-cta-btns {
+                flex-direction: column;
+                width: 100%;
+            }
+            .final-cta-btns .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .cyber-header .brand-title {
+                font-size: 0.86rem;
+            }
+            .cyber-header .brand-subtitle {
+                display: none;
+            }
+            .btn-back-portfolio {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.65rem;
+            }
+            .modal-dialog {
+                padding: 1.5rem 1.15rem;
+                max-width: 94vw;
+                margin: 1rem auto;
+            }
+            .modal-title {
+                font-size: 1.35rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats-grid .stat-cyber-card:last-child {
+                grid-column: span 1;
+            }
+            .cat-btn {
+                flex: 1 1 100%;
+            }
+            .milestone-card-full {
+                padding: 1rem 0.85rem;
             }
         }
     </style>
