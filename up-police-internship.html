@@ -4,34 +4,1103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UP Police & Amroha Police Cyber Security Fellowship (APCSIP-2026) | Rohit Pal Portfolio</title>
+    <title>Rohit Pal | UP Police Cyber Security Fellowship (APCSIP-2026)</title>
     <meta name="author" content="Rohit Pal">
     <meta name="description"
-        content="Official Government Cyber Crime Investigation & Digital Forensics Fellowship Report. Rohit Pal — Cyber Security Researcher & Full-Stack Developer. 15-day fellowship with UP Police & Amroha Police under APCSIP-2026.">
+        content="Official 15-day UP Police Cyber Security Fellowship report by Rohit Pal (Rohitpal08) — OSINT investigations, digital forensics, CDR analysis &amp; cyber law under DSP Anjali Kataria.">
     <meta name="keywords"
-        content="UP Police Cyber Security Internship Program, APCSIP 2026, Amroha Police Cyber Security Internship Program 2026, Rohit Pal UP Police, Cyber Security Researcher Prayagraj, Amroha Police Cyber Crime Cell, DSP Anjali Kataria, Cyber Forensics Fellowship, Rohit Pal">
-    <link rel="canonical" href="up-police-internship.html">
+        content="Rohit Pal, Rohitpal08, UP Police Cyber Security Internship, APCSIP 2026, Amroha Police Cyber Crime Cell, Rohit Pal UP Police, OSINT, Digital Forensics, DSP Anjali Kataria">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rohitpal.vercel.app/up-police-internship.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Rohit Pal Portfolio">
+    <meta property="og:title" content="Rohit Pal | UP Police Cyber Security Fellowship (APCSIP-2026)">
+    <meta property="og:description" content="Official 15-day state law enforcement cyber security fellowship report by Rohit Pal (Rohitpal08) under DSP Anjali Kataria, Amroha Police Cyber Crime Cell.">
+    <meta property="og:url" content="https://rohitpal.vercel.app/up-police-internship.html">
+    <meta property="og:image" content="https://rohitpal.vercel.app/assets/images/profile/rohit.png">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rohitpal00015">
+    <meta name="twitter:creator" content="@rohitpal00015">
+    <meta name="twitter:title" content="Rohit Pal | UP Police Cyber Security Fellowship (APCSIP-2026)">
+    <meta name="twitter:description" content="Official 15-day state law enforcement cyber security fellowship report by Rohit Pal (Rohitpal08) under DSP Anjali Kataria.">
+    <meta name="twitter:image" content="https://rohitpal.vercel.app/assets/images/profile/rohit.png">
+
+    <!-- Structured Data: Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rohitpal.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "UP Police Cyber Security Fellowship",
+          "item": "https://rohitpal.vercel.app/up-police-internship.html"
+        }
+      ]
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome & DevIcons & Lucide -->
+    <!-- FontAwesome, DevIcons & Lucide -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Scoped Government Cyber Fellowship Styles -->
+    <style>
+        /* Scoped Tokens & Styling */
+        :root {
+            --police-blue: #1D4ED8;
+            --police-navy: #0F172A;
+            --police-gold: #D97706;
+            --police-gold-light: #FFFBEB;
+            --police-gold-border: #FDE68A;
+            --police-emerald: #059669;
+            --police-slate: #334155;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3.5px;
+            width: 0%;
+            background: linear-gradient(90deg, #1D4ED8, #FFB800);
+            z-index: 99999;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Section Smooth Scroll Offset */
+        section[id] {
+            scroll-margin-top: 85px;
+        }
+
+        /* Section Layouts */
+        .section-wrap {
+            padding: 5.5rem 0;
+            position: relative;
+        }
+
+        .section-wrap.alt-bg {
+            background: #F8FAFC;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section-header-centered {
+            text-align: center;
+            max-width: 840px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-pill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--blue-primary);
+            background: var(--blue-light);
+            border: 1px solid var(--blue-border);
+            padding: 0.35rem 0.95rem;
+            border-radius: var(--radius-full);
+            margin-bottom: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-headline {
+            font-family: var(--font-heading);
+            font-size: 2.35rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtext {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* Triple Insignia Banner */
+        .hero-insignia-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.75rem;
+            margin-bottom: 1.75rem;
+            flex-wrap: wrap;
+        }
+
+        .insignia-logo {
+            height: 64px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.06));
+            transition: transform 0.3s ease;
+        }
+
+        .insignia-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .insignia-center-seal {
+            height: 78px;
+            width: auto;
+            border-radius: var(--radius-sm);
+            border: 1.5px solid var(--border-medium);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .insignia-center-seal:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Badges & Typography */
+        .police-badge-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--blue-primary);
+            background: var(--blue-light);
+            border: 1.5px solid var(--blue-border);
+            padding: 0.4rem 1.15rem;
+            border-radius: var(--radius-full);
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .police-hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .police-title-gradient {
+            background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .police-quote-card {
+            margin: 2.25rem auto;
+            padding: 1.35rem 2.25rem;
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-dark);
+            border-radius: var(--radius-md);
+            box-shadow: 4px 4px 0px var(--border-dark);
+            max-width: 820px;
+            position: relative;
+        }
+
+        .police-quote-card p {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* 5-Column Stats Grid */
+        .police-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.15rem;
+            max-width: 1140px;
+            margin: 3.5rem auto 0;
+        }
+
+        .police-stat-card {
+            padding: 1.5rem 1rem;
+            text-align: center;
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .police-stat-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--yellow-primary);
+            box-shadow: 0 10px 24px rgba(255, 184, 0, 0.18);
+        }
+
+        .police-stat-num {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--blue-primary);
+            line-height: 1.1;
+            margin-bottom: 0.35rem;
+        }
+
+        .police-stat-lbl {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Selection Pipeline Enhanced Grid */
+        .pipeline-timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .pipeline-stage-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .pipeline-stage-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--blue-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stage-badge-chip {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            background: #0F172A;
+            padding: 0.25rem 0.65rem;
+            border-radius: var(--radius-sm);
+            display: inline-block;
+            width: fit-content;
+            margin-bottom: 0.85rem;
+        }
+
+        .stage-title {
+            font-size: 1.15rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin-bottom: 0.45rem;
+            line-height: 1.3;
+        }
+
+        .stage-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .stage-footer-row {
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+        }
+
+        .stage-date-text {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .stage-status-tag {
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: #059669;
+        }
+
+        /* Evidence & Document Vault */
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .evidence-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .evidence-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--blue-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .evidence-img-container {
+            position: relative;
+            height: 250px;
+            background: #0F172A;
+            overflow: hidden;
+        }
+
+        .evidence-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .evidence-card:hover .evidence-img-container img {
+            transform: scale(1.05);
+        }
+
+        .evidence-zoom-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(2px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: #FFFFFF;
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .evidence-card:hover .evidence-zoom-overlay {
+            opacity: 1;
+        }
+
+        .evidence-body {
+            padding: 1.35rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .evidence-title {
+            font-size: 1.1rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin-bottom: 0.35rem;
+        }
+
+        .evidence-caption {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* Evidence Lightbox Modal */
+        .evidence-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(8px);
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .evidence-modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .evidence-modal-box {
+            position: relative;
+            background: #0B1120;
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-lg);
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            animation: modalPopIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes modalPopIn {
+            from { transform: scale(0.94); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .evidence-modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.2s ease;
+        }
+
+        .evidence-modal-close:hover {
+            background: #EF4444;
+            border-color: #EF4444;
+            transform: scale(1.1);
+        }
+
+        .evidence-modal-img-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #020617;
+            overflow: auto;
+            max-height: calc(90vh - 90px);
+            padding: 1rem;
+        }
+
+        .evidence-modal-img-wrap img {
+            max-width: 100%;
+            max-height: calc(90vh - 120px);
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+        }
+
+        .evidence-modal-desc {
+            padding: 1rem 1.5rem;
+            background: #0B1120;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #F8FAFC;
+            font-size: 0.92rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Core Domains Grid */
+        .domains-six-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .domain-feature-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem 1.75rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .domain-feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--blue-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .domain-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-md);
+            background: var(--blue-light);
+            color: var(--blue-primary);
+            border: 1px solid var(--blue-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            margin-bottom: 1.25rem;
+        }
+
+        /* 12-Day Operations Explorer */
+        .ops-explorer-filter-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .ops-filter-pill-btn {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.5rem 1.15rem;
+            border-radius: var(--radius-full);
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .ops-filter-pill-btn:hover {
+            color: var(--blue-primary);
+            border-color: var(--blue-primary);
+            background: var(--blue-light);
+        }
+
+        .ops-filter-pill-btn.active {
+            background: #0F172A;
+            color: #FFFFFF;
+            border-color: #0F172A;
+        }
+
+        .ops-day-pills-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            padding: 0.85rem;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .day-jump-btn {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.35rem 0.65rem;
+            border-radius: var(--radius-sm);
+            background: #F8FAFC;
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .day-jump-btn:hover, .day-jump-btn.active {
+            background: var(--yellow-light);
+            border-color: var(--yellow-border);
+            color: var(--yellow-dark);
+        }
+
+        .ops-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .op-card-modern {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            padding: 2.25rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            scroll-margin-top: 100px;
+        }
+
+        .op-card-modern:hover {
+            border-color: var(--yellow-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .op-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .op-code-badge {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: var(--yellow-dark);
+            background: var(--yellow-light);
+            border: 1px solid var(--yellow-border);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .op-date-text {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .op-main-title {
+            font-size: 1.45rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin: 0.35rem 0 0 0;
+            width: 100%;
+        }
+
+        .op-sessions-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 1.75rem;
+        }
+
+        .op-session-box {
+            background: #F8FAFC;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .op-session-heading {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--blue-primary);
+            margin-bottom: 0.65rem;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .op-session-box ul {
+            margin: 0;
+            padding-left: 1.25rem;
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+
+        .op-session-box li {
+            margin-bottom: 0.4rem;
+        }
+
+        .op-findings-box {
+            background: var(--yellow-light);
+            border: 1px solid var(--yellow-border);
+            border-radius: var(--radius-md);
+            padding: 1.35rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .op-findings-title {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 750;
+            color: var(--yellow-dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .op-findings-box p {
+            margin: 0;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Forensics Lab Simulator */
+        .simulator-layout {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .sim-terminal-box {
+            background: #0B1120;
+            border: 1.5px solid #1E293B;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+            color: #E2E8F0;
+            font-family: var(--font-mono);
+            font-size: 0.88rem;
+        }
+
+        .sim-terminal-header {
+            background: #0F172A;
+            border-bottom: 1px solid #1E293B;
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sim-tabs-row {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .sim-tab-btn {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.35rem 0.85rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid #334155;
+            background: #1E293B;
+            color: #94A3B8;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .sim-tab-btn.active {
+            background: #2563EB;
+            color: #FFFFFF;
+            border-color: #2563EB;
+        }
+
+        .sim-terminal-body {
+            padding: 1.5rem;
+            line-height: 1.7;
+            min-height: 280px;
+            max-height: 420px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family: var(--font-mono);
+            font-size: 0.86rem;
+            color: #E2E8F0;
+        }
+
+        .term-comment {
+            color: #64748B;
+            font-style: italic;
+        }
+
+        .term-prompt {
+            color: #38BDF8;
+            font-weight: 700;
+        }
+
+        .term-cmd {
+            color: #FCD34D;
+            font-weight: 600;
+        }
+
+        .term-highlight {
+            color: #A78BFA;
+            font-weight: 600;
+        }
+
+        .term-success {
+            color: #34D399;
+            font-weight: 600;
+        }
+
+        .sim-controls-bar {
+            background: #0F172A;
+            border-top: 1px solid #1E293B;
+            padding: 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .btn-sim-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.55rem 1.15rem;
+            border-radius: var(--radius-sm);
+            background: #2563EB;
+            color: #FFFFFF;
+            border: 1px solid #2563EB;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-sim-action:hover {
+            background: #1D4ED8;
+        }
+
+        .btn-sim-reset {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.55rem 1rem;
+            border-radius: var(--radius-sm);
+            background: #1E293B;
+            color: #94A3B8;
+            border: 1px solid #334155;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-sim-reset:hover {
+            color: #FFFFFF;
+            background: #334155;
+        }
+
+        /* Officers & Faculty Categorized Directory */
+        .officers-tier-title {
+            font-family: var(--font-heading);
+            font-size: 1.45rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+
+        .officers-tier-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .officers-grid-categorized {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .officer-profile-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .officer-profile-card:hover {
+            border-color: var(--yellow-primary);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .officer-avatar-frame {
+            width: 104px;
+            height: 104px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.15rem;
+            border: 3px solid var(--yellow-primary);
+            box-shadow: 0 4px 14px rgba(255, 184, 0, 0.25);
+        }
+
+        .officer-real-name {
+            font-size: 1.2rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .officer-designation {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--blue-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .officer-org-dept {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+
+        .officer-tags-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.35rem;
+        }
+
+        .officer-pill {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-full);
+            background: #F8FAFC;
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Accordion */
+        .faq-accordion-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-medium);
+        }
+
+        .faq-question-btn {
+            width: 100%;
+            padding: 1.35rem 1.75rem;
+            background: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question-btn i {
+            color: var(--blue-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-question-btn i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer-body {
+            padding: 0 1.75rem 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.open .faq-answer-body {
+            display: block;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .police-stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .pipeline-timeline-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .evidence-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .domains-six-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .op-sessions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .police-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .pipeline-timeline-grid {
+                grid-template-columns: 1fr;
+            }
+            .evidence-grid {
+                grid-template-columns: 1fr;
+            }
+            .domains-six-grid {
+                grid-template-columns: 1fr;
+            }
+            .op-card-modern {
+                padding: 1.5rem;
+            }
+            .police-quote-card {
+                padding: 1.15rem 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .police-stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body class="internship-page">
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scroll-progress"></div>
 
-    <!-- Sticky Cyber Command Header -->
-    <header class="cyber-header">
+    <!-- Sticky Command Header -->
+    <header class="cyber-header" id="header">
         <div class="container header-container">
             <div class="cyber-brand">
                 <a href="index.html" title="Go to Rohit Pal Portfolio Home" class="brand-avatar-link">
@@ -50,10 +1119,12 @@
                 <ul class="cyber-nav" id="cyber-nav">
                     <li><a href="#hero" class="nav-link active">Overview</a></li>
                     <li><a href="#pipeline" class="nav-link">Pipeline</a></li>
-                    <li><a href="#gallery" class="nav-link">Moments & Gallery</a></li>
+                    <li><a href="#gallery" class="nav-link">Evidence Vault</a></li>
                     <li><a href="#domains" class="nav-link">Domains</a></li>
                     <li><a href="#operations" class="nav-link">Operations Log</a></li>
+                    <li><a href="#simulator" class="nav-link">Forensics Lab</a></li>
                     <li><a href="#officers" class="nav-link">Officers</a></li>
+                    <li><a href="#reflection" class="nav-link">Reflection</a></li>
                 </ul>
             </nav>
 
@@ -71,1013 +1142,1110 @@
         <section id="hero" class="internship-hero-section">
             <div class="hero-mesh-glow"></div>
 
-            <!-- Floating Badges -->
-            <div class="floating-badge float-top-left">
-                <div class="floating-badge-icon icon-cyan"><i class="fa-solid fa-shield-halved"></i></div>
-                <div>
-                    <div class="floating-badge-title">Cyber Crime Cell</div>
-                    <div class="floating-badge-sub">APCSIP-2026 Fellowship</div>
-                </div>
-            </div>
-
-            <div class="floating-badge float-top-right">
-                <div class="floating-badge-icon icon-blue"><i class="fa-solid fa-user-secret"></i></div>
-                <div>
-                    <div class="floating-badge-title">OSINT & Forensics</div>
-                    <div class="floating-badge-sub">Digital Reconnaissance</div>
-                </div>
-            </div>
-
-            <div class="floating-badge float-bottom-left">
-                <div class="floating-badge-icon icon-emerald"><i class="fa-solid fa-network-wired"></i></div>
-                <div>
-                    <div class="floating-badge-title">CDR & IPDR Analysis</div>
-                    <div class="floating-badge-sub">Tower Log Sorting</div>
-                </div>
-            </div>
-
-            <div class="floating-badge float-bottom-right">
-                <div class="floating-badge-icon icon-gold"><i class="fa-solid fa-award"></i></div>
-                <div>
-                    <div class="floating-badge-title">Govt Fellowship</div>
-                    <div class="floating-badge-sub">UP Police Certified</div>
-                </div>
-            </div>
-
             <div class="container hero-content-wrapper">
                 <!-- Triple Brand Emblems Row -->
-                <div class="hero-emblems-row">
-                    <img src="assets/images/up-police/logos/up-police-logo-uttar-pradesh-police-up-police-logo-11563421838xjer0uaxol.png" alt="UP Police Insignia" class="emblem-img">
-                    <img src="assets/images/up-police/logos/APCSIP -2026.jpg" alt="APCSIP 2026 Badge" class="emblem-center-badge">
-                    <img src="assets/images/up-police/logos/UP GOV.webp" alt="UP Government Emblem" class="emblem-img">
+                <div class="hero-insignia-bar">
+                    <img src="assets/images/up-police/logos/up-police-logo-uttar-pradesh-police-up-police-logo-11563421838xjer0uaxol.png" alt="UP Police Insignia" class="insignia-logo">
+                    <img src="assets/images/up-police/logos/APCSIP -2026.jpg" alt="APCSIP 2026 Badge" class="insignia-center-seal">
+                    <img src="assets/images/up-police/logos/UP GOV.webp" alt="UP Government State Emblem" class="insignia-logo">
                 </div>
 
-                <div class="gov-badge">
+                <!-- Official Govt Clearance Status Badge -->
+                <div class="police-badge-status">
                     <span class="live-pulse-dot"></span>
-                    <span>Government of Uttar Pradesh · Cyber Crime Unit</span>
+                    <span>Government of Uttar Pradesh · Amroha Police Cyber Crime Cell</span>
                 </div>
 
-                <h1 class="hero-title">
+                <!-- Main Hero Headline -->
+                <h1 class="police-hero-title">
                     ROHIT PAL<br>
-                    <span class="text-gradient-emerald">APCSIP-2026 · UP POLICE CYBER SECURITY INTERNSHIP</span>
+                    <span class="police-title-gradient">APCSIP-2026 · UP POLICE CYBER SECURITY FELLOWSHIP</span>
                 </h1>
 
+                <!-- Tech Badges Row -->
                 <div class="hero-tags-row" style="display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem;">
-                    <span class="badge" style="background: rgba(16, 185, 129, 0.12); color: var(--primary); border-color: rgba(16, 185, 129, 0.3);">Cyber Security</span>
-                    <span class="badge" style="background: rgba(56, 189, 248, 0.12); color: var(--accent-cyan); border-color: rgba(56, 189, 248, 0.3);">OSINT & SIGINT</span>
-                    <span class="badge" style="background: rgba(59, 130, 246, 0.12); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">Digital Forensics</span>
-                    <span class="badge" style="background: rgba(245, 158, 11, 0.12); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">Malware Analysis</span>
-                    <span class="badge" style="background: rgba(168, 85, 247, 0.12); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">Cyber Laws</span>
+                    <span class="badge" style="background: var(--blue-light); color: var(--blue-primary); border-color: var(--blue-border);">
+                        <i class="fa-solid fa-shield-halved" style="margin-right: 0.35rem;"></i> Cyber Crime Investigation
+                    </span>
+                    <span class="badge" style="background: #EFF6FF; color: #1E40AF; border-color: #BFDBFE;">
+                        <i class="fa-solid fa-magnifying-glass-location" style="margin-right: 0.35rem;"></i> OSINT Reconnaissance
+                    </span>
+                    <span class="badge" style="background: var(--yellow-light); color: var(--yellow-dark); border-color: var(--yellow-border);">
+                        <i class="fa-solid fa-tower-cell" style="margin-right: 0.35rem;"></i> CDR & IPDR Tower Analysis
+                    </span>
+                    <span class="badge" style="background: #ECFDF5; color: #065F46; border-color: #A7F3D0;">
+                        <i class="fa-solid fa-hard-drive" style="margin-right: 0.35rem;"></i> Digital Forensics & Hash Integrity
+                    </span>
+                    <span class="badge" style="background: #F1F5F9; color: #0F172A; border-color: #CBD5E1;">
+                        <i class="fa-solid fa-gavel" style="margin-right: 0.35rem;"></i> IT Act 2000 & DPDP 2023
+                    </span>
                 </div>
 
-                <p class="hero-subtitle" style="font-size: 1.15rem; max-width: 800px; margin: 1.5rem auto 1.5rem;">
-                    A hands-on cybersecurity learning experience with the <strong>Amroha Police Cyber Crime Cell</strong>, focused on understanding real-world cybercrime investigation, digital evidence, and security practices.
+                <!-- Subtitle -->
+                <p class="hero-subtitle" style="font-size: 1.15rem; max-width: 820px; margin: 1.75rem auto 1.5rem; line-height: 1.75;">
+                    Official report on the intensive 15-day cybersecurity fellowship with the <strong>Amroha Police Cyber Crime Cell</strong>. Focused on real-world cybercrime investigation, digital evidence imaging, mobile forensics, CDR sorting, and Indian cyber jurisprudence under the mentorship of <strong>DSP Anjali Kataria</strong>.
                 </p>
 
-                <div class="hero-quote-box" style="margin-bottom: 2rem; padding: 1.25rem 2rem; background: rgba(15, 24, 44, 0.85); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: var(--radius-md); max-width: 800px; margin-left: auto; margin-right: auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
-                    <p style="font-style: italic; color: #ffffff; font-size: 1.05rem; margin: 0; line-height: 1.6;">
-                        <i class="fa-solid fa-quote-left" style="color: var(--primary); margin-right: 0.5rem;"></i>
-                        <strong>"Understanding cybersecurity beyond code — from digital evidence and investigation to law, privacy, and real-world threats."</strong>
-                        <i class="fa-solid fa-quote-right" style="color: var(--primary); margin-left: 0.5rem;"></i>
-                    </p>
-                </div>
-
-                <div class="hero-actions">
-                    <a href="#domains" class="btn btn-primary">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Key Investigation Areas</span>
-                    </a>
-                    <a href="#operations" class="btn btn-secondary">
+                <!-- Hero Action Buttons -->
+                <div class="hero-actions" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#operations" class="btn btn-primary">
                         <i class="fa-solid fa-list-check"></i>
                         <span>12-Day Operations Log</span>
                     </a>
+                    <a href="#gallery" class="btn btn-secondary">
+                        <i class="fa-solid fa-award"></i>
+                        <span>View Evidence Vault</span>
+                    </a>
+                    <a href="#simulator" class="btn btn-secondary" style="border-color: var(--border-dark);">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>Forensics Lab Simulator</span>
+                    </a>
                 </div>
 
+                <!-- Editorial Quote Card -->
+                <div class="police-quote-card">
+                    <p>
+                        <i class="fa-solid fa-quote-left" style="color: var(--yellow-primary); margin-right: 0.6rem;"></i>
+                        <strong>"Understanding cybersecurity beyond code — from digital evidence and investigation to statutory law, privacy, and real-world threats."</strong>
+                        <i class="fa-solid fa-quote-right" style="color: var(--yellow-primary); margin-left: 0.6rem;"></i>
+                    </p>
+                </div>
+
+                <!-- Live Status Bar -->
                 <div class="hero-live-status">
                     <span class="status-dot-live"></span>
-                    <span><strong>Live Status:</strong> APCSIP-2026 Fellow · Amroha Police Cyber Crime Cell · Mentored by DSP Anjali Kataria</span>
+                    <span><strong>Live Fellowship Record:</strong> APCSIP-2026 Fellow · Amroha Police Cyber Crime Cell · Mentored by DSP Anjali Kataria</span>
                 </div>
 
-                <!-- Hero Stats Bar -->
-                <div class="hero-stats-grid">
-                    <div class="stat-cyber-card glass-card">
-                        <div class="stat-num cyan">15</div>
-                        <div class="stat-label">Days Duration</div>
+                <!-- Hero Stats Bar (5 Points) -->
+                <div class="police-stats-grid">
+                    <div class="police-stat-card">
+                        <div class="police-stat-num">15</div>
+                        <div class="police-stat-lbl">Days Duration</div>
                     </div>
-                    <div class="stat-cyber-card glass-card">
-                        <div class="stat-num blue">45+</div>
-                        <div class="stat-label">Experts & Officers</div>
+                    <div class="police-stat-card">
+                        <div class="police-stat-num">45+</div>
+                        <div class="police-stat-lbl">Officers & Mentors</div>
                     </div>
-                    <div class="stat-cyber-card glass-card">
-                        <div class="stat-num gold">UP Police</div>
-                        <div class="stat-label">Cyber Crime Cell</div>
+                    <div class="police-stat-card">
+                        <div class="police-stat-num">UP Police</div>
+                        <div class="police-stat-lbl">Cyber Crime Cell</div>
                     </div>
-                    <div class="stat-cyber-card glass-card">
-                        <div class="stat-num cyan">08+</div>
-                        <div class="stat-label">Forensic Tools</div>
+                    <div class="police-stat-card">
+                        <div class="police-stat-num">08+</div>
+                        <div class="police-stat-lbl">Forensic Toolsuites</div>
                     </div>
-                    <div class="stat-cyber-card glass-card">
-                        <div class="stat-num blue">Govt</div>
-                        <div class="stat-label">Certified Fellow</div>
+                    <div class="police-stat-card">
+                        <div class="police-stat-num">Govt</div>
+                        <div class="police-stat-lbl">Certified Fellow</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 2. SELECTION & ONBOARDING PIPELINE -->
-        <section id="pipeline" class="section-padding bg-darker">
+        <section id="pipeline" class="section-wrap alt-bg">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Phase 01 · Vetting Pipeline</span>
-                    <h2 class="section-title text-gradient">Selection & Onboarding Journey</h2>
-                    <p class="section-desc">A rigorous multi-stage clearance process conducted by Amroha Police to select top engineering scholars across Uttar Pradesh.</p>
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="shield-check"></i> 01 // CLEARANCE & VETTING</span>
+                    <h2 class="section-headline">Selection & Onboarding Pipeline</h2>
+                    <p class="section-subtext">A multi-stage clearance process conducted by Uttar Pradesh Police to select engineering scholars across the state for active cyber defense exposure.</p>
                 </div>
 
-                <div class="pipeline-grid">
-                    <div class="pipeline-card glass-card">
-                        <span class="pipeline-step-badge">STAGE 01</span>
-                        <h3 class="pipeline-title">Application Submission</h3>
-                        <p class="pipeline-desc">Submitted formal application for APCSIP-2026 detailing academic rank, programming background, and interest in digital forensics.</p>
-                        <div class="pipeline-footer">
-                            <span class="pipeline-date">May 2026</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Submitted</span>
+                <div class="pipeline-timeline-grid">
+                    <!-- Stage 1 -->
+                    <div class="pipeline-stage-card">
+                        <span class="stage-badge-chip">STAGE 01</span>
+                        <h3 class="stage-title">Application Submission</h3>
+                        <p class="stage-desc">Submitted formal application for APCSIP-2026 detailing academic standing, programming background, and interest in digital forensics.</p>
+                        <div class="stage-footer-row">
+                            <span class="stage-date-text">May 2026</span>
+                            <span class="stage-status-tag"><i class="fa-solid fa-circle-check"></i> Submitted</span>
                         </div>
                     </div>
 
-                    <div class="pipeline-card glass-card">
-                        <span class="pipeline-step-badge">STAGE 02</span>
-                        <h3 class="pipeline-title">Eligibility Screening</h3>
-                        <p class="pipeline-desc">Profile shortlisted by UP Police Cyber Cell review committee. Received official screening test guidelines via registered portal.</p>
-                        <div class="pipeline-footer">
-                            <span class="pipeline-date">21-22 May 2026</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Shortlisted</span>
+                    <!-- Stage 2 -->
+                    <div class="pipeline-stage-card">
+                        <span class="stage-badge-chip">STAGE 02</span>
+                        <h3 class="stage-title">Eligibility Screening</h3>
+                        <p class="stage-desc">Profile shortlisted by UP Police Cyber Cell review board. Received official screening guidelines via registered candidate portal.</p>
+                        <div class="stage-footer-row">
+                            <span class="stage-date-text">21-22 May 2026</span>
+                            <span class="stage-status-tag"><i class="fa-solid fa-circle-check"></i> Shortlisted</span>
                         </div>
                     </div>
 
-                    <div class="pipeline-card glass-card">
-                        <span class="pipeline-step-badge">STAGE 03</span>
-                        <h3 class="pipeline-title">Online Competitive Exam</h3>
-                        <p class="pipeline-desc">Cleared competitive screening test (50 MCQs covering IT, networking, operating systems, and basic cyber security fundamentals).</p>
-                        <div class="pipeline-footer">
-                            <span class="pipeline-date">24 May 2026</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Cleared</span>
+                    <!-- Stage 3 -->
+                    <div class="pipeline-stage-card">
+                        <span class="stage-badge-chip">STAGE 03</span>
+                        <h3 class="stage-title">Competitive Exam</h3>
+                        <p class="stage-desc">Cleared competitive test (50 MCQs covering networking, operating systems, cryptographic principles, and cyber defense basics).</p>
+                        <div class="stage-footer-row">
+                            <span class="stage-date-text">24 May 2026</span>
+                            <span class="stage-status-tag"><i class="fa-solid fa-circle-check"></i> Cleared</span>
                         </div>
                     </div>
 
-                    <div class="pipeline-card glass-card">
-                        <span class="pipeline-step-badge">STAGE 04</span>
-                        <h3 class="pipeline-title">Official Offer Letter</h3>
-                        <p class="pipeline-desc">Received official selection offer letter, code of conduct undertakings, and reporting instructions from Amroha Police Directorate.</p>
-                        <div class="pipeline-footer">
-                            <span class="pipeline-date">Early June 2026</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Selected</span>
+                    <!-- Stage 4 -->
+                    <div class="pipeline-stage-card">
+                        <span class="stage-badge-chip">STAGE 04</span>
+                        <h3 class="stage-title">Selection Offer Letter</h3>
+                        <p class="stage-desc">Awarded selection offer letter (ID: APCSIP/2026/794) signed by Superintendent of Police, Amroha, with reporting directives.</p>
+                        <div class="stage-footer-row">
+                            <span class="stage-date-text">Early June 2026</span>
+                            <span class="stage-status-tag"><i class="fa-solid fa-circle-check"></i> Selected</span>
                         </div>
                     </div>
 
-                    <div class="pipeline-card glass-card">
-                        <span class="pipeline-step-badge">STAGE 05</span>
-                        <h3 class="pipeline-title">Document Verification</h3>
-                        <p class="pipeline-desc">Completed mandatory background checks, signed confidentiality undertakings, and verified student credentials.</p>
-                        <div class="pipeline-footer">
-                            <span class="pipeline-date">June 2026</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Vetted</span>
+                    <!-- Stage 5 -->
+                    <div class="pipeline-stage-card">
+                        <span class="stage-badge-chip">STAGE 05</span>
+                        <h3 class="stage-title">Document Verification</h3>
+                        <p class="stage-desc">Completed mandatory background vetting, identity verification, and signed statutory confidentiality & non-disclosure undertakings.</p>
+                        <div class="stage-footer-row">
+                            <span class="stage-date-text">June 2026</span>
+                            <span class="stage-status-tag"><i class="fa-solid fa-circle-check"></i> Vetted</span>
                         </div>
                     </div>
 
-                    <div class="pipeline-card glass-card">
-                        <span class="pipeline-step-badge">STAGE 06</span>
-                        <h3 class="pipeline-title">Arrival at Amroha</h3>
-                        <p class="pipeline-desc">Traveled to Amroha, checked into Shri Venkateshwara University campus quarters, and completed reporting protocols.</p>
-                        <div class="pipeline-footer">
-                            <span class="pipeline-date">10 June 2026</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Arrived</span>
+                    <!-- Stage 6 -->
+                    <div class="pipeline-stage-card">
+                        <span class="stage-badge-chip">STAGE 06</span>
+                        <h3 class="stage-title">Arrival at Amroha</h3>
+                        <p class="stage-desc">Traveled to Amroha, reported at Shri Venkateshwara University campus quarters, and checked in at the APCSIP registration cell.</p>
+                        <div class="stage-footer-row">
+                            <span class="stage-date-text">10 June 2026</span>
+                            <span class="stage-status-tag"><i class="fa-solid fa-circle-check"></i> Arrived</span>
                         </div>
                     </div>
 
-                    <div class="pipeline-card glass-card">
-                        <span class="pipeline-step-badge">STAGE 07</span>
-                        <h3 class="pipeline-title">12-Day Intensive Operations</h3>
-                        <p class="pipeline-desc">Engaged in daily cyber crime cell case simulations, OSINT recon, CDR sorting, malware reverse engineering, and SOC labs.</p>
-                        <div class="pipeline-footer">
-                            <span class="pipeline-date">11-22 June 2026</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Completed</span>
+                    <!-- Stage 7 -->
+                    <div class="pipeline-stage-card">
+                        <span class="stage-badge-chip">STAGE 07</span>
+                        <h3 class="stage-title">12-Day Operations</h3>
+                        <p class="stage-desc">Participated in daily morning briefings, case simulations, OSINT labs, CDR/IPDR sorting, and malware reverse engineering.</p>
+                        <div class="stage-footer-row">
+                            <span class="stage-date-text">11-22 June 2026</span>
+                            <span class="stage-status-tag"><i class="fa-solid fa-circle-check"></i> Completed</span>
                         </div>
                     </div>
 
-                    <div class="pipeline-card glass-card">
-                        <span class="pipeline-step-badge">STAGE 08</span>
-                        <h3 class="pipeline-title">Defense & Certification</h3>
-                        <p class="pipeline-desc">Presented technical case findings before valedictory review panel; awarded Official APCSIP-2026 Government Fellowship Certificate.</p>
-                        <div class="pipeline-footer">
-                            <span class="pipeline-date">22 June 2026</span>
-                            <span class="pipeline-status status-gold"><i class="fa-solid fa-trophy"></i> Certified</span>
+                    <!-- Stage 8 -->
+                    <div class="pipeline-stage-card">
+                        <span class="stage-badge-chip">STAGE 08</span>
+                        <h3 class="stage-title">Defense & Certification</h3>
+                        <p class="stage-desc">Defended technical findings before the valedictory review panel; officially awarded the UP Police APCSIP-2026 Certificate.</p>
+                        <div class="stage-footer-row">
+                            <span class="stage-date-text">22 June 2026</span>
+                            <span class="stage-status-tag" style="color: var(--yellow-dark);"><i class="fa-solid fa-trophy"></i> Certified</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. OFFICIAL MOMENTS & FELLOWSHIP GALLERY -->
-        <section id="gallery" class="section-padding">
+        <!-- 3. OFFICIAL EVIDENCE VAULT & CERTIFICATION GALLERY -->
+        <section id="gallery" class="section-wrap">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Official Fellowship Evidence</span>
-                    <h2 class="section-title text-gradient">Fellowship Moments & Certification</h2>
-                    <p class="section-desc">On-ground photographs from the APCSIP-2026 Cyber Security Fellowship with Amroha Police Cyber Crime Cell and DSP Anjali Kataria Ma'am.</p>
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="award"></i> 02 // EVIDENCE VAULT</span>
+                    <h2 class="section-headline">Fellowship Evidence & Certification Gallery</h2>
+                    <p class="section-subtext">Verified on-ground photographic evidence, official selection records, and graduation credentials from the APCSIP-2026 Fellowship.</p>
                 </div>
 
-                <div class="honors-banner glass-card">
+                <div class="honors-banner glass-card" style="margin-bottom: 2.5rem;">
                     <div class="honors-badge">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Official APCSIP-2026 Fellowship · Cyber Crime Cell, Amroha Police</span>
+                        <i class="fa-solid fa-shield-halved" style="color: var(--blue-primary);"></i>
+                        <span>Official APCSIP-2026 Fellowship Records · Cyber Crime Cell, Amroha Police</span>
                     </div>
                 </div>
 
-                <div class="honors-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-                    
-                    <!-- 1. Selection & Offer Letter -->
-                    <div class="honor-card glass-card">
-                        <div class="honor-photo-box" style="height: 260px; background: rgba(0, 0, 0, 0.4);">
-                            <img src="assets/images/up-police/moments/rohit_pal_offer_letter.jpg" alt="APCSIP-2026 Offer to Join Internship Letter" class="honor-photo" style="object-position: center top;">
+                <div class="evidence-grid">
+                    <!-- Item 1: Selection & Offer Letter -->
+                    <div class="evidence-card" onclick="openEvidenceModal(this)">
+                        <div class="evidence-img-container">
+                            <img src="assets/images/up-police/moments/rohit_pal_offer_letter.jpg" alt="APCSIP-2026 Offer to Join Internship Letter">
+                            <div class="evidence-zoom-overlay">
+                                <i data-lucide="eye"></i>
+                                <span>Click to Enlarge</span>
+                            </div>
                         </div>
-                        <div class="honor-info">
-                            <h3 class="honor-title">Selection & Offer Letter</h3>
-                            <p class="honor-desc">Official Government Selection Letter (Intern ID: APCSIP/2026/794) signed by Superintendent of Police, Amroha.</p>
-                        </div>
-                    </div>
-
-                    <!-- 2. Certificate Award with DSP Anjali Kataria Ma'am -->
-                    <div class="honor-card glass-card">
-                        <div class="honor-photo-box" style="height: 260px; background: rgba(0, 0, 0, 0.4);">
-                            <img src="assets/images/up-police/moments/rohit_pal_certificate_dsp.png" alt="Rohit Pal Receiving Certificate from DSP Anjali Kataria" class="honor-photo" style="object-position: center top;">
-                        </div>
-                        <div class="honor-info">
-                            <h3 class="honor-title">Certificate Award Ceremony</h3>
-                            <p class="honor-desc">Rohit Pal receiving the official APCSIP-2026 completion certificate directly from DSP Anjali Kataria Ma'am.</p>
+                        <div class="evidence-body">
+                            <h3 class="evidence-title">Selection Offer Letter</h3>
+                            <p class="evidence-caption">Official Government Selection Document (Intern ID: <strong>APCSIP/2026/794</strong>) authorized by Superintendent of Police, Amroha.</p>
                         </div>
                     </div>
 
-                    <!-- 3. Valedictory Ceremony with Cohort -->
-                    <div class="honor-card glass-card">
-                        <div class="honor-photo-box" style="height: 260px; background: rgba(0, 0, 0, 0.4);">
-                            <img src="assets/images/up-police/moments/rohit_pal_valedictory_cohort.jpg" alt="Valedictory Ceremony with DSP Anjali Kataria and Fellows" class="honor-photo" style="object-position: center top;">
+                    <!-- Item 2: Certificate Award with DSP Anjali Kataria -->
+                    <div class="evidence-card" onclick="openEvidenceModal(this)">
+                        <div class="evidence-img-container">
+                            <img src="assets/images/up-police/moments/rohit_pal_certificate_dsp.png" alt="Rohit Pal Receiving Certificate from DSP Anjali Kataria">
+                            <div class="evidence-zoom-overlay">
+                                <i data-lucide="eye"></i>
+                                <span>Click to Enlarge</span>
+                            </div>
                         </div>
-                        <div class="honor-info">
-                            <h3 class="honor-title">Valedictory Ceremony</h3>
-                            <p class="honor-desc">Commendation ceremony with DSP Anjali Kataria Ma'am, Jubilant Bhartia Foundation, and fellow APCSIP cyber fellows.</p>
-                        </div>
-                    </div>
-
-                    <!-- 4. Campus Delegation Cohort -->
-                    <div class="honor-card glass-card">
-                        <div class="honor-photo-box" style="height: 260px; background: rgba(0, 0, 0, 0.4);">
-                            <img src="assets/images/up-police/moments/rohit_pal_campus_entrance.jpg" alt="APCSIP Campus Cohort Delegation" class="honor-photo" style="object-position: center;">
-                        </div>
-                        <div class="honor-info">
-                            <h3 class="honor-title">Cohort Campus Delegation</h3>
-                            <p class="honor-desc">Rohit Pal and student cohort delegation during the 15-day UP Police Cyber Security Internship Program.</p>
+                        <div class="evidence-body">
+                            <h3 class="evidence-title">Award with DSP Kataria</h3>
+                            <p class="evidence-caption">Rohit Pal formally receiving the APCSIP-2026 Fellowship Certificate directly from <strong>DSP Anjali Kataria Ma’am</strong>.</p>
                         </div>
                     </div>
 
+                    <!-- Item 3: Valedictory Ceremony -->
+                    <div class="evidence-card" onclick="openEvidenceModal(this)">
+                        <div class="evidence-img-container">
+                            <img src="assets/images/up-police/moments/rohit_pal_valedictory_cohort.jpg" alt="Valedictory Ceremony with DSP Anjali Kataria and Fellows">
+                            <div class="evidence-zoom-overlay">
+                                <i data-lucide="eye"></i>
+                                <span>Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="evidence-body">
+                            <h3 class="evidence-title">Valedictory Ceremony</h3>
+                            <p class="evidence-caption">Graduation ceremony with DSP Anjali Kataria Ma'am, Jubilant Bhartia Foundation, and fellow cyber research cohorts.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Campus Delegation -->
+                    <div class="evidence-card" onclick="openEvidenceModal(this)">
+                        <div class="evidence-img-container">
+                            <img src="assets/images/up-police/moments/rohit_pal_campus_entrance.jpg" alt="APCSIP Campus Cohort Delegation">
+                            <div class="evidence-zoom-overlay">
+                                <i data-lucide="eye"></i>
+                                <span>Click to Enlarge</span>
+                            </div>
+                        </div>
+                        <div class="evidence-body">
+                            <h3 class="evidence-title">Cohort Delegation</h3>
+                            <p class="evidence-caption">Rohit Pal and selected engineering student delegates arriving on campus for the 15-day cyber crime investigation curriculum.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Evidence Lightbox Modal -->
+        <div id="evidenceLightboxModal" class="evidence-modal-overlay" onclick="closeEvidenceModal()">
+            <div class="evidence-modal-box" onclick="event.stopPropagation()">
+                <button class="evidence-modal-close" onclick="closeEvidenceModal()" aria-label="Close modal">&times;</button>
+                <div class="evidence-modal-img-wrap">
+                    <img id="evidenceModalImg" src="" alt="Enlarged Official Proof">
+                </div>
+                <div class="evidence-modal-desc">
+                    <span id="evidenceModalCaption">Official Fellowship Record</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">APCSIP-2026</span>
+                </div>
+            </div>
+        </div>
 
         <!-- 4. CORE CYBER SECURITY DOMAINS MATRIX -->
-        <section id="domains" class="section-padding bg-darker">
+        <section id="domains" class="section-wrap alt-bg">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Core Competencies</span>
-                    <h2 class="section-title text-gradient">Key Areas & Specializations</h2>
-                    <p class="section-desc">Key technical domains explored through practical sessions, case studies, and expert-led discussions.</p>
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="cpu"></i> 03 // CORE COMPETENCIES</span>
+                    <h2 class="section-headline">Key Cyber Investigation Domains</h2>
+                    <p class="section-subtext">Applied forensic methodologies, network log analysis, and statutory jurisprudence explored across real-world state cyber cell cases.</p>
                 </div>
 
-                <div class="domains-grid" style="grid-template-columns: repeat(3, 1fr);">
-                    
+                <div class="domains-six-grid">
                     <!-- 1. OSINT & SIGINT -->
-                    <div class="domain-cyber-card glass-card">
-                        <div class="domain-icon-box"><i class="fa-solid fa-magnifying-glass-location"></i></div>
-                        <h3 class="domain-title">OSINT & SIGINT</h3>
-                        <p class="domain-desc">Digital reconnaissance, information gathering, and threat intelligence fundamentals.</p>
+                    <div class="domain-feature-card">
+                        <div class="domain-icon-wrapper"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+                        <h3 class="domain-title">OSINT & SIGINT Recon</h3>
+                        <p class="domain-desc">Digital footprint analysis, passive intelligence gathering via Maltego, Shodan IoT queries, Google Dorking, and open source threat profiling.</p>
                     </div>
 
                     <!-- 2. Digital Forensics -->
-                    <div class="domain-cyber-card glass-card">
-                        <div class="domain-icon-box"><i class="fa-solid fa-microchip"></i></div>
-                        <h3 class="domain-title">Digital Forensics</h3>
-                        <p class="domain-desc">Evidence preservation, forensic methodology, Android analysis, and investigation workflows.</p>
+                    <div class="domain-feature-card">
+                        <div class="domain-icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
+                        <h3 class="domain-title">Digital Forensics & Imaging</h3>
+                        <p class="domain-desc">Hardware write-blockers, bit-stream image acquisitions, volatile RAM dumping, and preserving MD5/SHA-256 hash chains of custody.</p>
                     </div>
 
                     <!-- 3. Malware Analysis -->
-                    <div class="domain-cyber-card glass-card">
-                        <div class="domain-icon-box"><i class="fa-solid fa-bug"></i></div>
-                        <h3 class="domain-title">Malware Analysis</h3>
-                        <p class="domain-desc">APK analysis, sandboxing, static/dynamic analysis, and understanding malicious behavior.</p>
+                    <div class="domain-feature-card">
+                        <div class="domain-icon-wrapper"><i class="fa-solid fa-bug"></i></div>
+                        <h3 class="domain-title">Malware Reverse Engineering</h3>
+                        <p class="domain-desc">Android APK decompilation, Command & Control (C2) server extraction, sandboxing, and analyzing dynamic process trees in FlareVM/REMnux.</p>
                     </div>
 
                     <!-- 4. CDR & IPDR -->
-                    <div class="domain-cyber-card glass-card">
-                        <div class="domain-icon-box"><i class="fa-solid fa-tower-cell"></i></div>
-                        <h3 class="domain-title">CDR & IPDR</h3>
-                        <p class="domain-desc">Understanding call records, network logs, and their role in cybercrime investigations.</p>
+                    <div class="domain-feature-card">
+                        <div class="domain-icon-wrapper"><i class="fa-solid fa-tower-cell"></i></div>
+                        <h3 class="domain-title">CDR & IPDR Log Sorting</h3>
+                        <p class="domain-desc">Parsing cell tower dumps, correlating IMEI/IMSI identifiers, mapping antenna azimuths, and tracking IP session records during telecom fraud.</p>
                     </div>
 
                     <!-- 5. Cyber Laws & Privacy -->
-                    <div class="domain-cyber-card glass-card">
-                        <div class="domain-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
-                        <h3 class="domain-title">Cyber Laws & Privacy</h3>
-                        <p class="domain-desc">Indian cyber laws, digital evidence, data protection, cryptography, and compliance.</p>
+                    <div class="domain-feature-card">
+                        <div class="domain-icon-wrapper"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h3 class="domain-title">Cyber Laws & DPDP Act</h3>
+                        <p class="domain-desc">IT Act 2000 Section 66 violations, Section 91 CrPC notices, Section 65B electronic certificates, and DPDP Act 2023 compliance guidelines.</p>
                     </div>
 
                     <!-- 6. Mobile Security -->
-                    <div class="domain-cyber-card glass-card">
-                        <div class="domain-icon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                        <h3 class="domain-title">Mobile Security</h3>
-                        <p class="domain-desc">Android security, Genymotion-based analysis, APK investigation, and mobile threat analysis.</p>
+                    <div class="domain-feature-card">
+                        <div class="domain-icon-wrapper"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h3 class="domain-title">Mobile Security & Emulation</h3>
+                        <p class="domain-desc">Genymotion-based virtual Android sandboxing, permission boundary auditing, hardware chip extraction concepts, and physical device recovery.</p>
                     </div>
-
-                </div>
-
-                <!-- Experience Summary Card -->
-                <div class="glass-card" style="padding: 2.25rem; border: 1px solid rgba(16, 185, 129, 0.35); max-width: 950px; margin: 3rem auto 0 auto;">
-                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 1rem;">
-                        <h3 style="margin: 0; color: var(--text-primary); font-family: var(--font-heading); font-size: 1.35rem; display: flex; align-items: center; gap: 0.65rem;">
-                            <i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i>
-                            <span>Amroha Police · Cyber Crime Cell</span>
-                        </h3>
-                        <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: var(--primary); border-color: rgba(16, 185, 129, 0.35); font-weight: 700;">APCSIP-2026</span>
-                    </div>
-                    <p style="color: var(--text-secondary); line-height: 1.8; margin: 0; font-size: 1.05rem;">
-                        Worked through practical sessions, technical demonstrations, case studies, and expert-led discussions covering <strong>cyber investigation, forensics, OSINT, malware, mobile security, and cyber law</strong>.
-                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- 5. 12 DAILY OPERATIONS LOGS -->
-        <section id="operations" class="section-padding">
+        <!-- 5. 12-DAY DAILY OPERATIONS EXPLORER -->
+        <section id="operations" class="section-wrap">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Field Investigation Archive</span>
-                    <h2 class="section-title text-gradient">12 Daily Operations Logs</h2>
-                    <p class="section-desc">Comprehensive daily investigation reports detailing morning briefings, lab simulations, case studies, and evidence logs.</p>
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="clipboard-list"></i> 04 // FIELD LOGS</span>
+                    <h2 class="section-headline">12 Daily Operations Logs</h2>
+                    <p class="section-subtext">Exhaustive operational logbook detailing morning briefings, hands-on lab exercises, case findings, and verified LinkedIn publications.</p>
                 </div>
 
-                <div class="operations-layout">
-                    <!-- Sidebar Selector -->
-                    <aside class="ops-sidebar-nav glass-card">
-                        <span class="ops-sidebar-title">Log Selector</span>
-                        <ul class="ops-nav-list">
-                            <li class="ops-nav-item active"><a href="#op0"><span>Op 00 · Orientation</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op1"><span>Op 01 · Inauguration</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op2"><span>Op 02 · OSINT Recon</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op3"><span>Op 03 · Cyber Laws</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op4"><span>Op 04 · Malware Analysis</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op5"><span>Op 05 · SOC & Bug Bounty</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op6"><span>Op 06 · DPDP Act</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op7"><span>Op 07 · Crypto & Web3</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op8"><span>Op 08 · Privacy Laws</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op9"><span>Op 09 · Dark Web Recon</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op10"><span>Op 10 · Mobile Forensics</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op11"><span>Op 11 · Cyber Ethics</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="ops-nav-item"><a href="#op12"><span>Op 12 · Valedictory</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                        </ul>
-                    </aside>
+                <!-- Phase Filters -->
+                <div class="ops-explorer-filter-bar">
+                    <button class="ops-filter-pill-btn active" onclick="filterOps('all', this)">All Operations (12 Days)</button>
+                    <button class="ops-filter-pill-btn" onclick="filterOps('phase1', this)">Phase 1: Orientation & OSINT</button>
+                    <button class="ops-filter-pill-btn" onclick="filterOps('phase2', this)">Phase 2: Malware & Forensics</button>
+                    <button class="ops-filter-pill-btn" onclick="filterOps('phase3', this)">Phase 3: Deep Web & Defense</button>
+                </div>
 
-                    <!-- Operations Cards -->
-                    <div class="ops-cards-column">
-                        <!-- Op 00 -->
-                        <article class="ops-card glass-card" id="op0">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 00 · JUNE 10, 2026</span>
-                                <h3 class="ops-title">Registration, Welcome Kit & Program Orientation</h3>
-                            </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-id-card"></i> Morning Session · Onboarding</div>
-                                        <ul>
-                                            <li>Arrived at Shri Venkateshwara University (Amroha) and reported to the APCSIP registration desk.</li>
-                                            <li>Completed credential verification, collected official welcome kit, internship badge, and offer letter.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-clipboard-list"></i> Afternoon Session · Orientation</div>
-                                        <ul>
-                                            <li>Attended briefing on program expectations, discipline, attendance criteria, and assessment parameters.</li>
-                                            <li>Met student coordinators and reviewed the 15-day technical roadmap.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Established organizational baseline: state law enforcement collaborations start with strict operational discipline and clear accountability.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+                <!-- Quick Day Jump Navigator -->
+                <div class="ops-day-pills-row">
+                    <span style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; color: var(--text-muted); margin-right: 0.5rem;">Jump:</span>
+                    <a href="#op0" class="day-jump-btn">Op 00</a>
+                    <a href="#op1" class="day-jump-btn">Op 01</a>
+                    <a href="#op2" class="day-jump-btn">Op 02</a>
+                    <a href="#op3" class="day-jump-btn">Op 03</a>
+                    <a href="#op4" class="day-jump-btn">Op 04</a>
+                    <a href="#op5" class="day-jump-btn">Op 05</a>
+                    <a href="#op6" class="day-jump-btn">Op 06</a>
+                    <a href="#op7" class="day-jump-btn">Op 07</a>
+                    <a href="#op8" class="day-jump-btn">Op 08</a>
+                    <a href="#op9" class="day-jump-btn">Op 09</a>
+                    <a href="#op10" class="day-jump-btn">Op 10</a>
+                    <a href="#op11" class="day-jump-btn">Op 11</a>
+                    <a href="#op12" class="day-jump-btn">Op 12</a>
+                </div>
 
-                        <!-- Op 01 -->
-                        <article class="ops-card glass-card" id="op1">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 01 · JUNE 11, 2026</span>
-                                <h3 class="ops-title">Inauguration & Introduction to Cyber Security</h3>
+                <!-- Operations Cards Container -->
+                <div class="ops-cards-grid">
+                    <!-- Op 00 -->
+                    <article class="op-card-modern" id="op0" data-phase="phase1">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 00</span>
+                                <h3 class="op-main-title">Registration, Welcome Kit & Program Orientation</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-building-shield"></i> Morning Session · Inauguration</div>
-                                        <ul>
-                                            <li>Attended official inauguration ceremony with Amroha Police officials and cybersecurity experts.</li>
-                                            <li>Listened to keynote addresses by law enforcement leaders on emerging cyber threats in Uttar Pradesh.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-diagram-project"></i> Afternoon Session · Threat Ecosystem</div>
-                                        <ul>
-                                            <li>Analyzed modern cybercrime threat vectors, financial scam networks, and phishing ecosystems.</li>
-                                            <li>Studied workflow linkages between local cyber cells and National Cyber Crime Reporting Portal (NCCRP).</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 10, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-id-card"></i> Morning Session · Onboarding & Verification</div>
+                                    <ul>
+                                        <li>Arrived at Shri Venkateshwara University (Amroha) and reported to the APCSIP registration desk.</li>
+                                        <li>Completed credential verification, collected official welcome kit, internship badge, and offer letter.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Understood strategic role of cyber investigators: bridging human awareness, system hardening, and legal reporting loops.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7470898048672546816-iicy" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-clipboard-list"></i> Afternoon Session · Program Protocol Briefing</div>
+                                    <ul>
+                                        <li>Attended briefing on program expectations, discipline, attendance criteria, and assessment parameters.</li>
+                                        <li>Met student coordinators and reviewed the 15-day technical roadmap.</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>State law enforcement collaborations start with strict operational discipline, identity vetting, and clear accountability protocols.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 02 -->
-                        <article class="ops-card glass-card" id="op2">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 02 · JUNE 12, 2026</span>
-                                <h3 class="ops-title">OSINT Reconnaissance & Cyber Psychology</h3>
+                    <!-- Op 01 -->
+                    <article class="op-card-modern" id="op1" data-phase="phase1">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 01</span>
+                                <h3 class="op-main-title">Inauguration & Introduction to Cyber Security</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-brain"></i> Morning Session · Cyber Psychology</div>
-                                        <ul>
-                                            <li>Studied psychological manipulation tactics: urgency, fear, authority pretexts, and victim exploitation.</li>
-                                            <li>Analyzed criminal motivators: financial gain, hacktivism, extortion, and ideological agendas.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-magnifying-glass"></i> Afternoon Session · OSINT Lab</div>
-                                        <ul>
-                                            <li>Practiced passive data gathering using Maltego, Shodan IoT search, Google Dorks, DeHashed, and FotoForensics.</li>
-                                            <li>Performed self-audit on digital presence to identify past data breach exposures.</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 11, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-building-shield"></i> Morning Session · Inauguration</div>
+                                    <ul>
+                                        <li>Attended official inauguration ceremony with Amroha Police leadership and cybersecurity experts.</li>
+                                        <li>Listened to keynote addresses by law enforcement leaders on emerging cyber threats in Uttar Pradesh.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Vulnerabilities often lie in residual digital footprints. Mastered querying open registers without exposing investigation endpoints.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7471212272728596480-CLCt" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-diagram-project"></i> Afternoon Session · Threat Ecosystem</div>
+                                    <ul>
+                                        <li>Analyzed modern cybercrime threat vectors, financial scam networks, and phishing ecosystems.</li>
+                                        <li>Studied workflow linkages between local cyber cells and National Cyber Crime Reporting Portal (NCCRP).</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Understood strategic role of cyber investigators: bridging human awareness, system hardening, and statutory reporting loops.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7470898048672546816-iicy" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 03 -->
-                        <article class="ops-card glass-card" id="op3">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 03 · JUNE 13, 2026</span>
-                                <h3 class="ops-title">Cyber Laws, Research Methodology & AI</h3>
+                    <!-- Op 02 -->
+                    <article class="op-card-modern" id="op2" data-phase="phase1">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 02</span>
+                                <h3 class="op-main-title">OSINT Reconnaissance & Cyber Psychology</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-gavel"></i> Morning Session · IT Act Laws</div>
-                                        <ul>
-                                            <li>Studied legal frameworks under India's IT Act 2000, Section 66 offenses, and digital evidence rules.</li>
-                                            <li>Learned structured research steps: literature review, sampling design, and forensic case reporting.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-robot"></i> Afternoon Session · AI in Security</div>
-                                        <ul>
-                                            <li>Explored Machine Learning and Generative AI applications in threat pattern recognition and log anomaly detection.</li>
-                                            <li>Attended career advisory panel covering professional certifications (CEH, CISSP, DFIR).</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 12, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-brain"></i> Morning Session · Cyber Psychology</div>
+                                    <ul>
+                                        <li>Studied psychological manipulation tactics: urgency, fear, authority pretexts, and victim exploitation.</li>
+                                        <li>Analyzed criminal motivators: financial extortion, social engineering, and coordinated syndicates.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Developing admissible court case files requires combining statutory laws, scientific methodology, and AI-assisted data parsing.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7471581220217307137-Zheo" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-magnifying-glass"></i> Afternoon Session · OSINT Lab</div>
+                                    <ul>
+                                        <li>Practiced passive reconnaissance using Maltego, Shodan IoT search, Google Dorks, DeHashed, and FotoForensics.</li>
+                                        <li>Performed self-audit on digital footprints to uncover past credential breach exposures.</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Vulnerabilities often lie in residual public records. Mastered querying open registers without alerting adversary endpoints.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7471212272728596480-CLCt" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 04 -->
-                        <article class="ops-card glass-card" id="op4">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 04 · JUNE 14, 2026</span>
-                                <h3 class="ops-title">Malware Analysis & Digital Evidence Imaging</h3>
+                    <!-- Op 03 -->
+                    <article class="op-card-modern" id="op3" data-phase="phase1">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 03</span>
+                                <h3 class="op-main-title">Cyber Laws, Research Methodology & AI</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-bug"></i> Morning Session · Android Malware</div>
-                                        <ul>
-                                            <li>Studied Android malware packaging, dynamic Command & Control (C2) server mapping, and APK decompilation.</li>
-                                            <li>Explored static and dynamic binary auditing concepts within safe sandboxed testing environments.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-hard-drive"></i> Afternoon Session · Digital Forensics</div>
-                                        <ul>
-                                            <li>Analyzed digital evidence imaging pipelines: bit-stream dumps, write-blockers, and chain of custody rules.</li>
-                                            <li>Examined hash verification standards (MD5/SHA-256) used to ensure proof integrity during court submission.</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 13, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-gavel"></i> Morning Session · IT Act Legal Provisions</div>
+                                    <ul>
+                                        <li>Studied statutory frameworks under India's IT Act 2000, Section 66 computer violations, and admissibility mandates.</li>
+                                        <li>Learned structured investigation steps: evidence sampling, chain of custody logs, and court documentation.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Evidence integrity must be protected at every step. Hash signatures trace threat agents and maintain court admissibility.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7471934167786860544-eU9j" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-robot"></i> Afternoon Session · AI in Cyber Defense</div>
+                                    <ul>
+                                        <li>Explored Machine Learning and Generative AI applications in log parsing and automated anomaly detection.</li>
+                                        <li>Attended career advisory panel covering industry certifications (CEH, CISSP, DFIR).</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Admissible court briefs require strict adherence to statutory law, scientific evidence preservation, and verified hash chains.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7471581220217307137-Zheo" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 05 -->
-                        <article class="ops-card glass-card" id="op5">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 05 · JUNE 15, 2026</span>
-                                <h3 class="ops-title">SOC Operations & Bug Bounty Hunting</h3>
+                    <!-- Op 04 -->
+                    <article class="op-card-modern" id="op4" data-phase="phase2">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 04</span>
+                                <h3 class="op-main-title">Malware Analysis & Digital Evidence Imaging</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-desktop"></i> Morning Session · SOC & SIEM</div>
-                                        <ul>
-                                            <li>Studied Security Operations Center architecture, event correlation, SIEM, and EDR platforms.</li>
-                                            <li>Analyzed system alert logs using Wazuh, Elastic, Wireshark, and VirusTotal threat intelligence feeds.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-shield-virus"></i> Afternoon Session · Bug Bounty</div>
-                                        <ul>
-                                            <li>Learned bug bounty techniques: subdomain enumeration, API endpoint auditing, and business logic flaws.</li>
-                                            <li>Discussed responsible disclosure policies and platforms (HackerOne, Bugcrowd, Intigriti).</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 14, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-bug"></i> Morning Session · Android Malware</div>
+                                    <ul>
+                                        <li>Studied Android malware packaging, dynamic C2 server mapping, and APK decompilation workflows.</li>
+                                        <li>Explored static and dynamic binary auditing concepts within isolated, sandboxed environments.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Continuous monitoring is essential. SOC dashboards and bug bounty disclosures harden endpoints against real-world exploits.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7472285418227511296-1b2c" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-hard-drive"></i> Afternoon Session · Digital Forensics</div>
+                                    <ul>
+                                        <li>Analyzed evidence imaging pipelines: hardware write-blockers, bit-stream disk clones, and chain of custody rules.</li>
+                                        <li>Examined cryptographic hash verification standards (MD5/SHA-256) ensuring evidence integrity in legal proceedings.</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Evidence integrity must be strictly guarded. Write-blockers and matching SHA-256 signatures prove zero evidence tampering in court.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7471934167786860544-eU9j" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 06 -->
-                        <article class="ops-card glass-card" id="op6">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 06 · JUNE 16, 2026</span>
-                                <h3 class="ops-title">DPDP Act Compliance & Financial Mule Tracking</h3>
+                    <!-- Op 05 -->
+                    <article class="op-card-modern" id="op5" data-phase="phase2">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 05</span>
+                                <h3 class="op-main-title">SOC Operations & Bug Bounty Hunting</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-file-contract"></i> Morning Session · DPDP Act</div>
-                                        <ul>
-                                            <li>Studied Digital Personal Data Protection (DPDP) Act legal requirements and compliance boundaries.</li>
-                                            <li>Analyzed RBI/SEBI security guidelines, SWIFT Customer Security Program details, and mule account detection indicators.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-user-gear"></i> Afternoon Session · Executive Mentorship</div>
-                                        <ul>
-                                            <li>Industry speakers shared insights on corporate security roadmaps, SBOM software supply chain risks, and career development.</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 15, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-desktop"></i> Morning Session · SOC & SIEM</div>
+                                    <ul>
+                                        <li>Studied Security Operations Center architecture, event correlation, and SIEM monitoring pipelines.</li>
+                                        <li>Analyzed system alert logs using Wazuh, Elastic, Wireshark, and VirusTotal threat intelligence feeds.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Compliance standards and early cyber resilience planning protect critical infrastructure from supply chain compromise.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7472651901113745409-qpZa" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-shield-virus"></i> Afternoon Session · Bug Bounty</div>
+                                    <ul>
+                                        <li>Learned bug hunting methodologies: subdomain enumeration, API endpoint auditing, and business logic flaws.</li>
+                                        <li>Discussed responsible disclosure policies and platforms (HackerOne, Bugcrowd, Intigriti).</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Continuous monitoring is vital. Correlating SIEM alerts and bug bounty audits hardens endpoints against real-world zero-day exploits.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7472285418227511296-1b2c" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 07 -->
-                        <article class="ops-card glass-card" id="op7">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 07 · JUNE 17, 2026</span>
-                                <h3 class="ops-title">Blockchain, Crypto & Real Case Investigations</h3>
+                    <!-- Op 06 -->
+                    <article class="op-card-modern" id="op6" data-phase="phase2">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 06</span>
+                                <h3 class="op-main-title">DPDP Act Compliance & Financial Mule Tracking</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-link"></i> Morning Session · Web3 & Crypto</div>
-                                        <ul>
-                                            <li>Studied blockchain structure, public/private key cryptography, smart contract vulnerabilities, and 51% hash attacks.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-scale-unbalanced-flip"></i> Afternoon Session · Police Case Studies</div>
-                                        <ul>
-                                            <li>UP Police officers shared real case experiences on Section 91 CrPC notices, digital evidence collection, and crypto wallet tracking.</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 16, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-file-contract"></i> Morning Session · DPDP Act</div>
+                                    <ul>
+                                        <li>Studied Digital Personal Data Protection (DPDP) Act legal requirements and compliance boundaries.</li>
+                                        <li>Analyzed RBI/SEBI security guidelines, SWIFT Customer Security details, and mule account detection indicators.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Blockchain transparency enables investigators to trace suspect transaction nodes across public ledgers during crypto fraud tracking.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7473031309607632896-VK_k" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-user-gear"></i> Afternoon Session · Executive Mentorship</div>
+                                    <ul>
+                                        <li>Industry leaders shared insights on corporate cyber roadmaps, Software Bill of Materials (SBOM) risks, and career development.</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Statutory compliance standards and early cyber resilience frameworks protect critical national infrastructure from supply chain compromise.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7472651901113745409-qpZa" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 08 -->
-                        <article class="ops-card glass-card" id="op8">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 08 · JUNE 18, 2026</span>
-                                <h3 class="ops-title">Data Privacy Rulings & Confidential Briefing</h3>
+                    <!-- Op 07 -->
+                    <article class="op-card-modern" id="op7" data-phase="phase2">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 07</span>
+                                <h3 class="op-main-title">Blockchain, Crypto & Real Police Case Studies</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-lock"></i> Morning Session · Privacy Landmark</div>
-                                        <ul>
-                                            <li>Studied Supreme Court Privacy Ruling (K.S. Puttaswamy v. Union of India) establishing privacy as a fundamental right.</li>
-                                            <li>Explored ethics in emerging tech and responsible AI deployment protocols.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-user-secret"></i> Afternoon Session · Confidential Briefing</div>
-                                        <ul>
-                                            <li>Attended closed briefing on handling classified threat intelligence, officer discretion, and professional ethics.</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 17, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-link"></i> Morning Session · Web3 & Crypto Forensics</div>
+                                    <ul>
+                                        <li>Studied blockchain structure, public/private key cryptography, smart contract exploits, and 51% hash attacks.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Cyber security operates under strict ethical guidelines. Integrity, confidentiality, and data safety form the basis of law enforcement.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7473377737886412802-0n2x" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-scale-unbalanced-flip"></i> Afternoon Session · Real Case Studies</div>
+                                    <ul>
+                                        <li>UP Police officers shared real case experiences on Section 91 CrPC notices, digital evidence collection, and crypto wallet tracking.</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Public ledger transparency enables investigators to track crypto mixer funds and correlate suspect wallet clusters across decentralized nodes.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7473031309607632896-VK_k" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 09 -->
-                        <article class="ops-card glass-card" id="op9">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 09 · JUNE 19, 2026</span>
-                                <h3 class="ops-title">Offensive Security & Dark Web Investigation</h3>
+                    <!-- Op 08 -->
+                    <article class="op-card-modern" id="op8" data-phase="phase3">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 08</span>
+                                <h3 class="op-main-title">Data Privacy Rulings & Confidential Briefing</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-terminal"></i> Morning Session · Red Teaming</div>
-                                        <ul>
-                                            <li>Explored offensive security workflows: system enumeration, directory brute-forcing, and network port scanning.</li>
-                                            <li>Audited web security headers, cross-origin resource configurations, and subdomain exposure paths.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-mask"></i> Afternoon Session · Dark Web Recon</div>
-                                        <ul>
-                                            <li>Studied Tor onion routing mechanisms: entry/middle/exit nodes, hidden service directories, and cyber kill chain mapping.</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 18, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-lock"></i> Morning Session · Privacy Landmark Rulings</div>
+                                    <ul>
+                                        <li>Studied Supreme Court Privacy Ruling (K.S. Puttaswamy v. Union of India) establishing privacy as a fundamental right.</li>
+                                        <li>Explored ethics in emerging tech and responsible AI deployment protocols in law enforcement.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>To defend systems, security analysts must think like attackers. Mapping subdomains and open ports mitigates exposure risks.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7473737755009708032-xKky" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-user-secret"></i> Afternoon Session · Confidential Briefing</div>
+                                    <ul>
+                                        <li>Attended closed briefing on handling classified threat intelligence, officer discretion, and investigative ethics.</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Cyber operations function under strict constitutional boundaries. Integrity, confidentiality, and citizen data rights form the core of police ethics.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7473377737886412802-0n2x" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 10 -->
-                        <article class="ops-card glass-card" id="op10">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 10 · JUNE 20, 2026</span>
-                                <h3 class="ops-title">Malware Reverse Engineering & Chip-Off Forensics</h3>
+                    <!-- Op 09 -->
+                    <article class="op-card-modern" id="op9" data-phase="phase3">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 09</span>
+                                <h3 class="op-main-title">Offensive Security & Dark Web Investigation</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-vial"></i> Morning Session · VM Reverse Engineering</div>
-                                        <ul>
-                                            <li>Performed malware analysis inside isolated VMs (FlareVM/REMnux), monitoring process trees with Process Hacker & Wireshark.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-microchip"></i> Afternoon Session · Hardware Forensics</div>
-                                        <ul>
-                                            <li>Studied mobile physical chip extraction and hardware level forensic procedures for evidence recovery.</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 19, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-terminal"></i> Morning Session · Red Teaming Workflows</div>
+                                    <ul>
+                                        <li>Explored offensive security workflows: target enumeration, directory brute-forcing, and network port scanning.</li>
+                                        <li>Audited web security headers, cross-origin resource configurations, and subdomain exposure paths.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Forensic processes require strict evidence isolation. Advanced hardware chip-off recovers critical data from damaged devices.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7474098714874118144-IoRp" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-mask"></i> Afternoon Session · Dark Web Recon</div>
+                                    <ul>
+                                        <li>Studied Tor onion routing mechanisms: entry/middle/exit nodes, hidden service directories, and cyber kill chain mapping.</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>To defend critical networks, security analysts must understand attacker methodologies. Mapping subdomains and open ports mitigates exposure risks.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7473737755009708032-xKky" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 11 -->
-                        <article class="ops-card glass-card" id="op11">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 11 · JUNE 21, 2026</span>
-                                <h3 class="ops-title">Mobile Acquisition, Cyber Hygiene & Ethics</h3>
+                    <!-- Op 10 -->
+                    <article class="op-card-modern" id="op10" data-phase="phase3">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 10</span>
+                                <h3 class="op-main-title">Malware Reverse Engineering & Chip-Off Forensics</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-mobile-screen"></i> Morning Session · Mobile Acquisition</div>
-                                        <ul>
-                                            <li>Studied mobile device acquisition standards, preserving digital proof integrity and chain of custody documentation.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-spa"></i> Afternoon Session · Cyber Hygiene & Yoga</div>
-                                        <ul>
-                                            <li>Reviewed cyber hygiene best practices: MFA setups, strong password vaults, and mental focus discipline on International Yoga Day.</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 20, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-vial"></i> Morning Session · Isolated VM Reverse Engineering</div>
+                                    <ul>
+                                        <li>Performed malware dynamic audits inside isolated VMs (FlareVM/REMnux), monitoring process trees with Process Hacker & Wireshark.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Technical execution requires ethical responsibility. Physical and mental discipline improves decision-making in high-pressure SOC environments.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7474510708123140097-ECFF" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-microchip"></i> Afternoon Session · Hardware & Chip-Off Forensics</div>
+                                    <ul>
+                                        <li>Studied mobile physical chip extraction and hardware level forensic procedures for destroyed device evidence recovery.</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Forensic processes require strict evidence isolation. Advanced hardware chip-off recovers critical flash data from physically compromised phones.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7474098714874118144-IoRp" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                        <!-- Op 12 -->
-                        <article class="ops-card glass-card" id="op12">
-                            <div class="ops-header">
-                                <span class="ops-code">OPERATION 12 · JUNE 22, 2026</span>
-                                <h3 class="ops-title">Valedictory Defense & Certificate Reception</h3>
+                    <!-- Op 11 -->
+                    <article class="op-card-modern" id="op11" data-phase="phase3">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 11</span>
+                                <h3 class="op-main-title">Mobile Acquisition, Cyber Hygiene & Ethics</h3>
                             </div>
-                            <div class="ops-grid">
-                                <div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-file-powerpoint"></i> Morning Session · Defense Presentation</div>
-                                        <ul>
-                                            <li>Presented technical findings, OSINT case files, and CDR analysis reports before the UP Police valedictory review panel.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ops-session-box">
-                                        <div class="ops-session-label"><i class="fa-solid fa-graduation-cap"></i> Afternoon Session · Graduation</div>
-                                        <ul>
-                                            <li>Received official APCSIP-2026 completion certificate and fellowship commendation; captured group photos with officers.</li>
-                                        </ul>
-                                    </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 21, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-mobile-screen"></i> Morning Session · Mobile Evidence Acquisition</div>
+                                    <ul>
+                                        <li>Studied mobile device acquisition standards, preserving digital proof integrity and chain of custody documentation.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <div class="ops-takeaways-box">
-                                        <div class="ops-takeaway-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
-                                        <p>Concluded 15-day fellowship with distinction. Gained strong capabilities in digital forensics, OSINT recon, and law enforcement workflows.</p>
-                                    </div>
-                                    <div class="ops-actions">
-                                        <a href="https://www.linkedin.com/posts/activity-7468310729755045888-mNhc" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <span>Read Log on LinkedIn</span>
-                                        </a>
-                                    </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-spa"></i> Afternoon Session · Cyber Hygiene & Resilience</div>
+                                    <ul>
+                                        <li>Reviewed cyber hygiene best practices: MFA setups, strong password vaults, and mental focus discipline on International Yoga Day.</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
-                    </div>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Technical execution requires ethical responsibility. Physical and mental discipline improves decision-making in high-pressure SOC environments.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7474510708123140097-ECFF" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Op 12 -->
+                    <article class="op-card-modern" id="op12" data-phase="phase3">
+                        <div class="op-card-header">
+                            <div>
+                                <span class="op-code-badge">OPERATION 12</span>
+                                <h3 class="op-main-title">Valedictory Defense & Certificate Reception</h3>
+                            </div>
+                            <span class="op-date-text"><i class="fa-regular fa-calendar" style="margin-right: 0.35rem;"></i> June 22, 2026</span>
+                        </div>
+                        <div class="op-sessions-grid">
+                            <div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-file-powerpoint"></i> Morning Session · Defense Presentation</div>
+                                    <ul>
+                                        <li>Presented technical findings, OSINT case files, and CDR analysis reports before the UP Police valedictory review panel.</li>
+                                    </ul>
+                                </div>
+                                <div class="op-session-box">
+                                    <div class="op-session-heading"><i class="fa-solid fa-graduation-cap"></i> Afternoon Session · Graduation & Commendation</div>
+                                    <ul>
+                                        <li>Received official APCSIP-2026 completion certificate and fellowship commendation; captured group photos with officers.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="op-findings-box">
+                                    <div class="op-findings-title"><i class="fa-solid fa-shield-cat"></i> Mission Key Findings</div>
+                                    <p>Concluded 15-day fellowship with distinction. Gained strong capabilities in digital forensics, OSINT recon, and law enforcement workflows.</p>
+                                </div>
+                                <a href="https://www.linkedin.com/posts/activity-7468310729755045888-mNhc" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span>Read Verified Log on LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- 6. PROGRAM LEADERSHIP & OFFICERS -->
-        <section id="officers" class="section-padding bg-darker">
+        <!-- 6. FORENSICS LAB & CDR SIMULATOR -->
+        <section id="simulator" class="section-wrap alt-bg">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Directorate & Faculty</span>
-                    <h2 class="section-title text-gradient">Program Leadership & Officer Roster</h2>
-                    <p class="section-desc">Eminent law enforcement leaders, senior cyber cell officers, and national security experts who guided the APCSIP-2026 fellowship.</p>
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="terminal"></i> 05 // INVESTIGATIVE LAB</span>
+                    <h2 class="section-headline">Forensics Lab & CDR/IPDR Simulator</h2>
+                    <p class="section-subtext">Interactive simulation demonstrating applied telecom log parsing, Cell Tower Azimuth triangulation, and cryptographic hash verification.</p>
                 </div>
 
-                <div class="officers-grid">
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/Anjali Kataria, DSP.jpg" alt="Anjali Kataria" class="officer-photo">
-                        <h3 class="officer-name">Anjali Kataria</h3>
-                        <div class="officer-rank">Deputy Superintendent of Police (DSP)</div>
-                        <div class="officer-dept">Cyber Crime Cell, UP Police</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Law Enforcement</span>
-                            <span class="officer-tag-pill">Cyber Cell Head</span>
+                <div class="simulator-layout">
+                    <div class="sim-terminal-box">
+                        <div class="sim-terminal-header">
+                            <div class="sim-tabs-row">
+                                <button class="sim-tab-btn active" id="btn-mode-cdr" onclick="switchSimMode('cdr')">
+                                    <i class="fa-solid fa-tower-cell"></i> CDR & Tower Triangulation
+                                </button>
+                                <button class="sim-tab-btn" id="btn-mode-hash" onclick="switchSimMode('hash')">
+                                    <i class="fa-solid fa-fingerprint"></i> SHA-256 Hash Verification
+                                </button>
+                            </div>
+                            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #38BDF8;">
+                                <i class="fa-solid fa-circle-dot"></i> Cyber Crime Unit Terminal
+                            </span>
                         </div>
-                    </div>
 
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/Bhanu Sharma - Co-ordinator APSCSIP.jpg" alt="Bhanu Sharma" class="officer-photo">
-                        <h3 class="officer-name">Bhanu Sharma</h3>
-                        <div class="officer-rank">Program Coordinator</div>
-                        <div class="officer-dept">APCSIP Operations Directorate</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Operations Lead</span>
-                            <span class="officer-tag-pill">Coordination</span>
-                        </div>
-                    </div>
+                        <!-- Terminal Body -->
+                        <div class="sim-terminal-body" id="sim-terminal-output">
+<span class="term-comment"># APCSIP-2026 Telecommunication Forensics Engine Initialized.</span>
+<span class="term-comment"># Loaded Case File: CR-2026-AMR-409 (Financial SIM-Swap Extortion)</span>
+<span class="term-prompt">investigator@cybercell:~$</span> <span class="term-cmd">cat case_metadata.json</span>
+{
+  "jurisdiction": "Amroha Cyber Crime Cell",
+  "supervising_officer": "DSP Anjali Kataria",
+  "suspect_phone": "+91 98765-XXXXX",
+  "tower_logs_analyzed": 14205,
+  "status": "Ready for automated tower dump correlation"
+}
+<span class="term-prompt">investigator@cybercell:~$</span> Click [Run Triangulation] below to execute suspect tower sector localization...</div>
 
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/Vikash Kumar.jpg" alt="Vikash Kumar" class="officer-photo">
-                        <h3 class="officer-name">Vikash Kumar</h3>
-                        <div class="officer-rank">Student Coordinator</div>
-                        <div class="officer-dept">APCSIP Logistical Operations</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Logistics Lead</span>
-                            <span class="officer-tag-pill">Student Coordinator</span>
-                        </div>
-                    </div>
-
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/Rakshit Tandon - cyber security expert india, cyber security consultant.jpg" alt="Rakshit Tandon" class="officer-photo">
-                        <h3 class="officer-name">Rakshit Tandon</h3>
-                        <div class="officer-rank">Senior Cyber Security Consultant</div>
-                        <div class="officer-dept">Advisor to Law Enforcement Agencies</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Cyber Forensics</span>
-                            <span class="officer-tag-pill">National Advisor</span>
-                        </div>
-                    </div>
-
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/amit dubey cyber expert.webp" alt="Amit Dubey" class="officer-photo">
-                        <h3 class="officer-name">Amit Dubey</h3>
-                        <div class="officer-rank">Cyber Crime Investigator</div>
-                        <div class="officer-dept">National Security Author & Expert</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Threat Intelligence</span>
-                            <span class="officer-tag-pill">Investigator</span>
-                        </div>
-                    </div>
-
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/Saumay Srivastava Cybersecurity  Threat Intelligence Researcher  Darkweb.jpg" alt="Saumay Srivastava" class="officer-photo">
-                        <h3 class="officer-name">Saumay Srivastava</h3>
-                        <div class="officer-rank">Threat Intelligence Researcher</div>
-                        <div class="officer-dept">OSINT & Dark Web Profiling</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Dark Web Recon</span>
-                            <span class="officer-tag-pill">OSINT Lead</span>
-                        </div>
-                    </div>
-
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/Yugal Pathal Digital Forensics & Incident Response (DFIR) specialist.jpg" alt="Yugal Pathal" class="officer-photo">
-                        <h3 class="officer-name">Yugal Pathal</h3>
-                        <div class="officer-rank">DFIR Specialist</div>
-                        <div class="officer-dept">Digital Forensics & Incident Response</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Digital Forensics</span>
-                            <span class="officer-tag-pill">DFIR Lead</span>
-                        </div>
-                    </div>
-
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/nitinpandey.jpg" alt="Nitin Pandey" class="officer-photo">
-                        <h3 class="officer-name">Nitin Pandey</h3>
-                        <div class="officer-rank">Cyber Security Trainer</div>
-                        <div class="officer-dept">National Security Auditor</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Network Audits</span>
-                            <span class="officer-tag-pill">Penetration Testing</span>
-                        </div>
-                    </div>
-
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/Kailash D Agrawal Payment Security Consultant.jpg" alt="Kailash D Agrawal" class="officer-photo">
-                        <h3 class="officer-name">Kailash D Agrawal</h3>
-                        <div class="officer-rank">Payment Security Consultant</div>
-                        <div class="officer-dept">Financial Cyber Fraud Analyst</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">UPI Frauds</span>
-                            <span class="officer-tag-pill">Bank Nodal</span>
-                        </div>
-                    </div>
-
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/pakhi garg lawyer.webp" alt="Pakhi Garg" class="officer-photo">
-                        <h3 class="officer-name">Pakhi Garg</h3>
-                        <div class="officer-rank">Cyber Law Advisor</div>
-                        <div class="officer-dept">Legal Consultant, DPDP Act</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">IT Act Law</span>
-                            <span class="officer-tag-pill">Data Privacy</span>
-                        </div>
-                    </div>
-
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/yash chavhan - web3.jpg" alt="Yash Chavhan" class="officer-photo">
-                        <h3 class="officer-name">Yash Chavhan</h3>
-                        <div class="officer-rank">Web3 & Crypto Lead</div>
-                        <div class="officer-dept">Blockchain Security Audit</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Web3 Security</span>
-                            <span class="officer-tag-pill">Crypto Forensics</span>
-                        </div>
-                    </div>
-
-                    <div class="officer-card glass-card">
-                        <img src="assets/images/up-police/mentors/Manoj Kushwaha.jpg" alt="Manoj Kushwaha" class="officer-photo">
-                        <h3 class="officer-name">Manoj Kushwaha</h3>
-                        <div class="officer-rank">Technical Coordinator</div>
-                        <div class="officer-dept">APCSIP Organizing Directorate</div>
-                        <div class="officer-tags">
-                            <span class="officer-tag-pill">Technical Support</span>
-                            <span class="officer-tag-pill">Organizing Team</span>
+                        <!-- Controls Bar -->
+                        <div class="sim-controls-bar">
+                            <div style="display: flex; gap: 0.65rem; align-items: center;">
+                                <button class="btn-sim-action" id="btn-run-sim" onclick="executeCurrentSim()">
+                                    <i class="fa-solid fa-play"></i>
+                                    <span id="sim-btn-text">Run Triangulation</span>
+                                </button>
+                                <button class="btn-sim-reset" onclick="resetSimTerminal()">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                    <span>Reset Terminal</span>
+                                </button>
+                            </div>
+                            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">
+                                Standard: Section 65B Indian Evidence Act compliant
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 7. PERSONAL REFLECTION -->
-        <section id="reflection" class="section-padding">
+        <!-- 7. PROGRAM LEADERSHIP & OFFICERS DIRECTORY -->
+        <section id="officers" class="section-wrap">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="users"></i> 06 // LEADERSHIP ROSTER</span>
+                    <h2 class="section-headline">Program Leadership & Distinguished Faculty</h2>
+                    <p class="section-subtext">Senior law enforcement officers, national security consultants, and digital forensic specialists who mentored the APCSIP-2026 cohort.</p>
+                </div>
+
+                <!-- Category 1: Command & Law Enforcement -->
+                <h3 class="officers-tier-title"><i class="fa-solid fa-shield-halved" style="color: var(--blue-primary);"></i> Command & Directorate</h3>
+                <div class="officers-grid-categorized">
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/Anjali Kataria, DSP.jpg" alt="Anjali Kataria" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Anjali Kataria</h4>
+                        <div class="officer-designation">Deputy Superintendent of Police (DSP)</div>
+                        <div class="officer-org-dept">Cyber Crime Cell, UP Police</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Law Enforcement</span>
+                            <span class="officer-pill">Cyber Cell Head</span>
+                        </div>
+                    </div>
+
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/Bhanu Sharma - Co-ordinator APSCSIP.jpg" alt="Bhanu Sharma" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Bhanu Sharma</h4>
+                        <div class="officer-designation">Program Coordinator</div>
+                        <div class="officer-org-dept">APCSIP Operations Directorate</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Operations Lead</span>
+                            <span class="officer-pill">Coordination</span>
+                        </div>
+                    </div>
+
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/Vikash Kumar.jpg" alt="Vikash Kumar" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Vikash Kumar</h4>
+                        <div class="officer-designation">Student Coordinator</div>
+                        <div class="officer-org-dept">APCSIP Logistical Operations</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Logistics Lead</span>
+                            <span class="officer-pill">Student Support</span>
+                        </div>
+                    </div>
+
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/Manoj Kushwaha.jpg" alt="Manoj Kushwaha" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Manoj Kushwaha</h4>
+                        <div class="officer-designation">Technical Coordinator</div>
+                        <div class="officer-org-dept">APCSIP Organizing Directorate</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Technical Support</span>
+                            <span class="officer-pill">Organizing Team</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: National Security Advisors -->
+                <h3 class="officers-tier-title"><i class="fa-solid fa-award" style="color: var(--yellow-dark);"></i> National Security Advisors & Experts</h3>
+                <div class="officers-grid-categorized">
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/Rakshit Tandon - cyber security expert india, cyber security consultant.jpg" alt="Rakshit Tandon" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Rakshit Tandon</h4>
+                        <div class="officer-designation">Senior Cyber Security Consultant</div>
+                        <div class="officer-org-dept">Advisor to Law Enforcement Agencies</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Cyber Forensics</span>
+                            <span class="officer-pill">National Advisor</span>
+                        </div>
+                    </div>
+
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/amit dubey cyber expert.webp" alt="Amit Dubey" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Amit Dubey</h4>
+                        <div class="officer-designation">Cyber Crime Investigator</div>
+                        <div class="officer-org-dept">National Security Author & Expert</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Threat Intel</span>
+                            <span class="officer-pill">Investigator</span>
+                        </div>
+                    </div>
+
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/Saumay Srivastava Cybersecurity  Threat Intelligence Researcher  Darkweb.jpg" alt="Saumay Srivastava" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Saumay Srivastava</h4>
+                        <div class="officer-designation">Threat Intelligence Researcher</div>
+                        <div class="officer-org-dept">OSINT & Dark Web Profiling</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Dark Web Recon</span>
+                            <span class="officer-pill">OSINT Lead</span>
+                        </div>
+                    </div>
+
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/nitinpandey.jpg" alt="Nitin Pandey" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Nitin Pandey</h4>
+                        <div class="officer-designation">Cyber Security Trainer</div>
+                        <div class="officer-org-dept">National Security Auditor</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Network Audits</span>
+                            <span class="officer-pill">Penetration Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Forensic Specialists & Domain Leads -->
+                <h3 class="officers-tier-title"><i class="fa-solid fa-microchip" style="color: var(--police-emerald);"></i> Forensic Specialists & Legal Advisors</h3>
+                <div class="officers-grid-categorized">
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/Yugal Pathal Digital Forensics & Incident Response (DFIR) specialist.jpg" alt="Yugal Pathal" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Yugal Pathal</h4>
+                        <div class="officer-designation">DFIR Specialist</div>
+                        <div class="officer-org-dept">Digital Forensics & Incident Response</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Digital Forensics</span>
+                            <span class="officer-pill">DFIR Lead</span>
+                        </div>
+                    </div>
+
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/Kailash D Agrawal Payment Security Consultant.jpg" alt="Kailash D Agrawal" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Kailash D Agrawal</h4>
+                        <div class="officer-designation">Payment Security Consultant</div>
+                        <div class="officer-org-dept">Financial Cyber Fraud Analyst</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">UPI Frauds</span>
+                            <span class="officer-pill">Bank Nodal</span>
+                        </div>
+                    </div>
+
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/pakhi garg lawyer.webp" alt="Pakhi Garg" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Pakhi Garg</h4>
+                        <div class="officer-designation">Cyber Law Advisor</div>
+                        <div class="officer-org-dept">Legal Consultant, DPDP Act</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">IT Act Law</span>
+                            <span class="officer-pill">Data Privacy</span>
+                        </div>
+                    </div>
+
+                    <div class="officer-profile-card">
+                        <img src="assets/images/up-police/mentors/yash chavhan - web3.jpg" alt="Yash Chavhan" class="officer-avatar-frame">
+                        <h4 class="officer-real-name">Yash Chavhan</h4>
+                        <div class="officer-designation">Web3 & Crypto Lead</div>
+                        <div class="officer-org-dept">Blockchain Security Audit</div>
+                        <div class="officer-tags-group">
+                            <span class="officer-pill">Web3 Security</span>
+                            <span class="officer-pill">Crypto Forensics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. PERSONAL REFLECTION -->
+        <section id="reflection" class="section-wrap alt-bg">
             <div class="container">
                 <div class="reflection-card glass-card">
                     <i class="fa-solid fa-quote-left reflection-quote-icon"></i>
-                    <h2 class="section-title text-gradient">A Journey of Growth: 15 Days with Amroha Police</h2>
+                    <h2 class="section-headline" style="margin-bottom: 1.5rem;">A Journey of Growth: 15 Days with Amroha Police</h2>
                     <div class="reflection-body">
                         <p>
                             This internship was far more than a technical training program—it was a transformative 15-day law enforcement fellowship that pushed me out of my comfort zone. Arriving in Amroha, I was initially an outsider in an unfamiliar environment. However, this challenge turned into an extraordinary opportunity for personal and professional growth.
@@ -1104,6 +2272,63 @@
                 </div>
             </div>
         </section>
+
+        <!-- 9. STATUTORY FRAMEWORKS & CYBER FAQ -->
+        <section id="faq" class="section-wrap">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="help-circle"></i> 07 // LEGAL JURISPRUDENCE</span>
+                    <h2 class="section-headline">Frequently Asked Questions</h2>
+                    <p class="section-subtext">Common queries regarding the APCSIP-2026 fellowship, digital evidence admissibility, and Indian cyber jurisprudence.</p>
+                </div>
+
+                <div class="faq-accordion-wrap">
+                    <!-- Q1 -->
+                    <div class="faq-item open">
+                        <button class="faq-question-btn" onclick="toggleFaq(this)">
+                            <span>What is the APCSIP program and who organizes it?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer-body">
+                            The Amroha Police Cyber Security Internship Program (APCSIP-2026) is an elite state law enforcement initiative conducted by Uttar Pradesh Police in collaboration with Shri Venkateshwara University and Jubilant Bhartia Foundation. It trains selected engineering scholars in digital forensics, OSINT, mobile device acquisition, and cyber jurisprudence under senior police leadership.
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" onclick="toggleFaq(this)">
+                            <span>What is a Section 65B Certificate under the Indian Evidence Act?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer-body">
+                            Section 65B of the Indian Evidence Act prescribes strict statutory conditions for the admissibility of electronic records in court. It certifies that the computer output or digital proof was produced by a computer in lawful control, during ordinary activity, and that the device operated properly without tampering, accompanied by a verified cryptographic hash (MD5/SHA-256).
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" onclick="toggleFaq(this)">
+                            <span>How are CDR and IPDR logs analyzed in cyber crime cells?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer-body">
+                            Call Detail Records (CDR) and Internet Protocol Detail Records (IPDR) provide chronological telecommunication footprints. Investigators parse telecom tower dumps for IMEI/IMSI numbers, cell tower coordinates, call durations, and antenna azimuth angles to triangulate suspect locations and identify co-conspirators in financial and extortion crimes.
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" onclick="toggleFaq(this)">
+                            <span>How does the DPDP Act 2023 impact cyber investigations?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer-body">
+                            The Digital Personal Data Protection (DPDP) Act 2023 establishes explicit boundaries for data processing, consent, and user privacy in India. In legal investigations, law enforcement relies on statutory exceptions (e.g. Section 91 CrPC) while ensuring that digital evidence collection strictly respects constitutional privacy safeguards established in Puttaswamy v. Union of India.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -1121,17 +2346,20 @@
                     <ul class="footer-links">
                         <li><a href="#hero">Overview</a></li>
                         <li><a href="#pipeline">Selection Pipeline</a></li>
+                        <li><a href="#gallery">Evidence Vault</a></li>
                         <li><a href="#domains">Cyber Domains</a></li>
                         <li><a href="#operations">Operations Log</a></li>
-                        <li><a href="#honors">Awards & Honors</a></li>
+                        <li><a href="#simulator">Forensics Lab</a></li>
+                        <li><a href="#officers">Officers Roster</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-col-title">Main Portfolio</h4>
+                    <h4 class="footer-col-title">Related Tracks</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Rohit Pal Home</a></li>
-                        <li><a href="index.html#projects">Featured Projects</a></li>
-                        <li><a href="index.html#certificates">Certificates</a></li>
+                        <li><a href="index.html">Rohit Pal Portfolio Home</a></li>
+                        <li><a href="wikimedia-open-source.html">Wikimedia Open Source Report</a></li>
+                        <li><a href="hackathons-leadership.html">Hackathons & Leadership Track</a></li>
+                        <li><a href="certificates.html">Verified Credentials Archive</a></li>
                     </ul>
                 </div>
             </div>
@@ -1142,11 +2370,172 @@
         </div>
     </footer>
 
-    <!-- Lucide Icon Initialization -->
+    <!-- Interactive JavaScript -->
     <script>
+        // Initialize Lucide Icons
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const progressBar = document.getElementById('scroll-progress');
+            if (progressBar) {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+                progressBar.style.width = progress + '%';
+            }
+        });
+
+        // 12-Day Operations Phase Filter
+        function filterOps(phase, button) {
+            document.querySelectorAll('.ops-filter-pill-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const cards = document.querySelectorAll('.op-card-modern');
+            cards.forEach(card => {
+                const cardPhase = card.getAttribute('data-phase');
+                if (phase === 'all' || cardPhase === phase) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Simulator Engine
+        let currentSimMode = 'cdr';
+
+        function switchSimMode(mode) {
+            currentSimMode = mode;
+            const btnCdr = document.getElementById('btn-mode-cdr');
+            const btnHash = document.getElementById('btn-mode-hash');
+            const btnText = document.getElementById('sim-btn-text');
+            const termOutput = document.getElementById('sim-terminal-output');
+
+            if (mode === 'cdr') {
+                btnCdr.classList.add('active');
+                btnHash.classList.remove('active');
+                btnText.innerText = 'Run Triangulation';
+                termOutput.innerHTML = `<span class="term-comment"># APCSIP-2026 Telecommunication Forensics Engine Initialized.</span>
+<span class="term-comment"># Loaded Case File: CR-2026-AMR-409 (Financial SIM-Swap Extortion)</span>
+<span class="term-prompt">investigator@cybercell:~$</span> <span class="term-cmd">cat case_metadata.json</span>
+{
+  "jurisdiction": "Amroha Cyber Crime Cell",
+  "supervising_officer": "DSP Anjali Kataria",
+  "suspect_phone": "+91 98765-XXXXX",
+  "tower_logs_analyzed": 14205,
+  "status": "Ready for automated tower dump correlation"
+}
+<span class="term-prompt">investigator@cybercell:~$</span> Click [Run Triangulation] to execute suspect tower sector localization...`;
+            } else {
+                btnHash.classList.add('active');
+                btnCdr.classList.remove('active');
+                btnText.innerText = 'Verify SHA-256 Hash';
+                termOutput.innerHTML = `<span class="term-comment"># APCSIP-2026 Digital Forensics Evidence Imaging Lab.</span>
+<span class="term-comment"># Loaded Seized Evidence: EXHIBIT-A (Samsung Galaxy S22 - Suspect Device)</span>
+<span class="term-prompt">investigator@cybercell:~$</span> <span class="term-cmd">ls -la /evidence/exhibit_a/</span>
+-rw-r--r-- 1 root root 128849018880 Jun 14 11:24 exhibit_a_raw_bitstream.dd
+-rw-r--r-- 1 root root            64 Jun 14 11:25 writeblocker_master.sha256
+<span class="term-prompt">investigator@cybercell:~$</span> Click [Verify SHA-256 Hash] to compute integrity verification...`;
+            }
+        }
+
+        function executeCurrentSim() {
+            const termOutput = document.getElementById('sim-terminal-output');
+            if (currentSimMode === 'cdr') {
+                termOutput.innerHTML += `
+<br><span class="term-prompt">investigator@cybercell:~$</span> <span class="term-cmd">python3 tower_correlate.py --case CR-2026-AMR-409</span>
+<span class="term-highlight">[*] Ingesting 14,205 CDR tower dump records from 3 Base Transceiver Stations (BTS)...</span>
+[+] Sorting by timestamp: 2026-06-12 14:00:00 to 2026-06-12 18:30:00 IST
+[+] Parsing Azimuth angles (Sector Alpha 120°, Sector Beta 240°, Sector Gamma 360°)
+[!] ANOMALY LOCATED: Call Handover identified at Tower Site #AMR-048 (Sector Beta)
+    -> Suspect IMEI: 864521049928371
+    -> Suspect IMSI: 404450192847162
+    -> Target Coords: 28.9042° N, 78.4682° E (Amroha Bypass Junction)
+<span class="term-success">✓ Suspect cellular presence verified within ±35m radius during fraud transaction.</span>
+<span class="term-success">✓ Section 91 CrPC notice payload exported for telecom nodal officer.</span>`;
+            } else {
+                termOutput.innerHTML += `
+<br><span class="term-prompt">investigator@cybercell:~$</span> <span class="term-cmd">sha256sum /evidence/exhibit_a/exhibit_a_raw_bitstream.dd</span>
+[+] Reading 128.8 GB bit-stream image through hardware write-blocker...
+[+] Calculating cryptographic digest: [████████████████████] 100%
+<span class="term-highlight">Computed Hash:</span> e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+<span class="term-highlight">Master Hash:  </span> e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+<span class="term-success">✓ INTEGRITY VERIFICATION: 100% BIT-FOR-BIT MATCH. ZERO EVIDENCE CORRUPTION.</span>
+<span class="term-success">✓ Generated Section 65B Indian Evidence Act Admissibility Certificate.</span>`;
+            }
+            termOutput.scrollTop = termOutput.scrollHeight;
+        }
+
+        function resetSimTerminal() {
+            switchSimMode(currentSimMode);
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(button) {
+            const parentItem = button.closest('.faq-item');
+            if (parentItem) {
+                const isOpen = parentItem.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== parentItem) item.classList.remove('open');
+                });
+                parentItem.classList.toggle('open', !isOpen);
+            }
+        }
+
+        // Active link tracking on scroll for Cyber Nav
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.cyber-nav .nav-link');
+            let currentId = '';
+
+            sections.forEach(sec => {
+                const top = sec.offsetTop - 140;
+                const height = sec.offsetHeight;
+                if (window.scrollY >= top && window.scrollY < top + height) {
+                    currentId = sec.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }, { passive: true });
+
+        // Evidence Modal Functions
+        function openEvidenceModal(card) {
+            const img = card.querySelector('img');
+            const titleEl = card.querySelector('.evidence-title');
+            const modal = document.getElementById('evidenceLightboxModal');
+            const modalImg = document.getElementById('evidenceModalImg');
+            const modalCaption = document.getElementById('evidenceModalCaption');
+
+            if (img && modal && modalImg) {
+                modalImg.src = img.src;
+                modalImg.alt = img.alt || 'Official APCSIP Record';
+                modalCaption.innerText = titleEl ? titleEl.innerText : 'Official APCSIP-2026 Record';
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeEvidenceModal() {
+            const modal = document.getElementById('evidenceLightboxModal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeEvidenceModal();
+            }
+        });
     </script>
 </body>
 

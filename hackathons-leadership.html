@@ -4,13 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathons & Leadership Milestones | Rohit Pal Portfolio</title>
+    <title>Rohit Pal | Hackathons &amp; Technical Leadership Milestones</title>
     <meta name="author" content="Rohit Pal">
     <meta name="description"
-        content="Complete archive of national hackathon final placements, open-source competitions, campus leadership roles, and technical summits. Rohit Pal — Full-Stack Developer & Open Source Contributor.">
+        content="National hackathon placements, leadership roles, and technical achievements of Rohit Pal (Rohitpal08) — SRM BUILDS 7.0 finalist, TechSprint Top 10, GDG Vibe Coding Award, and Cloud Junction Ambassador.">
     <meta name="keywords"
-        content="Rohit Pal Hackathons, SRM BUILDS 7.0, TechSprint Hackathon, UHack 4.0, SIH Organizer, Open Source Day WikiClubTech, BECon IIT Delhi, Cloud Junction Campus Ambassador">
-    <link rel="canonical" href="hackathons-leadership.html">
+        content="Rohit Pal, Rohitpal08, Rohit Pal Hackathons, SRM BUILDS 7.0, TechSprint Hackathon, UHack 4.0, SIH Organizer, Open Source Day WikiClubTech, BECon IIT Delhi, Cloud Junction Campus Ambassador">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rohitpal.vercel.app/hackathons-leadership.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Rohit Pal Portfolio">
+    <meta property="og:title" content="Rohit Pal | Hackathons &amp; Technical Leadership Milestones">
+    <meta property="og:description" content="National hackathon placements, leadership roles, and technical achievements of Rohit Pal (Rohitpal08).">
+    <meta property="og:url" content="https://rohitpal.vercel.app/hackathons-leadership.html">
+    <meta property="og:image" content="https://rohitpal.vercel.app/assets/images/profile/rohit.png">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rohitpal00015">
+    <meta name="twitter:creator" content="@rohitpal00015">
+    <meta name="twitter:title" content="Rohit Pal | Hackathons &amp; Technical Leadership Milestones">
+    <meta name="twitter:description" content="National hackathon placements, leadership roles, and technical achievements of Rohit Pal (Rohitpal08).">
+    <meta name="twitter:image" content="https://rohitpal.vercel.app/assets/images/profile/rohit.png">
+
+    <!-- Structured Data: Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rohitpal.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hackathons & Leadership Milestones",
+          "item": "https://rohitpal.vercel.app/hackathons-leadership.html"
+        }
+      ]
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,9 +68,9 @@
         /* Dedicated Page Specific Styles */
         .milestone-hero {
             position: relative;
-            padding: 9rem 0 4rem 0;
+            padding: 7.5rem 0 3.5rem 0;
             overflow: hidden;
-            background: radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.08), transparent 60%);
+            background: radial-gradient(circle at 50% 15%, rgba(255, 184, 0, 0.12), transparent 65%);
         }
 
         .milestone-hero-title {
@@ -42,6 +81,7 @@
             color: var(--text-primary);
             margin: 1rem 0;
             text-align: center;
+            letter-spacing: -0.02em;
         }
 
         .milestone-grid {
@@ -51,27 +91,30 @@
             margin-top: 2.5rem;
         }
 
+        /* Milestone Card Full - Clean Elevated White Surface */
         .milestone-card-full {
             border-radius: var(--radius-lg);
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
+            background: #FFFFFF !important;
+            border: 1.5px solid var(--border-light) !important;
             padding: 2.25rem 2rem;
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
             position: relative;
-            transition: all var(--transition-normal);
+            transition: var(--transition);
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
         }
 
         .milestone-card-full:hover {
             transform: translateY(-5px);
-            border-color: rgba(245, 158, 11, 0.35);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(245, 158, 11, 0.12);
+            border-color: var(--yellow-primary) !important;
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08), 0 0 25px rgba(255, 184, 0, 0.16);
         }
 
         .milestone-card-full.featured-gold {
-            border-color: rgba(245, 158, 11, 0.35);
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.04) 0%, rgba(13, 20, 35, 0.6) 100%);
+            border-color: var(--yellow-primary) !important;
+            background: linear-gradient(145deg, #FFFFFF 0%, #FFFDF5 60%, #FFFBEB 100%) !important;
+            box-shadow: 0 8px 24px rgba(255, 184, 0, 0.1);
         }
 
         .milestone-top-row {
@@ -84,42 +127,43 @@
         .milestone-badge-box {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.85rem;
         }
 
         .milestone-icon {
             width: 48px;
             height: 48px;
-            border-radius: 12px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.35rem;
             flex-shrink: 0;
+            transition: var(--transition);
         }
 
         .icon-gold-glow {
-            background: rgba(245, 158, 11, 0.15);
-            color: var(--accent-gold);
-            border: 1px solid rgba(245, 158, 11, 0.3);
+            background: var(--yellow-light);
+            color: var(--yellow-dark);
+            border: 1.5px solid var(--yellow-border);
         }
 
         .icon-emerald-glow {
-            background: rgba(16, 185, 129, 0.15);
-            color: var(--primary);
-            border: 1px solid rgba(16, 185, 129, 0.3);
+            background: #ECFDF5;
+            color: #047857;
+            border: 1.5px solid #A7F3D0;
         }
 
-        .icon-blue-glow {
-            background: rgba(59, 130, 246, 0.15);
-            color: #60a5fa;
-            border: 1px solid rgba(59, 130, 246, 0.3);
+        .icon-blue-glow, .icon-cyan {
+            background: var(--blue-light);
+            color: var(--blue-primary);
+            border: 1.5px solid var(--blue-border);
         }
 
         .icon-purple-glow {
-            background: rgba(168, 85, 247, 0.15);
-            color: #c084fc;
-            border: 1px solid rgba(168, 85, 247, 0.3);
+            background: #FAF5FF;
+            color: #7E22CE;
+            border: 1.5px solid #E9D5FF;
         }
 
         .milestone-heading-group h3 {
@@ -127,25 +171,27 @@
             font-size: 1.35rem;
             font-weight: 700;
             color: var(--text-primary);
-            margin: 0 0 0.25rem 0;
+            margin: 0 0 0.35rem 0;
+            line-height: 1.3;
         }
 
         .milestone-loc-badge {
             font-family: var(--font-mono);
             font-size: 0.78rem;
-            color: var(--accent-cyan);
-            background: rgba(56, 189, 248, 0.08);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            padding: 0.2rem 0.6rem;
+            color: var(--blue-primary);
+            background: var(--blue-light);
+            border: 1px solid var(--blue-border);
+            padding: 0.25rem 0.7rem;
             border-radius: var(--radius-full);
             display: inline-block;
+            font-weight: 600;
         }
 
         .milestone-status-chip {
             font-family: var(--font-mono);
             font-size: 0.75rem;
             font-weight: 700;
-            padding: 0.3rem 0.75rem;
+            padding: 0.35rem 0.85rem;
             border-radius: var(--radius-full);
             text-transform: uppercase;
             letter-spacing: 0.04em;
@@ -153,28 +199,33 @@
         }
 
         .chip-gold {
-            background: rgba(245, 158, 11, 0.15);
-            color: #fbbf24;
-            border: 1px solid rgba(245, 158, 11, 0.35);
+            background: var(--yellow-light);
+            color: var(--yellow-dark);
+            border: 1.5px solid var(--yellow-border);
         }
 
         .chip-emerald {
-            background: rgba(16, 185, 129, 0.15);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.35);
+            background: #ECFDF5;
+            color: #047857;
+            border: 1.5px solid #A7F3D0;
         }
 
         .chip-blue {
-            background: rgba(59, 130, 246, 0.15);
-            color: #93c5fd;
-            border: 1px solid rgba(59, 130, 246, 0.35);
+            background: var(--blue-light);
+            color: var(--blue-primary);
+            border: 1.5px solid var(--blue-border);
         }
 
         .milestone-body {
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.65;
+            font-size: 0.96rem;
+            line-height: 1.7;
             flex-grow: 1;
+        }
+
+        .milestone-body p {
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
         }
 
         .milestone-body ul {
@@ -183,40 +234,92 @@
         }
 
         .milestone-body li {
-            margin-bottom: 0.45rem;
+            margin-bottom: 0.5rem;
             color: var(--text-secondary);
+            line-height: 1.65;
         }
 
         .milestone-body strong {
             color: var(--text-primary);
+            font-weight: 700;
         }
 
         .milestone-tags-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.45rem;
-            margin-top: 0.5rem;
+            gap: 0.5rem;
+            margin-top: 0.85rem;
         }
 
         .milestone-tag {
             font-family: var(--font-mono);
-            font-size: 0.75rem;
-            padding: 0.25rem 0.65rem;
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.76rem;
+            font-weight: 600;
+            padding: 0.35rem 0.8rem;
+            border-radius: var(--radius-full);
+            background: #F1F5F9;
+            border: 1px solid var(--border-light);
             color: var(--text-secondary);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .milestone-tag:hover {
+            background: var(--yellow-light);
+            border-color: var(--yellow-border);
+            color: var(--yellow-dark);
         }
 
         .milestone-footer-btn {
-            margin-top: 0.75rem;
+            margin-top: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 1rem;
             flex-wrap: wrap;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding-top: 1rem;
+            border-top: 1px solid var(--border-light);
+            padding-top: 1.25rem;
+        }
+
+        .milestone-date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            background: #F8FAFC;
+            padding: 0.35rem 0.85rem;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-light);
+            white-space: nowrap;
+        }
+
+        .milestone-footer-btn .btn {
+            font-family: var(--font-heading);
+            font-size: 0.86rem;
+            font-weight: 700;
+            padding: 0.55rem 1.25rem;
+            border-radius: var(--radius-full);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .milestone-footer-btn .btn-secondary {
+            background: var(--yellow-primary) !important;
+            color: var(--text-primary) !important;
+            border: 1.5px solid var(--border-dark) !important;
+            box-shadow: 2px 2px 0px var(--border-dark) !important;
+        }
+
+        .milestone-footer-btn .btn-secondary:hover {
+            background: var(--yellow-hover) !important;
+            color: var(--text-primary) !important;
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0px var(--border-dark) !important;
         }
 
         .category-filter-bar {
@@ -228,26 +331,113 @@
         }
 
         .cat-btn {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            padding: 0.55rem 1.2rem;
+            font-family: var(--font-heading);
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.6rem 1.35rem;
             border-radius: var(--radius-full);
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
             color: var(--text-secondary);
             cursor: pointer;
-            transition: all var(--transition-fast);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
         }
 
-        .cat-btn:hover, .cat-btn.active {
-            background: rgba(245, 158, 11, 0.15);
-            border-color: rgba(245, 158, 11, 0.4);
-            color: #fbbf24;
+        .cat-btn:hover {
+            border-color: var(--blue-primary);
+            color: var(--blue-primary);
+        }
+
+        .cat-btn.active {
+            background: var(--blue-primary);
+            border-color: var(--blue-primary);
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+        }
+
+        /* Hero Stats Grid */
+        .hero-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .stat-cyber-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .stat-cyber-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--yellow-border);
+        }
+
+        .stat-num {
+            font-family: var(--font-heading);
+            font-size: 2.1rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 0.35rem;
+        }
+
+        .stat-num.gold { color: var(--yellow-dark); }
+        .stat-num.cyan, .stat-num.blue { color: var(--blue-primary); }
+        .stat-num.emerald { color: #047857; }
+
+        .stat-label {
+            font-family: var(--font-heading);
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        /* Final CTA Card */
+        .final-cta-card {
+            background: var(--bg-surface-dark);
+            border-radius: var(--radius-xl);
+            padding: 3.5rem 2.5rem;
+            color: #FFFFFF;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .final-cta-card h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 0.85rem;
+        }
+
+        .final-cta-card p {
+            color: #CBD5E1;
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .final-cta-btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         @media (max-width: 900px) {
             .milestone-grid {
                 grid-template-columns: 1fr;
+            }
+            .hero-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             .milestone-hero-title {
                 font-size: 2.3rem;
@@ -346,7 +536,7 @@
         </section>
 
         <!-- 2. FULL MILESTONES ARCHIVE GRID -->
-        <section id="hackathons-list" class="section-padding bg-darker" style="padding-top: 2rem;">
+        <section id="hackathons-list" class="section-padding" style="padding-top: 2rem;">
             <div class="container">
 
                 <div class="milestone-grid">
@@ -385,11 +575,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('gdg-vibe-coding')" class="btn btn-secondary btn-sm" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.35);">
+                            <button type="button" onclick="openEventModal('gdg-vibe-coding')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>Read Full Story & Feedback</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">31 July 2026</span>
+                            <span class="milestone-date">31 July 2026</span>
                         </div>
                     </div>
 
@@ -427,11 +617,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <a href="https://www.linkedin.com/posts/rohit-pal-98230131a_opensource-wikimedia-wikiclubtech-activity-7496991574824820737-8hC3" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);">
+                            <a href="https://www.linkedin.com/posts/rohit-pal-98230131a_opensource-wikimedia-wikiclubtech-activity-7496991574824820737-8hC3" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
                                 <i class="fa-brands fa-linkedin"></i>
                                 <span>Read Full Story on LinkedIn</span>
                             </a>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">21 Aug 2024</span>
+                            <span class="milestone-date">21 Aug 2024</span>
                         </div>
                     </div>
 
@@ -467,11 +657,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('sih-internal')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('sih-internal')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="camera"></i>
                                 <span>View Organizing Gallery & Brief</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Internal Hackathon</span>
+                            <span class="milestone-date">Internal Hackathon</span>
                         </div>
                     </div>
 
@@ -507,11 +697,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('srm-builds')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('srm-builds')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Sprint Briefing</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Offline Hackathon</span>
+                            <span class="milestone-date">Offline Hackathon</span>
                         </div>
                     </div>
 
@@ -545,11 +735,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('techsprint-top10')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('techsprint-top10')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Briefing</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">National Hackathon</span>
+                            <span class="milestone-date">National Hackathon</span>
                         </div>
                     </div>
 
@@ -583,11 +773,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('uhack-4')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('uhack-4')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Briefing</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">17-18 March</span>
+                            <span class="milestone-date">17-18 March</span>
                         </div>
                     </div>
 
@@ -621,11 +811,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('cloud-junction')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('cloud-junction')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Details</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Pan-India</span>
+                            <span class="milestone-date">Pan-India</span>
                         </div>
                     </div>
 
@@ -661,11 +851,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('becon-2026')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('becon-2026')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Details</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Jan-Feb 2026</span>
+                            <span class="milestone-date">Jan-Feb 2026</span>
                         </div>
                     </div>
 
@@ -699,11 +889,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('foss-united-uit')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('foss-united-uit')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Details</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Open Source</span>
+                            <span class="milestone-date">Open Source</span>
                         </div>
                     </div>
 
@@ -733,11 +923,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('build-with-ai')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('build-with-ai')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Details</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">GDG UIT</span>
+                            <span class="milestone-date">GDG UIT</span>
                         </div>
                     </div>
 
@@ -767,11 +957,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('flowjam-2026')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('flowjam-2026')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Details</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">SIET</span>
+                            <span class="milestone-date">SIET</span>
                         </div>
                     </div>
 
@@ -801,11 +991,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('startup-confluence')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('startup-confluence')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Details</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Dec 2024</span>
+                            <span class="milestone-date">Dec 2024</span>
                         </div>
                     </div>
 
@@ -835,11 +1025,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('sankalp-2026')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('sankalp-2026')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Details</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">MNNIT</span>
+                            <span class="milestone-date">MNNIT</span>
                         </div>
                     </div>
 
@@ -869,11 +1059,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('hc-verma-visit')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('hc-verma-visit')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Details</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Legendary</span>
+                            <span class="milestone-date">Legendary</span>
                         </div>
                     </div>
 
@@ -903,11 +1093,11 @@
                         </div>
 
                         <div class="milestone-footer-btn">
-                            <button onclick="openEventModal('devfest-2024')" class="btn btn-secondary btn-sm">
+                            <button type="button" onclick="openEventModal('devfest-2024')" class="btn btn-secondary btn-sm">
                                 <i data-lucide="maximize-2"></i>
                                 <span>View Details</span>
                             </button>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Oct 2024</span>
+                            <span class="milestone-date">Oct 2024</span>
                         </div>
                     </div>
 
@@ -917,7 +1107,7 @@
         </section>
 
         <!-- 3. CALL TO ACTION -->
-        <section class="section-padding" style="background: var(--bg-dark); border-top: 1px solid rgba(255, 255, 255, 0.06);">
+        <section class="section-padding" style="background: var(--bg-surface-dark); border-top: 1px solid rgba(255, 255, 255, 0.06);">
             <div class="container text-center">
                 <div class="final-cta-card gradient-border border-indigo-blue" style="max-width: 800px; margin: 0 auto;" data-glow>
                     <div class="vercel-card-inner">
@@ -940,17 +1130,20 @@
     </main>
 
     <!-- Interactive Event Details Modal Container -->
-    <div id="event-modal" class="modal-backdrop">
-        <div class="modal-dialog glass-card">
-            <div class="modal-header">
-                <div class="modal-title-group">
-                    <span id="modal-category" class="modal-badge"></span>
-                    <h3 id="modal-title" class="modal-heading"></h3>
-                    <p id="modal-location" class="modal-loc"></p>
-                </div>
-                <button class="modal-close" onclick="closeEventModal()" aria-label="Close dialog">&times;</button>
+    <div class="modal-overlay" id="event-modal-overlay" onclick="closeEventModal()">
+        <div class="modal-dialog glass-card" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closeEventModal()">&times;</button>
+            <span class="modal-category-badge" id="event-modal-category">EVENT CATEGORY</span>
+            <h3 class="modal-title" id="event-modal-title">Event Title</h3>
+            <div class="modal-subtitle" id="event-modal-loc">
+                <i data-lucide="map-pin"></i> Venue
             </div>
-            <div class="modal-body" id="modal-body"></div>
+            <div class="modal-body-content" id="event-modal-body">
+                <!-- Injected via script.js -->
+            </div>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <button type="button" class="btn btn-secondary btn-sm" onclick="closeEventModal()">Close</button>
+            </div>
         </div>
     </div>
 

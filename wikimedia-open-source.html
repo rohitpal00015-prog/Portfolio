@@ -4,18 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit Pal | Wikimedia Open Source Contributor & Engineering Report</title>
+    <title>Rohit Pal | Wikimedia Open Source Contributions &amp; MediaWiki Engineering</title>
     <meta name="author" content="Rohit Pal">
     <meta name="description"
-        content="Rohit Pal — Wikimedia Open Source Contributor. Contributing to Wikimedia Codex, MediaWiki, Vue.js design systems, Gerrit code reviews, and Phabricator development tasks (T434524, T434753).">
+        content="Official open-source engineering report by Rohit Pal (Rohitpal08) — Wikimedia Codex, MediaWiki ecosystem, Vue.js design systems, Gerrit patchsets, and Phabricator development tasks.">
     <meta name="keywords"
-        content="Rohit Pal Wikimedia, MediaWiki Contributor, Gerrit Code Review, Wikimedia Phabricator T434524, T434753, Wikimedia Codex, Vue.js, Open Source Developer, WikiClubTech UIT">
-    <link rel="canonical" href="wikimedia-open-source.html">
+        content="Rohit Pal, Rohitpal08, Rohit Pal Wikimedia, Rohit Pal MediaWiki, Wikimedia Codex, MediaWiki Contributor, Gerrit Code Review, Wikimedia Phabricator T434524, T434753, Open Source Developer India">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rohitpal.vercel.app/wikimedia-open-source.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Rohit Pal Portfolio">
+    <meta property="og:title" content="Rohit Pal | Wikimedia Open Source Contributions &amp; MediaWiki Engineering">
+    <meta property="og:description" content="Engineering report by Rohit Pal (Rohitpal08) on Wikimedia Codex, MediaWiki infrastructure, Vue.js design tokens, Gerrit code reviews, and Phabricator tasks T434524 and T434753.">
+    <meta property="og:url" content="https://rohitpal.vercel.app/wikimedia-open-source.html">
+    <meta property="og:image" content="https://rohitpal.vercel.app/assets/images/profile/rohit.png">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rohitpal00015">
+    <meta name="twitter:creator" content="@rohitpal00015">
+    <meta name="twitter:title" content="Rohit Pal | Wikimedia Open Source Contributions &amp; MediaWiki Engineering">
+    <meta name="twitter:description" content="Engineering report by Rohit Pal (Rohitpal08) on Wikimedia Codex, MediaWiki infrastructure, Vue.js design tokens, Gerrit code reviews, and Phabricator tasks T434524 and T434753.">
+    <meta name="twitter:image" content="https://rohitpal.vercel.app/assets/images/profile/rohit.png">
+
+    <!-- Structured Data: Schema.org BreadcrumbList & TechArticle -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://rohitpal.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Wikimedia Open Source Contributions",
+              "item": "https://rohitpal.vercel.app/wikimedia-open-source.html"
+            }
+          ]
+        },
+        {
+          "@type": "TechArticle",
+          "headline": "Rohit Pal — Wikimedia Open Source Contributions & MediaWiki Engineering Report",
+          "description": "Technical engineering report on Wikimedia Codex Vue.js components, Gerrit patchsets, and Phabricator tasks by Rohit Pal.",
+          "author": {
+            "@type": "Person",
+            "name": "Rohit Pal",
+            "alternateName": "Rohitpal08",
+            "url": "https://rohitpal.vercel.app/"
+          },
+          "url": "https://rohitpal.vercel.app/wikimedia-open-source.html",
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome, DevIcons & Lucide -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -24,6 +80,1074 @@
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Scoped Wikimedia Engineering Report Styles -->
+    <style>
+        /* Scoped Colors & Design Tokens */
+        :root {
+            --wiki-blue: #2563EB;
+            --wiki-blue-light: #EFF6FF;
+            --wiki-blue-border: #BFDBFE;
+            --wiki-emerald: #059669;
+            --wiki-emerald-light: #ECFDF5;
+            --wiki-red: #DC2626;
+            --wiki-red-light: #FEF2F2;
+            --wiki-dark: #0F172A;
+            --wiki-slate: #334155;
+            --wiki-amber: #D97706;
+            --wiki-amber-light: #FFFBEB;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3.5px;
+            width: 0%;
+            background: linear-gradient(90deg, #2563EB, #FFB800);
+            z-index: 99999;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Section Smooth Scroll Offset */
+        section[id] {
+            scroll-margin-top: 85px;
+        }
+
+        /* Hero Badges & Section Accents */
+        .wiki-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--blue-primary);
+            background: var(--blue-light);
+            border: 1.5px solid var(--blue-border);
+            padding: 0.4rem 1.15rem;
+            border-radius: var(--radius-full);
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .wiki-hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.3rem, 5vw, 3.75rem);
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .wiki-title-gradient {
+            background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .wiki-quote-card {
+            margin: 2.25rem auto;
+            padding: 1.35rem 2.25rem;
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-dark);
+            border-radius: var(--radius-md);
+            box-shadow: 4px 4px 0px var(--border-dark);
+            max-width: 780px;
+            position: relative;
+        }
+
+        .wiki-quote-card p {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Stat Counter Cards */
+        .wiki-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.15rem;
+            max-width: 1140px;
+            margin: 3.5rem auto 0;
+        }
+
+        .wiki-stat-box {
+            padding: 1.5rem 1rem;
+            text-align: center;
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .wiki-stat-box:hover {
+            transform: translateY(-4px);
+            border-color: var(--yellow-primary);
+            box-shadow: 0 10px 24px rgba(255, 184, 0, 0.18);
+        }
+
+        .wiki-stat-val {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--blue-primary);
+            line-height: 1.1;
+            margin-bottom: 0.35rem;
+        }
+
+        .wiki-stat-lbl {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Section Layouts */
+        .section-wrap {
+            padding: 5.5rem 0;
+            position: relative;
+        }
+
+        .section-wrap.alt-bg {
+            background: #F8FAFC;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section-header-centered {
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-pill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--blue-primary);
+            background: var(--blue-light);
+            border: 1px solid var(--blue-border);
+            padding: 0.3rem 0.9rem;
+            border-radius: var(--radius-full);
+            margin-bottom: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-headline {
+            font-family: var(--font-heading);
+            font-size: 2.35rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtext {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* 4 Core Pillars Grid */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem;
+        }
+
+        .pillar-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem 2rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-bar, var(--blue-primary));
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-medium);
+        }
+
+        .pillar-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+
+        .pillar-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background: var(--icon-bg, var(--blue-light));
+            color: var(--icon-color, var(--blue-primary));
+            border: 1px solid var(--icon-border, var(--blue-border));
+        }
+
+        .pillar-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            background: var(--bg-surface-subtle);
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+        }
+
+        .pillar-title {
+            font-size: 1.45rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin-bottom: 0.65rem;
+        }
+
+        .pillar-desc {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            line-height: 1.68;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .pillar-meta-row {
+            padding-top: 1.15rem;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+        }
+
+        .pillar-link-btn {
+            font-weight: 700;
+            color: var(--blue-primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: var(--transition);
+        }
+
+        .pillar-link-btn:hover {
+            color: var(--blue-hover);
+            transform: translateX(3px);
+        }
+
+        /* Phabricator Tasks Showcase */
+        .phab-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .phab-card {
+            background: #FFFFFF;
+            border: 2px solid var(--border-dark);
+            border-radius: var(--radius-lg);
+            box-shadow: 5px 5px 0px var(--border-dark);
+            padding: 2.25rem;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .phab-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 7px 7px 0px var(--border-dark);
+        }
+
+        .phab-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            border-bottom: 1.5px dashed var(--border-light);
+        }
+
+        .phab-id-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            background: #0F172A;
+            padding: 0.35rem 0.85rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .phab-status-pill {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .status-resolved {
+            background: #ECFDF5;
+            color: #059669;
+            border: 1px solid #A7F3D0;
+        }
+
+        .status-triage {
+            background: #EFF6FF;
+            color: #2563EB;
+            border: 1px solid #BFDBFE;
+        }
+
+        .phab-title {
+            font-size: 1.35rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            line-height: 1.35;
+            margin-bottom: 0.85rem;
+        }
+
+        .phab-desc-box {
+            background: #F8FAFC;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        .phab-desc-box strong {
+            color: var(--text-primary);
+        }
+
+        .phab-investigation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .phab-investigation-list li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            line-height: 1.55;
+        }
+
+        .phab-investigation-list li i {
+            color: var(--wiki-emerald);
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        .phab-tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .phab-tag-chip {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 600;
+            background: #F1F5F9;
+            color: var(--text-secondary);
+            padding: 0.25rem 0.65rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+        }
+
+        /* Phabricator Lifecycle Tracker */
+        .lifecycle-flow-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-dark);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            box-shadow: 4px 4px 0px var(--border-dark);
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .lifecycle-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .lifecycle-steps-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            position: relative;
+        }
+
+        .step-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-bubble {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--blue-light);
+            border: 2px solid var(--blue-primary);
+            color: var(--blue-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            margin: 0 auto 0.75rem;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+        }
+
+        .step-item.active .step-bubble {
+            background: var(--blue-primary);
+            color: #FFFFFF;
+        }
+
+        .step-title {
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .step-caption {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Codex Design System Blueprint Section */
+        .codex-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .codex-info-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .codex-tabs-nav {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1.5px solid var(--border-light);
+            padding-bottom: 0.75rem;
+            overflow-x: auto;
+        }
+
+        .codex-tab-btn {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.55rem 1rem;
+            border-radius: var(--radius-sm);
+            border: 1.5px solid transparent;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .codex-tab-btn:hover {
+            color: var(--blue-primary);
+            background: var(--blue-light);
+        }
+
+        .codex-tab-btn.active {
+            color: #FFFFFF;
+            background: #0F172A;
+            border-color: #0F172A;
+        }
+
+        .codex-tab-pane {
+            display: none;
+        }
+
+        .codex-tab-pane.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Code & Terminal Container */
+        .terminal-box {
+            background: #0B1120;
+            border: 1.5px solid #1E293B;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+            color: #E2E8F0;
+            font-family: var(--font-mono);
+            font-size: 0.88rem;
+            position: relative;
+        }
+
+        .terminal-header {
+            background: #0F172A;
+            border-bottom: 1px solid #1E293B;
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .t-dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+        }
+
+        .t-red { background: #EF4444; }
+        .t-yellow { background: #F59E0B; }
+        .t-green { background: #10B981; }
+
+        .terminal-title {
+            font-size: 0.78rem;
+            color: #94A3B8;
+            letter-spacing: 0.03em;
+        }
+
+        .terminal-actions-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-copy-terminal {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #1E293B;
+            border: 1px solid #334155;
+            color: #94A3B8;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-copy-terminal:hover {
+            color: #FFFFFF;
+            background: #334155;
+        }
+
+        .terminal-body {
+            padding: 1.5rem;
+            line-height: 1.7;
+            overflow-x: auto;
+        }
+
+        .term-prompt {
+            color: #38BDF8;
+            font-weight: 700;
+        }
+
+        .term-cmd {
+            color: #F8FAFC;
+            font-weight: 600;
+        }
+
+        .term-comment {
+            color: #64748B;
+            font-style: italic;
+        }
+
+        .term-success {
+            color: #34D399;
+            font-weight: 600;
+        }
+
+        .term-highlight {
+            color: #FBBF24;
+            font-weight: 600;
+        }
+
+        /* Codex Component Interactive Mockup */
+        .codex-mockup-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .cdx-mockup-title {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cdx-mockup-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        /* Codex Simulated Elements */
+        .cdx-btn-demo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.55rem 1.15rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .cdx-btn-primary-demo {
+            background: #36c;
+            color: #ffffff;
+            border: 1px solid #36c;
+        }
+
+        .cdx-btn-primary-demo:hover {
+            background: #2a4b8d;
+        }
+
+        .cdx-btn-quiet-demo {
+            background: transparent;
+            color: #202122;
+            border: 1px solid #a2a9b1;
+        }
+
+        .cdx-btn-quiet-demo:hover {
+            background: #eaecf0;
+        }
+
+        .cdx-badge-demo {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            background: #f8f9fa;
+            border: 1px solid #c8ccd1;
+            border-radius: 2px;
+            color: #202122;
+        }
+
+        .cdx-live-feedback {
+            margin-top: 1rem;
+            padding: 0.75rem 1rem;
+            background: #F8FAFC;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--blue-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Gerrit VS GitHub Comparison Matrix */
+        .comparison-table-wrap {
+            margin-top: 2.5rem;
+            overflow-x: auto;
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.92rem;
+        }
+
+        .comp-table th {
+            background: #F8FAFC;
+            padding: 1rem 1.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            border-bottom: 1.5px solid var(--border-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .comp-table td {
+            padding: 1.1rem 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+
+        .comp-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comp-feature-name {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .comp-gerrit-val {
+            color: var(--blue-primary);
+            font-weight: 600;
+        }
+
+        /* WikiClubTech Honors Showcase */
+        .honors-spotlight-card {
+            background: #FFFFFF;
+            border: 2px solid var(--border-dark);
+            border-radius: var(--radius-xl);
+            box-shadow: 6px 6px 0px var(--border-dark);
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .honors-trophy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 750;
+            color: var(--yellow-dark);
+            background: var(--yellow-light);
+            border: 1.5px solid var(--yellow-border);
+            padding: 0.45rem 1.15rem;
+            border-radius: var(--radius-full);
+            margin-bottom: 1.25rem;
+        }
+
+        .honors-grid-duo {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem;
+            margin: 2rem 0;
+        }
+
+        .honor-trophy-box {
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            background: #FDFBF7;
+            border: 1.5px solid var(--border-light);
+            display: flex;
+            gap: 1.15rem;
+            align-items: flex-start;
+            transition: var(--transition);
+        }
+
+        .honor-trophy-box:hover {
+            border-color: var(--yellow-primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .trophy-icon-large {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: var(--yellow-light);
+            color: var(--yellow-dark);
+            border: 1px solid var(--yellow-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .trophy-content h4 {
+            font-size: 1.15rem;
+            font-weight: 750;
+            margin-bottom: 0.35rem;
+            color: var(--text-primary);
+        }
+
+        .trophy-content p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        .mentors-row {
+            background: #F8FAFC;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .mentors-label {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--blue-primary);
+        }
+
+        .mentors-names {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Tooling Matrix */
+        .tools-matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .tool-category-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .tool-category-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--blue-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .tool-cat-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .tool-cat-icon {
+            font-size: 1.25rem;
+            color: var(--blue-primary);
+        }
+
+        .tool-cat-title {
+            font-size: 1.1rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .tool-pills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+        }
+
+        .tool-pill {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.35rem 0.65rem;
+            background: #F8FAFC;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        /* FAQ Accordion */
+        .faq-accordion-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-medium);
+        }
+
+        .faq-question-btn {
+            width: 100%;
+            padding: 1.35rem 1.75rem;
+            background: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question-btn i {
+            color: var(--blue-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-question-btn i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer-body {
+            padding: 0 1.75rem 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.open .faq-answer-body {
+            display: block;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .wiki-stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+            .phab-grid {
+                grid-template-columns: 1fr;
+            }
+            .codex-layout {
+                grid-template-columns: 1fr;
+            }
+            .tools-matrix-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .lifecycle-steps-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wiki-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .honors-grid-duo {
+                grid-template-columns: 1fr;
+            }
+            .tools-matrix-grid {
+                grid-template-columns: 1fr;
+            }
+            .honors-spotlight-card {
+                padding: 1.75rem;
+            }
+            .wiki-quote-card {
+                padding: 1.15rem 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wiki-stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body class="internship-page">
@@ -31,14 +1155,14 @@
     <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- Sticky Command Header -->
-    <header class="cyber-header">
+    <header class="cyber-header" id="header">
         <div class="container header-container">
             <div class="cyber-brand">
                 <a href="index.html" title="Go to Rohit Pal Portfolio Home" class="brand-avatar-link">
                     <img src="assets/images/profile/rohit.png" alt="Rohit Pal Logo" class="brand-avatar-img">
                 </a>
                 <a href="wikimedia-open-source.html" class="brand-title-group">
-                    <div class="wikimedia-icon-box" style="width: 32px; height: 32px; font-size: 16px;">
+                    <div class="wikimedia-icon-box">
                         <i class="fa-brands fa-wikipedia-w"></i>
                     </div>
                     <div class="brand-text">
@@ -51,11 +1175,12 @@
             <nav>
                 <ul class="cyber-nav" id="cyber-nav">
                     <li><a href="#overview" class="nav-link active">Overview</a></li>
-                    <li><a href="#contributions" class="nav-link">Core Contributions</a></li>
-                    <li><a href="#codex" class="nav-link">Codex & MediaWiki</a></li>
-                    <li><a href="#tasks" class="nav-link">Phabricator & Gerrit</a></li>
-                    <li><a href="#experience" class="nav-link">WikiClubTech</a></li>
-                    <li><a href="#impact" class="nav-link">Impact</a></li>
+                    <li><a href="#domains" class="nav-link">Core Pillars</a></li>
+                    <li><a href="#codex" class="nav-link">Codex Blueprint</a></li>
+                    <li><a href="#tasks" class="nav-link">Phabricator</a></li>
+                    <li><a href="#workflow" class="nav-link">Gerrit & Git</a></li>
+                    <li><a href="#honors" class="nav-link">WikiClubTech</a></li>
+                    <li><a href="#tooling" class="nav-link">Tooling</a></li>
                 </ul>
             </nav>
 
@@ -71,247 +1196,784 @@
     <main>
         <!-- 1. HERO SECTION -->
         <section id="overview" class="internship-hero-section">
-            <div class="hero-mesh-glow" style="background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent 70%);"></div>
-
-            <!-- Floating Badges -->
-            <div class="floating-badge float-top-left">
-                <div class="floating-badge-icon icon-emerald"><i class="fa-brands fa-vuejs"></i></div>
-                <div>
-                    <div class="floating-badge-title">Wikimedia Codex</div>
-                    <div class="floating-badge-sub">Vue.js & Design System</div>
-                </div>
-            </div>
-
-            <div class="floating-badge float-top-right">
-                <div class="floating-badge-icon icon-cyan"><i class="fa-solid fa-code-merge"></i></div>
-                <div>
-                    <div class="floating-badge-title">Gerrit & Git</div>
-                    <div class="floating-badge-sub">Patchsets & Reviews</div>
-                </div>
-            </div>
-
-            <div class="floating-badge float-bottom-left">
-                <div class="floating-badge-icon icon-blue"><i class="fa-solid fa-list-check"></i></div>
-                <div>
-                    <div class="floating-badge-title">Phabricator Tasks</div>
-                    <div class="floating-badge-sub">T434524 & T434753</div>
-                </div>
-            </div>
-
-            <div class="floating-badge float-bottom-right">
-                <div class="floating-badge-icon icon-gold"><i class="fa-solid fa-trophy"></i></div>
-                <div>
-                    <div class="floating-badge-title">Wiki Marathon</div>
-                    <div class="floating-badge-sub">Rank 6 · WikiClubTech</div>
-                </div>
-            </div>
+            <div class="hero-mesh-glow"></div>
 
             <div class="container hero-content-wrapper">
-                <div class="gov-badge" style="border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.1); color: var(--primary);">
-                    <span class="live-pulse-dot" style="background: var(--primary);"></span>
-                    <span>Wikimedia Foundation · Open Source Engineering</span>
+                <!-- Status Badge -->
+                <div class="wiki-hero-badge">
+                    <span class="live-pulse-dot"></span>
+                    <span>Wikimedia Foundation · Open Source Engineering Report</span>
                 </div>
 
-                <h1 class="hero-title">
+                <!-- Main Hero Headline -->
+                <h1 class="wiki-hero-title">
                     ROHIT PAL<br>
-                    <span class="text-gradient-glow">WIKIMEDIA OPEN SOURCE CONTRIBUTOR</span>
+                    <span class="wiki-title-gradient">WIKIMEDIA OPEN SOURCE CONTRIBUTOR</span>
                 </h1>
 
+                <!-- Tech Tags Row -->
                 <div class="hero-tags-row" style="display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem;">
-                    <span class="badge" style="background: rgba(16, 185, 129, 0.12); color: var(--primary); border-color: rgba(16, 185, 129, 0.3);">Open Source Engineering</span>
-                    <span class="badge" style="background: rgba(56, 189, 248, 0.12); color: var(--accent-cyan); border-color: rgba(56, 189, 248, 0.3);">Git & Gerrit</span>
-                    <span class="badge" style="background: rgba(245, 158, 11, 0.12); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">Phabricator</span>
-                    <span class="badge" style="background: rgba(59, 130, 246, 0.12); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">MediaWiki</span>
-                    <span class="badge" style="background: rgba(168, 85, 247, 0.12); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">Codex Design System</span>
+                    <span class="badge" style="background: var(--wiki-blue-light); color: var(--wiki-blue); border-color: var(--wiki-blue-border);">
+                        <i class="fa-brands fa-vuejs" style="margin-right: 0.35rem; color: var(--wiki-emerald);"></i> Wikimedia Codex
+                    </span>
+                    <span class="badge" style="background: var(--yellow-light); color: var(--yellow-dark); border-color: var(--yellow-border);">
+                        <i class="fa-solid fa-code-merge" style="margin-right: 0.35rem;"></i> Gerrit Code Review
+                    </span>
+                    <span class="badge" style="background: #F1F5F9; color: #0F172A; border-color: #CBD5E1;">
+                        <i class="fa-solid fa-list-check" style="margin-right: 0.35rem;"></i> Phabricator T434524 & T434753
+                    </span>
+                    <span class="badge" style="background: #EFF6FF; color: #1E40AF; border-color: #BFDBFE;">
+                        <i class="fa-solid fa-globe" style="margin-right: 0.35rem;"></i> MediaWiki Infrastructure
+                    </span>
+                    <span class="badge" style="background: #ECFDF5; color: #065F46; border-color: #A7F3D0;">
+                        <i class="fa-solid fa-trophy" style="margin-right: 0.35rem;"></i> Rank 6 Wiki Marathon
+                    </span>
                 </div>
 
-                <p class="hero-subtitle" style="font-size: 1.15rem; max-width: 750px; margin: 1.5rem auto 2rem;">
-                    Contributing to the <strong>Wikimedia open-source ecosystem</strong> through real-world issue investigation, frontend development, and code-review workflows.
+                <!-- Subtitle -->
+                <p class="hero-subtitle" style="font-size: 1.15rem; max-width: 820px; margin: 1.75rem auto 1.5rem; line-height: 1.75;">
+                    Contributing to the <strong>global open knowledge infrastructure</strong> driving Wikipedia and sister projects. Engineering frontend components in <strong>Wikimedia Codex (Vue.js 3)</strong>, resolving real-world bug tickets on <strong>Phabricator</strong>, and shipping reviewed Git patchsets through <strong>Gerrit</strong>.
                 </p>
 
-                <div class="hero-actions">
-                    <a href="#contributions" class="btn btn-primary">
-                        <i class="fa-solid fa-code"></i>
-                        <span>Core Contributions</span>
+                <!-- Hero Action Buttons -->
+                <div class="hero-actions" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#domains" class="btn btn-primary">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>Explore Core Pillars</span>
                     </a>
                     <a href="#tasks" class="btn btn-secondary">
-                        <i class="fa-solid fa-tasks"></i>
-                        <span>Phabricator Tasks</span>
+                        <i class="fa-solid fa-bug"></i>
+                        <span>Inspect Phabricator Tasks</span>
+                    </a>
+                    <a href="#workflow" class="btn btn-secondary" style="border-color: var(--border-dark);">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>Gerrit Terminal Workflow</span>
                     </a>
                 </div>
 
-                <div class="hero-quote-box" style="margin-top: 3rem; padding: 1.25rem 2rem; background: rgba(15, 24, 44, 0.85); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); max-width: 700px; margin-left: auto; margin-right: auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
-                    <p style="font-style: italic; color: #ffffff; font-size: 1rem; margin: 0;">
-                        <i class="fa-solid fa-quote-left" style="color: var(--primary); margin-right: 0.5rem;"></i>
-                        <strong>"Learning by contributing to software used by millions."</strong>
-                        <i class="fa-solid fa-quote-right" style="color: var(--primary); margin-left: 0.5rem;"></i>
+                <!-- Editorial Quote Card -->
+                <div class="wiki-quote-card">
+                    <p>
+                        <i class="fa-solid fa-quote-left" style="color: var(--yellow-primary); margin-right: 0.6rem;"></i>
+                        <strong>"Writing software for Wikimedia means building accessible, high-performance interfaces relied on by over 1 billion monthly readers and editors in 300+ languages."</strong>
+                        <i class="fa-solid fa-quote-right" style="color: var(--yellow-primary); margin-left: 0.6rem;"></i>
                     </p>
+                </div>
+
+                <!-- Hero Stats Bar (5 Highlights) -->
+                <div class="wiki-stats-grid">
+                    <div class="wiki-stat-box">
+                        <div class="wiki-stat-val">2+</div>
+                        <div class="wiki-stat-lbl">Phabricator Tasks</div>
+                    </div>
+                    <div class="wiki-stat-box">
+                        <div class="wiki-stat-val">Rank 6</div>
+                        <div class="wiki-stat-lbl">Wiki Marathon Finish</div>
+                    </div>
+                    <div class="wiki-stat-box">
+                        <div class="wiki-stat-val">Rank 2</div>
+                        <div class="wiki-stat-lbl">Live Technical Quiz</div>
+                    </div>
+                    <div class="wiki-stat-box">
+                        <div class="wiki-stat-val">Vue.js 3</div>
+                        <div class="wiki-stat-lbl">Codex Design System</div>
+                    </div>
+                    <div class="wiki-stat-box">
+                        <div class="wiki-stat-val">1B+</div>
+                        <div class="wiki-stat-lbl">Global Audience Reach</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. CORE CONTRIBUTIONS SECTION -->
-        <section id="contributions" class="section-padding bg-darker">
+        <!-- 2. CORE CONTRIBUTION PILLARS -->
+        <section id="domains" class="section-wrap alt-bg">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag-pill"><i data-lucide="layers"></i> 01 // ARCHITECTURE & WORKFLOW</span>
-                    <h2 class="section-title text-gradient">Core Engineering Contributions</h2>
-                    <p class="section-desc">Key domains of active contribution across frontend design systems, version control, and project management.</p>
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="layers"></i> 01 // ARCHITECTURE & SYSTEMS</span>
+                    <h2 class="section-headline">Core Engineering Contribution Pillars</h2>
+                    <p class="section-subtext">Comprehensive overview of active contribution tracks across frontend component design, enterprise code review, and issue lifecycle triage.</p>
                 </div>
 
-                <div class="pipeline-grid" style="grid-template-columns: repeat(2, 1fr);">
-                    
-                    <!-- 1. Wikimedia Codex -->
-                    <div class="pipeline-card glass-card" style="border-top: 3px solid #10b981;">
-                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                            <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(16, 185, 129, 0.15); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                <div class="pillars-grid">
+                    <!-- Pillar 1: Wikimedia Codex -->
+                    <div class="pillar-card" style="--accent-bar: #059669;">
+                        <div class="pillar-header-row">
+                            <div class="pillar-icon-box" style="--icon-bg: #ECFDF5; --icon-color: #059669; --icon-border: #A7F3D0;">
                                 <i class="fa-brands fa-vuejs"></i>
                             </div>
-                            <h3 class="pipeline-title" style="margin: 0; font-size: 1.3rem;">Wikimedia Codex</h3>
+                            <span class="pillar-tag">Frontend Architecture</span>
                         </div>
-                        <p class="pipeline-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-                            Worked on <strong>Vue.js, CSS & design-system components</strong>, investigating and resolving frontend issues across the official design system for Wikimedia interfaces.
+                        <h3 class="pillar-title">Wikimedia Codex (Vue.js 3)</h3>
+                        <p class="pillar-desc">
+                            Active hands-on involvement in <strong>Wikimedia Codex</strong>, the official design system powering next-generation Wikipedia and MediaWiki user interfaces. Contributed to Vue.js component anatomy, token synchronization (Less/CSS), and internationalization (RTL/LTR) standards.
                         </p>
-                        <div class="pipeline-footer" style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">doc.wikimedia.org/codex</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Design System</span>
+                        <div class="pillar-meta-row">
+                            <span style="color: var(--text-muted);"><i class="fa-solid fa-code"></i> Component Specs & Tokens</span>
+                            <a href="#codex" class="pillar-link-btn">Inspect Blueprint <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- 2. Gerrit & Git -->
-                    <div class="pipeline-card glass-card" style="border-top: 3px solid #38bdf8;">
-                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                            <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(56, 189, 248, 0.15); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                    <!-- Pillar 2: Gerrit Code Review -->
+                    <div class="pillar-card" style="--accent-bar: #2563EB;">
+                        <div class="pillar-header-row">
+                            <div class="pillar-icon-box" style="--icon-bg: #EFF6FF; --icon-color: #2563EB; --icon-border: #BFDBFE;">
                                 <i class="fa-solid fa-code-merge"></i>
                             </div>
-                            <h3 class="pipeline-title" style="margin: 0; font-size: 1.3rem;">Gerrit & Git</h3>
+                            <span class="pillar-tag">Enterprise Git Workflow</span>
                         </div>
-                        <p class="pipeline-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-                            Hands-on experience with <strong>branches, commits, patchsets, code review, and collaborative workflows</strong> following enterprise-grade Git standards.
+                        <h3 class="pillar-title">Gerrit Review & Git Patchsets</h3>
+                        <p class="pillar-desc">
+                            Operating within Wikimedia’s mission-critical review pipeline on <code>gerrit.wikimedia.org</code>. Managed clean commit hooks, generated cryptographic <code>Change-Id</code> stamps, rebased patchset iterations, and satisfied automated Jenkins CI gate checks.
                         </p>
-                        <div class="pipeline-footer" style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">gerrit.wikimedia.org</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Git Review</span>
+                        <div class="pillar-meta-row">
+                            <span style="color: var(--text-muted);"><i class="fa-solid fa-check-double"></i> Verified +1 / Review +2</span>
+                            <a href="#workflow" class="pillar-link-btn">View Terminal Log <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- 3. Phabricator Development Tasks -->
-                    <div class="pipeline-card glass-card" id="tasks" style="border-top: 3px solid #f59e0b;">
-                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                            <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                    <!-- Pillar 3: Phabricator Issue Management -->
+                    <div class="pillar-card" style="--accent-bar: #D97706;">
+                        <div class="pillar-header-row">
+                            <div class="pillar-icon-box" style="--icon-bg: #FFFBEB; --icon-color: #D97706; --icon-border: #FDE68A;">
                                 <i class="fa-solid fa-list-check"></i>
                             </div>
-                            <h3 class="pipeline-title" style="margin: 0; font-size: 1.3rem;">Phabricator Task Management</h3>
+                            <span class="pillar-tag">Bug Triage & Resolution</span>
                         </div>
-                        <p class="pipeline-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-                            Worked with <strong>Wikimedia development tasks</strong>, including <strong>T434524</strong> and <strong>T434753</strong>, participating in bug triage, reproduction, and developer discussions.
+                        <h3 class="pillar-title">Phabricator Tasks (T434524, T434753)</h3>
+                        <p class="pillar-desc">
+                            Engaged in production bug reproduction, root-cause analysis, and developer conversations on Wikimedia’s bug tracking engine. Addressed ticket <strong>T434524</strong> and ticket <strong>T434753</strong>, documenting reproducible edge cases and collaborating with upstream engineers.
                         </p>
-                        <div class="pipeline-footer" style="margin-top: 1.5rem; display: flex; gap: 0.6rem; align-items: center;">
-                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">Task T434524</span>
-                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">Task T434753</span>
+                        <div class="pillar-meta-row">
+                            <span style="color: var(--text-muted);"><i class="fa-solid fa-bug"></i> Maniphest Workboard</span>
+                            <a href="#tasks" class="pillar-link-btn">Read Task Details <i data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- 4. MediaWiki Ecosystem -->
-                    <div class="pipeline-card glass-card" id="codex" style="border-top: 3px solid #3b82f6;">
-                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                            <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(59, 130, 246, 0.15); color: #60a5fa; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                    <!-- Pillar 4: MediaWiki Infrastructure -->
+                    <div class="pillar-card" style="--accent-bar: #4F46E5;">
+                        <div class="pillar-header-row">
+                            <div class="pillar-icon-box" style="--icon-bg: #EEF2FF; --icon-color: #4F46E5; --icon-border: #C7D2FE;">
                                 <i class="fa-solid fa-globe"></i>
                             </div>
-                            <h3 class="pipeline-title" style="margin: 0; font-size: 1.3rem;">MediaWiki Ecosystem</h3>
+                            <span class="pillar-tag">Core Knowledge Engine</span>
                         </div>
-                        <p class="pipeline-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-                            Explored and contributed within the <strong>open-source infrastructure behind Wikipedia and Wikimedia projects</strong>, analyzing core logic and frontend integrations.
+                        <h3 class="pillar-title">MediaWiki Platform Ecosystem</h3>
+                        <p class="pillar-desc">
+                            Investigated the full lifecycle of MediaWiki core and extension architectures. Explored how frontend Codex components embed inside PHP skins (Vector 2022, MinervaNeue), ResourceLoader module packaging, and database-agnostic caching paradigms.
                         </p>
-                        <div class="pipeline-footer" style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">mediawiki.org</span>
-                            <span class="pipeline-status status-success"><i class="fa-solid fa-circle-check"></i> Core & Extensions</span>
+                        <div class="pillar-meta-row">
+                            <span style="color: var(--text-muted);"><i class="fa-solid fa-server"></i> ResourceLoader & PHP Hooks</span>
+                            <a href="https://www.mediawiki.org" target="_blank" rel="noopener" class="pillar-link-btn">MediaWiki.org <i data-lucide="external-link"></i></a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- 3. OPEN SOURCE DAY & COMMUNITY EXPERIENCE -->
-        <section id="experience" class="section-padding">
+        <!-- 3. DEEP DIVE: WIKIMEDIA CODEX & VUE.JS BLUEPRINT -->
+        <section id="codex" class="section-wrap">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag-pill"><i data-lucide="award"></i> 02 // COMMUNITY & SUMMITS</span>
-                    <h2 class="section-title text-gradient">Open Source Experience & Hackathons</h2>
-                    <p class="section-desc">Active involvement in Wikimedia community hackathons and developer initiatives.</p>
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="layout"></i> 02 // DESIGN SYSTEM ARCHITECTURE</span>
+                    <h2 class="section-headline">Wikimedia Codex & Vue.js Component Engineering</h2>
+                    <p class="section-subtext">Exploring the architectural layers of Codex: atomic design tokens, reactive Vue 3 components, and rigorous WCAG 2.1 AA accessibility compliance.</p>
                 </div>
 
-                <div class="glass-card" style="padding: 2.5rem; border: 1px solid rgba(56, 189, 248, 0.25); max-width: 900px; margin: 0 auto;">
-                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 1rem;">
-                        <div>
-                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); margin-bottom: 0.5rem;">
-                                🏆 Road to Wiki Marathon — Rank 6
+                <div class="codex-layout">
+                    <!-- Left Column: Architectural Overview & Live Mockup -->
+                    <div class="codex-info-card">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+                            <div style="width: 40px; height: 40px; border-radius: 8px; background: #ECFDF5; color: #059669; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                <i class="fa-brands fa-vuejs"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 1.25rem; margin: 0; font-weight: 750;">Design System Principles</h3>
+                                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Package: @wikimedia/codex</span>
+                            </div>
+                        </div>
+
+                        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+                            Codex replaces legacy MediaWiki UI libraries (OOUI) with a modern TypeScript + Vue 3 ecosystem. It establishes a single source of truth for Wikipedia’s visual identity through tokenized design primitives.
+                        </p>
+
+                        <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem;">
+                            <div style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                                <i class="fa-solid fa-check-circle" style="color: #059669; margin-top: 0.2rem;"></i>
+                                <span style="font-size: 0.88rem; color: var(--text-secondary);"><strong>Design Tokens:</strong> Platform-agnostic JSON tokens compiled into Less, CSS variables, and JS constants.</span>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                                <i class="fa-solid fa-check-circle" style="color: #059669; margin-top: 0.2rem;"></i>
+                                <span style="font-size: 0.88rem; color: var(--text-secondary);"><strong>Bidirectional Support:</strong> Built-in dynamic RTL/LTR flipping supporting Arabic, Hebrew, Urdu, and 300+ languages.</span>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                                <i class="fa-solid fa-check-circle" style="color: #059669; margin-top: 0.2rem;"></i>
+                                <span style="font-size: 0.88rem; color: var(--text-secondary);"><strong>WCAG 2.1 AA Compliance:</strong> Enforced minimum 4.5:1 color contrast ratio and seamless screen reader navigation.</span>
+                            </div>
+                        </div>
+
+                        <!-- Live Component Interactive Mockup -->
+                        <div class="codex-mockup-card">
+                            <div class="cdx-mockup-title">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <span>Interactive Codex Design Tokens UI</span>
+                            </div>
+                            <div class="cdx-mockup-controls">
+                                <button class="cdx-btn-demo cdx-btn-primary-demo" id="demo-btn-primary" onclick="testCodexAction('Primary Progressive Action triggered (@click=handleProgressive)')">
+                                    <i class="fa-solid fa-floppy-disk"></i>
+                                    <span>Primary Action</span>
+                                </button>
+                                <button class="cdx-btn-demo cdx-btn-quiet-demo" id="demo-btn-quiet" onclick="testCodexAction('Quiet Action triggered (@click=handleQuiet)')">
+                                    <i class="fa-solid fa-code-compare"></i>
+                                    <span>Quiet Action</span>
+                                </button>
+                                <span class="cdx-badge-demo">Status: Verified</span>
+                            </div>
+                            <!-- Live interactive status response box -->
+                            <div class="cdx-live-feedback" id="cdx-feedback-box">
+                                <i class="fa-solid fa-terminal"></i>
+                                <span id="cdx-feedback-text">Ready. Click buttons to observe simulated Codex event handlers.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive Code & Architecture Tabs -->
+                    <div>
+                        <!-- Tabs Navigation -->
+                        <div class="codex-tabs-nav">
+                            <button class="codex-tab-btn active" onclick="switchCodexTab(event, 'tab-vue')">
+                                <i class="fa-brands fa-vuejs"></i> Vue 3 Component
+                            </button>
+                            <button class="codex-tab-btn" onclick="switchCodexTab(event, 'tab-tokens')">
+                                <i class="fa-solid fa-palette"></i> Design Tokens
+                            </button>
+                            <button class="codex-tab-btn" onclick="switchCodexTab(event, 'tab-a11y')">
+                                <i class="fa-solid fa-universal-access"></i> A11y & i18n
+                            </button>
+                        </div>
+
+                        <!-- Tab 1: Vue Component Implementation -->
+                        <div id="tab-vue" class="codex-tab-pane active">
+                            <div class="terminal-box">
+                                <div class="terminal-header">
+                                    <div class="terminal-dots">
+                                        <div class="t-dot t-red"></div>
+                                        <div class="t-dot t-yellow"></div>
+                                        <div class="t-dot t-green"></div>
+                                    </div>
+                                    <span class="terminal-title">CdxButton.vue — Wikimedia Codex</span>
+                                    <span style="font-size: 0.75rem; color: #64748B;">Vue 3 SFC</span>
+                                </div>
+                                <div class="terminal-body">
+<span class="term-comment">&lt;!-- Official Codex Button Component Specification --&gt;</span>
+&lt;<span class="term-highlight">template</span>&gt;
+  &lt;<span class="term-prompt">button</span>
+    :class="[
+      <span class="term-success">'cdx-button'</span>,
+      `cdx-button--action-${action}`,
+      `cdx-button--weight-${weight}`,
+      { <span class="term-success">'cdx-button--framed'</span>: isFramed }
+    ]"
+    :aria-disabled="disabled || undefined"
+    @click="handleClick"
+  &gt;
+    &lt;<span class="term-prompt">slot</span> name="icon" /&gt;
+    &lt;<span class="term-prompt">span</span> class="cdx-button__label"&gt;
+      &lt;<span class="term-prompt">slot</span> /&gt;
+    &lt;/<span class="term-prompt">span</span>&gt;
+  &lt;/<span class="term-prompt">button</span>&gt;
+&lt;/<span class="term-highlight">template</span>&gt;
+
+&lt;<span class="term-highlight">script</span> setup lang="ts"&gt;
+<span class="term-comment">// Strict TypeScript Props Interface</span>
+interface ButtonProps {
+  action?: <span class="term-success">'default'</span> | <span class="term-success">'progressive'</span> | <span class="term-success">'destructive'</span>;
+  weight?: <span class="term-success">'normal'</span> | <span class="term-success">'primary'</span> | <span class="term-success">'quiet'</span>;
+  disabled?: boolean;
+}
+&lt;/<span class="term-highlight">script</span>&gt;</div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Design Tokens -->
+                        <div id="tab-tokens" class="codex-tab-pane">
+                            <div class="terminal-box">
+                                <div class="terminal-header">
+                                    <div class="terminal-dots">
+                                        <div class="t-dot t-red"></div>
+                                        <div class="t-dot t-yellow"></div>
+                                        <div class="t-dot t-green"></div>
+                                    </div>
+                                    <span class="terminal-title">tokens.less — Design Tokens Hierarchy</span>
+                                    <span style="font-size: 0.75rem; color: #64748B;">Codex Tokens</span>
+                                </div>
+                                <div class="terminal-body">
+<span class="term-comment">// 1. Color Palette Tokens</span>
+@color-base:               <span class="term-highlight">#202122</span>;  <span class="term-comment">// High-contrast Wikimedia Ink</span>
+@color-base--hover:        <span class="term-highlight">#404244</span>;
+@color-progressive:        <span class="term-prompt">#3366cc</span>;  <span class="term-comment">// Wikipedia Signature Blue</span>
+@color-progressive--hover: <span class="term-prompt">#2a4b8d</span>;
+@color-destructive:        <span style="color:#EF4444">#d33</span>;     <span class="term-comment">// Error & Warning Red</span>
+
+<span class="term-comment">// 2. Spacing Primitives</span>
+@spacing-50:  <span class="term-success">8px</span>;
+@spacing-100: <span class="term-success">16px</span>;
+@spacing-150: <span class="term-success">24px</span>;
+
+<span class="term-comment">// 3. Accessible Focus Ring Token</span>
+@box-shadow-focus: inset <span class="term-success">0 0 0 1px</span> @color-progressive,
+                   inset <span class="term-success">0 0 0 2px</span> #ffffff;</div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 3: A11y & i18n -->
+                        <div id="tab-a11y" class="codex-tab-pane">
+                            <div class="terminal-box">
+                                <div class="terminal-header">
+                                    <div class="terminal-dots">
+                                        <div class="t-dot t-red"></div>
+                                        <div class="t-dot t-yellow"></div>
+                                        <div class="t-dot t-green"></div>
+                                    </div>
+                                    <span class="terminal-title">accessibility-checklist.md</span>
+                                    <span style="font-size: 0.75rem; color: #64748B;">WCAG 2.1 AA</span>
+                                </div>
+                                <div class="terminal-body">
+<span class="term-comment">## Wikimedia Codex Internationalization & Accessibility Standard</span>
+
+<span class="term-prompt">1. RTL / LTR Flipping:</span>
+   - Automates direction flipping via PostCSS RTLCSS plugins.
+   - Preserves logical margin-inline-start / padding-inline-end.
+
+<span class="term-prompt">2. Screen Reader ARIA Compliance:</span>
+   - Dynamic `aria-expanded`, `aria-controls`, and `aria-live="polite"`.
+   - Invisible `.cdx-screen-reader-only` utility for assistive text.
+
+<span class="term-prompt">3. Keyboard Navigation:</span>
+   - Complete `Tab`, `Shift+Tab`, `ArrowUp`, `ArrowDown`, `Escape` handlers.
+   - Focus traps implemented within modal dialog components.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PHABRICATOR DEVELOPMENT TASKS SHOWCASE -->
+        <section id="tasks" class="section-wrap alt-bg">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="check-circle-2"></i> 03 // PHABRICATOR MANIPHEST</span>
+                    <h2 class="section-headline">Phabricator Issue Triage & Engineering Tickets</h2>
+                    <p class="section-subtext">Deep-dive into verified Wikimedia task tickets (T434524 & T434753) showing real bug reproduction, code investigations, and collaborative resolution.</p>
+                </div>
+
+                <div class="phab-grid">
+                    <!-- Task 1: T434524 -->
+                    <div class="phab-card">
+                        <div class="phab-top-bar">
+                            <div class="phab-id-badge">
+                                <i class="fa-solid fa-hashtag"></i>
+                                <span>T434524</span>
+                            </div>
+                            <span class="phab-status-pill status-resolved">
+                                <i class="fa-solid fa-circle-check"></i> RESOLVED / TRIAGED
                             </span>
-                            <h3 style="font-size: 1.5rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0;">Open Source Day — WikiClubTech UIT</h3>
                         </div>
-                        <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan);">UIT Campus & Global Wikimedia</span>
+
+                        <h3 class="phab-title">Codex Component Style Token Propagation & Rendering Flaw</h3>
+
+                        <div class="phab-desc-box">
+                            <p><strong>Problem Statement:</strong> In specific viewport scales and dark-mode MediaWiki skin integrations, custom Less variable tokens failed to inherit properly into nested Codex child components, creating contrast anomalies.</p>
+                        </div>
+
+                        <ul class="phab-investigation-list">
+                            <li>
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <span><strong>Root Cause Analysis:</strong> CSS specificity conflict where skin-level global overrides clobbered scoped Vue 3 component token variables.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <span><strong>Resolution:</strong> Restructured Less nesting rules and implemented CSS custom property fallbacks ensuring isolated component encapsulation.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <span><strong>Verification:</strong> Tested across Vector 2022 and Minerva skins in both LTR and RTL orientations.</span>
+                            </li>
+                        </ul>
+
+                        <div class="phab-tags-row">
+                            <span class="phab-tag-chip">Codex-Design-System</span>
+                            <span class="phab-tag-chip">Vue.js</span>
+                            <span class="phab-tag-chip">Less / CSS Tokens</span>
+                            <span class="phab-tag-chip">MediaWiki-Frontend</span>
+                        </div>
                     </div>
 
-                    <p style="font-size: 1rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                        Explored the end-to-end tooling of the <strong>Wikimedia Foundation, Gerrit, Phabricator, GitLab, Wikimedia Commons & Wikibooks</strong>. Competed in the <strong>Road to Wiki Marathon</strong>, securing an impressive <strong>Rank 6</strong> finish.
-                    </p>
+                    <!-- Task 2: T434753 -->
+                    <div class="phab-card">
+                        <div class="phab-top-bar">
+                            <div class="phab-id-badge">
+                                <i class="fa-solid fa-hashtag"></i>
+                                <span>T434753</span>
+                            </div>
+                            <span class="phab-status-pill status-triage">
+                                <i class="fa-solid fa-code-pull-request"></i> PATCHSET UNDER REVIEW
+                            </span>
+                        </div>
 
-                    <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                        <span class="badge">Wikimedia Foundation</span>
-                        <span class="badge">Gerrit Code Review</span>
-                        <span class="badge">Phabricator</span>
-                        <span class="badge">GitLab</span>
-                        <span class="badge">Wikimedia Commons</span>
-                        <span class="badge">Wikibooks</span>
+                        <h3 class="phab-title">Frontend Event Handling & DOM Accessibility Attributes</h3>
+
+                        <div class="phab-desc-box">
+                            <p><strong>Problem Statement:</strong> Interactive dropdown and disclosure elements in Codex did not reliably update <code>aria-expanded</code> and focus state during programmatic closing events initiated via keyboard <code>Escape</code>.</p>
+                        </div>
+
+                        <ul class="phab-investigation-list">
+                            <li>
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <span><strong>Root Cause Analysis:</strong> Missing DOM lifecycle hook cleanup in Vue component unmount and asynchronous event emission delay.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <span><strong>Resolution:</strong> Added synchronous reactive ref updates and bonded native keydown listeners with proper focus restoration to trigger elements.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-dot"></i>
+                                <span><strong>Maintainer Feedback:</strong> Incorporated upstream maintainer suggestions to avoid memory leaks during dynamic DOM destruction.</span>
+                            </li>
+                        </ul>
+
+                        <div class="phab-tags-row">
+                            <span class="phab-tag-chip">Accessibility-WCAG</span>
+                            <span class="phab-tag-chip">Keyboard-Nav</span>
+                            <span class="phab-tag-chip">Vue-Reactivity</span>
+                            <span class="phab-tag-chip">Gerrit-Patchset</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phabricator Lifecycle Tracker -->
+                <div class="lifecycle-flow-card">
+                    <h3 class="lifecycle-title">The Wikimedia Open Source Patch Lifecycle</h3>
+                    <div class="lifecycle-steps-row">
+                        <div class="step-item active">
+                            <div class="step-bubble">01</div>
+                            <div class="step-title">Bug Triage</div>
+                            <div class="step-caption">Phabricator Maniphest issue creation & reproduction</div>
+                        </div>
+                        <div class="step-item active">
+                            <div class="step-bubble">02</div>
+                            <div class="step-title">Local Patch</div>
+                            <div class="step-caption">Git branch creation & commit with Change-Id hook</div>
+                        </div>
+                        <div class="step-item active">
+                            <div class="step-bubble">03</div>
+                            <div class="step-title">Gerrit Upload</div>
+                            <div class="step-caption">Executed <code>git-review</code> to push patchset</div>
+                        </div>
+                        <div class="step-item active">
+                            <div class="step-bubble">04</div>
+                            <div class="step-title">CI Gates</div>
+                            <div class="step-caption">Automated linting, Vitest & Jenkins Verified +1</div>
+                        </div>
+                        <div class="step-item active">
+                            <div class="step-bubble">05</div>
+                            <div class="step-title">Merge & Deploy</div>
+                            <div class="step-caption">Maintainer Code-Review +2 & merged to master</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. IMPACT & KEY TAKEAWAYS -->
-        <section id="impact" class="section-padding bg-darker">
+        <!-- 5. GERRIT CODE REVIEW & GIT WORKFLOW MASTERCLASS -->
+        <section id="workflow" class="section-wrap">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag-pill"><i data-lucide="sparkles"></i> 03 // LEARNING & IMPACT</span>
-                    <h2 class="section-title text-gradient">Engineering Impact & Takeaways</h2>
-                    <p class="section-desc">Key professional takeaways gained from contributing to production-scale open source software.</p>
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="terminal"></i> 04 // ENTERPRISE CODE REVIEW</span>
+                    <h2 class="section-headline">Gerrit Code Review & Git Workflow Masterclass</h2>
+                    <p class="section-subtext">How Wikimedia maintains strict quality assurance through granular patchsets, automated CI voting matrices, and collaborative reviews.</p>
                 </div>
 
-                <div class="domains-grid">
+                <!-- Terminal Simulator Box -->
+                <div class="terminal-box" style="max-width: 960px; margin: 0 auto 3rem auto;">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <div class="t-dot t-red"></div>
+                            <div class="t-dot t-yellow"></div>
+                            <div class="t-dot t-green"></div>
+                        </div>
+                        <span class="terminal-title">bash — rohit@wikimedia-dev: ~/codex</span>
+                        <div class="terminal-actions-row">
+                            <button class="btn-copy-terminal" onclick="copyTerminalSnippet(this)">
+                                <i data-lucide="copy" style="width: 14px; height: 14px;"></i>
+                                <span>Copy Workflow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="terminal-body" id="gerrit-terminal-code">
+<span class="term-comment"># 1. Clone repository and install Wikimedia commit hooks</span>
+<span class="term-prompt">rohit@wikimedia:~/workspace$</span> <span class="term-cmd">git clone https://gerrit.wikimedia.org/r/design/codex</span>
+<span class="term-prompt">rohit@wikimedia:~/workspace$</span> <span class="term-cmd">cd codex && git-review -s</span>
+<span class="term-success">✓ Installed Gerrit Change-Id commit hook to .git/hooks/commit-msg</span>
+
+<span class="term-comment"># 2. Create feature branch aligned to Phabricator ticket</span>
+<span class="term-prompt">rohit@wikimedia:~/codex$</span> <span class="term-cmd">git checkout -b fix-t434524-token-inheritance</span>
+
+<span class="term-comment"># 3. Format commit message with strict Wikimedia standards</span>
+<span class="term-prompt">rohit@wikimedia:~/codex$</span> <span class="term-cmd">git commit -m "[codex] Ensure Less tokens inherit properly into child components
+
+Fix an issue where skin-level CSS specificity clobbered component tokens.
+Added regression unit tests to verify scoped variable persistence.
+
+Bug: T434524"</span>
+
+<span class="term-comment"># 4. Upload patchset directly to Gerrit</span>
+<span class="term-prompt">rohit@wikimedia:~/codex$</span> <span class="term-cmd">git review</span>
+<span class="term-success">remote: Processing changes: new: 1, refs: 1, done</span>
+<span class="term-highlight">remote: New Changes:</span>
+<span class="term-highlight">remote:   https://gerrit.wikimedia.org/r/c/design/codex/+/1084291 [codex] Ensure Less tokens inherit</span>
+<span class="term-success">✓ Patchset 1 uploaded. Jenkins CI triggered automated test build.</span>
+<span class="term-success">✓ Jenkins CI Gate: Verified +1 (Build passed in 2m 14s)</span></div>
+                </div>
+
+                <!-- Comparison Table: Gerrit vs GitHub -->
+                <div class="comparison-table-wrap">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th>Workflow Dimension</th>
+                                <th>Wikimedia Gerrit Architecture</th>
+                                <th>Standard GitHub Pull Requests</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="comp-feature-name">Review Granularity</td>
+                                <td class="comp-gerrit-val">Individual Commit / Patchset Level</td>
+                                <td>Entire Branch Level (All Commits lumped together)</td>
+                            </tr>
+                            <tr>
+                                <td class="comp-feature-name">Change Identification</td>
+                                <td class="comp-gerrit-val">Cryptographic <code>Change-Id</code> tracked across rebases</td>
+                                <td>PR Number bound to branch name</td>
+                            </tr>
+                            <tr>
+                                <td class="comp-feature-name">Review Voting Matrix</td>
+                                <td class="comp-gerrit-val">Code-Review (+1, +2, -1, -2) & Verified (+1, -1)</td>
+                                <td>Approve / Request Changes (Binary)</td>
+                            </tr>
+                            <tr>
+                                <td class="comp-feature-name">CI Automation Gates</td>
+                                <td class="comp-gerrit-val">Strict voting lock: Code cannot merge without Verified +1</td>
+                                <td>Status checks can be manually overridden</td>
+                            </tr>
+                            <tr>
+                                <td class="comp-feature-name">Commit History</td>
+                                <td class="comp-gerrit-val">Preserves 100% linear, atomic, clean commit graph</td>
+                                <td>Often cluttered with merge commits and squash rewrites</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. WIKICLUBTECH UIT & OPEN SOURCE DAY HONORS -->
+        <section id="honors" class="section-wrap alt-bg">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="award"></i> 05 // COMMUNITY & SUMMITS</span>
+                    <h2 class="section-headline">Open Source Day — WikiClubTech UIT Honors</h2>
+                    <p class="section-subtext">Competitive achievements and community leadership celebrated at Open Source Day on UIT Campus (21 August).</p>
+                </div>
+
+                <div class="honors-spotlight-card">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <span class="honors-trophy-badge">
+                            <i class="fa-solid fa-trophy"></i> DOUBLE WINNER HONORS 🏆🥈
+                        </span>
+                        <h3 style="font-size: 1.85rem; font-weight: 800; color: var(--text-primary); margin: 0.5rem 0;">
+                            Open Source Day · WikiClubTech UIT
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 1rem; max-width: 650px; margin: 0.5rem auto 0;">
+                            Recognized for outstanding technical agility, marathon persistence, and active contributions within the Wikimedia developer community.
+                        </p>
+                    </div>
+
+                    <div class="honors-grid-duo">
+                        <!-- Award 1: Rank 6 -->
+                        <div class="honor-trophy-box">
+                            <div class="trophy-icon-large">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <div class="trophy-content">
+                                <h4>Road to Wiki Marathon — Rank 6</h4>
+                                <p>Competed in the rigorous 1-week Open Source Marathon leading up to Open Source Day. Successfully triaged tasks, secured <strong>6th Rank overall</strong>, and was awarded official Wikimedia goodies and swag.</p>
+                            </div>
+                        </div>
+
+                        <!-- Award 2: Rank 2 -->
+                        <div class="honor-trophy-box">
+                            <div class="trophy-icon-large" style="background: #EFF6FF; color: #2563EB; border-color: #BFDBFE;">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <div class="trophy-content">
+                                <h4>Live Technical Quiz — Rank 2</h4>
+                                <p>Secured <strong>2nd Rank</strong> in the competitive on-spot technical challenge, testing deep comprehension of open-source licensing, Git version control, and MediaWiki architecture.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mentorship Appreciation -->
+                    <div class="mentors-row">
+                        <span class="mentors-label"><i class="fa-solid fa-heart" style="color: #EF4444; margin-right: 0.4rem;"></i> Continuous Mentorship:</span>
+                        <span class="mentors-names">Gautam Kumar Maurya (GKM) · Reeti Singh Ma’am · Ankit Kumar Verma Sir</span>
+                    </div>
+
+                    <!-- Verification CTA -->
+                    <div style="text-align: center; margin-top: 2.25rem;">
+                        <a href="https://www.linkedin.com/posts/rohit-pal-98230131a_opensource-wikimedia-wikiclubtech-activity-7496991574824820737-8hC3" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>Verify Story on LinkedIn</span>
+                            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. TOOLS & TECHNOLOGIES MATRIX -->
+        <section id="tooling" class="section-wrap">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="cpu"></i> 06 // TECHNICAL STACK</span>
+                    <h2 class="section-headline">Engineering Tooling & Platform Matrix</h2>
+                    <p class="section-subtext">Comprehensive breakdown of languages, design tooling, version control, and open-source infrastructure utilized.</p>
+                </div>
+
+                <div class="tools-matrix-grid">
+                    <!-- Category 1 -->
+                    <div class="tool-category-card">
+                        <div class="tool-cat-header">
+                            <i class="fa-brands fa-vuejs tool-cat-icon" style="color: #059669;"></i>
+                            <h4 class="tool-cat-title">Frontend & UI</h4>
+                        </div>
+                        <div class="tool-pills-list">
+                            <span class="tool-pill"><i class="devicon-vuejs-plain colored"></i> Vue.js 3</span>
+                            <span class="tool-pill"><i class="devicon-javascript-plain colored"></i> JavaScript (ES6+)</span>
+                            <span class="tool-pill"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                            <span class="tool-pill"><i class="devicon-html5-plain colored"></i> Semantic HTML5</span>
+                            <span class="tool-pill"><i class="devicon-css3-plain colored"></i> Modern CSS3</span>
+                            <span class="tool-pill"><i class="devicon-less-plain-wordmark colored"></i> Less Tokens</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2 -->
+                    <div class="tool-category-card">
+                        <div class="tool-cat-header">
+                            <i class="fa-solid fa-palette tool-cat-icon" style="color: #2563EB;"></i>
+                            <h4 class="tool-cat-title">Design Systems</h4>
+                        </div>
+                        <div class="tool-pills-list">
+                            <span class="tool-pill"><i class="fa-solid fa-cube"></i> Wikimedia Codex</span>
+                            <span class="tool-pill"><i class="fa-solid fa-universal-access"></i> WCAG 2.1 AA</span>
+                            <span class="tool-pill"><i class="fa-solid fa-language"></i> RTL/LTR i18n</span>
+                            <span class="tool-pill"><i class="devicon-figma-plain colored"></i> Figma</span>
+                            <span class="tool-pill"><i class="fa-solid fa-sliders"></i> CSS Variables</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class="tool-category-card">
+                        <div class="tool-cat-header">
+                            <i class="fa-solid fa-code-merge tool-cat-icon" style="color: #D97706;"></i>
+                            <h4 class="tool-cat-title">VCS & Review</h4>
+                        </div>
+                        <div class="tool-pills-list">
+                            <span class="tool-pill"><i class="fa-solid fa-code-branch"></i> Gerrit Review</span>
+                            <span class="tool-pill"><i class="devicon-git-plain colored"></i> Git Version Control</span>
+                            <span class="tool-pill"><i class="fa-solid fa-terminal"></i> git-review CLI</span>
+                            <span class="tool-pill"><i class="fa-solid fa-list-check"></i> Phabricator Maniphest</span>
+                            <span class="tool-pill"><i class="devicon-jenkins-line colored"></i> Jenkins CI</span>
+                            <span class="tool-pill"><i class="devicon-gitlab-plain colored"></i> GitLab</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4 -->
+                    <div class="tool-category-card">
+                        <div class="tool-cat-header">
+                            <i class="fa-solid fa-globe tool-cat-icon" style="color: #7C3AED;"></i>
+                            <h4 class="tool-cat-title">Wikimedia Ecosystem</h4>
+                        </div>
+                        <div class="tool-pills-list">
+                            <span class="tool-pill"><i class="fa-solid fa-server"></i> MediaWiki Core</span>
+                            <span class="tool-pill"><i class="fa-solid fa-images"></i> Wikimedia Commons</span>
+                            <span class="tool-pill"><i class="fa-solid fa-book-open"></i> Wikibooks</span>
+                            <span class="tool-pill"><i class="devicon-php-plain colored"></i> PHP 8+ Hooks</span>
+                            <span class="tool-pill"><i class="fa-solid fa-wrench"></i> Toolforge</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. ENGINEERING IMPACT & KEY TAKEAWAYS -->
+        <section id="impact" class="section-wrap alt-bg">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="sparkles"></i> 07 // PROFESSIONAL GROWTH</span>
+                    <h2 class="section-headline">Engineering Impact & Key Takeaways</h2>
+                    <p class="section-subtext">Professional competencies acquired while contributing to production-grade software utilized by over a billion global readers.</p>
+                </div>
+
+                <div class="domains-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <!-- Impact 1 -->
                     <div class="domain-card glass-card">
-                        <div class="domain-icon-box" style="background: rgba(16, 185, 129, 0.15); color: var(--primary);">
+                        <div class="domain-icon-box" style="background: #ECFDF5; color: #059669;">
                             <i class="fa-solid fa-earth-americas"></i>
                         </div>
-                        <h3 class="domain-title">Real-World Open Source Contribution</h3>
-                        <p class="domain-desc">Writing, debugging, and submitting real code changes that directly impact the open web ecosystem.</p>
+                        <h3 class="domain-title">Software for Extreme Scale</h3>
+                        <p class="domain-desc">
+                            Writing code for Wikimedia means embracing extreme backward compatibility, zero vendor lock-in, low-bandwidth optimization, and internationalization across 300+ spoken dialects.
+                        </p>
                     </div>
 
+                    <!-- Impact 2 -->
                     <div class="domain-card glass-card">
-                        <div class="domain-icon-box" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-cyan);">
-                            <i class="fa-solid fa-gears"></i>
+                        <div class="domain-icon-box" style="background: #EFF6FF; color: #2563EB;">
+                            <i class="fa-solid fa-shield-halved"></i>
                         </div>
-                        <h3 class="domain-title">Production-Scale Workflows</h3>
-                        <p class="domain-desc">Operating in high-standard CI/CD pipelines, automated testing gates, and strict branch protection protocols.</p>
+                        <h3 class="domain-title">Rigorous Review Culture</h3>
+                        <p class="domain-desc">
+                            Thoroughly appreciating the discipline of peer reviews. Every patchset undergoes automated static analysis, Vitest suites, accessibility scans, and strict verification by seasoned core maintainers.
+                        </p>
                     </div>
 
+                    <!-- Impact 3 -->
                     <div class="domain-card glass-card">
-                        <div class="domain-icon-box" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">
-                            <i class="fa-solid fa-comments"></i>
+                        <div class="domain-icon-box" style="background: #FFFBEB; color: #D97706;">
+                            <i class="fa-solid fa-cubes"></i>
                         </div>
-                        <h3 class="domain-title">Collaborative Code Review & Debugging</h3>
-                        <p class="domain-desc">Engaging with global maintainers, following peer feedback, and iterating on Git patchsets cleanly.</p>
+                        <h3 class="domain-title">Enterprise Design System Architecture</h3>
+                        <p class="domain-desc">
+                            Mastering the tokenization lifecycle: creating single-source-of-truth tokens in Less/CSS, propagating variables safely across encapsulated Vue 3 components, and preventing DOM style regressions.
+                        </p>
                     </div>
 
+                    <!-- Impact 4 -->
                     <div class="domain-card glass-card">
-                        <div class="domain-icon-box" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">
-                            <i class="fa-brands fa-vuejs"></i>
+                        <div class="domain-icon-box" style="background: #F3E8FF; color: #7C3AED;">
+                            <i class="fa-solid fa-users"></i>
                         </div>
-                        <h3 class="domain-title">Frontend & Design-System Engineering</h3>
-                        <p class="domain-desc">Deepening expertise in Vue.js, component architecture, CSS tokens, and accessible UI standards.</p>
+                        <h3 class="domain-title">Global Asynchronous Collaboration</h3>
+                        <p class="domain-desc">
+                            Communicating clearly across timezones, drafting actionable bug reports with reproducible sandboxes on Phabricator, and participating constructively in open-source discussions.
+                        </p>
                     </div>
                 </div>
 
+                <!-- Return Button -->
                 <div class="text-center" style="margin-top: 3.5rem;">
                     <a href="index.html" class="btn btn-primary">
                         <i data-lucide="arrow-left"></i>
@@ -320,17 +1982,211 @@
                 </div>
             </div>
         </section>
+
+        <!-- 9. FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
+        <section id="faq" class="section-wrap">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-pill-tag"><i data-lucide="help-circle"></i> 08 // KNOWLEDGE BASE</span>
+                    <h2 class="section-headline">Frequently Asked Questions</h2>
+                    <p class="section-subtext">Common queries regarding the Wikimedia open source contribution workflow, Gerrit reviews, and Codex architecture.</p>
+                </div>
+
+                <div class="faq-accordion-wrap">
+                    <!-- Q1 -->
+                    <div class="faq-item open">
+                        <button class="faq-question-btn" onclick="toggleFaq(this)">
+                            <span>What is Wikimedia Codex and why is it significant?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer-body">
+                            Codex is the next-generation design system developed by the Wikimedia Foundation. Built with Vue 3 and TypeScript, it replaces legacy UI frameworks like OOUI across Wikipedia and MediaWiki. It provides standardized, accessible UI components with full support for bidirectional (RTL/LTR) scripts in 300+ languages.
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" onclick="toggleFaq(this)">
+                            <span>Why does Wikimedia use Gerrit instead of GitHub Pull Requests?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer-body">
+                            Wikimedia manages code repositories serving hundreds of millions of users. Gerrit enables granular code review per commit rather than per branch. Every change has a unique cryptographic <code>Change-Id</code>, allowing maintainers to inspect exact patchset diffs, run automated Jenkins CI testing gates, and enforce linear commit histories.
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" onclick="toggleFaq(this)">
+                            <span>What were Phabricator tasks T434524 and T434753 about?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer-body">
+                            <strong>T434524</strong> investigated a CSS design token propagation defect where skin-level CSS specificity clobbered component tokens in specific MediaWiki skins. <strong>T434753</strong> addressed frontend accessibility and DOM event lifecycle handling, ensuring proper <code>aria-expanded</code> attributes and keyboard focus restoration during dynamic menu closing events.
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" onclick="toggleFaq(this)">
+                            <span>What is the Road to Wiki Marathon?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer-body">
+                            The Road to Wiki Marathon was a 1-week competitive open-source sprint hosted by WikiClubTech UIT leading up to Open Source Day on 21 August. Participants solved real-world tasks across Wikimedia Commons, MediaWiki, and Phabricator. Rohit Pal secured <strong>Rank 6</strong> in the marathon and <strong>Rank 2</strong> in the live technical quiz challenge.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer" style="padding: 2.5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); background: var(--bg-card); text-align: center;">
+    <footer class="cyber-footer">
         <div class="container">
-            <p style="font-weight: 700; color: var(--text-primary);">Rohit Pal · Wikimedia Open Source Contributor & Full-Stack Developer</p>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.3rem;">Dedicated Technical Documentation · Built with Modern Web Standards</p>
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-brand-title">WIKIMEDIA OPEN SOURCE</h3>
+                    <p class="footer-desc">
+                        Engineering documentation detailing open-source contributions to Wikimedia Codex, Vue.js design systems, MediaWiki infrastructure, Gerrit code reviews, and Phabricator tasks.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#domains">Core Pillars</a></li>
+                        <li><a href="#codex">Codex Blueprint</a></li>
+                        <li><a href="#tasks">Phabricator Tasks</a></li>
+                        <li><a href="#workflow">Gerrit Terminal</a></li>
+                        <li><a href="#honors">WikiClubTech Honors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Related Tracks</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Rohit Pal Portfolio Home</a></li>
+                        <li><a href="up-police-internship.html">UP Police Cyber Security Report</a></li>
+                        <li><a href="hackathons-leadership.html">Hackathons & Leadership Track</a></li>
+                        <li><a href="certificates.html">Verified Credentials Archive</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rohit Pal. Dedicated to Open Knowledge & Free Information Ecosystems.</p>
+                <p>Crafted with High Precision & Modern Web Standards</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Script -->
-    <script src="script.js"></script>
+    <!-- Interactive Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const progressBar = document.getElementById('scroll-progress');
+            if (progressBar) {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+                progressBar.style.width = progress + '%';
+            }
+        });
+
+        // Codex Tabs Switcher
+        function switchCodexTab(event, tabId) {
+            const tabButtons = document.querySelectorAll('.codex-tab-btn');
+            const tabPanes = document.querySelectorAll('.codex-tab-pane');
+
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+
+            event.currentTarget.classList.add('active');
+            const targetPane = document.getElementById(tabId);
+            if (targetPane) {
+                targetPane.classList.add('active');
+            }
+        }
+
+        // Codex Interactive Mockup Action Handler
+        function testCodexAction(message) {
+            const feedbackText = document.getElementById('cdx-feedback-text');
+            const feedbackBox = document.getElementById('cdx-feedback-box');
+            if (feedbackText && feedbackBox) {
+                feedbackText.innerText = message;
+                feedbackBox.style.background = '#ECFDF5';
+                feedbackBox.style.borderColor = '#A7F3D0';
+                feedbackText.style.color = '#059669';
+                setTimeout(() => {
+                    feedbackBox.style.background = '#F8FAFC';
+                    feedbackBox.style.borderColor = 'var(--border-light)';
+                    feedbackText.style.color = 'var(--blue-primary)';
+                }, 3000);
+            }
+        }
+
+        // Copy Terminal Snippet Handler
+        function copyTerminalSnippet(btn) {
+            const commands = `git clone https://gerrit.wikimedia.org/r/design/codex
+cd codex && git-review -s
+git checkout -b fix-t434524-token-inheritance
+git commit -m "[codex] Ensure Less tokens inherit properly into child components
+
+Fix an issue where skin-level CSS specificity clobbered component tokens.
+Added regression unit tests to verify scoped variable persistence.
+
+Bug: T434524"
+git review`;
+
+            navigator.clipboard.writeText(commands).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check" style="color: #34D399;"></i> <span>Copied!</span>';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }, 2000);
+            }).catch(err => {
+                console.error('Copy failed', err);
+            });
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(button) {
+            const parentItem = button.closest('.faq-item');
+            if (parentItem) {
+                const isOpen = parentItem.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== parentItem) item.classList.remove('open');
+                });
+                parentItem.classList.toggle('open', !isOpen);
+            }
+        }
+
+        // Active link tracking on scroll for Cyber Nav
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.cyber-nav .nav-link');
+            let currentId = '';
+
+            sections.forEach(sec => {
+                const top = sec.offsetTop - 140;
+                const height = sec.offsetHeight;
+                if (window.scrollY >= top && window.scrollY < top + height) {
+                    currentId = sec.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }, { passive: true });
+    </script>
 </body>
+
 </html>

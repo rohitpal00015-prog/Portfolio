@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://rohitpal.vercel.app/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Wikimedia Open Source Hub -->
+  <url>
+    <loc>https://rohitpal.vercel.app/wikimedia-open-source.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- UP Police Cyber Security Fellowship Report -->
+  <url>
+    <loc>https://rohitpal.vercel.app/up-police-internship.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Hackathons & Technical Leadership Milestones -->
+  <url>
+    <loc>https://rohitpal.vercel.app/hackathons-leadership.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Verified Certificates & Credentials -->
+  <url>
+    <loc>https://rohitpal.vercel.app/certificates.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
