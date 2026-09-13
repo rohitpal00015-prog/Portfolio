@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Projects Filter Mechanism
     initProjectFilter();
+
+    // 6. Theme Toggle (Dark / Light Mode)
+    initThemeToggle();
+
+    // 7. Standard Quality Scroll Reveal Animations
+    initScrollAnimations();
 });
 
 // --------------------------------------------------------------------------
@@ -500,3 +506,82 @@ document.addEventListener('keydown', (e) => {
         closeEventModal();
     }
 });
+
+// ==========================================================================
+// THEME TOGGLE ENGINE (Dark / Light with LocalStorage Persistence)
+// ==========================================================================
+function initThemeToggle() {
+    const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
+    if (!toggleBtns.length) return;
+
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme') || 'light';
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', nextTheme);
+            try {
+                localStorage.setItem('portfolio-theme', nextTheme);
+            } catch (err) {
+                console.warn('LocalStorage not available for theme saving', err);
+            }
+
+            // Haptic-like micro-animation
+            btn.classList.add('theme-toggle-active');
+            setTimeout(() => {
+                btn.classList.remove('theme-toggle-active');
+            }, 500);
+
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    });
+}
+
+// ==========================================================================
+// STANDARD HIGH-QUALITY SCROLL REVEAL ANIMATIONS
+// Hardware-accelerated, subtle, non-distracting staggered entrance
+// ==========================================================================
+function initScrollAnimations() {
+    const animTargets = document.querySelectorAll(
+        '.project-card-clean, .milestone-card-full, .cert-card-full, .police-stat-card, ' +
+        '.police-domain-card, .police-quote-card, .pipeline-card, .officer-card, ' +
+        '.wiki-stat-card, .wiki-pillar-card, .wiki-task-card, .wiki-tool-card, ' +
+        '.timeline-node-card, .stat-cyber-card, .about-highlight-card, .contact-card'
+    );
+
+    if (!animTargets.length) return;
+
+    // Staggered delay within each parent grid / container
+    const parentCounts = new Map();
+    animTargets.forEach(el => {
+        const parent = el.parentElement || document.body;
+        const count = parentCounts.get(parent) || 0;
+        parentCounts.set(parent, count + 1);
+
+        el.classList.add('reveal-init');
+        const delayIdx = (count % 4) + 1;
+        el.classList.add(`delay-${delayIdx}`);
+    });
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        animTargets.forEach(el => observer.observe(el));
+    } else {
+        animTargets.forEach(el => el.classList.add('reveal-visible'));
+    }
+}

@@ -13,6 +13,12 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rohitpal.vercel.app/wikimedia-open-source.html">
 
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Rohit Pal Portfolio">
@@ -80,6 +86,14 @@
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Theme Preload Script to prevent flicker -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('portfolio-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 
     <!-- Scoped Wikimedia Engineering Report Styles -->
     <style>
@@ -1147,6 +1161,356 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ------------------------------------------------------------------
+           Wikimedia Engineering Dark / Night Mode Overrides
+           ------------------------------------------------------------------ */
+        [data-theme="dark"] .wiki-title-gradient {
+            background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 50%, #FBBF24 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        [data-theme="dark"] .wiki-hero-badge,
+        [data-theme="dark"] .section-pill-tag {
+            color: #60A5FA !important;
+            background: rgba(59, 130, 246, 0.15) !important;
+            border-color: rgba(59, 130, 246, 0.35) !important;
+        }
+
+        [data-theme="dark"] .hero-tags-row .badge {
+            background: var(--bg-surface-subtle) !important;
+            color: var(--text-primary) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
+        }
+
+        [data-theme="dark"] .section-wrap.alt-bg {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        [data-theme="dark"] .wiki-quote-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.18) !important;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        [data-theme="dark"] .wiki-stat-box {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .wiki-stat-val {
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .pillar-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .pillar-icon-box {
+            background: rgba(30, 41, 59, 0.8) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
+        }
+
+        [data-theme="dark"] .pillar-tag {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .pillar-meta-row {
+            border-top-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        [data-theme="dark"] .pillar-link-btn {
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .phab-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.18) !important;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        [data-theme="dark"] .phab-top-bar {
+            border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        [data-theme="dark"] .phab-desc-box {
+            background: rgba(15, 23, 42, 0.75) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .phab-desc-box strong {
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .phab-desc-box code {
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: #38BDF8 !important;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        [data-theme="dark"] .phab-investigation-list li {
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .phab-investigation-list li strong {
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .phab-investigation-list li i {
+            color: #34D399 !important;
+        }
+
+        [data-theme="dark"] .phab-tag-chip {
+            background: rgba(15, 23, 42, 0.7) !important;
+            color: #94A3B8 !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        [data-theme="dark"] .status-resolved {
+            background: rgba(5, 150, 105, 0.18) !important;
+            color: #34D399 !important;
+            border-color: rgba(5, 150, 105, 0.35) !important;
+        }
+
+        [data-theme="dark"] .status-triage {
+            background: rgba(37, 99, 235, 0.18) !important;
+            color: #60A5FA !important;
+            border-color: rgba(37, 99, 235, 0.35) !important;
+        }
+
+        [data-theme="dark"] .lifecycle-flow-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.18) !important;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        [data-theme="dark"] .step-bubble {
+            background: rgba(37, 99, 235, 0.15) !important;
+            border-color: #3B82F6 !important;
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .step-item.active .step-bubble {
+            background: #2563EB !important;
+            color: #FFFFFF !important;
+            box-shadow: 0 0 16px rgba(37, 99, 235, 0.5) !important;
+        }
+
+        [data-theme="dark"] .step-title {
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .step-caption {
+            color: var(--text-muted) !important;
+        }
+
+        [data-theme="dark"] .codex-info-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .codex-info-card strong {
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .codex-tabs-nav {
+            border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        [data-theme="dark"] .codex-tab-btn {
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .codex-tab-btn:hover {
+            color: #60A5FA !important;
+            background: rgba(59, 130, 246, 0.12) !important;
+        }
+
+        [data-theme="dark"] .codex-tab-btn.active {
+            color: #FFFFFF !important;
+            background: #1E293B !important;
+            border-color: #3B82F6 !important;
+        }
+
+        [data-theme="dark"] .codex-mockup-card {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        [data-theme="dark"] .cdx-btn-quiet-demo {
+            color: #E2E8F0 !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        [data-theme="dark"] .cdx-btn-quiet-demo:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: #FFFFFF !important;
+        }
+
+        [data-theme="dark"] .cdx-badge-demo {
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #CBD5E1 !important;
+            border-color: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        [data-theme="dark"] .cdx-live-feedback {
+            background: rgba(37, 99, 235, 0.12) !important;
+            border-color: rgba(37, 99, 235, 0.3) !important;
+            color: #60A5FA !important;
+        }
+
+        .cdx-live-feedback.feedback-active {
+            background: #ECFDF5 !important;
+            border-color: #A7F3D0 !important;
+            color: #059669 !important;
+        }
+
+        [data-theme="dark"] .cdx-live-feedback.feedback-active {
+            background: rgba(16, 185, 129, 0.15) !important;
+            border-color: rgba(16, 185, 129, 0.35) !important;
+            color: #34D399 !important;
+        }
+
+        [data-theme="dark"] .comparison-table-wrap {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .comp-table th {
+            background: var(--bg-surface-subtle) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .comp-table td {
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .comp-feature-name {
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .comp-gerrit-val {
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .comp-table td code {
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: #38BDF8 !important;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        [data-theme="dark"] .honors-spotlight-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.18) !important;
+            box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        [data-theme="dark"] .honors-trophy-badge {
+            background: rgba(251, 191, 36, 0.15) !important;
+            border-color: rgba(251, 191, 36, 0.35) !important;
+            color: #FDE68A !important;
+        }
+
+        [data-theme="dark"] .honor-trophy-box {
+            background: rgba(15, 23, 42, 0.75) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
+        }
+
+        [data-theme="dark"] .honor-trophy-box:hover {
+            border-color: var(--yellow-primary) !important;
+            box-shadow: 0 8px 24px rgba(255, 184, 0, 0.15) !important;
+        }
+
+        [data-theme="dark"] .trophy-icon-large {
+            background: rgba(251, 191, 36, 0.15) !important;
+            color: #FBBF24 !important;
+            border-color: rgba(251, 191, 36, 0.3) !important;
+        }
+
+        [data-theme="dark"] .honor-trophy-box:nth-child(2) .trophy-icon-large {
+            background: rgba(59, 130, 246, 0.15) !important;
+            color: #60A5FA !important;
+            border-color: rgba(59, 130, 246, 0.3) !important;
+        }
+
+        [data-theme="dark"] .trophy-content h4 {
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .trophy-content p {
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .trophy-content p strong {
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .mentors-row {
+            background: rgba(15, 23, 42, 0.75) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
+        }
+
+        [data-theme="dark"] .mentors-label {
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .mentors-names {
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .tool-category-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .tool-cat-header {
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        [data-theme="dark"] .tool-pill {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .domain-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        [data-theme="dark"] .domain-card:hover {
+            border-color: var(--blue-primary) !important;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        [data-theme="dark"] .domain-icon-box {
+            background: rgba(30, 41, 59, 0.8) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        [data-theme="dark"] .faq-item {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        [data-theme="dark"] .faq-question-btn {
+            color: var(--text-primary) !important;
+        }
     </style>
 </head>
 
@@ -1185,6 +1549,10 @@
             </nav>
 
             <div class="header-right-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon" class="theme-icon-moon"></i>
+                    <i data-lucide="sun" class="theme-icon-sun"></i>
+                </button>
                 <a href="index.html" class="btn-back-portfolio">
                     <i data-lucide="arrow-left"></i>
                     <span>Portfolio Home</span>
@@ -2117,13 +2485,10 @@ Bug: T434524"</span>
             const feedbackBox = document.getElementById('cdx-feedback-box');
             if (feedbackText && feedbackBox) {
                 feedbackText.innerText = message;
-                feedbackBox.style.background = '#ECFDF5';
-                feedbackBox.style.borderColor = '#A7F3D0';
-                feedbackText.style.color = '#059669';
+                feedbackBox.classList.add('feedback-active');
                 setTimeout(() => {
-                    feedbackBox.style.background = '#F8FAFC';
-                    feedbackBox.style.borderColor = 'var(--border-light)';
-                    feedbackText.style.color = 'var(--blue-primary)';
+                    feedbackBox.classList.remove('feedback-active');
+                    feedbackText.innerText = 'Ready. Click buttons to observe simulated Codex event handlers.';
                 }, 3000);
             }
         }
@@ -2187,6 +2552,7 @@ git review`;
             });
         }, { passive: true });
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

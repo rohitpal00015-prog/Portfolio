@@ -13,6 +13,12 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rohitpal.vercel.app/certificates.html">
 
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Rohit Pal Portfolio">
@@ -62,6 +68,14 @@
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Theme Preload Script to prevent flicker -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('portfolio-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 
     <style>
         .cert-hero {
@@ -216,7 +230,7 @@
         .cert-view-btn-row {
             margin-top: auto;
             padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-top: 1px solid var(--border-light);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -262,6 +276,10 @@
             </nav>
 
             <div class="header-right-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon" class="theme-icon-moon"></i>
+                    <i data-lucide="sun" class="theme-icon-sun"></i>
+                </button>
                 <a href="index.html#certificates" class="btn-back-portfolio">
                     <i data-lucide="arrow-left"></i>
                     <span>Portfolio Home</span>

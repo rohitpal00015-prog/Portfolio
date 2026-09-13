@@ -13,6 +13,12 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rohitpal.vercel.app/up-police-internship.html">
 
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Rohit Pal Portfolio">
@@ -63,6 +69,14 @@
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Theme Preload Script to prevent flicker -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('portfolio-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 
     <!-- Scoped Government Cyber Fellowship Styles -->
     <style>
@@ -1092,6 +1106,176 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ------------------------------------------------------------------
+           UP Police Fellowship Dark / Night Mode Overrides
+           High Contrast, Crystal-Clear Visibility, Balanced Elegance
+           ------------------------------------------------------------------ */
+        [data-theme="dark"] .police-title-gradient {
+            background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 50%, #FBBF24 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        [data-theme="dark"] .police-badge-status,
+        [data-theme="dark"] .section-pill-tag {
+            color: #60A5FA !important;
+            background: rgba(59, 130, 246, 0.15) !important;
+            border-color: rgba(59, 130, 246, 0.35) !important;
+        }
+
+        [data-theme="dark"] .section-wrap.alt-bg {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        [data-theme="dark"] .police-quote-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.18) !important;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        [data-theme="dark"] .police-stat-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .police-stat-num {
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .pipeline-stage-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .stage-badge-chip {
+            background: #1E293B !important;
+            color: #38BDF8 !important;
+            border: 1px solid rgba(56, 189, 248, 0.3) !important;
+        }
+
+        [data-theme="dark"] .stage-status-tag {
+            color: #34D399 !important;
+        }
+
+        [data-theme="dark"] .stage-footer-row {
+            border-top-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        [data-theme="dark"] .evidence-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .domain-feature-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .domain-icon-wrapper {
+            background: rgba(59, 130, 246, 0.15) !important;
+            border-color: rgba(59, 130, 246, 0.35) !important;
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .ops-filter-pill-btn {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .ops-filter-pill-btn:hover {
+            color: #60A5FA !important;
+            border-color: #3B82F6 !important;
+            background: rgba(59, 130, 246, 0.15) !important;
+        }
+
+        [data-theme="dark"] .ops-filter-pill-btn.active {
+            background: var(--yellow-primary) !important;
+            color: #0F172A !important;
+            border-color: var(--yellow-primary) !important;
+        }
+
+        [data-theme="dark"] .ops-day-pills-row {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        [data-theme="dark"] .day-jump-btn {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .day-jump-btn:hover,
+        [data-theme="dark"] .day-jump-btn.active {
+            background: rgba(251, 191, 36, 0.18) !important;
+            border-color: rgba(251, 191, 36, 0.4) !important;
+            color: #FDE68A !important;
+        }
+
+        [data-theme="dark"] .op-card-modern {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45) !important;
+        }
+
+        [data-theme="dark"] .op-card-header {
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        [data-theme="dark"] .op-session-box {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        [data-theme="dark"] .op-session-heading {
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .op-findings-box {
+            background: rgba(251, 191, 36, 0.1) !important;
+            border-color: rgba(251, 191, 36, 0.3) !important;
+        }
+
+        [data-theme="dark"] .op-findings-title {
+            color: #FDE68A !important;
+        }
+
+        [data-theme="dark"] .officer-profile-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .officer-pill {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .faq-item {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        [data-theme="dark"] .faq-question-btn {
+            color: var(--text-primary) !important;
+        }
+
+        [data-theme="dark"] .evidence-modal-box {
+            background: #0F172A !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        [data-theme="dark"] .evidence-modal-desc {
+            background: #0B1120 !important;
+        }
     </style>
 </head>
 
@@ -1129,6 +1313,10 @@
             </nav>
 
             <div class="header-right-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon" class="theme-icon-moon"></i>
+                    <i data-lucide="sun" class="theme-icon-sun"></i>
+                </button>
                 <a href="index.html" class="btn-back-portfolio">
                     <i data-lucide="arrow-left"></i>
                     <span>Portfolio Home</span>
@@ -2537,6 +2725,7 @@
             }
         });
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

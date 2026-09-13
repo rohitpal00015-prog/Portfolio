@@ -13,6 +13,12 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rohitpal.vercel.app/">
 
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="profile">
     <meta property="og:site_name" content="Rohit Pal Portfolio">
@@ -119,6 +125,14 @@
 
     <!-- Custom Modern Minimal Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Theme Preload Script to prevent flicker -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('portfolio-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 </head>
 
 <body>
@@ -134,12 +148,6 @@
 
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li class="mobile-nav-status">
-                        <div class="status-pill">
-                            <span class="status-dot"></span>
-                            <span>Available for Roles</span>
-                        </div>
-                    </li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#journeys" class="nav-link">Internships</a></li>
                     <li><a href="#timeline" class="nav-link">Timeline</a></li>
@@ -151,10 +159,10 @@
             </nav>
 
             <div class="header-right">
-                <div class="status-pill header-status-pill">
-                    <span class="status-dot"></span>
-                    <span>Available for Roles</span>
-                </div>
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon" class="theme-icon-moon"></i>
+                    <i data-lucide="sun" class="theme-icon-sun"></i>
+                </button>
                 
                 <a href="assets/docs/Rohit_Pal_Resume.pdf" download="Rohit_Pal_Resume.pdf" class="btn btn-secondary btn-sm nav-resume-btn" style="display: inline-flex;">
                     <i data-lucide="download" style="width: 14px; height: 14px;"></i>

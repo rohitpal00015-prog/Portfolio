@@ -13,6 +13,12 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rohitpal.vercel.app/hackathons-leadership.html">
 
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Rohit Pal Portfolio">
@@ -63,6 +69,14 @@
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Theme Preload Script to prevent flicker -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('portfolio-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 
     <style>
         /* Dedicated Page Specific Styles */
@@ -627,6 +641,140 @@
                 padding: 1rem 0.85rem;
             }
         }
+
+        /* ------------------------------------------------------------------
+           Hackathons & Leadership Dark / Night Mode Overrides
+           High Contrast, Crystal-Clear Visibility, Balanced Elegance
+           ------------------------------------------------------------------ */
+        [data-theme="dark"] .milestone-card-full {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45) !important;
+        }
+
+        [data-theme="dark"] .milestone-card-full:hover {
+            border-color: var(--yellow-primary) !important;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(251, 191, 36, 0.15) !important;
+        }
+
+        [data-theme="dark"] .milestone-card-full.featured-gold {
+            background: linear-gradient(145deg, #1E293B 0%, #162032 100%) !important;
+            border-color: rgba(251, 191, 36, 0.35) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(251, 191, 36, 0.12) !important;
+        }
+
+        [data-theme="dark"] .stat-cyber-card {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .cat-btn {
+            background: var(--bg-surface) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
+            color: var(--text-secondary) !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        [data-theme="dark"] .cat-btn:hover {
+            border-color: var(--blue-primary) !important;
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .cat-btn.active {
+            background: var(--yellow-primary) !important;
+            color: #0F172A !important;
+            border-color: var(--yellow-primary) !important;
+            box-shadow: 0 4px 16px rgba(251, 191, 36, 0.25) !important;
+        }
+
+        [data-theme="dark"] .milestone-tag {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .milestone-tag:hover {
+            background: rgba(251, 191, 36, 0.15) !important;
+            border-color: rgba(251, 191, 36, 0.4) !important;
+            color: #FDE68A !important;
+        }
+
+        [data-theme="dark"] .milestone-date {
+            background: var(--bg-surface-subtle) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            color: var(--text-secondary) !important;
+        }
+
+        [data-theme="dark"] .milestone-footer-btn {
+            border-top-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        [data-theme="dark"] .milestone-footer-btn .btn-secondary {
+            background: var(--yellow-primary) !important;
+            color: #0F172A !important;
+            border: 1.5px solid var(--yellow-hover) !important;
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        [data-theme="dark"] .milestone-footer-btn .btn-secondary:hover {
+            background: var(--yellow-hover) !important;
+            color: #0F172A !important;
+            box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        [data-theme="dark"] .stat-num.gold {
+            color: #FDE68A !important;
+        }
+
+        [data-theme="dark"] .stat-num.cyan,
+        [data-theme="dark"] .stat-num.blue {
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .stat-num.emerald {
+            color: #34D399 !important;
+        }
+
+        [data-theme="dark"] .icon-emerald-glow,
+        [data-theme="dark"] .chip-emerald {
+            background: rgba(5, 150, 105, 0.15) !important;
+            color: #34D399 !important;
+            border-color: rgba(5, 150, 105, 0.35) !important;
+        }
+
+        [data-theme="dark"] .icon-purple-glow {
+            background: rgba(126, 34, 206, 0.18) !important;
+            color: #C084FC !important;
+            border-color: rgba(126, 34, 206, 0.35) !important;
+        }
+
+        [data-theme="dark"] .icon-blue-glow,
+        [data-theme="dark"] .icon-cyan,
+        [data-theme="dark"] .chip-blue {
+            background: rgba(37, 99, 235, 0.15) !important;
+            color: #60A5FA !important;
+            border-color: rgba(37, 99, 235, 0.35) !important;
+        }
+
+        [data-theme="dark"] .icon-gold-glow,
+        [data-theme="dark"] .chip-gold {
+            background: rgba(251, 191, 36, 0.15) !important;
+            color: #FDE68A !important;
+            border-color: rgba(251, 191, 36, 0.35) !important;
+        }
+
+        [data-theme="dark"] .milestone-loc-badge {
+            background: rgba(59, 130, 246, 0.15) !important;
+            border-color: rgba(59, 130, 246, 0.35) !important;
+            color: #60A5FA !important;
+        }
+
+        [data-theme="dark"] .final-cta-card {
+            background: #030712 !important;
+            border-color: rgba(255, 255, 255, 0.15) !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
+        }
     </style>
 </head>
 
@@ -659,6 +807,10 @@
             </nav>
 
             <div class="header-right-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon" class="theme-icon-moon"></i>
+                    <i data-lucide="sun" class="theme-icon-sun"></i>
+                </button>
                 <a href="index.html#hackathons" class="btn-back-portfolio">
                     <i data-lucide="arrow-left"></i>
                     <span>Portfolio Home</span>
