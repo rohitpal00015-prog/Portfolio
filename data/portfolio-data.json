@@ -145,8 +145,8 @@
       "period": "Present",
       "status": "Global Open Source",
       "statusType": "opensource",
-      "description": "Delivering code reviews, technical contributions, and localization improvements using Gerrit & Phabricator across Wikimedia Codex (Vue.js) and MediaWiki.",
-      "techChips": ["Gerrit", "Phabricator", "TranslateWiki", "Vue.js", "Codex"]
+      "description": "Delivering merged production code to ContentTranslation and Wikitermbase gadget (PR #88, T437964), with 10+ verified contributions across Wikimedia Codex and MediaWiki extensions.",
+      "techChips": ["Merged PR #88", "Gerrit", "Phabricator", "Vue.js", "Codex"]
     },
     {
       "id": "cloud-junction",
@@ -158,6 +158,17 @@
       "statusType": "featured",
       "description": "Leading student developer initiatives, technical workshops, and cloud networking across campus networks. Selected from over 10,000+ applicants.",
       "techChips": ["Tech Ambassador", "Community Growth", "Cloud Ecosystems"]
+    },
+    {
+      "id": "ucc-leadership",
+      "role": "Media & PR Lead",
+      "company": "UIT Coding Club (UCC)",
+      "location": "United Institute of Technology",
+      "period": "Present",
+      "status": "Core Leadership",
+      "statusType": "featured",
+      "description": "Appointed to the Executive Council of UIT Coding Club. Leading developer outreach, media branding, and architecting the official web portal for 500+ student developers.",
+      "techChips": ["Media & PR Lead", "Web Architecture", "Community Growth", "Event PR"]
     },
     {
       "id": "techeraa",
@@ -194,6 +205,40 @@
     }
   ],
   "projects": [
+    {
+      "id": "ucc-portal",
+      "title": "UIT Coding Club (UCC) Web Portal",
+      "category": "community-tools",
+      "badge": "Live Platform",
+      "isLive": true,
+      "image": null,
+      "techStack": ["HTML5/CSS3", "JavaScript", "Web Audio API", "Cyber UI"],
+      "description": "The official student-run developer community platform for United Institute of Technology. Features an interactive tabbed code simulator, dynamic organization hierarchy tree, live event timers, and persistent dark/light mode.",
+      "github": "https://github.com/rohitpal00015-prog/uit-coding-club",
+      "demo": "https://uit-coding-club.vercel.app/",
+      "highlights": [
+        "Interactive hierarchy tree view with dynamic council profiles",
+        "Tabbed in-browser code runner simulation (JavaScript, C++, HTML)",
+        "Cyberpunk aesthetic with Web Audio ambient chime effects & dark/light toggle"
+      ]
+    },
+    {
+      "id": "zeroup",
+      "title": "ZEROUP — Studio Platform",
+      "category": "fullstack",
+      "badge": "Creative Tech",
+      "isLive": false,
+      "image": null,
+      "techStack": ["HTML5/Tailwind", "Canvas 2D", "Web Audio API"],
+      "description": "Interactive media infrastructure studio engineered for founders and breakout brands. Features 3D perspective flipbook manifesto, procedural Web Audio synthesizer, and 60 FPS Canvas wave simulation.",
+      "github": "https://github.com/rohitpal00015-prog/zeroup",
+      "demo": null,
+      "highlights": [
+        "Pure CSS 3D perspective book with screenplay manifesto",
+        "Procedural browser-native Web Audio synthesizer with drone textures",
+        "Real-time 60 FPS 2D Canvas wave terrain simulation"
+      ]
+    },
     {
       "id": "palbasket",
       "title": "PalGrocery (PalBasket)",
@@ -277,23 +322,6 @@
         "Participant team registration and slot management",
         "Problem statement repository and submission tracker",
         "Responsive, modern event landing interface"
-      ]
-    },
-    {
-      "id": "agriverse",
-      "title": "AgriVerse",
-      "category": "fullstack",
-      "badge": "Coming Soon",
-      "isLive": false,
-      "image": "assets/images/projects/logo.png",
-      "techStack": ["Node.js", "JavaScript", "Firebase"],
-      "description": "A concept-driven platform supporting farmers by delivering agricultural information, market prices, government schemes, and digital services in a single interface.",
-      "github": "https://github.com/rohitpal00015-prog",
-      "demo": null,
-      "highlights": [
-        "Unified portal for agricultural market price updates",
-        "Government welfare scheme directory and guidance",
-        "Lightweight mobile-first web interface"
       ]
     },
     {
@@ -422,6 +450,39 @@
     }
   ],
   "hackathonsAndMilestones": [
+    {
+      "id": "vindhya-millets",
+      "title": "Digital Content & Social Media Executive — Vindhya Millets",
+      "category": "leadership",
+      "badge": "Indian Army Supplier 🌾",
+      "location": "Citiblock Farmer Producer Company Limited",
+      "date": "Sept 2026 — Present",
+      "summary": "Built brand & web presence from scratch alongside Praveen Singh and Gautam Kumar Maurya. Products supplied to the Indian Army and expanding into international markets.",
+      "bullets": [
+        "Supplied products to the Indian Army and entering international consumer markets.",
+        "Built official website, product presentations, and digital communication from scratch.",
+        "Directing content strategy, campaigns, publishing, and social media brand growth."
+      ],
+      "tags": ["Vindhya Millets", "Indian Army Supplier", "Citiblock FPC", "Branding", "Executive"],
+      "link": "https://lnkd.in/p/gvAK4ghJ"
+    },
+    {
+      "id": "gfg-gate",
+      "title": "Gateway to GATE — Core Organizing Team",
+      "category": "leadership",
+      "badge": "Flagship Conclave 🚀",
+      "location": "United Institute of Technology (UIT), Prayagraj",
+      "date": "Recent Conclave",
+      "summary": "Core organizing team for “Gateway to GATE – Unlock Your Potential” hosting Chandan Jha Sir (VP at GeeksforGeeks, Ex-ISRO Scientist, GATE AIR 23 & 26) for 600+ engineering students.",
+      "bullets": [
+        "Auditorium Leadership: Handled crowd flow, stage operations, and technical presentation systems for 600+ engineering aspirants.",
+        "On-Stage Presence: Took the microphone, engaged the audience, and closely coordinated speaker interactions.",
+        "Executive Mentorship: Gained one-on-one insights from Chandan Jha Sir on competitive technical roadmaps and career acceleration.",
+        "Community Collaboration: Partnered alongside GFG Student Chapter UIT, HackerRank UIT, Ansh Kumar Gupta, and Gautam Kumar Maurya (GKM)."
+      ],
+      "tags": ["GeeksforGeeks", "Gateway to GATE", "Chandan Jha", "Auditorium 600+", "Leadership"],
+      "link": "https://lnkd.in/p/gX7MG-_w"
+    },
     {
       "id": "gdg-vibe-coding",
       "title": "GDG Prayagraj Vibe Coding Hackathon 2026",
@@ -876,22 +937,28 @@
     "tagline": "Learning by contributing to software used by millions.",
     "coreAreas": [
       {
+        "area": "Wikipedia Gadgets & Tools",
+        "tech": "Wikitermbase, Clipboard API, Phabricator T437964",
+        "url": "https://github.com/forzagreen/wikitermbase/pull/88",
+        "description": "Authored merged PR #88 in Wikitermbase to modernize citation copying using the async Clipboard API with legacy fallback."
+      },
+      {
         "area": "Wikimedia Codex",
         "tech": "Vue.js, CSS & Design Systems",
         "url": "https://doc.wikimedia.org/codex",
         "description": "Worked on Vue.js, CSS & design-system components, investigating and resolving frontend issues across the official design system for Wikimedia interfaces."
       },
       {
-        "area": "Gerrit & Git",
-        "tech": "Branches, Commits, Patchsets, Code Review",
-        "url": "https://gerrit.wikimedia.org",
-        "description": "Hands-on experience with branches, commits, patchsets, code review, and collaborative workflows following enterprise-grade Git standards."
+        "area": "Gerrit & Git Pipelines",
+        "tech": "Verified Patchsets, Code Review, Jenkins CI",
+        "url": "https://gerrit.wikimedia.org/r/q/owner:rohitpal08",
+        "description": "Authored 9+ verified patchsets across Wikimedia Codex and MediaWiki extensions, including merged patch #1347603 in ContentTranslation."
       },
       {
         "area": "Phabricator Development Tasks",
         "tech": "Bug Triage & Task Management",
-        "tasks": ["T434524", "T434753"],
-        "description": "Worked with Wikimedia development tasks (T434524 and T434753), participating in bug triage, reproduction, and developer discussions."
+        "tasks": ["T437964", "T434524", "T434753"],
+        "description": "Worked with Wikimedia development tasks (T437964, T434524, and T434753), participating in bug triage, reproduction, and developer discussions."
       },
       {
         "area": "MediaWiki Ecosystem",
@@ -901,6 +968,18 @@
       }
     ],
     "milestones": [
+      {
+        "title": "Merged PR #88 — Wikitermbase Citation Gadget",
+        "event": "Wikimedia Gadgets Ecosystem (T437964)",
+        "rank": "Merged into main",
+        "summary": "Modernized citation popup clipboard mechanism to async Clipboard API with legacy fallback on GitHub."
+      },
+      {
+        "title": "Merged Patch #1347603 — ContentTranslation",
+        "event": "MediaWiki Extensions (Gerrit)",
+        "rank": "Merged into master",
+        "summary": "Added ext.uls.common dependency and language preference guard in ContentTranslation onboarding."
+      },
       {
         "title": "Road to Wiki Marathon — Rank 6",
         "event": "Open Source Day — WikiClubTech UIT",
@@ -959,8 +1038,7 @@
     "projectLogos": {
       "palbasket": "assets/images/projects/Palbasket logo.png",
       "prayagrajRooms": "assets/images/projects/prayagrajrooms_logo.png",
-      "zynoq": "assets/images/projects/ok.png",
-      "agriverse": "assets/images/projects/logo.png"
+      "zynoq": "assets/images/projects/ok.png"
     },
     "certificateImages": [
       "assets/images/certificates/1.png",

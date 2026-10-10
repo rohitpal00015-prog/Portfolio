@@ -223,6 +223,22 @@ const timelineMilestonesData = {
         tags: ['React UI', 'Hackathon Platform', 'Community', 'Frontend Architecture'],
         link: null
     },
+    'ucc': {
+        title: 'Media & PR Lead — UIT Coding Club (UCC)',
+        category: 'Campus Developer Leadership',
+        period: 'Present · Core Leadership',
+        org: 'United Institute of Technology (500+ Member Community)',
+        body: `
+            <p>Appointed to the Core Leadership Council of UIT Coding Club (UCC), driving campus developer culture, official web engineering, and brand communications.</p>
+            <ul>
+                <li><strong>Official Web Portal:</strong> Architected and built the official web portal (<a href="https://uit-coding-club.vercel.app/" target="_blank" rel="noopener" style="color: var(--blue-primary); font-weight: 600;">uit-coding-club.vercel.app</a>) featuring interactive code execution terminals, dynamic dark/light mode, and organization hierarchy.</li>
+                <li><strong>Media & Brand Outreach:</strong> Leading public relations, technical hackathon announcements, and social branding across campus.</li>
+                <li><strong>Executive Collaboration:</strong> Partnering with President Gautam Kumar Maurya (GKM), Vice-President Ansh Kumar Gupta, and technical teams to mentor 500+ student developers.</li>
+            </ul>
+        `,
+        tags: ['Media & PR Lead', 'UCC Portal', 'Community Leadership', 'Web Engineering'],
+        link: 'https://uit-coding-club.vercel.app/'
+    },
     'cloud-junction': {
         title: 'Cloud Junction Campus Ambassador',
         category: 'National Leadership Selection',
@@ -244,15 +260,17 @@ const timelineMilestonesData = {
         period: 'Present · Global Community',
         org: 'Wikimedia Foundation & MediaWiki Ecosystem',
         body: `
-            <p>Active open-source contributor delivering code reviews, technical contributions, and design system engineering.</p>
+            <p>Active open-source contributor delivering merged production code, code reviews, and design system engineering.</p>
             <ul>
+                <li><strong>Merged PR #88 in Wikitermbase:</strong> Modernized citation popup clipboard mechanism to async Clipboard API (Phabricator T437964).</li>
+                <li><strong>Merged Patch #1347603 in ContentTranslation:</strong> Resolved critical ULS dependency and language preference guard in core MediaWiki.</li>
                 <li><strong>Wikimedia Codex:</strong> Contributing to Vue.js components and CSS design-system tokens for Wikipedia's official design system.</li>
                 <li><strong>Gerrit & Git Pipelines:</strong> Managing commits, patchsets, automated testing gates, and strict branch protection protocols.</li>
-                <li><strong>Phabricator Development:</strong> Resolving development tasks including T434524 and T434753, bug reproduction, and triage discussions.</li>
+                <li><strong>Phabricator Development:</strong> Resolving development tasks including T437964, T434524, and T434753.</li>
                 <li><strong>Wiki Marathon Honor:</strong> Achieved Rank 6 in Road to Wiki Marathon and Rank 2 in live technical quiz on Open Source Day.</li>
             </ul>
         `,
-        tags: ['Vue.js Codex', 'Gerrit Code Review', 'Phabricator', 'MediaWiki'],
+        tags: ['Merged PR #88', 'Vue.js Codex', 'Gerrit Code Review', 'Phabricator', 'MediaWiki'],
         link: 'wikimedia-open-source.html'
     },
     'heisyn': {
@@ -270,6 +288,42 @@ const timelineMilestonesData = {
         `,
         tags: ['React.js', 'Node.js', 'REST APIs', 'Production Web', 'JavaScript'],
         link: null
+    },
+    'gfg-gate': {
+        title: 'Core Organizer — Gateway to GATE',
+        category: '600+ Attendee Flagship Tech Conclave',
+        period: 'Recent Conclave · UIT Prayagraj',
+        org: 'GeeksforGeeks Student Chapter UIT × HackerRank UIT',
+        body: `
+            <p>Served on the core organizing committee for <strong>“Gateway to GATE – Unlock Your Potential”</strong> at United Institute of Technology, Prayagraj, hosting Chandan Jha Sir (Vice President at GeeksforGeeks, Ex-ISRO Scientist, GATE AIR 23 &amp; 26).</p>
+            <ul>
+                <li><strong>Auditorium Leadership (600+ Students):</strong> Coordinated stage operations, technical presentation infrastructure, and crowd flow for an audience of 600+ engineering aspirants.</li>
+                <li><strong>Dual-Role Execution:</strong> Balanced on-stage host responsibilities and speaker interactions with high-pressure backstage event operations.</li>
+                <li><strong>Direct Executive Mentorship:</strong> Personal discussion with Chandan Jha Sir on competitive technical roadmaps, Tier-3 to Tier-1 career acceleration, and high-impact engineering mindsets.</li>
+                <li><strong>Community Collaboration:</strong> Partnered alongside GFG Student Chapter UIT, HackerRank UIT, Ansh Kumar Gupta, and Gautam Kumar Maurya (GKM).</li>
+            </ul>
+        `,
+        tags: ['GeeksforGeeks', 'HackerRank UIT', 'Chandan Jha (VP GFG)', 'Auditorium (600+)', 'Leadership & Hosting'],
+        link: 'https://lnkd.in/p/gX7MG-_w',
+        linkText: 'View LinkedIn Post'
+    },
+    'vindhya-millets': {
+        title: 'Digital Content & Social Media Executive',
+        category: 'Agri-Business Startup · Indian Army Supplier',
+        period: 'Sept 2026 — Present · Official Role',
+        org: 'Citiblock Farmer Producer Company Limited (Vindhya Millets)',
+        body: `
+            <p>Officially joined <strong>Citiblock Farmer Producer Company Limited</strong> as Digital Content &amp; Social Media Executive for <strong>Vindhya Millets</strong>, following months of ground-up brand architecture alongside Praveen Singh and Gautam Kumar Maurya.</p>
+            <ul>
+                <li><strong>Indian Army &amp; Global Distribution:</strong> Scaled brand operations to a milestone where products are officially supplied to the <strong>Indian Army</strong> and entering international consumer markets.</li>
+                <li><strong>Zero-to-One Brand Building:</strong> Architected the official website, initial digital infrastructure, packaging presentations, and product storytelling frameworks from scratch.</li>
+                <li><strong>Digital Campaigns &amp; Growth:</strong> Directing omnichannel social media publishing, campaign roadmaps, consumer engagement, and digital identity.</li>
+                <li><strong>Co-Building Ownership:</strong> Driving strategic execution, cross-functional accountability, and brand equity for indigenous superfoods.</li>
+            </ul>
+        `,
+        tags: ['Vindhya Millets', 'Indian Army Supplier', 'Web Architecture', 'Digital Branding', 'Citiblock FPC'],
+        link: 'https://lnkd.in/p/gvAK4ghJ',
+        linkText: 'View LinkedIn Post'
     }
 };
 
@@ -298,6 +352,17 @@ function openTimelineDetail(id) {
         if (data.link) {
             linkBtn.href = data.link;
             linkBtn.style.display = 'inline-flex';
+            const linkTextSpan = linkBtn.querySelector('span');
+            if (linkTextSpan) {
+                linkTextSpan.innerText = data.linkText || (data.link.includes('lnkd.in') || data.link.includes('linkedin.com') ? 'View on LinkedIn' : data.link.startsWith('http') ? 'View Live Link' : 'Read Report');
+            }
+            if (data.link.startsWith('http')) {
+                linkBtn.target = '_blank';
+                linkBtn.rel = 'noopener noreferrer';
+            } else {
+                linkBtn.removeAttribute('target');
+                linkBtn.removeAttribute('rel');
+            }
         } else {
             linkBtn.style.display = 'none';
         }
@@ -457,6 +522,33 @@ const eventModalData = {
             <ul>
                 <li>Architected and pitched a full-featured web solution prototype under aggressive sprint deadlines.</li>
                 <li>Successfully defended system architecture, database schema, and live workflow to jury panels.</li>
+            </ul>
+        `
+    },
+    'gfg-gate': {
+        title: 'Core Organizer — Gateway to GATE',
+        category: '600+ Attendee Flagship Tech Conclave',
+        location: 'UIT Prayagraj · Auditorium Conclave',
+        body: `
+            <p>Served on the core organizing committee for <strong>“Gateway to GATE – Unlock Your Potential”</strong> at United Institute of Technology, Prayagraj, hosting Chandan Jha Sir (Vice President at GeeksforGeeks, Ex-ISRO Scientist, GATE AIR 23 &amp; 26).</p>
+            <ul>
+                <li><strong>Auditorium Leadership (600+ Students):</strong> Coordinated stage operations, technical presentation infrastructure, and crowd flow for an audience of 600+ engineering aspirants.</li>
+                <li><strong>Dual-Role Execution:</strong> Balanced on-stage host responsibilities and speaker interactions with high-pressure backstage event operations.</li>
+                <li><strong>Direct Executive Mentorship:</strong> Personal discussion with Chandan Jha Sir on competitive technical roadmaps, Tier-3 to Tier-1 career acceleration, and high-impact engineering mindsets.</li>
+                <li><strong>Community Collaboration:</strong> Partnered alongside GFG Student Chapter UIT, HackerRank UIT, Ansh Kumar Gupta, and Gautam Kumar Maurya (GKM).</li>
+            </ul>
+        `
+    },
+    'vindhya-millets': {
+        title: 'Digital Content & Social Media Executive — Vindhya Millets',
+        category: 'Agri-Business Startup · Indian Army Supplier',
+        location: 'Citiblock Farmer Producer Company Limited',
+        body: `
+            <p>Officially joined <strong>Citiblock Farmer Producer Company Limited</strong> as Digital Content &amp; Social Media Executive for <strong>Vindhya Millets</strong>, following months of ground-up brand architecture alongside Praveen Singh and Gautam Kumar Maurya.</p>
+            <ul>
+                <li><strong>Indian Army &amp; Global Distribution:</strong> Scaled brand operations to a milestone where products are officially supplied to the <strong>Indian Army</strong> and entering international consumer markets.</li>
+                <li><strong>Zero-to-One Brand Building:</strong> Architected the official website, initial digital infrastructure, packaging presentations, and product storytelling frameworks from scratch.</li>
+                <li><strong>Digital Campaigns &amp; Growth:</strong> Directing omnichannel social media publishing, campaign roadmaps, consumer engagement, and digital identity.</li>
             </ul>
         `
     }

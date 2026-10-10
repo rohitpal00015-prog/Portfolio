@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Pal - Software Developer Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        @page {
+            size: A4 portrait;
+            margin: 8mm 10mm 8mm 10mm;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e293b;
+            background-color: #ffffff;
+            font-size: 8.6pt;
+            line-height: 1.32;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .resume-page {
+            width: 100%;
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 5px;
+            margin-bottom: 6px;
+        }
+
+        h1.name {
+            font-size: 19.5pt;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .headline {
+            font-size: 9.3pt;
+            font-weight: 600;
+            color: #0284c7;
+            letter-spacing: 0.3px;
+            margin-bottom: 3px;
+        }
+
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 8.1pt;
+            color: #475569;
+        }
+
+        .contact-bar a {
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-bar a:hover {
+            color: #0284c7;
+            text-decoration: underline;
+        }
+
+        .contact-bar .sep {
+            color: #94a3b8;
+            font-weight: bold;
+        }
+
+        /* SECTIONS */
+        section {
+            margin-bottom: 6px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3.5px;
+        }
+
+        .section-title {
+            font-size: 9pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: #0f172a;
+            white-space: nowrap;
+        }
+
+        .section-line {
+            flex-grow: 1;
+            height: 1px;
+            background: #cbd5e1;
+            margin-left: 8px;
+        }
+
+        /* ENTRY LAYOUT */
+        .entry {
+            margin-bottom: 4px;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.5px;
+        }
+
+        .entry-title {
+            font-size: 8.8pt;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .entry-org {
+            font-weight: 600;
+            color: #0284c7;
+        }
+
+        .entry-org a {
+            color: #0284c7;
+            text-decoration: none;
+        }
+
+        .entry-org a:hover {
+            text-decoration: underline;
+        }
+
+        .entry-meta {
+            font-size: 8pt;
+            font-weight: 500;
+            color: #64748b;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        /* BULLETS (Standard natural flow for ATS) */
+        ul.bullet-list {
+            list-style-type: disc;
+            margin: 0 0 0 14px;
+            padding: 0;
+        }
+
+        ul.bullet-list li {
+            font-size: 8.3pt;
+            color: #334155;
+            line-height: 1.28;
+            margin-bottom: 1px;
+        }
+
+        ul.bullet-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        ul.bullet-list li strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        ul.bullet-list li a {
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        ul.bullet-list li a:hover {
+            text-decoration: underline;
+        }
+
+        /* SKILLS TABLE */
+        .skills-table {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .skills-row {
+            display: table-row;
+        }
+
+        .skills-cell-label {
+            display: table-cell;
+            font-size: 8.3pt;
+            font-weight: 700;
+            color: #0f172a;
+            width: 130px;
+            padding-bottom: 2px;
+            white-space: nowrap;
+        }
+
+        .skills-cell-data {
+            display: table-cell;
+            font-size: 8.3pt;
+            color: #334155;
+            padding-bottom: 2px;
+            line-height: 1.28;
+        }
+
+        /* PROJECT LINKS */
+        .proj-badge {
+            font-size: 7.8pt;
+            font-weight: 500;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .proj-links {
+            font-size: 7.9pt;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .proj-links a {
+            color: #0284c7;
+            text-decoration: none;
+        }
+
+        .proj-links a:hover {
+            text-decoration: underline;
+        }
+
+        .proj-links .sep {
+            color: #cbd5e1;
+            margin: 0 3px;
+        }
+
+        /* HONORS TABLE */
+        .honors-table {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .honor-row {
+            display: table-row;
+        }
+
+        .honor-content {
+            display: table-cell;
+            font-size: 8.3pt;
+            color: #334155;
+            padding-bottom: 1.5px;
+            line-height: 1.28;
+        }
+
+        .honor-content strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .honor-year {
+            display: table-cell;
+            font-size: 8pt;
+            color: #64748b;
+            text-align: right;
+            white-space: nowrap;
+            width: 70px;
+            padding-bottom: 1.5px;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+            .resume-page {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="resume-page">
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="name">Rohit Pal</h1>
+        <div class="headline">Software Developer &bull; Open Source Contributor &bull; Cyber Security Fellow</div>
+        <div class="contact-bar">
+            <span>Prayagraj, Uttar Pradesh, India</span>
+            <span class="sep">&bull;</span>
+            <a href="tel:+919517260659">+91 9517260659</a>
+            <span class="sep">&bull;</span>
+            <a href="mailto:rohitpal00015@gmail.com">rohitpal00015@gmail.com</a>
+            <span class="sep">&bull;</span>
+            <a href="https://linkedin.com/in/rohit-pal-98230131a" target="_blank">linkedin.com/in/rohit-pal-98230131a</a>
+            <span class="sep">&bull;</span>
+            <a href="https://github.com/rohitpal00015-prog" target="_blank">github.com/rohitpal00015-prog</a>
+            <span class="sep">&bull;</span>
+            <a href="https://rohitpal.vercel.app" target="_blank">rohitpal.vercel.app</a>
+        </div>
+    </header>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+        <div class="section-header">
+            <span class="section-title">Technical Skills</span>
+            <span class="section-line"></span>
+        </div>
+        <div class="skills-table">
+            <div class="skills-row">
+                <span class="skills-cell-label">Languages:</span>
+                <span class="skills-cell-data">JavaScript (ES6+), Python, C, SQL (MySQL, PostgreSQL), HTML5, Modern CSS3</span>
+            </div>
+            <div class="skills-row">
+                <span class="skills-cell-label">Frontend &amp; Backend:</span>
+                <span class="skills-cell-data">React.js, Node.js, Express.js, Vue.js (Codex Tokens), RESTful APIs, EJS, Tailwind CSS</span>
+            </div>
+            <div class="skills-row">
+                <span class="skills-cell-label">Databases &amp; Cloud:</span>
+                <span class="skills-cell-data">MongoDB, MySQL, Firebase, Supabase, Vercel, Netlify</span>
+            </div>
+            <div class="skills-row">
+                <span class="skills-cell-label">Tools &amp; Methodologies:</span>
+                <span class="skills-cell-data">Git, GitHub, Gerrit Code Review, Phabricator, Linux / Bash, Postman, OSINT, Agile/Scrum</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & FELLOWSHIPS -->
+    <section>
+        <div class="section-header">
+            <span class="section-title">Experience &amp; Fellowships</span>
+            <span class="section-line"></span>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">Full-Stack Developer Intern &bull; <span class="entry-org">HeiSyn Pvt. Ltd.</span></div>
+                <div class="entry-meta">June 2026 – Present | Remote</div>
+            </div>
+            <ul class="bullet-list">
+                <li>Engineering responsive web UI with <strong>React.js</strong> and architecting scalable backend REST APIs with <strong>Node.js &amp; Express.js</strong>.</li>
+                <li>Integrating asynchronous database operations, robust error handling, and clean software architecture patterns.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">Digital Content &amp; Social Media Executive &bull; <span class="entry-org"><a href="https://vindhyamillets.com" target="_blank">Citiblock FPC (Vindhya Millets)</a></span></div>
+                <div class="entry-meta">Sept 2026 – Present | Prayagraj, UP</div>
+            </div>
+            <ul class="bullet-list">
+                <li>Architected 0-to-1 web platform and brand digital infrastructure for an enterprise officially supplied to the <strong>Indian Army</strong>.</li>
+                <li>Directing omnichannel social media publishing, technical product catalog presentation, and strategic digital content roadmaps.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">Cyber Security Fellow (APCSIP-2026) &bull; <span class="entry-org">Amroha Police Cyber Crime Cell, UP Police</span></div>
+                <div class="entry-meta">June 2026 | Amroha, UP</div>
+            </div>
+            <ul class="bullet-list">
+                <li>Selected through competitive statewide screening (ID: <strong>APCSIP/2026/794</strong>); mentored by DSP Anjali Kataria and cyber forensics leads.</li>
+                <li>Conducted <strong>OSINT</strong> reconnaissance (Maltego, Shodan), cellular <strong>CDR/IPDR</strong> linkage triage, and Android APK malware analysis.</li>
+                <li>Performed forensic bit-stream disk acquisition, SHA-256 hash integrity checks, and defended case reports before review panels.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- OPEN SOURCE & LEADERSHIP -->
+    <section>
+        <div class="section-header">
+            <span class="section-title">Open Source Contributions &amp; Leadership</span>
+            <span class="section-line"></span>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">Open Source Contributor &bull; <span class="entry-org">Wikimedia Foundation &amp; MediaWiki</span></div>
+                <div class="entry-meta">2025 – Present | Global</div>
+            </div>
+            <ul class="bullet-list">
+                <li><strong>Merged PR #88 in Wikitermbase:</strong> Modernized citation popup clipboard mechanism to modern asynchronous Clipboard API (<a href="https://phabricator.wikimedia.org/T437964" target="_blank">T437964</a>).</li>
+                <li><strong>Merged Patch #1347603 in ContentTranslation:</strong> Resolved critical ULS dependency and language preference guard in core MediaWiki.</li>
+                <li>Reviewed code on <strong>Gerrit</strong>, contributed to <strong>Wikimedia Codex</strong> (Vue.js design tokens), and resolved Phabricator tasks.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">Core Organizer — Gateway to GATE Conclave &bull; <span class="entry-org">GFG Student Chapter &times; HackerRank UIT</span></div>
+                <div class="entry-meta">2026 | Prayagraj, UP</div>
+            </div>
+            <ul class="bullet-list">
+                <li>Organized flagship technical conclave hosting <strong>Chandan Jha</strong> (VP GeeksforGeeks, Ex-ISRO) for an auditorium of <strong>600+ students</strong>.</li>
+                <li>Directed on-stage speaker hosting and led technical AV infrastructure and participant workflow coordination.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">Media &amp; PR Lead &bull; <span class="entry-org"><a href="https://uit-coding-club.vercel.app/" target="_blank">UIT Coding Club (UCC)</a></span></div>
+                <div class="entry-meta">2025 – Present | Prayagraj, UP</div>
+            </div>
+            <ul class="bullet-list">
+                <li>Built the official UCC portal (<a href="https://uit-coding-club.vercel.app/" target="_blank">uit-coding-club.vercel.app</a>) with live terminal execution and interactive directories for <strong>500+ student coders</strong>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+        <div class="section-header">
+            <span class="section-title">Projects</span>
+            <span class="section-line"></span>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">PalGrocery (PalBasket) — E-Commerce Grocery Web Platform</div>
+                <div class="proj-links">
+                    <span class="proj-badge">PHP, MySQL, JavaScript, CSS3</span>
+                    <span class="sep">&bull;</span>
+                    <a href="https://palbasket.vercel.app/" target="_blank">Live Demo ↗</a>
+                    <span class="sep">&bull;</span>
+                    <a href="https://github.com/rohitpal00015-prog/PalGrocery" target="_blank">GitHub ↗</a>
+                </div>
+            </div>
+            <ul class="bullet-list">
+                <li>Engineered a full-featured grocery ordering portal featuring dynamic category filtering, shopping cart state, and order tracking.</li>
+                <li>Implemented administrative control panel for inventory catalog management and relational database schema for high-throughput orders.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">Prayagraj Rooms — Student Accommodation Discovery Portal</div>
+                <div class="proj-links">
+                    <span class="proj-badge">Node.js, Express, MongoDB, JavaScript</span>
+                    <span class="sep">&bull;</span>
+                    <a href="https://prayagrajrooms.in/" target="_blank">Live Demo ↗</a>
+                    <span class="sep">&bull;</span>
+                    <a href="https://github.com/rohitpal00015-prog/prayagraj-rooms" target="_blank">GitHub ↗</a>
+                </div>
+            </div>
+            <ul class="bullet-list">
+                <li>Developed a zero-brokerage rental discovery portal connecting 500+ university students with verified accommodation owners.</li>
+                <li>Built geolocation filters, verified landlord listings, and optimized database indexing for fast sub-second search response.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">Zynoq AI Assistant / Genis — RAG Workflow Automation &amp; LLM Tool</div>
+                <div class="proj-links">
+                    <span class="proj-badge">Python, Gemini API, FastAPI, JS</span>
+                    <span class="sep">&bull;</span>
+                    <a href="https://znoq.netlify.app/" target="_blank">Live Demo ↗</a>
+                    <span class="sep">&bull;</span>
+                    <a href="https://github.com/rohitpal00015-prog" target="_blank">GitHub ↗</a>
+                </div>
+            </div>
+            <ul class="bullet-list">
+                <li>Built a Retrieval-Augmented Generation (RAG) assistant integrating multimodal document parsing, memory caching, and prompt chains.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <div class="section-header">
+            <span class="section-title">Education</span>
+            <span class="section-line"></span>
+        </div>
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">United Institute of Technology (UIT) &bull; <span class="entry-org">Bachelor of Technology (B.Tech)</span></div>
+                <div class="entry-meta">2024 – 2028 | Prayagraj, UP</div>
+            </div>
+            <ul class="bullet-list">
+                <li>Computer Science &amp; Engineering | Core Coursework: Data Structures &amp; Algorithms, DBMS, Operating Systems, Computer Networks.</li>
+            </ul>
+        </div>
+        <div class="entry">
+            <div class="entry-top">
+                <div class="entry-title">Jwala Devi S.V.M. Inter College &bull; <span class="entry-org">Senior Secondary (12th: 2023 | 10th: 2021)</span></div>
+                <div class="entry-meta">Prayagraj, UP</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HONORS & FELLOWSHIPS -->
+    <section>
+        <div class="section-header">
+            <span class="section-title">Honors &amp; Fellowships</span>
+            <span class="section-line"></span>
+        </div>
+        <div class="honors-table">
+            <div class="honor-row">
+                <span class="honor-content"><strong>Samsung Fellowship:</strong> Selected for Samsung Innovation Campus ISWDP Cohort 9 &bull; Grade III</span>
+                <span class="honor-year">2026</span>
+            </div>
+            <div class="honor-row">
+                <span class="honor-content"><strong>Smart India Hackathon (SIH):</strong> Core Organizing Team member for institutional hackathon rounds at UIT</span>
+                <span class="honor-year">2025 – 2026</span>
+            </div>
+            <div class="honor-row">
+                <span class="honor-content"><strong>Cloud Junction Campus Ambassador:</strong> Selected from nationwide pool of 10,000+ engineering applicants</span>
+                <span class="honor-year">2026</span>
+            </div>
+            <div class="honor-row">
+                <span class="honor-content"><strong>Wikimedia Recognition:</strong> Rank 6 in Road to Wiki Marathon &bull; Rank 2 in Open Source Day Technical Quiz</span>
+                <span class="honor-year">2025</span>
+            </div>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

@@ -138,23 +138,29 @@
 <body>
 
     <!-- ====================================================================
-         1. Header & Navigation (Ultra-Clean)
+         1. Header & Navigation (Floating Glass Island Dock)
          ==================================================================== -->
     <header class="header" id="header">
         <div class="container header-container">
-            <a href="#" class="logo">
-                <span class="logo-terminal">&lt;/&gt;</span> Rohit<span class="logo-accent">Pal</span>
+            <a href="#" class="logo" title="Rohit Pal — Home">
+                <span class="logo-terminal-box">
+                    <i data-lucide="terminal"></i>
+                </span>
+                <span class="logo-name">Rohit<span class="logo-accent">Pal</span></span>
+                <span class="logo-status-pill">
+                    <span class="status-dot"></span> Available
+                </span>
             </a>
 
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#journeys" class="nav-link">Internships</a></li>
-                    <li><a href="#timeline" class="nav-link">Timeline</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#certificates" class="nav-link">Certificates</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#about" class="nav-link"><i data-lucide="user" class="nav-icon-mobile"></i><span>About</span></a></li>
+                    <li><a href="#journeys" class="nav-link"><i data-lucide="briefcase" class="nav-icon-mobile"></i><span>Internships</span></a></li>
+                    <li><a href="#timeline" class="nav-link"><i data-lucide="git-commit" class="nav-icon-mobile"></i><span>Timeline</span></a></li>
+                    <li><a href="#projects" class="nav-link"><i data-lucide="layers" class="nav-icon-mobile"></i><span>Projects</span></a></li>
+                    <li><a href="#skills" class="nav-link"><i data-lucide="code-2" class="nav-icon-mobile"></i><span>Skills</span></a></li>
+                    <li><a href="#certificates" class="nav-link"><i data-lucide="award" class="nav-icon-mobile"></i><span>Certificates</span></a></li>
+                    <li><a href="#contact" class="nav-link"><i data-lucide="send" class="nav-icon-mobile"></i><span>Contact</span></a></li>
                 </ul>
             </nav>
 
@@ -164,8 +170,8 @@
                     <i data-lucide="sun" class="theme-icon-sun"></i>
                 </button>
                 
-                <a href="assets/docs/Rohit_Pal_Resume.pdf" download="Rohit_Pal_Resume.pdf" class="btn btn-secondary btn-sm nav-resume-btn" style="display: inline-flex;">
-                    <i data-lucide="download" style="width: 14px; height: 14px;"></i>
+                <a href="assets/docs/Rohit_Pal_Resume.pdf" download="Rohit_Pal_Resume.pdf" class="btn btn-secondary btn-sm nav-resume-btn" title="Download Resume">
+                    <i data-lucide="download"></i>
                     <span>Resume</span>
                 </a>
 
@@ -192,14 +198,11 @@
                         <div class="section-tag-pill" style="margin-bottom: 0;">
                             <i data-lucide="sparkles"></i> FULL-STACK &amp; OPEN SOURCE
                         </div>
-                        <span class="hero-handle-pill">
-                            <i data-lucide="at-sign"></i>rohitpal08
-                        </span>
                     </div>
 
                     <h1 class="hero-title">
                         <span class="text-gradient">Rohit Pal</span>
-                        <span class="hero-title-sub">— Software Developer &amp; Open Source Contributor</span>
+                        <span class="hero-title-sub">— Software Developer &amp;<br>Open Source Contributor</span>
                     </h1>
 
                     <h2 class="hero-subtitle">
@@ -207,7 +210,7 @@
                     </h2>
 
                     <p class="hero-description">
-                        I am a Computer Science &amp; Engineering student at <strong>United Institute of Technology, Prayagraj</strong> (active online as <strong>Rohitpal08</strong>). I build practical, high-performance web applications using modern web technologies, explore artificial intelligence and API systems, and contribute to global open-source software within the <strong>Wikimedia / MediaWiki</strong> ecosystem.
+                        Pre-final year CSE student at <strong>United Institute of Technology, Prayagraj</strong>. Building scalable web applications, exploring practical AI integrations, and contributing production code to the global <strong>Wikimedia</strong> ecosystem.
                     </p>
 
                     <div class="hero-actions">
@@ -228,7 +231,7 @@
                         <a href="https://linkedin.com/in/rohit-pal-98230131a" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn Profile of Rohit Pal">
                             <i data-lucide="linkedin" class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="https://www.instagram.com/rohitpal08_/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram Profile of Rohitpal08">
+                        <a href="https://www.instagram.com/rohitpal08_/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram Profile of Rohit Pal">
                             <i data-lucide="instagram" class="fa-brands fa-instagram"></i>
                         </a>
                         <a href="mailto:rohitpal00015@gmail.com" class="social-link" aria-label="Email Rohit Pal">
@@ -251,6 +254,9 @@
                                 <strong class="chip-role-title">Marketing Lead</strong>
                                 <p>prayagrajrooms.in</p>
                             </div>
+                            <div class="chip-arrow-box">
+                                <i data-lucide="arrow-up-right"></i>
+                            </div>
                         </a>
 
                         <!-- Badge 2: Police Fellowship (Top Right) -->
@@ -261,6 +267,9 @@
                             <div class="chip-text">
                                 <strong class="chip-role-title">APCSIP-2026</strong>
                                 <p>UP Police Fellow</p>
+                            </div>
+                            <div class="chip-arrow-box">
+                                <i data-lucide="arrow-up-right"></i>
                             </div>
                         </a>
 
@@ -273,8 +282,67 @@
                                 <strong class="chip-role-title">Wikimedia</strong>
                                 <p>Gerrit Contributor</p>
                             </div>
+                            <div class="chip-arrow-box">
+                                <i data-lucide="arrow-up-right"></i>
+                            </div>
                         </a>
                     </div>
+                </div>
+            </div>
+
+            <!-- Hero Highlights Strip (Compact & Minimal) -->
+            <div class="container hero-highlights-container">
+                <div class="hero-highlights-grid">
+                    <!-- Box 1: 600+ Students -->
+                    <div class="hero-highlight-card">
+                        <div class="highlight-circle-icon icon-glow-cyan">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div class="highlight-info-col">
+                            <h4 class="highlight-main-title">600+ Students</h4>
+                            <span class="highlight-sub-title">Community &amp; Events</span>
+                            <p class="highlight-desc-text">Gemini Builder event with GSA UIT.</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 2: Samsung Fellowship -->
+                    <div class="hero-highlight-card">
+                        <div class="highlight-circle-icon icon-glow-emerald">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <div class="highlight-info-col">
+                            <h4 class="highlight-main-title">Samsung Fellowship</h4>
+                            <span class="highlight-sub-title">ISWDP Cohort 9</span>
+                            <p class="highlight-desc-text">Selected for Samsung Fellowship.</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 3: SIH Core Organizer -->
+                    <div class="hero-highlight-card" onclick="openEventModal('sih-internal')" style="cursor: pointer;" title="View SIH Organizing Details">
+                        <div class="highlight-circle-icon icon-glow-gold">
+                            <i data-lucide="trophy"></i>
+                        </div>
+                        <div class="highlight-info-col">
+                            <h4 class="highlight-main-title">SIH Core Organizer</h4>
+                            <span class="highlight-sub-title">Smart India Hackathon</span>
+                            <p class="highlight-desc-text">Hackathon operations &amp; tech setup.</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 4: Vindhya Millets Executive -->
+                    <a href="https://lnkd.in/p/gvAK4ghJ" target="_blank" rel="noopener noreferrer" class="hero-highlight-card highlight-card-link" title="Digital Content & Social Media Executive at Vindhya Millets">
+                        <div class="highlight-circle-icon icon-glow-purple">
+                            <i data-lucide="sprout"></i>
+                        </div>
+                        <div class="highlight-info-col">
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.25rem;">
+                                <h4 class="highlight-main-title">Vindhya Millets</h4>
+                                <i data-lucide="arrow-up-right" class="highlight-link-arrow"></i>
+                            </div>
+                            <span class="highlight-sub-title">Digital Media Exec</span>
+                            <p class="highlight-desc-text">Web &amp; ops · Indian Army supplier.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -297,7 +365,7 @@
                             <span class="section-tag-pill" style="margin-bottom: 0.75rem;">DEVELOPER BIO</span>
                             <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">Building scalable, clean web software.</h3>
                             <p class="bento-about-text">
-                                I am <strong>Rohit Pal</strong> (recognized online as <strong>Rohitpal08</strong>), a Computer Science &amp; Engineering student from India studying at <strong>United Institute of Technology, Prayagraj</strong>. As a software developer and open-source contributor, my core mission is building practical, reliable software and modern web applications that solve real-world problems.<br><br>
+                                I am <strong>Rohit Pal</strong>, a Computer Science &amp; Engineering student from India studying at <strong>United Institute of Technology, Prayagraj</strong>. As a software developer and open-source contributor, my core mission is building practical, reliable software and modern web applications that solve real-world problems.<br><br>
                                 My technical interests center around full-stack web development, API engineering, artificial intelligence integrations, software engineering best practices, and modern developer tools. In open source, I am actively learning and contributing to the <strong>Wikimedia / MediaWiki</strong> ecosystem (working on Vue.js design systems in Codex, Gerrit patchsets, and Phabricator task triage), while collaborating on student developer platforms with <strong>TechEraa</strong>, <strong>UDTech India</strong>, and representing communities as a <strong>Cloud Junction Campus Ambassador</strong>.
                             </p>
                         </div>
@@ -438,7 +506,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-tag-pill"><i data-lucide="git-pull-request"></i> 02 // OPEN SOURCE &amp; FELLOWSHIPS</span>
-                    <h2 class="section-title">Open Source Contributions &amp; Fellowships</h2>
+                    <h2 class="section-title">Learning &amp; Contributing in Public: Open-Source Software</h2>
                     <p class="section-subtitle">Hands-on learning and contributions in <strong>Wikimedia / MediaWiki open source</strong>, <strong>state cyber security</strong>, and <strong>hackathon platforms</strong>.</p>
                 </div>
 
@@ -547,6 +615,74 @@
                     <!-- Ascending Branches (Reversed: Earliest near bottom, Present at top) -->
                     <div class="growth-branches-flow">
 
+                        <!-- Milestone 0.1 (Top Peak - Active Executive Role): Vindhya Millets -->
+                        <div class="growth-branch-item align-left" onclick="openTimelineDetail('vindhya-millets')" title="Click for Full Details">
+                            <div class="glass-card branch-card border-gold">
+                                <div class="branch-card-header">
+                                    <span class="micro-tag" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-gold); font-weight: 700;">Indian Army Supplier</span>
+                                    <span class="branch-date-chip">Sept 2026 — Present</span>
+                                </div>
+                                <h3 class="branch-role-title">Digital &amp; Social Media Executive</h3>
+                                <div class="branch-org-name">
+                                    <i data-lucide="sprout" style="width: 14px; height: 14px; color: var(--accent-gold);"></i>
+                                    <span>Citiblock Farmer Producer Co. (Vindhya Millets)</span>
+                                </div>
+                                <p class="branch-summary-text">
+                                    Built brand &amp; web infrastructure from scratch with Praveen Singh &amp; Gautam Kumar Maurya. Products supplied to the Indian Army and global markets.
+                                </p>
+                                <div class="branch-chips-row">
+                                    <span class="micro-tag">Vindhya Millets</span>
+                                    <span class="micro-tag">Indian Army</span>
+                                    <span class="micro-tag">Citiblock FPC</span>
+                                    <span class="micro-tag">Digital Branding</span>
+                                </div>
+                                <div class="branch-click-cta">
+                                    <i data-lucide="info"></i>
+                                    <span>Click to View Full Details</span>
+                                </div>
+                            </div>
+
+                            <div class="branch-node-marker">
+                                <div class="branch-node-dot" style="border-color: #f59e0b; box-shadow: 0 0 20px #f59e0b;"></div>
+                            </div>
+
+                            <div class="branch-spacer"></div>
+                        </div>
+
+                        <!-- Milestone 0 (Flagship Conclave): Gateway to GATE Core Organizer -->
+                        <div class="growth-branch-item align-right" onclick="openTimelineDetail('gfg-gate')" title="Click for Full Details">
+                            <div class="branch-spacer"></div>
+
+                            <div class="branch-node-marker">
+                                <div class="branch-node-dot" style="border-color: #10b981; box-shadow: 0 0 20px #10b981;"></div>
+                            </div>
+
+                            <div class="glass-card branch-card border-emerald">
+                                <div class="branch-card-header">
+                                    <span class="micro-tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 700;">600+ Students Conclave</span>
+                                    <span class="branch-date-chip">Recent Conclave</span>
+                                </div>
+                                <h3 class="branch-role-title">Core Organizer — Gateway to GATE</h3>
+                                <div class="branch-org-name">
+                                    <i data-lucide="graduation-cap" style="width: 14px; height: 14px; color: #10b981;"></i>
+                                    <span>GeeksforGeeks UIT × HackerRank UIT</span>
+                                </div>
+                                <p class="branch-summary-text">
+                                    Organized flagship conclave hosting Chandan Jha (VP at GeeksforGeeks, Ex-ISRO Scientist, AIR 23 &amp; 26) for 600+ engineering students.
+                                </p>
+                                <div class="branch-chips-row">
+                                    <span class="micro-tag">GeeksforGeeks</span>
+                                    <span class="micro-tag">HackerRank UIT</span>
+                                    <span class="micro-tag">Chandan Jha</span>
+                                    <span class="micro-tag">600+ Attendees</span>
+                                </div>
+                                <div class="branch-click-cta">
+                                    <i data-lucide="info"></i>
+                                    <span>Click to View Full Details</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Milestone 1 (Top Peak): Heisyn Full-Stack Intern -->
                         <div class="growth-branch-item align-left" onclick="openTimelineDetail('heisyn')" title="Click for Full Details">
                             <div class="glass-card branch-card border-indigo">
@@ -599,11 +735,12 @@
                                     <span>Wikimedia Ecosystem</span>
                                 </div>
                                 <p class="branch-summary-text">
-                                    Delivering code reviews, Vue.js Codex components, and solving Phabricator tasks (T434524, T434753).
+                                    Delivering merged production code to ContentTranslation and Wikitermbase gadget (PR #88, T437964), alongside Vue.js Codex patches.
                                 </p>
                                 <div class="branch-chips-row">
-                                    <span class="micro-tag">Vue.js Codex</span>
+                                    <span class="micro-tag">Merged PR #88</span>
                                     <span class="micro-tag">Gerrit Review</span>
+                                    <span class="micro-tag">Vue.js Codex</span>
                                     <span class="micro-tag">Phabricator</span>
                                 </div>
                                 <div class="branch-click-cta">
@@ -764,6 +901,70 @@
 
                 <!-- Projects Grid -->
                 <div class="projects-cards-grid" id="projects-cards-grid">
+
+                    <!-- Project: UIT Coding Club Web Portal -->
+                    <article class="glass-card project-card-clean border-indigo featured-project-card" data-category="community-tools">
+                        <div class="project-thumbnail-box" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(99, 102, 241, 0.08)); display: flex; align-items: center; justify-content: center;">
+                            <span class="project-live-indicator"><span class="status-dot"></span> Live Portal</span>
+                            <i data-lucide="terminal" style="width: 56px; height: 56px; color: var(--blue-primary);"></i>
+                        </div>
+                        <div class="project-details-body">
+                            <div class="project-tags-wrap">
+                                <span class="micro-tag">HTML5/CSS3</span>
+                                <span class="micro-tag">JavaScript</span>
+                                <span class="micro-tag">Web Audio API</span>
+                                <span class="micro-tag">Cyber UI</span>
+                            </div>
+                            <span class="project-role-badge" style="display: inline-block; font-size: 0.78rem; font-weight: 700; color: var(--blue-primary); margin-bottom: 0.35rem; font-family: var(--font-mono);">
+                                <i data-lucide="user-check" style="width: 12px; height: 12px; vertical-align: -1px;"></i> Role: Media &amp; PR Lead &amp; Frontend Architect
+                            </span>
+                            <h3 class="project-name">UIT Coding Club (UCC) — Official Community Web Portal</h3>
+                            <p class="project-short-desc">
+                                <strong>Problem Solved:</strong> Centralized digital platform for United Institute of Technology's premier developer community, connecting 500+ active student coders.
+                            </p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+                                <strong>Key Features:</strong> Interactive tabbed code runner (UCC.js, DSA_Sprint.cpp), dynamic leadership tree hierarchy, hackathon countdowns, and dark/light mode toggle.
+                            </p>
+                            <div class="project-actions-row">
+                                <a href="https://github.com/rohitpal00015-prog/uit-coding-club" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" title="View Source on GitHub">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <a href="https://uit-coding-club.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm" title="Launch UCC Live Portal">
+                                    <i data-lucide="external-link"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project: ZEROUP Studio Platform -->
+                    <article class="glass-card project-card-clean border-gold" data-category="fullstack">
+                        <div class="project-thumbnail-box" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(0, 0, 0, 0.4)); display: flex; align-items: center; justify-content: center;">
+                            <span class="project-live-indicator" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);"><i data-lucide="sparkles"></i> Creative Tech</span>
+                            <i data-lucide="layers" style="width: 56px; height: 56px; color: #fbbf24;"></i>
+                        </div>
+                        <div class="project-details-body">
+                            <div class="project-tags-wrap">
+                                <span class="micro-tag">HTML5/Tailwind</span>
+                                <span class="micro-tag">Canvas 2D</span>
+                                <span class="micro-tag">Web Audio API</span>
+                            </div>
+                            <span class="project-role-badge" style="display: inline-block; font-size: 0.78rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.35rem; font-family: var(--font-mono);">
+                                <i data-lucide="user-check" style="width: 12px; height: 12px; vertical-align: -1px;"></i> Role: Creator &amp; Frontend Architect
+                            </span>
+                            <h3 class="project-name">ZEROUP — Interactive Media &amp; Distribution Studio</h3>
+                            <p class="project-short-desc">
+                                <strong>Problem Solved:</strong> High-end interactive media infrastructure for founders and creators turning expertise into compounding distribution.
+                            </p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+                                <strong>Key Features:</strong> Pure CSS 3D interactive flipbook manifesto, procedural browser-native Web Audio synthesizer, and 60 FPS Canvas wave simulation.
+                            </p>
+                            <div class="project-actions-row">
+                                <a href="https://github.com/rohitpal00015-prog/zeroup" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" title="View ZEROUP on GitHub">
+                                    <i data-lucide="github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
                     <!-- Project 1: PalGrocery -->
                     <article class="glass-card project-card-clean border-emerald" data-category="fullstack">
@@ -951,36 +1152,6 @@
                             </p>
                             <div class="project-actions-row">
                                 <a href="https://github.com/rohitpal00015-prog/tech-era" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" title="View TechEraa Platform Repository on GitHub">
-                                    <i data-lucide="github"></i> Repository
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 7: AgriVerse -->
-                    <article class="glass-card project-card-clean border-emerald" data-category="fullstack">
-                        <div class="project-thumbnail-box">
-                            <span class="project-live-indicator" style="color: #34d399; border-color: var(--border-emerald);">Concept</span>
-                            <img src="assets/images/projects/logo.png" alt="AgriVerse — Digital Agriculture Information & Market Price System by Rohit Pal" class="project-thumbnail-img" loading="lazy" decoding="async">
-                        </div>
-                        <div class="project-details-body">
-                            <div class="project-tags-wrap">
-                                <span class="micro-tag">Node.js</span>
-                                <span class="micro-tag">JavaScript</span>
-                                <span class="micro-tag">Firebase</span>
-                            </div>
-                            <span class="project-role-badge" style="display: inline-block; font-size: 0.78rem; font-weight: 700; color: #34d399; margin-bottom: 0.35rem; font-family: var(--font-mono);">
-                                <i data-lucide="user-check" style="width: 12px; height: 12px; vertical-align: -1px;"></i> Role: Full-Stack Developer
-                            </span>
-                            <h3 class="project-name">AgriVerse — Digital Agriculture &amp; Mandi Price System</h3>
-                            <p class="project-short-desc">
-                                <strong>Problem Solved:</strong> Bridges the rural digital divide by providing farmers with transparent, up-to-date market crop prices and government subsidies.
-                            </p>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
-                                <strong>Key Features:</strong> Live mandi rate tracker, government agricultural scheme directory, and lightweight mobile-first interface for low-bandwidth devices.
-                            </p>
-                            <div class="project-actions-row">
-                                <a href="https://github.com/rohitpal00015-prog" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" title="View GitHub Repositories by Rohit Pal">
                                     <i data-lucide="github"></i> Repository
                                 </a>
                             </div>

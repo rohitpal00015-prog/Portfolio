@@ -117,6 +117,26 @@ const PORTFOLIO_DATA = {
   },
   experience: [
     {
+      id: "vindhya-millets",
+      role: "Digital Content & Social Media Executive",
+      company: "Citiblock Farmer Producer Co. (Vindhya Millets)",
+      period: "Sept 2026 — Present",
+      status: "Indian Army Supplier",
+      description: "Building digital presence, web platform, and omnichannel branding from scratch alongside Praveen Singh & Gautam Kumar Maurya. Products supplied to the Indian Army and international markets.",
+      techChips: ["Vindhya Millets", "Indian Army", "Citiblock FPC", "Digital Branding"],
+      link: "https://lnkd.in/p/gvAK4ghJ"
+    },
+    {
+      id: "gfg-gate",
+      role: "Core Organizer — Gateway to GATE",
+      company: "GeeksforGeeks UIT × HackerRank UIT",
+      period: "Recent Conclave",
+      status: "600+ Students Conclave",
+      description: "Organized flagship technical conclave hosting Chandan Jha Sir (VP at GeeksforGeeks, Ex-ISRO Scientist, GATE AIR 23 & 26) with stage coordination and auditorium management for 600+ students.",
+      techChips: ["GeeksforGeeks", "HackerRank UIT", "Leadership", "Event Hosting"],
+      link: "https://lnkd.in/p/gX7MG-_w"
+    },
+    {
       id: "heisyn",
       role: "Full-Stack Developer Intern",
       company: "Heisyn Pvt. Ltd.",
@@ -225,17 +245,6 @@ const PORTFOLIO_DATA = {
       techStack: ["React.js", "Node.js", "Express"],
       description: "A web platform developed for managing registrations, event information, problem statements, and participant workflows for a national-level hackathon.",
       github: "https://github.com/rohitpal00015-prog/tech-era",
-      demo: null
-    },
-    {
-      id: "agriverse",
-      title: "AgriVerse",
-      category: "fullstack",
-      badge: "Coming Soon",
-      image: "assets/images/projects/logo.png",
-      techStack: ["Node.js", "JavaScript", "Firebase"],
-      description: "A concept-driven platform supporting farmers by delivering agricultural information, market prices, government schemes, and digital services in a single interface.",
-      github: "https://github.com/rohitpal00015-prog",
       demo: null
     },
     {
