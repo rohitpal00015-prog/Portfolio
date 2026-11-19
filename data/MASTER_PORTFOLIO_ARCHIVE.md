@@ -6,27 +6,28 @@
 
 ## 1. 👤 Personal Identity & Profile
 - **Full Name**: Rohit Pal
-- **Primary Title**: Full-Stack Web Developer & Software Engineering Student
+- **Primary Title**: Full-Stack Developer, AI Builder & Open Source Contributor
 - **Tagline**: Pre-final year B.Tech CSE Student @ United Institute of Technology, Prayagraj
-- **Current Status**: `Available for Web Dev Roles`
+- **Current Status**: `Open to Full-Stack / AI Roles`
 - **Location**: Prayagraj, Uttar Pradesh, India
 - **Email**: [rohitpal00015@gmail.com](mailto:rohitpal00015@gmail.com)
 - **GitHub**: [github.com/rohitpal00015-prog](https://github.com/rohitpal00015-prog)
 - **LinkedIn**: [linkedin.com/in/rohit-pal-98230131a](https://linkedin.com/in/rohit-pal-98230131a)
 - **Instagram**: [instagram.com/rohitpal08_](https://www.instagram.com/rohitpal08_/)
 - **Twitter / X**: [twitter.com/rohitpal00015](https://twitter.com/rohitpal00015)
-- **Profile Photo Asset**: `assets/images/profile/rohit.png`
+- **Profile Photo Asset**: `assets/images/profile/rohit.webp` (80 KB WebP; PNG master retained)
+- **Social Card Asset**: `assets/images/og/rohit-pal-og.jpg` (1200×630)
 - **Resume PDF Asset**: `assets/docs/Rohit_Pal_Resume.pdf`
 
 ### Typewriter Dynamic Roles
-1. `Full-Stack Web Developer`
-2. `Software Engineering Student`
-3. `AI Solutions Explorer`
-4. `B.Tech CSE Student @ UIT`
-5. `Open Source Contributor`
+1. `Full-Stack Developer`
+2. `AI Solutions Builder`
+3. `Open Source Contributor`
+4. `Flutter App Developer`
+5. `B.Tech CSE Student @ UIT`
 
 ### Bio & Philosophy
-> *"Pre-final year Computer Science student at United Institute of Technology with a strong interest in full-stack web development. I enjoy designing and developing web applications using modern technologies while learning through real projects, team collaborations, and hackathons. My goal is to build software that is reliable, secure, scalable, and easy to use."*
+> *"Pre-final year Computer Science student at United Institute of Technology building production full-stack and AI products. Currently developing ShilpSetu for SIH 2026, shipping web apps for real clients, and contributing merged code to Wikimedia open source. My goal is to build software that is reliable, secure, scalable, and easy to use."*
 
 ---
 
@@ -41,7 +42,7 @@
 ---
 
 ## 3. 📊 Key Metrics & Highlights
-- **15+** Full-Stack Web & AI Projects Developed
+- **20+** Full-Stack Web & AI Projects / Public Repositories
 - **3x** National Hackathon Finalist (SRM BUILDS 7.0 36h sprint, TechSprint Top 10, UHack 4.0 Top 65)
 - **8+** Verified Credentials & Hackathon Merit Awards
 - **10,000+** Candidate Pool Selection (Cloud Junction Campus Ambassador)
@@ -54,19 +55,22 @@
 ## 4. 🛠️ Technical Skills & Tools Taxonomy
 
 ### A. Full-Stack & Web Engineering
-- **Frontend**: React.js, Vue.js (Wikimedia Codex), JavaScript (ES6+), HTML5 Semantic Web, CSS3 / Modern Flexbox & CSS Grid, Single Page Applications (SPA), Responsive UI/UX Design.
-- **Backend**: Node.js Runtime, Express.js Backend Architecture, RESTful API Architecture.
-- **Databases & BaaS**: MongoDB & Mongoose ODM, MySQL Relational Database, Firebase BaaS & Authentication.
+- **Frontend**: React.js (19), Next.js (App Router), Vue.js (Wikimedia Codex), TypeScript, JavaScript (ES6+), Flutter (Dart), Tailwind CSS, GSAP, HTML5 Semantic Web, CSS3 / Flexbox & Grid, Responsive UI/UX.
+- **Backend**: Node.js Runtime, Express.js, FastAPI (Python), RESTful API Architecture, JWT Authentication.
+- **Databases & BaaS**: MongoDB & Mongoose, MySQL, MariaDB, PostgreSQL / Supabase, Firebase BaaS & Authentication.
 
 ### B. Programming Languages
-- JavaScript
+- JavaScript / TypeScript
 - Python
+- Dart (Flutter)
 - Java
 - C Language
 
 ### C. AI, Tooling & DevOps
-- Gemini API & LLM Integrations
-- Zynoq AI Assistant
+- Gemini 2.5 Flash & Gemini API
+- Groq / Llama low-latency inference
+- PEFT / LoRA fine-tuning (PyTorch)
+- Chrome Manifest V3 extensions
 - Postman API Testing
 - Git & GitHub
 - Gerrit Code Review (Wikimedia)
@@ -87,9 +91,11 @@
 
 | Role | Organization | Status / Period | Key Tech / Highlights |
 |---|---|---|---|
-| **Full-Stack Developer Intern** | Heisyn Pvt. Ltd. | Present (Active) | React.js, Node.js, REST APIs |
+| **Full-Stack Developer Intern** | Heisyn Pvt. Ltd. | June 2026 — Present (Remote) | React.js, Node.js, REST APIs |
+| **Digital Content & Social Media Executive** | Citiblock FPC (Vindhya Millets) | Sept 2026 — Present | Brand web, digital campaigns, Indian Army supplier |
 | **Wikimedia Open Source Contributor** | Wikimedia Ecosystem | Present (Global) | Gerrit, Phabricator, Vue.js Codex, MediaWiki |
 | **Cloud Junction Campus Ambassador** | Cloud Junction | Present (Selected from 10k+ pool) | Campus Leadership, Cloud Ecosystems |
+| **Media & PR Lead** | UIT Coding Club (UCC) | Present (Core Council) | Web architecture, community of 500+ |
 | **Technical Associate** | TechEraa & UDTech India | Present | React UI, Hackathon Platforms |
 | **Cyber Security Intern / Fellow** | UP Police (APCSIP-2026) | Completed (June 2026) | OSINT, Digital Forensics, Malware, CDR/IPDR |
 | **B.Tech CSE Student** | United Institute of Technology | 2024 – 2028 | Core CS, Algorithms, Full Stack Architecture |
@@ -98,68 +104,121 @@
 
 ## 6. 🚀 Featured Projects Archive
 
-### 1. PalGrocery (PalBasket)
-- **Category**: Web / Fullstack (`fullstack`)
-- **Badge**: Grocery Platform / Live
-- **Tech Stack**: HTML5/CSS3, JavaScript, PHP/MySQL
-- **Description**: An online grocery ordering platform featuring product catalog management, smart shopping cart, customer checkout, user authentication, and admin management dashboard.
-- **GitHub**: [github.com/rohitpal00015-prog/PalGrocery](https://github.com/rohitpal00015-prog/PalGrocery)
-- **Live Demo**: [palbasket.vercel.app](https://palbasket.vercel.app/)
-- **Image**: `assets/images/projects/Palbasket logo.png`
+### Project Index (16 featured · 21 public repositories)
 
-### 2. Prayagraj Rooms
-- **Category**: Web / Fullstack (`fullstack`)
-- **Badge**: Live Project
-- **Tech Stack**: HTML5/CSS3, JavaScript, MongoDB/MySQL
-- **Description**: A web platform designed to simplify accommodation discovery for students and working professionals in Prayagraj with room browsing, custom filters, and database management.
-- **GitHub**: [github.com/rohitpal00015-prog/prayagraj-rooms](https://github.com/rohitpal00015-prog/prayagraj-rooms)
-- **Live Demo**: [prayagrajrooms.in](https://prayagrajrooms.in/)
-- **Image**: `assets/images/projects/prayagrajrooms_logo.png`
+| # | Project | Category | Core Stack |
+|---|---|---|---|
+| 1 | ShilpSetu — Voice-First AI Marketplace | `python-ai` | Flutter, FastAPI, Gemini 2.5, Groq |
+| 2 | UIT Coding Club (UCC) Web Portal | `community-tools` | HTML5/CSS3, JavaScript, Web Audio |
+| 3 | DevFest Prayagraj '26 Website | `community-tools` | React, TypeScript, Tailwind, GSAP |
+| 4 | SourceWiki — Reference Verification | `community-tools` | React/TS, Node/Express, MariaDB, JWT |
+| 5 | ZEROUP — Interactive Media Studio | `fullstack` | HTML5/Tailwind, Canvas 2D, Web Audio |
+| 6 | PalGrocery (PalBasket) | `fullstack` | HTML5/CSS3, JavaScript, PHP/MySQL |
+| 7 | Prayagraj Rooms | `fullstack` | HTML5/CSS3, JavaScript, MongoDB/MySQL |
+| 8 | Zynoq AI Assistant | `python-ai` | Python, AI APIs, Automation |
+| 9 | Agentic AI Browser Extension | `python-ai` | Agentic AI, DOM Automation, LLM APIs |
+| 10 | CampusLink | `fullstack` | JavaScript, React, Full-Stack |
+| 11 | TechEraa Hackathon Platform | `community-tools` | React.js, Node.js, Express |
+| 12 | Nexora AI — In-Browser Copilot | `python-ai` | Chrome MV3, React/TS, Gemini Flash |
+| 13 | Campus Toolkit | `community-tools` | Next.js, TypeScript, Tailwind |
+| 14 | Exofinity — Builder Community | `community-tools` | React 19, Tailwind v4, GSAP |
+| 15 | Genis — Generative AI Digital Twin | `python-ai` | Python, PyTorch, PEFT/LoRA |
+| 16 | UP Police APCSIP-2026 Fellowship Portal | `cybersecurity` | Cyber forensics, OSINT, CDR |
 
-### 3. Zynoq AI Assistant
-- **Category**: Python & AI (`python-ai`)
-- **Badge**: AI Assistant / Live
-- **Tech Stack**: Python, AI APIs, Workflow Automation
-- **Description**: An AI-powered assistant developed to experiment with API integrations, intelligent responses, and practical workflow automation within web applications.
-- **GitHub**: [github.com/rohitpal00015-prog](https://github.com/rohitpal00015-prog)
-- **Live Demo**: [znoq.netlify.app](https://znoq.netlify.app/)
-- **Image**: `assets/images/projects/ok.png`
+### 1. ShilpSetu — Voice-First AI Marketplace
+- **Category**: AI & Products (`python-ai`)
+- **Badge**: SIH 2026 · PS-26090 · Team CyberEye
+- **Tech Stack**: Flutter, FastAPI, Gemini 2.5, Groq, Offline-first
+- **Description**: Voice-first, offline-first marketplace helping India's 7M+ artisans sell online without typing, studio photography, or English listings. Built for Smart India Hackathon 2026 (PS-26090) and SPARK 2 SCALE 2026 (PS44).
+- **Highlights**: 11-language snap-and-speak cataloging, AI photo cleanup, bilingual SEO listings, deferred-sync offline flows.
+- **GitHub**: [shilpsetu](https://github.com/rohitpal00015-prog/shilpsetu) · [prototype](https://github.com/rohitpal00015-prog/shilpsetu-prototype)
+- **Image**: `assets/images/projects/shilpsetu-cover.webp`
 
-### 4. CampusLink
-- **Category**: Web / Fullstack (`fullstack`)
-- **Badge**: GDG MoByte Project
-- **Tech Stack**: JavaScript, React/Web, Full-Stack
-- **Description**: Developed during GDG Prayagraj MoByte to preserve college memories, showcase student projects, and strengthen alumni engagement through a centralized digital platform.
-- **GitHub**: [github.com/rohitpal00015-prog/CampusLink](https://github.com/rohitpal00015-prog/CampusLink)
-
-### 5. TechEraa Hackathon Platform
+### 2. UIT Coding Club (UCC) Web Portal
 - **Category**: Community Platforms (`community-tools`)
-- **Badge**: TechEraa Platform
-- **Tech Stack**: React.js, Node.js, Express
-- **Description**: A web platform developed for managing registrations, event information, problem statements, and participant workflows for a national-level hackathon.
-- **GitHub**: [github.com/rohitpal00015-prog/tech-era](https://github.com/rohitpal00015-prog/tech-era)
+- **Badge**: Live Platform
+- **Tech Stack**: HTML5/CSS3, JavaScript, Web Audio API, Cyber UI
+- **Description**: Official community platform for UIT's 500+ student developers, with an interactive code simulator, leadership hierarchy tree, event timers, and persistent dark/light mode.
+- **GitHub**: [uit-coding-club](https://github.com/rohitpal00015-prog/uit-coding-club) · **Live**: [uit-coding-club.vercel.app](https://uit-coding-club.vercel.app/)
 
-### 6. AgriVerse
+### 3. DevFest Prayagraj '26 Website
+- **Category**: Community Platforms (`community-tools`)
+- **Badge**: GDG Prayagraj
+- **Tech Stack**: React, TypeScript, Tailwind CSS, GSAP
+- **Description**: Cinematic, fully responsive event website with an animated boat-voyage preloader, multi-view schedule, speaker modals, and a holographic badge studio.
+- **GitHub**: [devfest-prayagraj](https://github.com/rohitpal00015-prog/devfest-prayagraj) · **Live**: [devfest-prayagraj-blue.vercel.app](https://devfest-prayagraj-blue.vercel.app)
+
+### 4. SourceWiki — Reference Verification
+- **Category**: Community Platforms (`community-tools`)
+- **Tech Stack**: React + TypeScript, Node/Express, MariaDB, JWT
+- **Description**: Country-aware database of credible sources for Wikipedia editors, with regional expert verification and a searchable public directory. Hosted on Wikimedia Toolforge.
+- **GitHub**: [SourceWiki](https://github.com/rohitpal00015-prog/SourceWiki) · **Live**: [source-wiki.vercel.app](https://source-wiki.vercel.app/)
+
+### 5. ZEROUP — Interactive Media Studio
 - **Category**: Web / Fullstack (`fullstack`)
-- **Badge**: Concept / Coming Soon
-- **Tech Stack**: Node.js, JavaScript, Firebase
-- **Description**: A concept-driven platform supporting farmers by delivering agricultural information, market prices, government schemes, and digital services in a single interface.
-- **GitHub**: [github.com/rohitpal00015-prog](https://github.com/rohitpal00015-prog)
-- **Image**: `assets/images/projects/logo.png`
+- **Tech Stack**: HTML5/Tailwind, Canvas 2D, Web Audio API
+- **Description**: Interactive media infrastructure studio with a 3D flipbook manifesto, procedural Web Audio synthesizer, and 60 FPS Canvas wave simulation.
+- **GitHub**: [zeroup](https://github.com/rohitpal00015-prog/zeroup)
 
-### 7. Agentic AI Browser Extension
+### 6. PalGrocery (PalBasket)
+- **Category**: Web / Fullstack (`fullstack`)
+- **Tech Stack**: HTML5/CSS3, JavaScript, PHP/MySQL
+- **Description**: Online grocery platform with catalogue management, cart, checkout, authentication, and admin dashboard.
+- **GitHub**: [PalGrocery](https://github.com/rohitpal00015-prog/PalGrocery) · **Live**: [palbasket.vercel.app](https://palbasket.vercel.app/)
+- **Image**: `assets/images/projects/palbasket-logo.webp`
+
+### 7. Prayagraj Rooms
+- **Category**: Web / Fullstack (`fullstack`)
+- **Description**: Accommodation discovery for students and professionals in Prayagraj, with locality/rent filters and owner listing workflows.
+- **GitHub**: [prayagraj-rooms](https://github.com/rohitpal00015-prog/prayagraj-rooms) · **Live**: [prayagrajrooms.in](https://prayagrajrooms.in/)
+
+### 8. Zynoq AI Assistant
 - **Category**: Python & AI (`python-ai`)
-- **Badge**: GDG Hackathon Award
-- **Tech Stack**: Agentic AI, JavaScript, DOM Automation, LLM APIs
-- **Description**: Autonomous AI browser extension built in a 2-hour sprint at GDG Prayagraj Vibe Coding Hackathon. Understands natural language voice/text prompts and executes browser actions autonomously.
-- **Distinction**: Certificate of Achievement Award
+- **Description**: AI assistant exploring LLM API integration, intelligent responses, and workflow automation.
+- **Live**: [znoq.netlify.app](https://znoq.netlify.app/)
 
-### 8. UP Police APCSIP-2026 Fellowship Web Portal
+### 9. Agentic AI Browser Extension
+- **Category**: Python & AI (`python-ai`)
+- **Description**: Autonomous voice/text-driven browser agent built in a 2-hour GDG Prayagraj sprint; Certificate of Achievement.
+- **Tech Stack**: Agentic AI, DOM Automation, LLM APIs
+
+### 10. CampusLink
+- **Category**: Web / Fullstack (`fullstack`)
+- **Description**: GDG MoByte build preserving student projects and connecting alumni through mentorship channels.
+- **GitHub**: [CampusLink](https://github.com/rohitpal00015-prog/CampusLink)
+
+### 11. TechEraa Hackathon Platform
+- **Category**: Community Platforms (`community-tools`)
+- **Description**: Registration, problem statements, and participant workflows for national hackathons.
+- **GitHub**: [tech-era](https://github.com/rohitpal00015-prog/tech-era)
+
+### 12. Nexora AI — In-Browser Copilot
+- **Category**: Python & AI (`python-ai`)
+- **Tech Stack**: Chrome MV3, React + TypeScript, Gemini Flash
+- **Description**: Page-aware side-panel copilot that keeps the context of the page you are reading.
+- **GitHub**: [nexos](https://github.com/rohitpal00015-prog/nexos)
+- **Image**: `assets/images/projects/nexora-cover.webp`
+
+### 13. Campus Toolkit
+- **Category**: Community Platforms (`community-tools`)
+- **Description**: 100% client-side attendance/GPA calculators, JSON↔CSV converter, and Pomodoro timer; intentional starter bugs for OSS workshops.
+- **GitHub**: [Campus-Toolkit](https://github.com/rohitpal00015-prog/Campus-Toolkit)
+
+### 14. Exofinity — Builder Community
+- **Category**: Community Platforms (`community-tools`)
+- **Description**: Community home with GSAP scroll storytelling and static content architecture.
+- **GitHub**: [Exofinity](https://github.com/rohitpal00015-prog/Exofinity) · **Live**: [exofinity.vercel.app](https://exofinity.vercel.app)
+
+### 15. Genis — Generative AI Digital Twin
+- **Category**: Python & AI (`python-ai`)
+- **Tech Stack**: Python, PyTorch, PEFT/LoRA
+- **Description**: Persistent memory and persona modelling for a personal digital twin, with controlled delegation of routine replies.
+- **GitHub**: [Genis](https://github.com/rohitpal00015-prog/Genis)
+
+### 16. UP Police APCSIP-2026 Fellowship Portal
 - **Category**: Cybersecurity (`cybersecurity`)
-- **Badge**: UP Police Cyber Cell
-- **Tech Stack**: Cyber Forensics, OSINT & CDR, Malware Analysis
-- **Description**: Official fellowship brief documenting 15 days of intensive cyber cell case simulations, forensic tools, and officer sessions.
-- **Subpage File**: `up-police-internship.html`
+- **Description**: Fellowship dossier covering 15 days of cyber-cell case simulations, forensic tooling, and officer sessions.
+- **Subpage**: `up-police-internship.html`
 - **Image**: `assets/images/up-police/logos/APCSIP -2026.jpg`
 
 ---
@@ -216,27 +275,30 @@
 
 ---
 
-## 8. 🏆 Hackathons, Summits & Leadership Archive (19 Milestones)
+## 8. 🏆 Hackathons, Summits & Leadership Archive (22 Milestones)
 
-1. **GDG Prayagraj Vibe Coding Hackathon 2026** (31 July 2026) — Built Agentic AI Browser Extension in 2 hours; Certificate of Achievement.
-2. **Open Source Day – WikiClubTech UIT** (21 August 2024) — Rank 6 in 1-week Open Source Marathon (Wikimedia swag) & Rank 2 in Live Quiz.
-3. **SIH Internal Hackathon Core Organizing Team** — Core Organizer at UIT handling logistics, squads, jury evaluation pipelines.
-4. **SRM BUILDS 7.0 National Hackathon** — Team Leader, 36-hour offline sprint, 6 evaluation rounds, national finalist.
-5. **TechSprint Hackathon** — Top 10 Finish nationwide with live web prototype and jury defense.
-6. **UHack 4.0 Grand Finale** (17-18 March) — Top 65 Finalist nationwide in 24-hour sprint.
-7. **Cloud Junction Campus Ambassador** — Selected from 10,000+ national applicant pool.
-8. **BECon 2026 @ IIT Delhi** (30 Jan - 1 Feb 2026) — 3-day conclave with ministers, VCs, startup founders.
-9. **FOSS UNITED UIT Chapter Launch** — Promoted free and open-source software culture.
-10. **GDG "Build with AI"** — 12th Rank out of 56 participants in Wayground Quiz Challenge.
-11. **FlowJam 2026 SIET** — FlutterFlow low-code hackathon under dynamic team reshuffling.
-12. **Startup Confluence 2024** (Dec 11-12, 2024) — Inaugurated by UP Cabinet Minister Nand Gopal Nandi; learned TAM/SAM/SOM and IPR laws.
-13. **SANKALP 2026 National Summit** — 3-day leadership summit at MNNIT Allahabad.
-14. **Meeting Prof. H.C. Verma Sir** — Historic mentorship session with Concepts of Physics author.
-15. **DevFest Prayagraj 2024** (26 Oct 2024) — Flagship GDG developer conference with GDEs.
-16. **NHRD UNITED Talks Session** (21 April 2025) — Leadership and mindset session with Advait Dikshit.
-17. **PhysicsWallah PW Sankalp Session** — Met Alakh Pandey Sir, Sumit Rewati Sir, Dr. Saleem Sir live on campus.
-18. **GDG Prayagraj MoByte & CampusLink** — Showcased CampusLink platform to community leads.
-19. **NxtWave Generative AI Workshop** — Hands-on prompt engineering and custom generative models.
+1. **ShilpSetu — SIH 2026 & SPARK 2 SCALE 2026** (Nov 2026 — Present) — Team CyberEye lead; voice-first, offline-first artisan marketplace built with Flutter, FastAPI, Gemini 2.5, and Groq (PS-26090 / PS44).
+2. **Vindhya Millets — Digital Content & Social Media Executive** (Sept 2026 — Present) — Brand web, campaigns, and omnichannel growth for a Citiblock FPC brand now supplying the Indian Army.
+3. **DevFest Prayagraj 2026 Website** — Built the official event site (React, TypeScript, Tailwind, GSAP) for GDG Prayagraj.
+4. **GDG Prayagraj Vibe Coding Hackathon 2026** (31 July 2026) — Built Agentic AI Browser Extension in 2 hours; Certificate of Achievement.
+5. **Open Source Day – WikiClubTech UIT** (21 August 2024) — Rank 6 in 1-week Open Source Marathon (Wikimedia swag) & Rank 2 in Live Quiz.
+6. **SIH Internal Hackathon Core Organizing Team** — Core Organizer at UIT handling logistics, squads, jury evaluation pipelines.
+7. **SRM BUILDS 7.0 National Hackathon** — Team Leader, 36-hour offline sprint, 6 evaluation rounds, national finalist.
+8. **TechSprint Hackathon** — Top 10 Finish nationwide with live web prototype and jury defense.
+9. **UHack 4.0 Grand Finale** (17-18 March) — Top 65 Finalist nationwide in 24-hour sprint.
+10. **Cloud Junction Campus Ambassador** — Selected from 10,000+ national applicant pool.
+11. **BECon 2026 @ IIT Delhi** (30 Jan - 1 Feb 2026) — 3-day conclave with ministers, VCs, startup founders.
+12. **FOSS UNITED UIT Chapter Launch** — Promoted free and open-source software culture.
+13. **GDG "Build with AI"** — 12th Rank out of 56 participants in Wayground Quiz Challenge.
+14. **FlowJam 2026 SIET** — FlutterFlow low-code hackathon under dynamic team reshuffling.
+15. **Startup Confluence 2024** (Dec 11-12, 2024) — Inaugurated by UP Cabinet Minister Nand Gopal Nandi; learned TAM/SAM/SOM and IPR laws.
+16. **SANKALP 2026 National Summit** — 3-day leadership summit at MNNIT Allahabad.
+17. **Meeting Prof. H.C. Verma Sir** — Historic mentorship session with Concepts of Physics author.
+18. **DevFest Prayagraj 2024** (26 Oct 2024) — Flagship GDG developer conference with GDEs.
+19. **NHRD UNITED Talks Session** (21 April 2025) — Leadership and mindset session with Advait Dikshit.
+20. **PhysicsWallah PW Sankalp Session** — Met Alakh Pandey Sir, Sumit Rewati Sir, Dr. Saleem Sir live on campus.
+21. **GDG Prayagraj MoByte & CampusLink** — Showcased CampusLink platform to community leads.
+22. **NxtWave Generative AI Workshop** — Hands-on prompt engineering and custom generative models.
 
 ---
 
@@ -312,12 +374,18 @@ assets/
 │   └── Rohit_Pal_Resume.pdf
 └── images/
     ├── profile/
-    │   └── rohit.png
+    │   ├── rohit.webp (optimized hero/LCP asset, 80 KB)
+    │   └── rohit.png (original master)
+    ├── og/
+    │   └── rohit-pal-og.jpg (1200×630 social card)
     ├── projects/
-    │   ├── Palbasket logo.png
+    │   ├── shilpsetu-cover.webp (1200×600)
+    │   ├── devfest-cover.webp (1200×600)
+    │   ├── nexora-cover.webp (1200×600)
+    │   ├── palbasket-logo.webp (400×400, 8 KB)
     │   ├── prayagrajrooms_logo.png
     │   ├── ok.png (Zynoq AI)
-    │   └── logo.png (AgriVerse)
+    │   └── logo.png (ZEROUP/legacy studio mark)
     ├── certificates/
     │   ├── 1.png (SRM BUILDS 7.0 Offline Round)
     │   ├── 2.png (TechSprint Hackathon 2025)

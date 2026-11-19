@@ -35,12 +35,17 @@ function initTypewriter() {
     if (!typewriterEl) return;
 
     const roles = [
-        "Full-Stack Web Developer",
-        "Software Engineering Student",
-        "AI Solutions Explorer",
-        "B.Tech CSE Student @ UIT",
-        "Open Source Contributor"
+        "Full-Stack Developer",
+        "AI Solutions Builder",
+        "Open Source Contributor",
+        "Flutter App Developer",
+        "B.Tech CSE Student @ UIT"
     ];
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        typewriterEl.textContent = roles[0];
+        return;
+    }
 
     let roleIndex = 0;
     let charIndex = 0;
@@ -121,26 +126,27 @@ function initMobileNav() {
 
     if (!toggleBtn || !navMenu) return;
 
+    function setMenuState(isOpen) {
+        navMenu.classList.toggle('open', isOpen);
+        toggleBtn.innerHTML = `<i data-lucide="${isOpen ? 'x' : 'menu'}"></i>`;
+        toggleBtn.setAttribute('aria-expanded', String(isOpen));
+        toggleBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
     toggleBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('open');
-        const icon = toggleBtn.querySelector('i');
-        if (icon) {
-            const isOpen = navMenu.classList.contains('open');
-            icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
-            if (typeof lucide !== 'undefined') lucide.createIcons();
-        }
+        setMenuState(!navMenu.classList.contains('open'));
     });
 
-    // Close mobile nav when clicking a link
     navMenu.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('open');
-            const icon = toggleBtn.querySelector('i');
-            if (icon) {
-                icon.setAttribute('data-lucide', 'menu');
-                if (typeof lucide !== 'undefined') lucide.createIcons();
-            }
-        });
+        link.addEventListener('click', () => setMenuState(false));
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+            setMenuState(false);
+            toggleBtn.focus();
+        }
     });
 }
 
@@ -153,18 +159,20 @@ function initProjectFilter() {
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            filterButtons.forEach(b => b.classList.remove('active'));
+            filterButtons.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
             btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
 
             const filterVal = btn.getAttribute('data-filter');
 
             projectCards.forEach(card => {
                 const cat = card.getAttribute('data-category');
-                if (filterVal === 'all' || cat === filterVal) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
+                const isVisible = filterVal === 'all' || cat === filterVal;
+                card.style.display = isVisible ? 'flex' : 'none';
+                card.setAttribute('aria-hidden', String(!isVisible));
             });
         });
     });
@@ -174,6 +182,24 @@ function initProjectFilter() {
 // TIMELINE MILESTONES DATA & MODAL LOGIC (Bottom-To-Top Growth Root)
 // ==========================================================================
 const timelineMilestonesData = {
+    'shilpsetu': {
+        title: 'ShilpSetu — AI Artisan Marketplace',
+        category: 'SIH 2026 (PS-26090) · SPARK 2 SCALE 2026 (PS44)',
+        period: 'Nov 2026 — Present · Team CyberEye',
+        org: 'United Institute of Technology, Prayagraj',
+        body: `
+            <p>Leading development of a voice-first, offline-first marketplace that connects Indian artisans directly with buyers — built for Smart India Hackathon 2026 (Problem Statement PS-26090) and SPARK 2 SCALE 2026 (PS44).</p>
+            <ul>
+                <li><strong>Offline-first Mobile App:</strong> Flutter client with local caching and deferred sync so artisans in low-connectivity areas can list products and receive orders reliably.</li>
+                <li><strong>AI Product Assistance:</strong> FastAPI backend integrating Gemini 2.5 for catalogue writing, pricing guidance, and multilingual voice interactions, with Groq-hosted models for low-latency inference.</li>
+                <li><strong>Voice-first UX:</strong> Regional-language voice flows designed for artisans with limited digital literacy, from onboarding to order confirmation.</li>
+                <li><strong>Two National Builds:</strong> Same product architecture submitted across SIH 2026 and SPARK 2 SCALE 2026 with adapted problem statements.</li>
+            </ul>
+        `,
+        tags: ['Flutter', 'FastAPI', 'Gemini 2.5', 'Groq', 'Offline-first', 'SIH 2026'],
+        link: 'https://github.com/rohitpal00015-prog/shilpsetu',
+        linkText: 'View on GitHub'
+    },
     'uit-foundation': {
         title: 'B.Tech Computer Science & Engineering',
         category: 'Root Origin · Academic Foundation',
@@ -327,9 +353,31 @@ const timelineMilestonesData = {
     }
 };
 
+let lastFocusedElement = null;
+
+function rememberFocus() {
+    lastFocusedElement = document.activeElement;
+}
+
+function focusIntoModal(overlay) {
+    if (!overlay) return;
+    const target = overlay.querySelector('.modal-close-btn') || overlay.querySelector('.modal-dialog');
+    if (target) {
+        setTimeout(() => target.focus({ preventScroll: true }), 30);
+    }
+}
+
+function restoreFocus() {
+    if (lastFocusedElement && document.contains(lastFocusedElement)) {
+        lastFocusedElement.focus({ preventScroll: true });
+    }
+    lastFocusedElement = null;
+}
+
 function openTimelineDetail(id) {
     const data = timelineMilestonesData[id];
     if (!data) return;
+    rememberFocus();
 
     const modalOverlay = document.getElementById('timeline-modal-overlay');
     const titleEl = document.getElementById('timeline-modal-title');
@@ -371,6 +419,7 @@ function openTimelineDetail(id) {
     if (modalOverlay) {
         modalOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+        focusIntoModal(modalOverlay);
     }
 
     if (typeof lucide !== 'undefined') lucide.createIcons();
@@ -378,9 +427,10 @@ function openTimelineDetail(id) {
 
 function closeTimelineModal() {
     const modalOverlay = document.getElementById('timeline-modal-overlay');
-    if (modalOverlay) {
+    if (modalOverlay && modalOverlay.classList.contains('active')) {
         modalOverlay.classList.remove('active');
         document.body.style.overflow = '';
+        restoreFocus();
     }
 }
 
@@ -407,19 +457,22 @@ let activeCertIdx = 0;
 function openCertificateLightbox(index) {
     activeCertIdx = index;
     updateCertLightbox();
+    rememberFocus();
 
     const lightbox = document.getElementById('cert-lightbox-modal');
     if (lightbox) {
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
+        focusIntoModal(lightbox);
     }
 }
 
 function closeCertificateLightbox() {
     const lightbox = document.getElementById('cert-lightbox-modal');
-    if (lightbox) {
+    if (lightbox && lightbox.classList.contains('active')) {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
+        restoreFocus();
     }
 }
 
@@ -557,6 +610,7 @@ const eventModalData = {
 function openEventModal(eventId) {
     const data = eventModalData[eventId];
     if (!data) return;
+    rememberFocus();
 
     const overlay = document.getElementById('event-modal-overlay') || document.getElementById('event-modal');
     const titleEl = document.getElementById('event-modal-title') || document.getElementById('modal-title');
@@ -573,6 +627,7 @@ function openEventModal(eventId) {
         overlay.classList.add('active');
         overlay.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        focusIntoModal(overlay);
     }
 
     if (typeof lucide !== 'undefined') lucide.createIcons();
@@ -580,10 +635,11 @@ function openEventModal(eventId) {
 
 function closeEventModal() {
     const overlay = document.getElementById('event-modal-overlay') || document.getElementById('event-modal');
-    if (overlay) {
+    if (overlay && overlay.classList.contains('active')) {
         overlay.classList.remove('active');
         overlay.style.display = '';
         document.body.style.overflow = '';
+        restoreFocus();
     }
 }
 
@@ -592,10 +648,46 @@ window.closeEventModal = closeEventModal;
 
 // Keyboard Escape listener
 document.addEventListener('keydown', (e) => {
+    const lightbox = document.getElementById('cert-lightbox-modal');
+    if (lightbox && lightbox.classList.contains('active')) {
+        if (e.key === 'ArrowRight') {
+            nextCertificate();
+            return;
+        }
+        if (e.key === 'ArrowLeft') {
+            prevCertificate();
+            return;
+        }
+    }
+
     if (e.key === 'Escape') {
         closeTimelineModal();
         closeCertificateLightbox();
         closeEventModal();
+    }
+});
+
+// Keep keyboard focus inside whichever modal is open
+document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const activeModal = document.querySelector('.modal-overlay.active');
+    if (!activeModal) return;
+
+    const focusables = Array.from(activeModal.querySelectorAll(
+        'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )).filter(el => el.offsetParent !== null);
+
+    if (!focusables.length) return;
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
     }
 });
 
@@ -606,10 +698,22 @@ function initThemeToggle() {
     const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
     if (!toggleBtns.length) return;
 
+    const html = document.documentElement;
+
+    function syncToggleState() {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        html.style.colorScheme = isDark ? 'dark' : 'light';
+        toggleBtns.forEach(btn => {
+            btn.setAttribute('aria-pressed', String(isDark));
+            btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+        });
+    }
+
+    syncToggleState();
+
     toggleBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            const html = document.documentElement;
             const currentTheme = html.getAttribute('data-theme') || 'light';
             const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
@@ -619,6 +723,8 @@ function initThemeToggle() {
             } catch (err) {
                 console.warn('LocalStorage not available for theme saving', err);
             }
+
+            syncToggleState();
 
             // Haptic-like micro-animation
             btn.classList.add('theme-toggle-active');
@@ -658,6 +764,11 @@ function initScrollAnimations() {
         const delayIdx = (count % 4) + 1;
         el.classList.add(`delay-${delayIdx}`);
     });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        animTargets.forEach(el => el.classList.add('reveal-visible'));
+        return;
+    }
 
     if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries, obs) => {

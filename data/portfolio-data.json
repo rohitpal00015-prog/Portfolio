@@ -1,27 +1,31 @@
 {
   "profile": {
     "name": "Rohit Pal",
-    "title": "Full-Stack Web Developer & Software Engineering Student",
+    "title": "Full-Stack Developer, AI Builder & Open Source Contributor",
     "subtitle": "Pre-final year B.Tech CSE Student @ United Institute of Technology, Prayagraj",
     "typewriterRoles": [
-      "Full-Stack Web Developer",
-      "Software Engineering Student",
-      "AI Solutions Explorer",
-      "B.Tech CSE Student @ UIT",
-      "Open Source Contributor"
+      "Full-Stack Developer",
+      "AI Solutions Builder",
+      "Wikimedia Contributor",
+      "Open Source Contributor",
+      "B.Tech CSE Student @ UIT"
     ],
-    "aboutShort": "Pre-final year Computer Science student at United Institute of Technology with a strong interest in full-stack web development. I enjoy designing and developing web applications using modern technologies while learning through real projects, team collaborations, and hackathons. My goal is to build software that is reliable, secure, scalable, and easy to use.",
-    "aboutLong": "I am a Pre-final year Computer Science student at United Institute of Technology with a strong focus on full-stack web engineering. Beyond academics, I am actively involved in developer communities like TechEraa, UDTech India, and Cloud Junction. I am also a Wikimedia Open Source Contributor working with Vue.js design systems (Codex), Gerrit, and Phabricator, and have completed an official state law enforcement Cyber Security Fellowship with Amroha Police Cyber Crime Cell (UP Police).",
+    "aboutShort": "Pre-final year Computer Science student at United Institute of Technology building production web and AI products — and contributing to Wikimedia's open-source ecosystem. I care about accessible interfaces, free knowledge, and tools that reach real people.",
+    "aboutLong": "I'm a Computer Science student at United Institute of Technology, Prayagraj, working across full-stack engineering, AI products, and open source. My volunteer time goes to the Wikimedia Movement: writing and reviewing code across MediaWiki, the Codex design system and community skins, documenting India's cultural heritage on Wikimedia Commons, supporting Hindi Wikipedia campaigns, and maintaining community documentation on Meta-Wiki. I believe open platforms can bridge educational gaps and empower local communities — and that every patch, photograph, and edit helps build a freer, more open world.",
     "location": "Prayagraj, Uttar Pradesh, India",
     "email": "rohitpal00015@gmail.com",
-    "status": "Available for Web Dev Roles",
+    "status": "Open to Full-Stack / AI Roles",
     "socials": {
       "github": "https://github.com/rohitpal00015-prog",
       "linkedin": "https://linkedin.com/in/rohit-pal-98230131a",
       "instagram": "https://www.instagram.com/rohitpal08_/",
-      "twitter": "https://twitter.com/rohitpal00015"
+      "twitter": "https://twitter.com/rohitpal00015",
+      "meta": "https://meta.wikimedia.org/wiki/User:Rohitpal08",
+      "gerrit": "https://gerrit.wikimedia.org/r/q/owner:rohitpal08",
+      "phabricator": "https://phabricator.wikimedia.org/p/Rohitpal08/",
+      "commons": "https://commons.wikimedia.org/wiki/Special:ListFiles/Rohitpal08"
     },
-    "avatar": "assets/images/profile/rohit.png",
+    "avatar": "assets/images/profile/rohit.webp",
     "resume": "assets/docs/Rohit_Pal_Resume.pdf"
   },
   "education": {
@@ -39,7 +43,7 @@
     ]
   },
   "keyMetrics": {
-    "projectsCount": "15+",
+    "projectsCount": "20+",
     "hackathonsFinalist": "3x",
     "verifiedCredentials": "8+",
     "ambassadorPool": "10,000+",
@@ -52,25 +56,41 @@
       "id": "01",
       "title": "Full-Stack Web Applications",
       "description": "Building clean, responsive, and high-performance web applications with modern frontend & backend architectures.",
-      "tags": ["React.js", "Node.js", "JavaScript / TS"]
+      "tags": [
+        "React.js",
+        "Node.js",
+        "JavaScript / TS"
+      ]
     },
     {
       "id": "02",
       "title": "REST APIs & Database Architecture",
       "description": "Designing resilient, scalable backend schemas, endpoints, and authentication workflows with MongoDB, Express, and MySQL.",
-      "tags": ["Express.js", "MongoDB", "MySQL"]
+      "tags": [
+        "Express.js",
+        "MongoDB",
+        "MySQL"
+      ]
     },
     {
       "id": "03",
       "title": "AI Integrations & Web Automation",
       "description": "Integrating intelligent LLM API endpoints and building custom workflow automation assistants (like Zynoq AI).",
-      "tags": ["Gemini API", "AI Workflows", "Prompt Eng"]
+      "tags": [
+        "Gemini API",
+        "AI Workflows",
+        "Prompt Eng"
+      ]
     },
     {
       "id": "04",
       "title": "Open Source & Code Reviews",
       "description": "Actively contributing to global open-source ecosystems, managing patchsets on Gerrit, and solving Phabricator tasks.",
-      "tags": ["Gerrit Review", "Phabricator", "Git Pipelines"]
+      "tags": [
+        "Gerrit Review",
+        "Phabricator",
+        "Git Pipelines"
+      ]
     }
   ],
   "skills": {
@@ -87,13 +107,20 @@
       "Firebase BaaS & Auth",
       "Responsive UI/UX Design",
       "Single Page Applications (SPA)",
-      "Vue.js (Wikimedia Codex)"
+      "Vue.js (Wikimedia Codex)",
+      "TypeScript",
+      "Next.js (App Router)",
+      "Tailwind CSS",
+      "Flutter (Dart)",
+      "Supabase"
     ],
     "programmingLanguages": [
       "JavaScript",
       "Python",
       "Java",
-      "C Language"
+      "C Language",
+      "TypeScript",
+      "Dart (Flutter)"
     ],
     "aiAndWebTools": [
       "Gemini API",
@@ -103,7 +130,14 @@
       "Gerrit Code Review",
       "Phabricator",
       "Vercel",
-      "Netlify"
+      "Netlify",
+      "FastAPI",
+      "Groq / Llama",
+      "Gemini 2.5 Flash",
+      "PEFT / LoRA",
+      "Chrome Manifest V3",
+      "Sanity CMS",
+      "GSAP"
     ],
     "backendAndDatabases": [
       "Express.js",
@@ -112,7 +146,11 @@
       "MySQL Database",
       "RESTful API Design",
       "CRUD Operations",
-      "Authentication Workflows"
+      "Authentication Workflows",
+      "FastAPI (Python)",
+      "PostgreSQL / Supabase",
+      "MariaDB",
+      "JWT Authentication"
     ],
     "cybersecurityExposure": [
       "OSINT & Digital Footprints",
@@ -131,11 +169,31 @@
       "role": "Full-Stack Developer Intern",
       "company": "Heisyn Pvt. Ltd.",
       "location": "Remote / Hybrid",
-      "period": "Present",
+      "period": "June 2026 — Present",
       "status": "Active Role",
       "statusType": "active",
-      "description": "Developing responsive frontend interfaces & scalable Node.js APIs with clean, production-ready JavaScript code.",
-      "techChips": ["React.js", "Node.js", "REST APIs"]
+      "description": "Developing responsive production interfaces and scalable Node.js APIs, working across React UI, REST integrations, and code review inside agile sprints.",
+      "techChips": [
+        "React.js",
+        "Node.js",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "vindhya-millets",
+      "role": "Digital Content & Social Media Executive",
+      "company": "Citiblock Farmer Producer Company (Vindhya Millets)",
+      "location": "Remote",
+      "period": "Sept 2026 — Present",
+      "status": "Brand & Web",
+      "statusType": "active",
+      "description": "Directing digital content and brand growth for Vindhya Millets, whose products are now supplied to the Indian Army. Built the official website, product storytelling, and omnichannel campaign roadmap from scratch.",
+      "techChips": [
+        "Brand Web",
+        "Digital Campaigns",
+        "Content Strategy",
+        "E-commerce"
+      ]
     },
     {
       "id": "wikimedia",
@@ -146,7 +204,13 @@
       "status": "Global Open Source",
       "statusType": "opensource",
       "description": "Delivering merged production code to ContentTranslation and Wikitermbase gadget (PR #88, T437964), with 10+ verified contributions across Wikimedia Codex and MediaWiki extensions.",
-      "techChips": ["Merged PR #88", "Gerrit", "Phabricator", "Vue.js", "Codex"]
+      "techChips": [
+        "Merged PR #88",
+        "Gerrit",
+        "Phabricator",
+        "Vue.js",
+        "Codex"
+      ]
     },
     {
       "id": "cloud-junction",
@@ -157,7 +221,11 @@
       "status": "Selected (10k+ Applicants)",
       "statusType": "featured",
       "description": "Leading student developer initiatives, technical workshops, and cloud networking across campus networks. Selected from over 10,000+ applicants.",
-      "techChips": ["Tech Ambassador", "Community Growth", "Cloud Ecosystems"]
+      "techChips": [
+        "Tech Ambassador",
+        "Community Growth",
+        "Cloud Ecosystems"
+      ]
     },
     {
       "id": "ucc-leadership",
@@ -168,7 +236,12 @@
       "status": "Core Leadership",
       "statusType": "featured",
       "description": "Appointed to the Executive Council of UIT Coding Club. Leading developer outreach, media branding, and architecting the official web portal for 500+ student developers.",
-      "techChips": ["Media & PR Lead", "Web Architecture", "Community Growth", "Event PR"]
+      "techChips": [
+        "Media & PR Lead",
+        "Web Architecture",
+        "Community Growth",
+        "Event PR"
+      ]
     },
     {
       "id": "techeraa",
@@ -179,7 +252,11 @@
       "status": "Hackathon Builder",
       "statusType": "community",
       "description": "Building frontend UI platforms for national hackathons and collaborating on developer community initiatives and participant management systems.",
-      "techChips": ["Hackathon Platform", "React UI", "Community Building"]
+      "techChips": [
+        "Hackathon Platform",
+        "React UI",
+        "Community Building"
+      ]
     },
     {
       "id": "up-police-apcsip",
@@ -190,7 +267,12 @@
       "status": "UP Police Fellowship",
       "statusType": "govt",
       "description": "15-day official government Cyber Security Fellowship with Amroha Police Cyber Crime Cell under DSP Anjali Kataria Ma'am. Trained in OSINT investigations, mobile security concepts, digital forensics, CDR analysis, and cyber laws.",
-      "techChips": ["OSINT", "Digital Forensics", "Malware Analysis", "CDR/IPDR"]
+      "techChips": [
+        "OSINT",
+        "Digital Forensics",
+        "Malware Analysis",
+        "CDR/IPDR"
+      ]
     },
     {
       "id": "uit-academic",
@@ -201,10 +283,38 @@
       "status": "Pre-Final Year",
       "statusType": "education",
       "description": "Strengthening core CS fundamentals, algorithms, and practical full-stack web software engineering while actively organizing and competing in national hackathons.",
-      "techChips": ["Core CS", "Algorithms", "Full Stack", "Software Architecture"]
+      "techChips": [
+        "Core CS",
+        "Algorithms",
+        "Full Stack",
+        "Software Architecture"
+      ]
     }
   ],
   "projects": [
+    {
+      "id": "shilpsetu",
+      "title": "ShilpSetu — Voice-First AI Marketplace",
+      "category": "python-ai",
+      "badge": "SIH 2026 · PS-26090",
+      "isLive": false,
+      "image": "assets/images/projects/shilpsetu-cover.webp",
+      "techStack": [
+        "Flutter",
+        "FastAPI",
+        "Gemini 2.5",
+        "Groq",
+        "Offline-first"
+      ],
+      "description": "A voice-first, offline-first marketplace helping India's 7M+ artisans sell online without typing, studio photography, or English listings. Built for Smart India Hackathon 2026 (PS-26090) and SPARK 2 SCALE 2026 (PS44).",
+      "github": "https://github.com/rohitpal00015-prog/shilpsetu",
+      "demo": null,
+      "highlights": [
+        "Snap-and-speak cataloging in 11 Indian languages with AI studio photo cleanup",
+        "Bilingual SEO listings and deferred-sync offline buyer/seller flows",
+        "FastAPI + Gemini 2.5 backend with Groq-hosted models for low-latency inference"
+      ]
+    },
     {
       "id": "ucc-portal",
       "title": "UIT Coding Club (UCC) Web Portal",
@@ -212,7 +322,12 @@
       "badge": "Live Platform",
       "isLive": true,
       "image": null,
-      "techStack": ["HTML5/CSS3", "JavaScript", "Web Audio API", "Cyber UI"],
+      "techStack": [
+        "HTML5/CSS3",
+        "JavaScript",
+        "Web Audio API",
+        "Cyber UI"
+      ],
       "description": "The official student-run developer community platform for United Institute of Technology. Features an interactive tabbed code simulator, dynamic organization hierarchy tree, live event timers, and persistent dark/light mode.",
       "github": "https://github.com/rohitpal00015-prog/uit-coding-club",
       "demo": "https://uit-coding-club.vercel.app/",
@@ -223,13 +338,61 @@
       ]
     },
     {
+      "id": "devfest-prayagraj",
+      "title": "DevFest Prayagraj '26 — Community Event Website",
+      "category": "community-tools",
+      "badge": "GDG Prayagraj",
+      "isLive": true,
+      "image": "assets/images/projects/devfest-cover.webp",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "GSAP"
+      ],
+      "description": "The official web home for GDG Prayagraj's flagship DevFest: a cinematic, fully responsive site for attendees, speakers, and organizers.",
+      "github": "https://github.com/rohitpal00015-prog/devfest-prayagraj",
+      "demo": "https://devfest-prayagraj-blue.vercel.app",
+      "highlights": [
+        "Animated boat-voyage preloader and dark/light editorial theme",
+        "Multi-view schedule with filters and bookmarks plus speaker detail modals",
+        "Customizable holographic badge studio for attendees"
+      ]
+    },
+    {
+      "id": "sourcewiki",
+      "title": "SourceWiki — Reference Verification for Wikipedia Editors",
+      "category": "community-tools",
+      "badge": "Wikimedia Toolforge",
+      "isLive": true,
+      "image": null,
+      "techStack": [
+        "React + TypeScript",
+        "Node/Express",
+        "MariaDB",
+        "JWT"
+      ],
+      "description": "A shared, country-aware database of credible sources for Wikipedia editors, with regional expert verification and a searchable public directory.",
+      "github": "https://github.com/rohitpal00015-prog/SourceWiki",
+      "demo": "https://source-wiki.vercel.app/",
+      "highlights": [
+        "Reference submission and regional expert verification workflow",
+        "Searchable public directory of vetted sources",
+        "Community gamification with points, badges, and leaderboards"
+      ]
+    },
+    {
       "id": "zeroup",
       "title": "ZEROUP — Studio Platform",
       "category": "fullstack",
       "badge": "Creative Tech",
       "isLive": false,
       "image": null,
-      "techStack": ["HTML5/Tailwind", "Canvas 2D", "Web Audio API"],
+      "techStack": [
+        "HTML5/Tailwind",
+        "Canvas 2D",
+        "Web Audio API"
+      ],
       "description": "Interactive media infrastructure studio engineered for founders and breakout brands. Features 3D perspective flipbook manifesto, procedural Web Audio synthesizer, and 60 FPS Canvas wave simulation.",
       "github": "https://github.com/rohitpal00015-prog/zeroup",
       "demo": null,
@@ -245,8 +408,12 @@
       "category": "fullstack",
       "badge": "Grocery Platform",
       "isLive": true,
-      "image": "assets/images/projects/Palbasket logo.png",
-      "techStack": ["HTML5/CSS3", "JavaScript", "PHP/MySQL"],
+      "image": "assets/images/projects/palbasket-logo.webp",
+      "techStack": [
+        "HTML5/CSS3",
+        "JavaScript",
+        "PHP/MySQL"
+      ],
       "description": "An online grocery ordering platform featuring product catalog management, smart shopping cart, customer checkout, user authentication, and an admin management dashboard.",
       "github": "https://github.com/rohitpal00015-prog/PalGrocery",
       "demo": "https://palbasket.vercel.app/",
@@ -263,7 +430,11 @@
       "badge": "Live Project",
       "isLive": true,
       "image": "assets/images/projects/prayagrajrooms_logo.png",
-      "techStack": ["HTML5/CSS3", "JavaScript", "MongoDB/MySQL"],
+      "techStack": [
+        "HTML5/CSS3",
+        "JavaScript",
+        "MongoDB/MySQL"
+      ],
       "description": "A web platform designed to simplify accommodation discovery for students and working professionals in Prayagraj with room browsing, custom filters, and database management.",
       "github": "https://github.com/rohitpal00015-prog/prayagraj-rooms",
       "demo": "https://prayagrajrooms.in/",
@@ -280,7 +451,11 @@
       "badge": "AI Assistant",
       "isLive": true,
       "image": "assets/images/projects/ok.png",
-      "techStack": ["Python", "AI APIs", "Workflow Automation"],
+      "techStack": [
+        "Python",
+        "AI APIs",
+        "Workflow Automation"
+      ],
       "description": "An AI-powered assistant developed to experiment with API integrations, intelligent responses, and practical workflow automation within web applications.",
       "github": "https://github.com/rohitpal00015-prog",
       "demo": "https://znoq.netlify.app/",
@@ -291,13 +466,39 @@
       ]
     },
     {
+      "id": "agentic-browser-extension",
+      "title": "Agentic AI Browser Extension",
+      "category": "python-ai",
+      "badge": "GDG Hackathon Award",
+      "isLive": false,
+      "image": null,
+      "techStack": [
+        "Agentic AI",
+        "JavaScript",
+        "DOM Automation",
+        "LLM APIs"
+      ],
+      "description": "An autonomous Agentic AI browser extension built in a high-pressure 2-hour sprint at GDG Prayagraj Vibe Coding Hackathon. Understands natural language voice/text prompts and executes browser actions autonomously.",
+      "github": "https://github.com/rohitpal00015-prog",
+      "demo": null,
+      "highlights": [
+        "Built in 2-hour hackathon timer with teammate Praveen Singh",
+        "Achieved ~50% autonomous agent execution on live browser tabs",
+        "Awarded Certificate of Achievement by GDG Prayagraj"
+      ]
+    },
+    {
       "id": "campuslink",
       "title": "CampusLink",
       "category": "fullstack",
       "badge": "GDG MoByte",
       "isLive": false,
       "image": null,
-      "techStack": ["JavaScript", "React/Web", "Full-Stack"],
+      "techStack": [
+        "JavaScript",
+        "React/Web",
+        "Full-Stack"
+      ],
       "description": "Developed during GDG Prayagraj MoByte to preserve college memories, showcase student projects, and strengthen alumni engagement through a centralized digital platform.",
       "github": "https://github.com/rohitpal00015-prog/CampusLink",
       "demo": null,
@@ -314,7 +515,11 @@
       "badge": "TechEraa Platform",
       "isLive": false,
       "image": null,
-      "techStack": ["React.js", "Node.js", "Express"],
+      "techStack": [
+        "React.js",
+        "Node.js",
+        "Express"
+      ],
       "description": "A web platform developed for managing registrations, event information, problem statements, and participant workflows for a national-level hackathon.",
       "github": "https://github.com/rohitpal00015-prog/tech-era",
       "demo": null,
@@ -325,20 +530,87 @@
       ]
     },
     {
-      "id": "agentic-browser-extension",
-      "title": "Agentic AI Browser Extension",
+      "id": "nexora",
+      "title": "Nexora AI — In-Browser Copilot for Any Webpage",
       "category": "python-ai",
-      "badge": "GDG Hackathon Award",
+      "badge": "Chrome MV3",
       "isLive": false,
-      "image": null,
-      "techStack": ["Agentic AI", "JavaScript", "DOM Automation", "LLM APIs"],
-      "description": "An autonomous Agentic AI browser extension built in a high-pressure 2-hour sprint at GDG Prayagraj Vibe Coding Hackathon. Understands natural language voice/text prompts and executes browser actions autonomously.",
-      "github": "https://github.com/rohitpal00015-prog",
+      "image": "assets/images/projects/nexora-cover.webp",
+      "techStack": [
+        "Chrome MV3",
+        "React + TypeScript",
+        "Gemini Flash"
+      ],
+      "description": "A page-aware browser copilot that keeps the context of the page you are reading, removing the copy-paste loop of generic AI chat tabs.",
+      "github": "https://github.com/rohitpal00015-prog/nexos",
       "demo": null,
       "highlights": [
-        "Built in 2-hour hackathon timer with teammate Praveen Singh",
-        "Achieved ~50% autonomous agent execution on live browser tabs",
-        "Awarded Certificate of Achievement by GDG Prayagraj"
+        "Page-aware side-panel assistant with natural-language actions",
+        "Privacy-focused context handling and lightweight Manifest V3 build",
+        "React + Gemini Flash extension architecture"
+      ]
+    },
+    {
+      "id": "campus-toolkit",
+      "title": "Campus Toolkit — Student Productivity, Zero Backend",
+      "category": "community-tools",
+      "badge": "Open Source",
+      "isLive": false,
+      "image": null,
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "description": "A 100% client-side toolkit that replaces scattered spreadsheets with attendance-goal math, GPA tracking, and JSON<->CSV conversion.",
+      "github": "https://github.com/rohitpal00015-prog/Campus-Toolkit",
+      "demo": null,
+      "highlights": [
+        "Attendance goal calculator and GPA/CGPA tracker",
+        "Two-way JSON <-> CSV converter and offline Pomodoro timer",
+        "Intentional starter bugs for open-source workshop contributors"
+      ]
+    },
+    {
+      "id": "exofinity",
+      "title": "Exofinity — Community Home for Builders",
+      "category": "community-tools",
+      "badge": "Live Community",
+      "isLive": true,
+      "image": null,
+      "techStack": [
+        "React 19",
+        "Tailwind v4",
+        "GSAP"
+      ],
+      "description": "A shared home for former members and collaborators to reconnect, showcase work, and grow around AI and web technology.",
+      "github": "https://github.com/rohitpal00015-prog/Exofinity",
+      "demo": "https://exofinity.vercel.app",
+      "highlights": [
+        "Animated GSAP scroll storytelling across React Router pages",
+        "Static content architecture for fast, low-cost hosting",
+        "Direct WhatsApp and email community onboarding"
+      ]
+    },
+    {
+      "id": "genis",
+      "title": "Genis — Personal Generative AI Digital Twin",
+      "category": "python-ai",
+      "badge": "Research Build",
+      "isLive": false,
+      "image": null,
+      "techStack": [
+        "Python",
+        "PyTorch",
+        "PEFT / LoRA"
+      ],
+      "description": "A persistent digital twin that models a person's memory, tone, relationships, and decision patterns instead of behaving like a stateless chatbot.",
+      "github": "https://github.com/rohitpal00015-prog/Genis",
+      "demo": null,
+      "highlights": [
+        "Ingests messages, notes, and documents into a persistent memory system",
+        "Persona-aware communication modelling with PEFT / LoRA tuning",
+        "Controlled delegation of routine replies and agentic workflows"
       ]
     },
     {
@@ -348,7 +620,11 @@
       "badge": "UP Police Cyber Cell",
       "isLive": true,
       "image": "assets/images/up-police/logos/APCSIP -2026.jpg",
-      "techStack": ["Cyber Forensics", "OSINT & CDR", "Malware Analysis"],
+      "techStack": [
+        "Cyber Forensics",
+        "OSINT & CDR",
+        "Malware Analysis"
+      ],
       "description": "Official 15-day state law enforcement fellowship report covering OSINT investigations, mobile digital forensics, CDR sorting, and cyber laws under DSP Anjali Kataria Ma'am.",
       "github": null,
       "demo": "up-police-internship.html",
@@ -451,6 +727,29 @@
   ],
   "hackathonsAndMilestones": [
     {
+      "id": "shilpsetu-sih",
+      "title": "ShilpSetu — SIH 2026 & SPARK 2 SCALE 2026 Build",
+      "category": "hackathon",
+      "badge": "Team CyberEye",
+      "location": "United Institute of Technology, Prayagraj",
+      "date": "Nov 2026 — Present",
+      "summary": "Leading Team CyberEye on a voice-first, offline-first artisan marketplace for Smart India Hackathon 2026 (PS-26090) and SPARK 2 SCALE 2026 (PS44), built with Flutter, FastAPI, Gemini 2.5, and Groq.",
+      "bullets": [
+        "Designed offline-first Flutter flows for artisans in low-connectivity regions.",
+        "Built a FastAPI + Gemini 2.5 backend for catalogue writing, pricing, and multilingual voice.",
+        "Shipped the same architecture across two national problem statements (PS-26090 and PS44)."
+      ],
+      "tags": [
+        "SIH 2026",
+        "SPARK 2 SCALE",
+        "Flutter",
+        "FastAPI",
+        "Gemini 2.5",
+        "Team CyberEye"
+      ],
+      "link": "https://github.com/rohitpal00015-prog/shilpsetu"
+    },
+    {
       "id": "vindhya-millets",
       "title": "Digital Content & Social Media Executive — Vindhya Millets",
       "category": "leadership",
@@ -463,7 +762,13 @@
         "Built official website, product presentations, and digital communication from scratch.",
         "Directing content strategy, campaigns, publishing, and social media brand growth."
       ],
-      "tags": ["Vindhya Millets", "Indian Army Supplier", "Citiblock FPC", "Branding", "Executive"],
+      "tags": [
+        "Vindhya Millets",
+        "Indian Army Supplier",
+        "Citiblock FPC",
+        "Branding",
+        "Executive"
+      ],
       "link": "https://lnkd.in/p/gvAK4ghJ"
     },
     {
@@ -480,7 +785,13 @@
         "Executive Mentorship: Gained one-on-one insights from Chandan Jha Sir on competitive technical roadmaps and career acceleration.",
         "Community Collaboration: Partnered alongside GFG Student Chapter UIT, HackerRank UIT, Ansh Kumar Gupta, and Gautam Kumar Maurya (GKM)."
       ],
-      "tags": ["GeeksforGeeks", "Gateway to GATE", "Chandan Jha", "Auditorium 600+", "Leadership"],
+      "tags": [
+        "GeeksforGeeks",
+        "Gateway to GATE",
+        "Chandan Jha",
+        "Auditorium 600+",
+        "Leadership"
+      ],
       "link": "https://lnkd.in/p/gX7MG-_w"
     },
     {
@@ -497,7 +808,13 @@
         "Team: Built alongside teammate Praveen Singh, with continuous ideation support from Gautam Kumar Maurya (GKM).",
         "Jury Panel: Evaluated by Shivansh Singh Sir, Atul Singh Sir, and faculty panel from University of Allahabad. Special thanks to GDG Organizer Ankit Kumar Verma Sir and Sanskar Dubey Sir."
       ],
-      "tags": ["GDG Prayagraj", "Agentic AI", "Browser Extension", "2-Hour Sprint", "Achievement Award"],
+      "tags": [
+        "GDG Prayagraj",
+        "Agentic AI",
+        "Browser Extension",
+        "2-Hour Sprint",
+        "Achievement Award"
+      ],
       "link": null
     },
     {
@@ -514,7 +831,13 @@
         "Wikimedia Exploration: Dived into Wikimedia Foundation, MediaWiki, Phabricator, GitLab, Wikimedia Commons, and Wikibooks contribution workflows.",
         "Mentorship: Gratitude to Gautam Kumar Maurya (GKM), Reeti Singh Ma'am, and Ankit Kumar Verma Sir."
       ],
-      "tags": ["Wikimedia Ecosystem", "Open Source Marathon", "Rank 6", "Quiz 2nd Rank", "WikiClubTech"],
+      "tags": [
+        "Wikimedia Ecosystem",
+        "Open Source Marathon",
+        "Rank 6",
+        "Quiz 2nd Rank",
+        "WikiClubTech"
+      ],
       "link": "https://www.linkedin.com/posts/rohit-pal-98230131a_opensource-wikimedia-wikiclubtech-activity-7496991574824820737-8hC3"
     },
     {
@@ -530,7 +853,12 @@
         "Team Coordination: Streamlined communication channels and registration desk for all student hackathon squads.",
         "Evaluation & Jury: Managed presentation slots and scoring evaluation pipelines alongside faculty coordinators."
       ],
-      "tags": ["SIH 2024", "Event Operations", "Leadership", "Coordination"],
+      "tags": [
+        "SIH 2024",
+        "Event Operations",
+        "Leadership",
+        "Coordination"
+      ],
       "gallery": [
         "assets/images/sih/sih_team_stage.jpg",
         "assets/images/sih/sih_group_faculty.jpg",
@@ -552,7 +880,12 @@
         "6 Evaluation Rounds: Successfully defended product across 3 different jury panels, including a 1:00 AM midnight evaluation.",
         "Cross-State Logistics: Balanced college sessional exams while traveling across state lines to compete with Praveen, Rohit Pal, and Anshuman."
       ],
-      "tags": ["36-Hour Hackathon", "Team Leader", "National Finalist", "VERGE Fest"]
+      "tags": [
+        "36-Hour Hackathon",
+        "Team Leader",
+        "National Finalist",
+        "VERGE Fest"
+      ]
     },
     {
       "id": "techsprint-top10",
@@ -567,7 +900,11 @@
         "Rapid Architecture: Built a full-featured web solution prototype under strict sprint deadlines.",
         "Technical Defense: Defended database schema, REST API responses, and responsive workflow before jury."
       ],
-      "tags": ["Top 10 Finalist", "Web Prototype", "National Placement"]
+      "tags": [
+        "Top 10 Finalist",
+        "Web Prototype",
+        "National Placement"
+      ]
     },
     {
       "id": "uhack-4",
@@ -582,7 +919,11 @@
         "Built project from scratch: From ideation to working web application prototype within 24 hours.",
         "Cleared Round 1 evaluation conducted at 2:00 AM and iterated solution based on judge feedback."
       ],
-      "tags": ["UHack 4.0", "24h Sprint", "Top 65"]
+      "tags": [
+        "UHack 4.0",
+        "24h Sprint",
+        "Top 65"
+      ]
     },
     {
       "id": "cloud-junction",
@@ -596,7 +937,11 @@
         "Leading student tech community initiatives and sharing learning opportunities around web dev and cloud ecosystems.",
         "Connecting peer developers with technical ambassador networks and mentorship programs."
       ],
-      "tags": ["Campus Ambassador", "10,000+ Pool", "Community Building"]
+      "tags": [
+        "Campus Ambassador",
+        "10,000+ Pool",
+        "Community Building"
+      ]
     },
     {
       "id": "becon-2026",
@@ -613,7 +958,12 @@
         "AI Future Panel: Exploring AI opportunities with experts from Zoho, Observe AI, Sauce Labs, Sanasai.",
         "Workshops: Google Scaling Indian Startups workshop, Open Source Hardware, Defense Tech, TechnoVerse."
       ],
-      "tags": ["IIT Delhi", "BECon 2026", "Venture Capital", "Startups"]
+      "tags": [
+        "IIT Delhi",
+        "BECon 2026",
+        "Venture Capital",
+        "Startups"
+      ]
     },
     {
       "id": "foss-united-uit",
@@ -628,7 +978,11 @@
         "DSW Vision by Dr. Manas Pandey (Dean Student Welfare, IITian) on real-world problem solving.",
         "FOSS Introduction talk by Atul Sir on modern open source stacks and student collaboration."
       ],
-      "tags": ["FOSS United", "Open Source", "Student Community"]
+      "tags": [
+        "FOSS United",
+        "Open Source",
+        "Student Community"
+      ]
     },
     {
       "id": "build-with-ai",
@@ -643,7 +997,11 @@
         "Mentored by Sarthak Singh (Organizer), Abhipsa Srivastava (ML Lead), Syed Mohammad Aquib (Web Lead).",
         "Scored 12th out of 56 participants in Wayground (Quizizz) challenge and earned Google stickers."
       ],
-      "tags": ["GDG on Campus", "GenAI", "12th Rank"]
+      "tags": [
+        "GDG on Campus",
+        "GenAI",
+        "12th Rank"
+      ]
     },
     {
       "id": "flowjam-2026",
@@ -658,7 +1016,11 @@
         "Rapidly aligned workflows and delivered working web app prototype using FlutterFlow under strict deadlines.",
         "Mentors & Organizers: Ankit Kumar Verma & Atul Singh."
       ],
-      "tags": ["FlutterFlow", "Rapid Prototyping", "Team Shuffle"]
+      "tags": [
+        "FlutterFlow",
+        "Rapid Prototyping",
+        "Team Shuffle"
+      ]
     },
     {
       "id": "startup-confluence",
@@ -674,7 +1036,11 @@
         "Analyzed case studies of BigBasket, Blinkit, Zomato, PhysicsWallah, and IIT Kanpur startups.",
         "IPR Workshop covering Patents, Designs, Trademarks, Copyrights, and Trade Secrets."
       ],
-      "tags": ["Incubation Hub", "IPR Laws", "Market Sizing"]
+      "tags": [
+        "Incubation Hub",
+        "IPR Laws",
+        "Market Sizing"
+      ]
     },
     {
       "id": "sankalp-2026",
@@ -689,7 +1055,11 @@
         "Day 2: Startup scaling keynotes with Manish Pandey (BeerBiceps Media) & Ideabaaz team.",
         "Day 3: Networking with VIT Vellore students & YourStory representatives; concert by Pt. Vishwa Mohan Bhatt."
       ],
-      "tags": ["MNNIT Allahabad", "Aatmanirbhar", "Leadership"]
+      "tags": [
+        "MNNIT Allahabad",
+        "Aatmanirbhar",
+        "Leadership"
+      ]
     },
     {
       "id": "hc-verma-visit",
@@ -704,7 +1074,11 @@
         "'True learning gives both good marks and a good life.'",
         "'Earning money is good — but using it for society is greatness.'"
       ],
-      "tags": ["HC Verma Sir", "UGI Campus", "Mentorship"]
+      "tags": [
+        "HC Verma Sir",
+        "UGI Campus",
+        "Mentorship"
+      ]
     },
     {
       "id": "devfest-2024",
@@ -718,7 +1092,11 @@
         "Joined developers and GDEs covering Generative AI, Cloud Computing, Flutter, and ML.",
         "Engaged in technical networking with developers and open-source contributors from across Prayagraj."
       ],
-      "tags": ["DevFest", "GDG Prayagraj", "AI & Cloud"]
+      "tags": [
+        "DevFest",
+        "GDG Prayagraj",
+        "AI & Cloud"
+      ]
     },
     {
       "id": "nhrd-talks",
@@ -732,7 +1110,11 @@
         "'Dreams are the beginning, but action gives them life. Mindset > Motivation — stay consistent.'",
         "'Turn your why into how, and how into now.'"
       ],
-      "tags": ["NHRD", "Leadership Mindset", "Consistency"]
+      "tags": [
+        "NHRD",
+        "Leadership Mindset",
+        "Consistency"
+      ]
     },
     {
       "id": "pw-sankalp",
@@ -746,7 +1128,11 @@
         "Surreal experience as a Sankalp batch student meeting Alakh Pandey Sir live.",
         "Gained inspiration from educators who revolutionized affordable technical education across India."
       ],
-      "tags": ["PhysicsWallah", "Alakh Pandey", "Inspiration"]
+      "tags": [
+        "PhysicsWallah",
+        "Alakh Pandey",
+        "Inspiration"
+      ]
     },
     {
       "id": "gdg-mobyte",
@@ -760,7 +1146,11 @@
         "Showcased 'CampusLink' platform for preserving memories and alumni project showcase.",
         "Mentorship from Ankit Kumar Verma, Hridyesh Gupta, Atul Singh, Reeti Singh, and Abhishek Sahu (GDG Lucknow)."
       ],
-      "tags": ["GDG MoByte", "CampusLink", "Showcase"]
+      "tags": [
+        "GDG MoByte",
+        "CampusLink",
+        "Showcase"
+      ]
     },
     {
       "id": "nxtwave-ai",
@@ -774,7 +1164,11 @@
         "Explored LLM prompt engineering strategies and generative models architecture.",
         "Practical exercises building prompt pipelines and automation workflows."
       ],
-      "tags": ["NxtWave", "Generative AI", "Prompt Engineering"]
+      "tags": [
+        "NxtWave",
+        "Generative AI",
+        "Prompt Engineering"
+      ]
     }
   ],
   "upPoliceFellowship": {
@@ -787,22 +1181,80 @@
     "duration": "15 Days (June 10 - June 24, 2026)",
     "location": "Shri Venkateshwara University, Amroha, Uttar Pradesh",
     "selectionPipeline": [
-      { "stage": 1, "name": "Application Submission", "date": "May 2026", "desc": "Formal application submitted detailing academic rank, coding skills, and interest in digital forensics." },
-      { "stage": 2, "name": "Eligibility Screening", "date": "21-22 May 2026", "desc": "Profile shortlisted by UP Police Cyber Cell review committee." },
-      { "stage": 3, "name": "Online Competitive Exam", "date": "24 May 2026", "desc": "Cleared 50 MCQs competitive exam covering IT, networking, OS, and cyber security fundamentals." },
-      { "stage": 4, "name": "Official Offer Letter", "date": "Early June 2026", "desc": "Received selection offer letter signed by Superintendent of Police, Amroha (Intern ID: APCSIP/2026/794)." },
-      { "stage": 5, "name": "Document Verification", "date": "June 2026", "desc": "Completed background verification and confidentiality non-disclosure undertakings." },
-      { "stage": 6, "name": "Arrival at Amroha", "date": "10 June 2026", "desc": "Reported to Shri Venkateshwara University campus quarters and completed onboarding protocols." },
-      { "stage": 7, "name": "12-Day Intensive Operations", "date": "11-22 June 2026", "desc": "Daily cyber cell case simulations, OSINT recon, CDR sorting, malware reverse engineering, and SOC labs." },
-      { "stage": 8, "name": "Defense & Certification", "date": "22 June 2026", "desc": "Defended technical case findings before valedictory review panel and awarded Official Certificate by DSP Anjali Kataria." }
+      {
+        "stage": 1,
+        "name": "Application Submission",
+        "date": "May 2026",
+        "desc": "Formal application submitted detailing academic rank, coding skills, and interest in digital forensics."
+      },
+      {
+        "stage": 2,
+        "name": "Eligibility Screening",
+        "date": "21-22 May 2026",
+        "desc": "Profile shortlisted by UP Police Cyber Cell review committee."
+      },
+      {
+        "stage": 3,
+        "name": "Online Competitive Exam",
+        "date": "24 May 2026",
+        "desc": "Cleared 50 MCQs competitive exam covering IT, networking, OS, and cyber security fundamentals."
+      },
+      {
+        "stage": 4,
+        "name": "Official Offer Letter",
+        "date": "Early June 2026",
+        "desc": "Received selection offer letter signed by Superintendent of Police, Amroha (Intern ID: APCSIP/2026/794)."
+      },
+      {
+        "stage": 5,
+        "name": "Document Verification",
+        "date": "June 2026",
+        "desc": "Completed background verification and confidentiality non-disclosure undertakings."
+      },
+      {
+        "stage": 6,
+        "name": "Arrival at Amroha",
+        "date": "10 June 2026",
+        "desc": "Reported to Shri Venkateshwara University campus quarters and completed onboarding protocols."
+      },
+      {
+        "stage": 7,
+        "name": "12-Day Intensive Operations",
+        "date": "11-22 June 2026",
+        "desc": "Daily cyber cell case simulations, OSINT recon, CDR sorting, malware reverse engineering, and SOC labs."
+      },
+      {
+        "stage": 8,
+        "name": "Defense & Certification",
+        "date": "22 June 2026",
+        "desc": "Defended technical case findings before valedictory review panel and awarded Official Certificate by DSP Anjali Kataria."
+      }
     ],
     "keyDomains": [
-      { "name": "OSINT & SIGINT", "desc": "Digital reconnaissance, information gathering, and threat intelligence fundamentals." },
-      { "name": "Digital Forensics", "desc": "Evidence preservation, forensic methodology, Android analysis, and investigation workflows." },
-      { "name": "Malware Analysis", "desc": "APK analysis, sandboxing, static/dynamic binary auditing, and C2 server mapping." },
-      { "name": "CDR & IPDR", "desc": "Understanding call records, IP detail records, cell tower logs, and cybercrime links." },
-      { "name": "Cyber Laws & Privacy", "desc": "IT Act 2000 Section 66 offenses, DPDP Act 2023, Puttaswamy privacy ruling, and court evidence rules." },
-      { "name": "Mobile Security", "desc": "Android security, Genymotion-based analysis, hardware chip-off forensics, and evidence preservation." }
+      {
+        "name": "OSINT & SIGINT",
+        "desc": "Digital reconnaissance, information gathering, and threat intelligence fundamentals."
+      },
+      {
+        "name": "Digital Forensics",
+        "desc": "Evidence preservation, forensic methodology, Android analysis, and investigation workflows."
+      },
+      {
+        "name": "Malware Analysis",
+        "desc": "APK analysis, sandboxing, static/dynamic binary auditing, and C2 server mapping."
+      },
+      {
+        "name": "CDR & IPDR",
+        "desc": "Understanding call records, IP detail records, cell tower logs, and cybercrime links."
+      },
+      {
+        "name": "Cyber Laws & Privacy",
+        "desc": "IT Act 2000 Section 66 offenses, DPDP Act 2023, Puttaswamy privacy ruling, and court evidence rules."
+      },
+      {
+        "name": "Mobile Security",
+        "desc": "Android security, Genymotion-based analysis, hardware chip-off forensics, and evidence preservation."
+      }
     ],
     "dailyOperations": [
       {
@@ -911,24 +1363,148 @@
       }
     ],
     "officersAndFaculty": [
-      { "name": "Anjali Kataria", "rank": "Deputy Superintendent of Police (DSP)", "dept": "Cyber Crime Cell, UP Police", "photo": "assets/images/up-police/mentors/Anjali Kataria, DSP.jpg", "tags": ["Law Enforcement", "Cyber Cell Head"] },
-      { "name": "Bhanu Sharma", "rank": "Program Coordinator", "dept": "APCSIP Operations Directorate", "photo": "assets/images/up-police/mentors/Bhanu Sharma - Co-ordinator APSCSIP.jpg", "tags": ["Operations Lead", "Coordination"] },
-      { "name": "Vikash Kumar", "rank": "Student Coordinator", "dept": "APCSIP Logistical Operations", "photo": "assets/images/up-police/mentors/Vikash Kumar.jpg", "tags": ["Logistics Lead", "Student Coordinator"] },
-      { "name": "Rakshit Tandon", "rank": "Senior Cyber Security Consultant", "dept": "Advisor to Law Enforcement Agencies", "photo": "assets/images/up-police/mentors/Rakshit Tandon - cyber security expert india, cyber security consultant.jpg", "tags": ["Cyber Forensics", "National Advisor"] },
-      { "name": "Amit Dubey", "rank": "Cyber Crime Investigator", "dept": "National Security Author & Expert", "photo": "assets/images/up-police/mentors/amit dubey cyber expert.webp", "tags": ["Threat Intelligence", "Investigator"] },
-      { "name": "Saumay Srivastava", "rank": "Threat Intelligence Researcher", "dept": "OSINT & Dark Web Profiling", "photo": "assets/images/up-police/mentors/Saumay Srivastava Cybersecurity  Threat Intelligence Researcher  Darkweb.jpg", "tags": ["Dark Web Recon", "OSINT Lead"] },
-      { "name": "Yugal Pathal", "rank": "DFIR Specialist", "dept": "Digital Forensics & Incident Response", "photo": "assets/images/up-police/mentors/Yugal Pathal Digital Forensics & Incident Response (DFIR) specialist.jpg", "tags": ["Digital Forensics", "DFIR Lead"] },
-      { "name": "Nitin Pandey", "rank": "Cyber Security Trainer", "dept": "National Security Auditor", "photo": "assets/images/up-police/mentors/nitinpandey.jpg", "tags": ["Network Audits", "Penetration Testing"] },
-      { "name": "Kailash D Agrawal", "rank": "Payment Security Consultant", "dept": "Financial Cyber Fraud Analyst", "photo": "assets/images/up-police/mentors/Kailash D Agrawal Payment Security Consultant.jpg", "tags": ["UPI Frauds", "Bank Nodal"] },
-      { "name": "Pakhi Garg", "rank": "Cyber Law Advisor", "dept": "Legal Consultant, DPDP Act", "photo": "assets/images/up-police/mentors/pakhi garg lawyer.webp", "tags": ["IT Act Law", "Data Privacy"] },
-      { "name": "Yash Chavhan", "rank": "Web3 & Crypto Lead", "dept": "Blockchain Security Audit", "photo": "assets/images/up-police/mentors/yash chavhan - web3.jpg", "tags": ["Web3 Security", "Crypto Forensics"] },
-      { "name": "Manoj Kushwaha", "rank": "Technical Coordinator", "dept": "APCSIP Organizing Directorate", "photo": "assets/images/up-police/mentors/Manoj Kushwaha.jpg", "tags": ["Technical Support", "Organizing Team"] }
+      {
+        "name": "Anjali Kataria",
+        "rank": "Deputy Superintendent of Police (DSP)",
+        "dept": "Cyber Crime Cell, UP Police",
+        "photo": "assets/images/up-police/mentors/Anjali Kataria, DSP.jpg",
+        "tags": [
+          "Law Enforcement",
+          "Cyber Cell Head"
+        ]
+      },
+      {
+        "name": "Bhanu Sharma",
+        "rank": "Program Coordinator",
+        "dept": "APCSIP Operations Directorate",
+        "photo": "assets/images/up-police/mentors/Bhanu Sharma - Co-ordinator APSCSIP.jpg",
+        "tags": [
+          "Operations Lead",
+          "Coordination"
+        ]
+      },
+      {
+        "name": "Vikash Kumar",
+        "rank": "Student Coordinator",
+        "dept": "APCSIP Logistical Operations",
+        "photo": "assets/images/up-police/mentors/Vikash Kumar.jpg",
+        "tags": [
+          "Logistics Lead",
+          "Student Coordinator"
+        ]
+      },
+      {
+        "name": "Rakshit Tandon",
+        "rank": "Senior Cyber Security Consultant",
+        "dept": "Advisor to Law Enforcement Agencies",
+        "photo": "assets/images/up-police/mentors/Rakshit Tandon - cyber security expert india, cyber security consultant.jpg",
+        "tags": [
+          "Cyber Forensics",
+          "National Advisor"
+        ]
+      },
+      {
+        "name": "Amit Dubey",
+        "rank": "Cyber Crime Investigator",
+        "dept": "National Security Author & Expert",
+        "photo": "assets/images/up-police/mentors/amit dubey cyber expert.webp",
+        "tags": [
+          "Threat Intelligence",
+          "Investigator"
+        ]
+      },
+      {
+        "name": "Saumay Srivastava",
+        "rank": "Threat Intelligence Researcher",
+        "dept": "OSINT & Dark Web Profiling",
+        "photo": "assets/images/up-police/mentors/Saumay Srivastava Cybersecurity  Threat Intelligence Researcher  Darkweb.jpg",
+        "tags": [
+          "Dark Web Recon",
+          "OSINT Lead"
+        ]
+      },
+      {
+        "name": "Yugal Pathal",
+        "rank": "DFIR Specialist",
+        "dept": "Digital Forensics & Incident Response",
+        "photo": "assets/images/up-police/mentors/Yugal Pathal Digital Forensics & Incident Response (DFIR) specialist.jpg",
+        "tags": [
+          "Digital Forensics",
+          "DFIR Lead"
+        ]
+      },
+      {
+        "name": "Nitin Pandey",
+        "rank": "Cyber Security Trainer",
+        "dept": "National Security Auditor",
+        "photo": "assets/images/up-police/mentors/nitinpandey.jpg",
+        "tags": [
+          "Network Audits",
+          "Penetration Testing"
+        ]
+      },
+      {
+        "name": "Kailash D Agrawal",
+        "rank": "Payment Security Consultant",
+        "dept": "Financial Cyber Fraud Analyst",
+        "photo": "assets/images/up-police/mentors/Kailash D Agrawal Payment Security Consultant.jpg",
+        "tags": [
+          "UPI Frauds",
+          "Bank Nodal"
+        ]
+      },
+      {
+        "name": "Pakhi Garg",
+        "rank": "Cyber Law Advisor",
+        "dept": "Legal Consultant, DPDP Act",
+        "photo": "assets/images/up-police/mentors/pakhi garg lawyer.webp",
+        "tags": [
+          "IT Act Law",
+          "Data Privacy"
+        ]
+      },
+      {
+        "name": "Yash Chavhan",
+        "rank": "Web3 & Crypto Lead",
+        "dept": "Blockchain Security Audit",
+        "photo": "assets/images/up-police/mentors/yash chavhan - web3.jpg",
+        "tags": [
+          "Web3 Security",
+          "Crypto Forensics"
+        ]
+      },
+      {
+        "name": "Manoj Kushwaha",
+        "rank": "Technical Coordinator",
+        "dept": "APCSIP Organizing Directorate",
+        "photo": "assets/images/up-police/mentors/Manoj Kushwaha.jpg",
+        "tags": [
+          "Technical Support",
+          "Organizing Team"
+        ]
+      }
     ],
     "momentsPhotos": [
-      { "title": "Offer Letter", "file": "assets/images/up-police/moments/rohit_pal_offer_letter.jpg", "desc": "Official Government Selection Letter (Intern ID: APCSIP/2026/794) signed by Superintendent of Police, Amroha." },
-      { "title": "Certificate Award Ceremony", "file": "assets/images/up-police/moments/rohit_pal_certificate_dsp.png", "desc": "Rohit Pal receiving completion certificate directly from DSP Anjali Kataria Ma'am." },
-      { "title": "Valedictory Cohort", "file": "assets/images/up-police/moments/rohit_pal_valedictory_cohort.jpg", "desc": "Commendation ceremony with DSP Anjali Kataria Ma'am, Jubilant Bhartia Foundation, and fellows." },
-      { "title": "Campus Entrance Delegation", "file": "assets/images/up-police/moments/rohit_pal_campus_entrance.jpg", "desc": "Rohit Pal and student cohort delegation during the 15-day fellowship." }
+      {
+        "title": "Offer Letter",
+        "file": "assets/images/up-police/moments/rohit_pal_offer_letter.jpg",
+        "desc": "Official Government Selection Letter (Intern ID: APCSIP/2026/794) signed by Superintendent of Police, Amroha."
+      },
+      {
+        "title": "Certificate Award Ceremony",
+        "file": "assets/images/up-police/moments/rohit_pal_certificate_dsp.png",
+        "desc": "Rohit Pal receiving completion certificate directly from DSP Anjali Kataria Ma'am."
+      },
+      {
+        "title": "Valedictory Cohort",
+        "file": "assets/images/up-police/moments/rohit_pal_valedictory_cohort.jpg",
+        "desc": "Commendation ceremony with DSP Anjali Kataria Ma'am, Jubilant Bhartia Foundation, and fellows."
+      },
+      {
+        "title": "Campus Entrance Delegation",
+        "file": "assets/images/up-police/moments/rohit_pal_campus_entrance.jpg",
+        "desc": "Rohit Pal and student cohort delegation during the 15-day fellowship."
+      }
     ]
   },
   "wikimediaOpenSource": {
@@ -957,7 +1533,11 @@
       {
         "area": "Phabricator Development Tasks",
         "tech": "Bug Triage & Task Management",
-        "tasks": ["T437964", "T434524", "T434753"],
+        "tasks": [
+          "T437964",
+          "T434524",
+          "T434753"
+        ],
         "description": "Worked with Wikimedia development tasks (T437964, T434524, and T434753), participating in bug triage, reproduction, and developer discussions."
       },
       {
@@ -999,7 +1579,11 @@
       "audience": "FOR RECRUITERS",
       "heading": "Looking for a Web Developer?",
       "description": "Explore my web projects, React/Node skills, and engineering experience.",
-      "tags": ["Resume PDF", "React & Node", "B.Tech CSE"],
+      "tags": [
+        "Resume PDF",
+        "React & Node",
+        "B.Tech CSE"
+      ],
       "actionText": "Download Resume",
       "actionLink": "assets/docs/Rohit_Pal_Resume.pdf",
       "isDownload": true
@@ -1008,7 +1592,11 @@
       "audience": "FOR FOUNDERS",
       "heading": "Building a Web Product?",
       "description": "Let's discuss full-stack web architecture, MVP design, and smart AI API integrations.",
-      "tags": ["MVP Builds", "AI Assistants", "REST APIs"],
+      "tags": [
+        "MVP Builds",
+        "AI Assistants",
+        "REST APIs"
+      ],
       "actionText": "Connect on LinkedIn",
       "actionLink": "https://linkedin.com/in/rohit-pal-98230131a",
       "isDownload": false
@@ -1017,7 +1605,11 @@
       "audience": "FOR DEVELOPERS",
       "heading": "Let's Build Web Apps Together",
       "description": "Collaborate on open-source projects, React web platforms, and national hackathons.",
-      "tags": ["Open Source", "Hackathons", "Wikimedia"],
+      "tags": [
+        "Open Source",
+        "Hackathons",
+        "Wikimedia"
+      ],
       "actionText": "View GitHub",
       "actionLink": "https://github.com/rohitpal00015-prog",
       "isDownload": false
@@ -1026,7 +1618,11 @@
       "audience": "CAMPUS & COMMUNITY",
       "heading": "Tech Events & Ambassadors",
       "description": "Collaborate for Cloud Junction initiatives, local workshops, and student networking.",
-      "tags": ["Cloud Junction", "Workshops", "Networking"],
+      "tags": [
+        "Cloud Junction",
+        "Workshops",
+        "Networking"
+      ],
       "actionText": "Get in Touch",
       "actionLink": "https://linkedin.com/in/rohit-pal-98230131a",
       "isDownload": false
@@ -1034,11 +1630,14 @@
   ],
   "assetsCatalog": {
     "resume": "assets/docs/Rohit_Pal_Resume.pdf",
-    "profile": "assets/images/profile/rohit.png",
+    "profile": "assets/images/profile/rohit.webp",
     "projectLogos": {
-      "palbasket": "assets/images/projects/Palbasket logo.png",
+      "palbasket": "assets/images/projects/palbasket-logo.webp",
       "prayagrajRooms": "assets/images/projects/prayagrajrooms_logo.png",
-      "zynoq": "assets/images/projects/ok.png"
+      "zynoq": "assets/images/projects/ok.png",
+      "shilpsetu": "assets/images/projects/shilpsetu-cover.webp",
+      "devfest": "assets/images/projects/devfest-cover.webp",
+      "nexora": "assets/images/projects/nexora-cover.webp"
     },
     "certificateImages": [
       "assets/images/certificates/1.png",
@@ -1070,6 +1669,7 @@
         "assets/images/up-police/moments/rohit_pal_valedictory_cohort.jpg",
         "assets/images/up-police/moments/rohit_pal_campus_entrance.jpg"
       ]
-    }
+    },
+    "ogImage": "assets/images/og/rohit-pal-og.jpg"
   }
 }

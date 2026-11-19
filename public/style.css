@@ -1364,6 +1364,7 @@ img {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    min-width: 0;
 }
 
 .fact-card-top {
@@ -1696,7 +1697,7 @@ img {
 /* Upward Branch Milestone Cards Container */
 .growth-branches-flow {
     display: flex;
-    flex-direction: column-reverse; /* Reverses order so earliest is at bottom near college, latest at top */
+    flex-direction: column; /* Markup is newest-first, so the latest milestone sits at the top of the root */
     position: relative;
     z-index: 2;
     gap: 2.25rem;
@@ -3774,11 +3775,11 @@ img {
         border-radius: var(--radius-lg);
     }
     .bento-facts-row {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.85rem;
     }
     .fact-bento-card {
-        padding: 1.25rem 1rem !important;
+        padding: 1.25rem 1rem;
     }
     .fact-bento-card .micro-tag {
         font-size: 0.7rem;
@@ -4052,8 +4053,13 @@ img {
         grid-template-columns: 1fr;
         gap: 0.65rem;
     }
-    .bento-fact-card {
+    .fact-bento-card {
         padding: 1rem 0.75rem;
+    }
+    .fact-bento-card .micro-tag {
+        max-width: none;
+        white-space: normal;
+        text-overflow: clip;
     }
 
     /* Projects Grid */
@@ -4567,6 +4573,79 @@ html:not([data-theme="dark"]) .theme-toggle-btn .theme-icon-moon {
 [data-theme="dark"] .contact-input:focus {
     border-color: var(--blue-primary);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility & 2026 Refresh Additions
+   -------------------------------------------------------------------------- */
+.skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 10000;
+    transform: translateY(-200%);
+    background: var(--blue-primary);
+    color: #FFFFFF;
+    padding: 0.65rem 1.1rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    outline: 3px solid var(--yellow-primary);
+    outline-offset: 2px;
+}
+
+:focus-visible {
+    outline: 3px solid var(--yellow-primary);
+    outline-offset: 2px;
+}
+
+.featured-project-card {
+    border-width: 2px;
+    box-shadow: var(--shadow-md);
+}
+
+.more-projects-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.more-projects-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.4rem;
+    border: 1.5px dashed var(--border-medium);
+    border-radius: var(--radius-full);
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.93rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.more-projects-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+.more-projects-link:hover {
+    border-color: var(--blue-primary);
+    color: var(--blue-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.project-card-clean .project-thumbnail-box img {
+    display: block;
 }
 
 /* Reduced Motion Override */
