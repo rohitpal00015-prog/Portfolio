@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { asset, certificates } from '../data';
 import { lockScroll, unlockScroll } from '../lib/scroll';
@@ -128,7 +129,7 @@ export default function Credentials({ reduced }) {
     <section id="credentials" className="credentials" ref={rootRef}>
       <div className="container">
         <header className="cred__head">
-          <p className="section-label cred__eyebrow"><span>05</span> Proof</p>
+          <p className="section-label cred__eyebrow"><span>06</span> Proof</p>
           <h2 className="cred__title">Certified.<br /><em>Verified.</em></h2>
           <p className="cred__intro">
             National finalist certificates, government fellowship proof and Google developer community
@@ -164,12 +165,12 @@ export default function Credentials({ reduced }) {
         </div>
 
         <div className="cred__actions">
-          <a className="btn btn--primary" href="/certificates.html" data-magnetic>
+          <Link className="btn btn--primary" to="/certificates" data-magnetic>
             All 8 certificates <span aria-hidden="true">↗</span>
-          </a>
-          <a className="btn btn--ghost" href="/hackathons-leadership.html">
+          </Link>
+          <Link className="btn btn--ghost" to="/hackathons">
             Hackathon milestones <span aria-hidden="true">↗</span>
-          </a>
+          </Link>
         </div>
       </div>
 

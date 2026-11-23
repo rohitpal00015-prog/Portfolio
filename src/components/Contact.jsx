@@ -1,8 +1,8 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import Marquee from './Marquee';
+import SiteFooter from './SiteFooter';
 import { profile, asset, wikimediaLinks } from '../data';
-import { scrollToTarget } from '../lib/scroll';
 
 const socials = [
   { label: 'GitHub', href: profile.socials.github },
@@ -78,7 +78,7 @@ export default function Contact({ reduced }) {
     <section id="contact" className="contact" ref={rootRef}>
       <div className="contact__glow" aria-hidden="true" />
       <div className="container contact__inner">
-        <p className="section-label contact__eyebrow"><span>06</span> Contact</p>
+        <p className="section-label contact__eyebrow"><span>07</span> Contact</p>
 
         <h2 className="contact__title">
           <span className="line"><span>Let's build</span></span>
@@ -149,21 +149,7 @@ export default function Contact({ reduced }) {
         speed={38}
       />
 
-      <footer className="footer">
-        <div className="container footer__inner">
-          <a className="footer__brand" href="#home" onClick={(event) => { event.preventDefault(); scrollToTarget('#home'); }}>
-            RP<span>®</span>
-          </a>
-          <p className="footer__copy">© {new Date().getFullYear()} Rohit Pal · Prayagraj, India</p>
-          <div className="footer__links">
-            <a href="/resume.html">Résumé</a>
-            <a href="/up-police-internship.html">UP Police</a>
-            <a href="/wikimedia-open-source.html">Wikimedia</a>
-            <button type="button" onClick={() => scrollToTarget('#home')}>Back to top ↑</button>
-          </div>
-          <p className="footer__note">React · GSAP · Lenis</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </section>
   );
 }

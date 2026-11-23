@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
@@ -171,15 +172,18 @@ export default function About({ reduced }) {
 
             <div className="about__highlights">
               {aboutHighlights.map((item, itemIndex) => {
-                const Tag = item.href ? 'a' : 'article';
+                const internal = item.href?.startsWith('/');
+                const Tag = internal ? Link : item.href ? 'a' : 'article';
+                const linkProps = internal
+                  ? { to: item.href }
+                  : item.href
+                    ? { href: item.href, ...(item.external ? { target: '_blank', rel: 'noreferrer' } : {}) }
+                    : {};
                 return (
                   <Tag
                     className={`about__highlight about__highlight--${item.tone}${item.href ? ' about__highlight--link' : ''}`}
                     key={item.title}
-                    {...(item.href ? {
-                      href: item.href,
-                      ...(item.external ? { target: '_blank', rel: 'noreferrer' } : {})
-                    } : {})}
+                    {...linkProps}
                   >
                     <span className="about__highlight-index">{String(itemIndex + 1).padStart(2, '0')}</span>
                     {item.href && <span className="about__highlight-arrow" aria-hidden="true">↗</span>}

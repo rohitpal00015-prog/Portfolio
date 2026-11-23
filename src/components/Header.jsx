@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { navLinks, profile } from '../data';
 import { lockScroll, scrollToTarget, unlockScroll } from '../lib/scroll';
 
-const sections = ['home', 'about', 'work', 'timeline', 'stack', 'credentials', 'contact'];
+const sections = ['home', 'about', 'work', 'dossiers', 'timeline', 'stack', 'credentials', 'contact'];
 
 export default function Header({ started }) {
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('home');
   const barRef = useRef(null);
@@ -32,6 +35,11 @@ export default function Header({ started }) {
   }, []);
 
   useEffect(() => {
+    if (!isHome) {
+      setActive(pathname === '/certificates' ? 'credentials' : pathname === '/resume' ? '' : 'dossiers');
+      return undefined;
+    }
+    setActive('home');
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -45,7 +53,7 @@ export default function Header({ started }) {
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [isHome, pathname]);
 
   useEffect(() => {
     if (open && !lockedRef.current) {
@@ -72,33 +80,34 @@ export default function Header({ started }) {
   }, []);
 
   const go = (event, id) => {
+    if (!isHome) return;
     event.preventDefault();
     setOpen(false);
-    window.setTimeout(() => scrollToTarget(`#${id}`), open ? 120 : 0);
+    window.setTimeout(() => scrollToTarget(id === 'home' ? '#home' : `#${id}`), open ? 120 : 0);
   };
 
   return (
     <>
       <header className={`site-header ${started ? 'is-ready' : ''} ${open ? 'is-open' : ''}`}>
-        <a className="brand" href="#home" onClick={(event) => go(event, 'home')} aria-label="Rohit Pal — home">
+        <Link className="brand" to="/" onClick={(event) => go(event, 'home')} aria-label="Rohit Pal — home">
           <span className="brand__mark">RP<span>®</span></span>
           <span className="brand__name">
             Rohit Pal
-            <small>Full-stack developer</small>
+            <small>Software developer</small>
           </span>
-        </a>
+        </Link>
 
         <nav className="site-nav" aria-label="Primary">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.id}
-              href={`#${link.id}`}
+              to={isHome ? `#${link.id}` : `/#${link.id}`}
               className={active === link.id ? 'is-active' : ''}
               onClick={(event) => go(event, link.id)}
             >
               <span className="site-nav__dot" />
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -126,17 +135,20 @@ export default function Header({ started }) {
         <div className="menu-overlay__inner">
           <nav className="menu-nav" aria-label="Mobile">
             {[...navLinks, { id: 'contact', label: 'Contact' }].map((link, index) => (
-              <a
+              <Link
                 key={link.id}
-                href={`#${link.id}`}
+                to={isHome ? `#${link.id}` : `/#${link.id}`}
                 className="menu-link"
-                onClick={(event) => go(event, link.id)}
+                onClick={(event) => {
+                  setOpen(false);
+                  go(event, link.id);
+                }}
                 tabIndex={open ? 0 : -1}
               >
-                <span className="menu-link__index">0{index + 1}</span>
+                <span className="menu-link__index">{String(index + 1).padStart(2, '0')}</span>
                 <span className="menu-link__label">{link.label}</span>
                 <span className="menu-link__arrow" aria-hidden="true">↗</span>
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="menu-meta">
@@ -152,7 +164,9 @@ export default function Header({ started }) {
                 <a href={profile.socials.twitter} target="_blank" rel="noreferrer" tabIndex={open ? 0 : -1}>X</a>
               </div>
             </div>
-            <a className="menu-resume" href="/resume.html" tabIndex={open ? 0 : -1}>Résumé (PDF) ↗</a>
+            <Link className="menu-resume" to="/resume" onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}>
+              Résumé <span aria-hidden="true">↗</span>
+            </Link>
           </div>
           <p className="menu-foot">Prayagraj, India · {new Date().getFullYear()} — designed &amp; built by Rohit Pal</p>
         </div>

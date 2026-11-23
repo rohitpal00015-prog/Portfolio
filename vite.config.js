@@ -9,6 +9,13 @@ export default defineConfig({
   },
   build: {
     target: 'es2020',
-    assetsInlineLimit: 2048
+    assetsInlineLimit: 2048,
+    rolldownOptions: {
+      output: {
+        codeSplitting: {
+          groups: [{ name: 'vendor', test: /node_modules/ }]
+        }
+      }
+    }
   }
 });

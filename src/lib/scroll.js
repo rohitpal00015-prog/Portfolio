@@ -26,14 +26,14 @@ export function getLenis() {
   return lenis;
 }
 
-export function scrollToTarget(target) {
+export function scrollToTarget(target, options = {}) {
   const el = typeof target === 'string' ? document.querySelector(target) : target;
   if (!el) return;
   if (lenis) {
-    lenis.scrollTo(el, { offset: -72, duration: 1.3 });
+    lenis.scrollTo(el, { offset: -72, duration: 1.3, ...options });
   } else {
     const top = el.getBoundingClientRect().top + window.scrollY - 72;
-    window.scrollTo({ top, behavior: 'smooth' });
+    window.scrollTo({ top, behavior: options.immediate ? 'auto' : 'smooth' });
   }
 }
 

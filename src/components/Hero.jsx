@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import Marquee from './Marquee';
 import { profile, metrics, asset } from '../data';
@@ -129,9 +130,9 @@ export default function Hero({ started, reduced }) {
             >
               Explore selected work <span aria-hidden="true">↘</span>
             </a>
-            <a className="btn btn--ghost" href="/resume.html">
-              Download résumé <span aria-hidden="true">↗</span>
-            </a>
+            <Link className="btn btn--ghost" to="/resume">
+              Résumé &amp; dossier <span aria-hidden="true">↗</span>
+            </Link>
           </div>
 
           <div className="hero__facts">

@@ -1,24 +1,36 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Preloader from './components/Preloader';
 import Cursor from './components/Cursor';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Work from './components/Work';
-import Timeline from './components/Timeline';
-import Stack from './components/Stack';
-import Credentials from './components/Credentials';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 import { initSmoothScroll, scrollToTarget, getLenis } from './lib/scroll';
+
+const WikimediaPage = lazy(() => import('./pages/WikimediaPage'));
+const FellowshipPage = lazy(() => import('./pages/FellowshipPage'));
+const HackathonsPage = lazy(() => import('./pages/HackathonsPage'));
+const CertificatesPage = lazy(() => import('./pages/CertificatesPage'));
+const ResumePage = lazy(() => import('./pages/ResumePage'));
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' &&
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const titles = {
+  '/': 'Rohit Pal | Full-Stack Developer, AI & Open Source Contributor',
+  '/wikimedia': 'Wikimedia & Open Source — Rohit Pal',
+  '/fellowship': 'UP Police Cyber Fellowship — Rohit Pal',
+  '/hackathons': 'Hackathons & Leadership — Rohit Pal',
+  '/certificates': 'Certificates & Verified Proof — Rohit Pal',
+  '/resume': 'Résumé & Full Record — Rohit Pal'
+};
+
 export default function App() {
   const reduced = prefersReducedMotion();
+  const location = useLocation();
   const [started, setStarted] = useState(false);
   const magneticCleanup = useRef(null);
 
@@ -35,19 +47,28 @@ export default function App() {
   }, [reduced]);
 
   useEffect(() => {
-    if (!started) return undefined;
-    const timer = window.setTimeout(() => ScrollTrigger.refresh(), 150);
-    if (window.location.hash) {
-      const hashTimer = window.setTimeout(() => {
-        scrollToTarget(window.location.hash);
-      }, 250);
+    document.title = titles[location.pathname] || 'Page not found — Rohit Pal';
+  }, [location.pathname]);
+
+  useLayoutEffect(() => {
+    if (location.hash) {
+      if (!started) return undefined;
+      const jump = () => {
+        ScrollTrigger.refresh();
+        scrollToTarget(location.hash, { immediate: true });
+      };
+      const first = window.setTimeout(jump, 320);
+      const settle = window.setTimeout(jump, 900);
       return () => {
-        window.clearTimeout(timer);
-        window.clearTimeout(hashTimer);
+        window.clearTimeout(first);
+        window.clearTimeout(settle);
       };
     }
-    return () => window.clearTimeout(timer);
-  }, [started]);
+    getLenis()?.scrollTo(0, { immediate: true });
+    window.scrollTo(0, 0);
+    const refresh = window.setTimeout(() => ScrollTrigger.refresh(), 220);
+    return () => window.clearTimeout(refresh);
+  }, [location.pathname, location.hash, started]);
 
   useLayoutEffect(() => {
     if (!started || reduced) return undefined;
@@ -77,7 +98,7 @@ export default function App() {
       magneticCleanup.current?.();
       magneticCleanup.current = null;
     };
-  }, [started, reduced]);
+  }, [started, reduced, location.pathname]);
 
   return (
     <>
@@ -85,14 +106,23 @@ export default function App() {
       <Cursor enabled={!reduced} />
       <Preloader reduced={reduced} onDone={() => setStarted(true)} />
       <Header started={started} />
-      <main id="main">
-        <Hero started={started} reduced={reduced} />
-        <About reduced={reduced} />
-        <Work reduced={reduced} />
-        <Timeline reduced={reduced} />
-        <Stack reduced={reduced} />
-        <Credentials reduced={reduced} />
-        <Contact reduced={reduced} />
+      <main id="main" className="route-view" key={location.pathname}>
+        <Suspense fallback={<div className="route-loading" aria-busy="true" />}>
+          <Routes>
+            <Route path="/" element={<Home started={started} reduced={reduced} />} />
+            <Route path="/wikimedia" element={<WikimediaPage reduced={reduced} />} />
+            <Route path="/fellowship" element={<FellowshipPage reduced={reduced} />} />
+            <Route path="/hackathons" element={<HackathonsPage reduced={reduced} />} />
+            <Route path="/certificates" element={<CertificatesPage reduced={reduced} />} />
+            <Route path="/resume" element={<ResumePage reduced={reduced} />} />
+            <Route path="/wikimedia-open-source.html" element={<Navigate to="/wikimedia" replace />} />
+            <Route path="/up-police-internship.html" element={<Navigate to="/fellowship" replace />} />
+            <Route path="/hackathons-leadership.html" element={<Navigate to="/hackathons" replace />} />
+            <Route path="/certificates.html" element={<Navigate to="/certificates" replace />} />
+            <Route path="/resume.html" element={<Navigate to="/resume" replace />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
     </>
   );

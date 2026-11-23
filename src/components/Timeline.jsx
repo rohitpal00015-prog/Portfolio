@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { timeline } from '../data';
 
@@ -56,7 +57,7 @@ export default function Timeline({ reduced }) {
     <section id="timeline" className="timeline" ref={rootRef}>
       <div className="container">
         <header className="tl-head">
-          <p className="section-label"><span>03</span> Trajectory</p>
+          <p className="section-label"><span>04</span> Trajectory</p>
           <h2 className="tl-title">
             A trajectory,<br /> not a <em>résumé.</em>
           </h2>
@@ -82,18 +83,24 @@ export default function Timeline({ reduced }) {
                 <ul className="tl-card__tags">
                   {item.tags.map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
-                <a className="tl-card__link" href={item.link} target="_blank" rel="noreferrer">
-                  Learn more <span aria-hidden="true">↗</span>
-                </a>
+                {item.link.startsWith('/') ? (
+                  <Link className="tl-card__link" to={item.link}>
+                    Learn more <span aria-hidden="true">↗</span>
+                  </Link>
+                ) : (
+                  <a className="tl-card__link" href={item.link} target="_blank" rel="noreferrer">
+                    Learn more <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </div>
             </article>
           ))}
         </div>
 
         <div className="tl-foot">
-          <a className="btn btn--ghost" href="/hackathons-leadership.html">
+          <Link className="btn btn--ghost" to="/hackathons">
             Full milestone log <span aria-hidden="true">↗</span>
-          </a>
+          </Link>
           <span className="tl-foot__note">22 milestones · 2024 — 2026</span>
         </div>
       </div>

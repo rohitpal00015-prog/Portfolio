@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import {
   categoryLabel,
@@ -41,6 +42,19 @@ export default function Work({ reduced }) {
   const previewRef = useRef(null);
   const pointerRef = useRef({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(null);
+  const [filter, setFilter] = useState('all');
+
+  const filters = [
+    { id: 'all', label: 'All work', count: archiveProjects.length },
+    ...Object.entries(categoryLabel).map(([id, label]) => ({
+      id,
+      label,
+      count: archiveProjects.filter((project) => project.category === id).length
+    }))
+  ];
+  const visibleProjects = filter === 'all'
+    ? archiveProjects
+    : archiveProjects.filter((project) => project.category === filter);
 
   useLayoutEffect(() => {
     if (reduced) return undefined;
@@ -165,7 +179,11 @@ export default function Work({ reduced }) {
                 </ul>
                 <div className="work-panel__links">
                   {project.demo && (
-                    <a href={project.demo} target="_blank" rel="noreferrer">Live site <span aria-hidden="true">↗</span></a>
+                    project.demo.startsWith('/') ? (
+                      <Link to={project.demo}>Open dossier <span aria-hidden="true">↗</span></Link>
+                    ) : (
+                      <a href={project.demo} target="_blank" rel="noreferrer">Live site <span aria-hidden="true">↗</span></a>
+                    )
                   )}
                   {project.github && (
                     <a href={project.github} target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
@@ -185,30 +203,54 @@ export default function Work({ reduced }) {
 
       <div className="container work__archive">
         <div className="archive__head">
-          <h3>The full archive <span>({archiveProjects.length})</span></h3>
-          <p>Every build, live product and experiment — hover to preview.</p>
+          <div>
+            <h3>The full archive <span>({archiveProjects.length})</span></h3>
+            <p>Every build, live product and experiment — filter by category, hover to preview.</p>
+          </div>
+          <div className="archive__filters" role="group" aria-label="Filter projects by category">
+            {filters.map((item) => (
+              <button
+                type="button"
+                key={item.id}
+                className={`archive__filter ${filter === item.id ? 'is-active' : ''}`}
+                aria-pressed={filter === item.id}
+                onClick={() => setFilter(item.id)}
+              >
+                {item.label} <span>{String(item.count).padStart(2, '0')}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="archive__list">
-          {archiveProjects.map((project, index) => (
-            <a
-              className="archive-row"
-              key={project.id}
-              href={project.demo || project.github || '#'}
-              target={project.demo || project.github ? '_blank' : undefined}
-              rel="noreferrer"
-              onMouseEnter={() => setHovered(project)}
-              onMouseLeave={() => setHovered(null)}
-              onFocus={() => setHovered(project)}
-              onBlur={() => setHovered(null)}
-            >
-              <span className="archive-row__index">{String(index + 1).padStart(2, '0')}</span>
-              <span className="archive-row__title">{project.title}</span>
-              <span className="archive-row__cat">{categoryLabel[project.category]}</span>
-              <span className="archive-row__stack">{project.techStack.slice(0, 3).join(' · ')}</span>
-              <span className="archive-row__arrow" aria-hidden="true">↗</span>
-            </a>
-          ))}
+        <div className="archive__list" key={filter}>
+          {visibleProjects.map((project, index) => {
+            const dest = project.demo || project.github;
+            const internal = dest?.startsWith('/');
+            const Tag = internal ? Link : dest ? 'a' : 'div';
+            const linkProps = internal
+              ? { to: dest }
+              : dest
+                ? { href: dest, target: '_blank', rel: 'noreferrer' }
+                : {};
+            return (
+              <Tag
+                className="archive-row"
+                key={project.id}
+                style={{ '--row': index }}
+                {...linkProps}
+                onMouseEnter={() => setHovered(project)}
+                onMouseLeave={() => setHovered(null)}
+                onFocus={() => setHovered(project)}
+                onBlur={() => setHovered(null)}
+              >
+                <span className="archive-row__index">{String(index + 1).padStart(2, '0')}</span>
+                <span className="archive-row__title">{project.title}</span>
+                <span className="archive-row__cat">{categoryLabel[project.category]}</span>
+                <span className="archive-row__stack">{project.techStack.slice(0, 3).join(' · ')}</span>
+                <span className="archive-row__arrow" aria-hidden="true">{dest ? '↗' : '·'}</span>
+              </Tag>
+            );
+          })}
         </div>
 
         <a

@@ -46,7 +46,7 @@ export default function Stack({ reduced }) {
     <section id="stack" className="stack" ref={rootRef}>
       <div className="container">
         <header className="stack__head">
-          <p className="section-label stack__eyebrow"><span>04</span> Arsenal</p>
+          <p className="section-label stack__eyebrow"><span>05</span> Arsenal</p>
           <h2 className="stack__title">
             The stack behind<br /> the <em>shipping.</em>
           </h2>

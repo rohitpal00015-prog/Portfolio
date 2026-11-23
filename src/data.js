@@ -1,6 +1,7 @@
 import raw from '../data/portfolio-data.json';
 
 export const profile = raw.profile;
+export const education = raw.education;
 export const metrics = raw.keyMetrics;
 export const focusAreas = raw.focusAreas;
 export const experience = raw.experience;
@@ -8,6 +9,9 @@ export const projects = raw.projects;
 export const certificates = raw.certificates;
 export const milestones = raw.hackathonsAndMilestones;
 export const skills = raw.skills;
+export const upPolice = raw.upPoliceFellowship;
+export const wikimedia = raw.wikimediaOpenSource;
+export const collaborationHub = raw.collaborationHub;
 
 export const asset = (path) => (path ? `/${path.replace(/^\.?\//, '')}` : null);
 
@@ -45,11 +49,12 @@ export const initials = (title) =>
     .join('');
 
 export const navLinks = [
-  { id: 'work', label: 'Work', index: '02' },
   { id: 'about', label: 'About', index: '01' },
-  { id: 'timeline', label: 'Trajectory', index: '03' },
-  { id: 'stack', label: 'Stack', index: '04' },
-  { id: 'credentials', label: 'Proof', index: '05' }
+  { id: 'work', label: 'Work', index: '02' },
+  { id: 'dossiers', label: 'Dossiers', index: '03' },
+  { id: 'timeline', label: 'Trajectory', index: '04' },
+  { id: 'stack', label: 'Stack', index: '05' },
+  { id: 'credentials', label: 'Proof', index: '06' }
 ];
 
 const aboutHighlightsMap = [
@@ -79,21 +84,21 @@ export const aboutHighlights = [
     title: '600+ Students',
     kicker: 'Community & Events',
     description: 'Gemini Builder event with GSA UIT.',
-    href: '/hackathons-leadership.html'
+    href: '/hackathons'
   },
   {
     tone: 'blue',
     title: 'Samsung Fellowship',
     kicker: 'ISWDP Cohort 9',
     description: 'Selected for Samsung Fellowship.',
-    href: '/resume.html'
+    href: '/resume'
   },
   {
     tone: 'green',
     title: 'SIH Core Organizer',
     kicker: 'Smart India Hackathon',
     description: 'Hackathon operations & tech setup.',
-    href: '/hackathons-leadership.html'
+    href: '/hackathons'
   },
   {
     tone: 'amber',
@@ -116,14 +121,14 @@ export const aboutHighlights = [
     title: 'APCSIP-2026',
     kicker: 'UP Police Fellow',
     description: 'Read the fellowship case study',
-    href: '/up-police-internship.html'
+    href: '/fellowship'
   },
   {
     tone: 'green',
     title: 'Wikimedia',
     kicker: 'Gerrit Contributor',
     description: 'Explore the open-source contributions',
-    href: '/wikimedia-open-source.html'
+    href: '/wikimedia'
   }
 ];
 
@@ -168,6 +173,60 @@ export const wikimediaLinks = [
   { label: 'Commons uploads', href: profile.socials.commons }
 ];
 
+export const dossiers = [
+  {
+    id: 'wikimedia',
+    index: '01',
+    tone: 'green',
+    eyebrow: 'Open source',
+    title: 'Wikimedia',
+    subtitle: 'Code, Commons and community.',
+    summary:
+      'Accessibility-first patches across MediaWiki, Codex and community skins — alongside free photography and Hindi Wikipedia participation.',
+    stats: [
+      { value: 'PR #88', label: 'merged' },
+      { value: '9+', label: 'patchsets' },
+      { value: 'Rank 6', label: 'Road to Wiki' }
+    ],
+    tags: ['Codex', 'MediaWiki', 'Commons', 'Hindi Wikipedia'],
+    href: '/wikimedia'
+  },
+  {
+    id: 'fellowship',
+    index: '02',
+    tone: 'amber',
+    eyebrow: 'Government fellowship',
+    title: 'UP Police',
+    subtitle: 'Inside the cyber crime cell.',
+    summary:
+      'A 15-day official fellowship with Amroha Police — OSINT, digital forensics, CDR analysis and field operations with serving officers.',
+    stats: [
+      { value: '15', label: 'days' },
+      { value: '13', label: 'field ops' },
+      { value: '12', label: 'officers' }
+    ],
+    tags: ['OSINT', 'Forensics', 'CDR / IPDR', 'Cyber law'],
+    href: '/fellowship'
+  },
+  {
+    id: 'hackathons',
+    index: '03',
+    tone: 'blue',
+    eyebrow: 'Build log',
+    title: 'Hackathons',
+    subtitle: '22 milestones. 3 national podiums.',
+    summary:
+      'From SIH organizing teams to national finals and 600+ student conclaves — the rooms, teams and builds that shaped the work.',
+    stats: [
+      { value: '22', label: 'milestones' },
+      { value: '3x', label: 'finalist' },
+      { value: '600+', label: 'conclave' }
+    ],
+    tags: ['SIH', 'SRM BUILDS', 'GDG', 'Leadership'],
+    href: '/hackathons'
+  }
+];
+
 export const timeline = [
   {
     id: 'shilpsetu-sih',
@@ -199,7 +258,7 @@ export const timeline = [
     summary:
       'Built and shipped a working prototype under time pressure with the Google Student Ambassador cohort, earning the Certificate of Achievement.',
     tags: ['GDG', 'Hackathon', 'Certificate'],
-    link: '/certificates.html',
+    link: '/certificates',
     type: 'Award'
   },
   {
@@ -221,7 +280,7 @@ export const timeline = [
     summary:
       'Selected for a 15-day official government fellowship covering OSINT, digital forensics, cybercrime response and field operations with UP Police officers.',
     tags: ['Cyber Security', 'OSINT', 'Govt. of UP'],
-    link: '/up-police-internship.html',
+    link: '/fellowship',
     type: 'Fellowship'
   },
   {
@@ -232,7 +291,7 @@ export const timeline = [
     summary:
       'Reached the national finals of a 36-hour offline build sprint with a working product and a live judging round against teams from across India.',
     tags: ['Hackathon', 'Finalist', '36h'],
-    link: '/hackathons-leadership.html',
+    link: '/hackathons',
     type: 'Award'
   },
   {
@@ -243,7 +302,7 @@ export const timeline = [
     summary:
       'Contributing across MediaWiki, Codex and community tools with accessibility at the centre — merged Wikitermbase PR #88 and ContentTranslation patch #1347603, alongside Commons photography and Hindi Wikipedia participation.',
     tags: ['Codex', 'A11y', 'Commons', 'Hindi Wikipedia'],
-    link: '/wikimedia-open-source.html',
+    link: '/wikimedia',
     type: 'Open Source'
   },
   {
@@ -254,7 +313,7 @@ export const timeline = [
     summary:
       'Placed in the national top ten with an engineering-focused build, alongside a Codefront 2.0 merit award and a TechSprint NCU appreciation.',
     tags: ['Hackathon', 'Top 10'],
-    link: '/certificates.html',
+    link: '/certificates',
     type: 'Award'
   },
   {
@@ -265,7 +324,7 @@ export const timeline = [
     summary:
       'Cleared multiple evaluation rounds to reach the grand finale, shipping a complete prototype with a small team.',
     tags: ['Hackathon', 'Top 65'],
-    link: '/hackathons-leadership.html',
+    link: '/hackathons',
     type: 'Award'
   }
 ];
