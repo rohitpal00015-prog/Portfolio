@@ -307,12 +307,12 @@ export default function Hero({ started, reduced }) {
                   <span className="hero__pulse hero__pulse--green" /> Wikimedia Foundation <span className="hero__slash">/</span> WikiClub Tech UIT Team
                 </p>
 
-                <h1 className="hero__title">
+                <h1 className="hero__title hero__title--oss">
                   <span className="hero__name hero__name--solid"><SplitName text="OPEN" /></span>
                   <span className="hero__name-line">
                     <span className="hero__name hero__name--outline"><SplitName text="SOURCE" /></span>
                     <span className="hero__serif hero-oss__serif">
-                      in the<br />open<span className="hero__asterisk">*</span>
+                      in the open<span className="hero__asterisk">*</span>
                     </span>
                   </span>
                 </h1>
@@ -382,7 +382,7 @@ export default function Hero({ started, reduced }) {
 
       {/* Hero Foot Indicator & Links */}
       <div className="hero__foot container">
-        <span className="hero__foot-meta">
+        <span className={`hero__foot-meta ${activePage === 1 ? 'hero__foot-meta--oss' : ''}`}>
           {activePage === 0
             ? 'B.Tech CSE ’28 · United Institute of Technology'
             : 'MediaWiki · Codex · Gerrit · Commons'}
