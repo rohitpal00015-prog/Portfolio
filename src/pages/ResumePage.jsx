@@ -149,7 +149,7 @@ export default function ResumePage({ reduced }) {
           <div className="honor">
             <span>Google GSA</span>
             <h3>Google Student Ambassador</h3>
-            <p>Pitch-night recognition and a 10,000+ ambassador community network.</p>
+            <p>Pitch-night recognition and active participation in student developer initiatives.</p>
           </div>
           <div className="honor">
             <span>SIH</span>
@@ -158,8 +158,8 @@ export default function ResumePage({ reduced }) {
           </div>
           <div className="honor">
             <span>Wikimedia</span>
-            <h3>Merged open-source code</h3>
-            <p>PR #88 and Gerrit patch #1347603 accepted into Wikimedia projects.</p>
+            <h3>20+ Merged Patches &amp; WikiClub Tech</h3>
+            <p>20+ merged upstream Gerrit patches in MediaWiki/Codex, and Co-Organizer of Hacktoberfest Hack Day series.</p>
           </div>
         </div>
         <ul className="focus-tags" data-reveal-group>

@@ -9,39 +9,80 @@ export default function usePageReveal(ref, reduced) {
     const ctx = gsap.context(() => {
       const heroItems = root.querySelectorAll('[data-hero-reveal]');
       if (heroItems.length) {
-        gsap.from(heroItems, {
-          y: 34,
-          opacity: 0,
-          duration: 0.9,
-          stagger: 0.08,
-          ease: 'power3.out',
-          delay: 0.12
-        });
+        gsap.fromTo(
+          heroItems,
+          { y: 28, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.07,
+            ease: 'power3.out',
+            clearProps: 'all',
+            delay: 0.08
+          }
+        );
       }
 
       root.querySelectorAll('[data-reveal]').forEach((node) => {
-        gsap.from(node, {
-          y: 28,
-          opacity: 0,
-          duration: 0.75,
-          ease: 'power3.out',
-          scrollTrigger: { trigger: node, start: 'top 91%', once: true }
-        });
+        const inView = node.getBoundingClientRect().top < window.innerHeight * 0.95;
+        if (inView) {
+          gsap.fromTo(
+            node,
+            { y: 20, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', clearProps: 'all', delay: 0.1 }
+          );
+        } else {
+          gsap.fromTo(
+            node,
+            { y: 24, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.65,
+              ease: 'power3.out',
+              clearProps: 'all',
+              scrollTrigger: { trigger: node, start: 'top 95%', once: true }
+            }
+          );
+        }
       });
 
       root.querySelectorAll('[data-reveal-group]').forEach((group) => {
-        gsap.from(group.children, {
-          y: 30,
-          opacity: 0,
-          duration: 0.65,
-          stagger: 0.06,
-          ease: 'power3.out',
-          scrollTrigger: { trigger: group, start: 'top 88%', once: true }
-        });
+        const inView = group.getBoundingClientRect().top < window.innerHeight * 0.95;
+        if (inView) {
+          gsap.fromTo(
+            group.children,
+            { y: 20, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.55,
+              stagger: 0.05,
+              ease: 'power3.out',
+              clearProps: 'all',
+              delay: 0.12
+            }
+          );
+        } else {
+          gsap.fromTo(
+            group.children,
+            { y: 24, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.6,
+              stagger: 0.05,
+              ease: 'power3.out',
+              clearProps: 'all',
+              scrollTrigger: { trigger: group, start: 'top 95%', once: true }
+            }
+          );
+        }
       });
     }, root);
 
-    const refresh = window.setTimeout(() => ScrollTrigger.refresh(), 180);
+    const refresh = window.setTimeout(() => ScrollTrigger.refresh(), 120);
     return () => {
       window.clearTimeout(refresh);
       ctx.revert();

@@ -43,12 +43,14 @@
 
 ## 3. 📊 Key Metrics & Highlights
 - **20+** Full-Stack Web & AI Projects / Public Repositories
+- **20+** Merged Upstream Patches on Gerrit (MediaWiki, ContentTranslation, Codex)
+- **Co-Organizer** Hacktoberfest Hack Day Trilogy (1.0, 2.0 & 3.0, WikiClub Tech UIT)
 - **3x** National Hackathon Finalist (SRM BUILDS 7.0 36h sprint, TechSprint Top 10, UHack 4.0 Top 65)
 - **8+** Verified Credentials & Hackathon Merit Awards
-- **10,000+** Candidate Pool Selection (Cloud Junction Campus Ambassador)
+- **1,000+** Student & Developer Community Reach
 - **Rank 6 & Rank 2** Open Source Day Double Winner (WikiClubTech UIT)
 - **15 Days** Official State Law Enforcement Fellowship (APCSIP-2026, UP Police Cyber Crime Cell)
-- **45+** Law Enforcement Officers, Mentors & Experts Engaged
+- **15+** Law Enforcement Officers, Mentors & Experts Engaged
 
 ---
 
@@ -278,7 +280,7 @@
 ## 8. 🏆 Hackathons, Summits & Leadership Archive (22 Milestones)
 
 1. **ShilpSetu — SIH 2026 & SPARK 2 SCALE 2026** (Nov 2026 — Present) — Team CyberEye lead; voice-first, offline-first artisan marketplace built with Flutter, FastAPI, Gemini 2.5, and Groq (PS-26090 / PS44).
-2. **Vindhya Millets — Digital Content & Social Media Executive** (Sept 2026 — Present) — Brand web, campaigns, and omnichannel growth for a Citiblock FPC brand now supplying the Indian Army.
+2. **Vindhya Millets — Web & Digital Strategy Lead** (Sept 2026 — Present) — Brand website, catalog, and digital outreach for Citiblock FPC (Vindhya Millets).
 3. **DevFest Prayagraj 2026 Website** — Built the official event site (React, TypeScript, Tailwind, GSAP) for GDG Prayagraj.
 4. **GDG Prayagraj Vibe Coding Hackathon 2026** (31 July 2026) — Built Agentic AI Browser Extension in 2 hours; Certificate of Achievement.
 5. **Open Source Day – WikiClubTech UIT** (21 August 2024) — Rank 6 in 1-week Open Source Marathon (Wikimedia swag) & Rank 2 in Live Quiz.
@@ -286,17 +288,17 @@
 7. **SRM BUILDS 7.0 National Hackathon** — Team Leader, 36-hour offline sprint, 6 evaluation rounds, national finalist.
 8. **TechSprint Hackathon** — Top 10 Finish nationwide with live web prototype and jury defense.
 9. **UHack 4.0 Grand Finale** (17-18 March) — Top 65 Finalist nationwide in 24-hour sprint.
-10. **Cloud Junction Campus Ambassador** — Selected from 10,000+ national applicant pool.
+10. **Cloud Junction Campus Ambassador** — Campus Ambassador coordinating developer workshops and cloud learning.
 11. **BECon 2026 @ IIT Delhi** (30 Jan - 1 Feb 2026) — 3-day conclave with ministers, VCs, startup founders.
 12. **FOSS UNITED UIT Chapter Launch** — Promoted free and open-source software culture.
-13. **GDG "Build with AI"** — 12th Rank out of 56 participants in Wayground Quiz Challenge.
+13. **GDG "Build with AI" Workshop** — Hands-on Generative AI and Gemini API development workshop.
 14. **FlowJam 2026 SIET** — FlutterFlow low-code hackathon under dynamic team reshuffling.
 15. **Startup Confluence 2024** (Dec 11-12, 2024) — Inaugurated by UP Cabinet Minister Nand Gopal Nandi; learned TAM/SAM/SOM and IPR laws.
 16. **SANKALP 2026 National Summit** — 3-day leadership summit at MNNIT Allahabad.
-17. **Meeting Prof. H.C. Verma Sir** — Historic mentorship session with Concepts of Physics author.
+17. **Keynote Address by Prof. H.C. Verma** — Distinguished session on foundational problem-solving and purposeful engineering.
 18. **DevFest Prayagraj 2024** (26 Oct 2024) — Flagship GDG developer conference with GDEs.
-19. **NHRD UNITED Talks Session** (21 April 2025) — Leadership and mindset session with Advait Dikshit.
-20. **PhysicsWallah PW Sankalp Session** — Met Alakh Pandey Sir, Sumit Rewati Sir, Dr. Saleem Sir live on campus.
+19. **NHRD Professional Development Session** (21 April 2025) — Professional development and industry readiness session.
+20. **EdTech Leadership Session (PhysicsWallah)** — Interactive campus session on accessible digital education platforms.
 21. **GDG Prayagraj MoByte & CampusLink** — Showcased CampusLink platform to community leads.
 22. **NxtWave Generative AI Workshop** — Hands-on prompt engineering and custom generative models.
 

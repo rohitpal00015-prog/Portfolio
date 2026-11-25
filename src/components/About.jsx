@@ -5,12 +5,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   aboutHighlights,
   aboutRich,
-  belief,
   focusAreas,
   metrics,
-  profile,
-  wikimediaLinks,
-  wikimediaPillars
+  profile
 } from '../data';
 
 function Counter({ value, reduced }) {
@@ -18,25 +15,26 @@ function Counter({ value, reduced }) {
 
   useEffect(() => {
     if (reduced) return undefined;
-    const match = String(value).match(/^([\d,]+)(.*)$/);
+    const match = String(value).match(/^(.*?)(\d[\d,]*)(.*)$/);
     if (!match) return undefined;
-    const end = Number(match[1].replace(/,/g, ''));
-    const suffix = match[2];
+    const prefix = match[1];
+    const end = Number(match[2].replace(/,/g, ''));
+    const suffix = match[3];
     const state = { number: 0 };
     const node = ref.current;
     if (!node) return undefined;
 
     const trigger = ScrollTrigger.create({
       trigger: node,
-      start: 'top 92%',
+      start: 'top 95%',
       once: true,
       onEnter: () => {
         gsap.to(state, {
           number: end,
-          duration: 1.6,
+          duration: 1.4,
           ease: 'power2.out',
           onUpdate: () => {
-            node.textContent = Math.round(state.number).toLocaleString('en-US') + suffix;
+            node.textContent = prefix + Math.round(state.number).toLocaleString('en-US') + suffix;
           }
         });
       }
@@ -78,44 +76,18 @@ export default function About({ reduced }) {
         ease: 'power3.out',
         scrollTrigger: { trigger: '.about__highlights', start: 'top 88%' }
       });
-      gsap.from('.about__belief', {
-        y: 28,
-        opacity: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '.about__belief', start: 'top 86%' }
-      });
-      gsap.from('.about__open-head > *', {
-        y: 24,
-        opacity: 0,
-        duration: 0.75,
-        stagger: 0.08,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '.about__open', start: 'top 82%' }
-      });
-      gsap.from('.about__open-card', {
-        y: 30,
-        opacity: 0,
-        duration: 0.75,
-        stagger: 0.1,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '.about__open-grid', start: 'top 88%' }
-      });
-      gsap.from('.about__open-links', {
-        y: 18,
-        opacity: 0,
-        duration: 0.6,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '.about__open-links', start: 'top 92%' }
-      });
-      gsap.from('.about__stat', {
-        y: 24,
-        opacity: 0,
-        duration: 0.65,
-        stagger: 0.07,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '.about__stats', start: 'top 88%' }
-      });
+      gsap.fromTo('.about__stat',
+        { y: 20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.06,
+          ease: 'power3.out',
+          clearProps: 'all',
+          scrollTrigger: { trigger: '.about__stats', start: 'top 95%', once: true }
+        }
+      );
       gsap.from('.focus-row', {
         y: 30,
         opacity: 0,
@@ -129,10 +101,30 @@ export default function About({ reduced }) {
   }, [reduced]);
 
   const stats = [
-    { value: metrics.projectsCount, label: 'Products built & shipped' },
-    { value: metrics.hackathonsFinalist, label: 'Hackathon finals' },
-    { value: metrics.ambassadorPool, label: 'Developer community reach' },
-    { value: metrics.openSourceMarathonRank, label: 'Open-source sprint rank' }
+    {
+      value: metrics.projectsCount,
+      label: 'Products built & shipped',
+      theme: 'emerald',
+      meaning: 'Shipping & Growth'
+    },
+    {
+      value: metrics.hackathonsFinalist,
+      label: 'Hackathon finals',
+      theme: 'amber',
+      meaning: 'Podiums & Victory'
+    },
+    {
+      value: metrics.ambassadorPool,
+      label: 'Developer community reach',
+      theme: 'blue',
+      meaning: 'Scale & Community'
+    },
+    {
+      value: metrics.openSourceMarathonRank,
+      label: 'Open-source sprint rank',
+      theme: 'rose',
+      meaning: 'Sprint Distinction'
+    }
   ];
 
   return (
@@ -185,63 +177,35 @@ export default function About({ reduced }) {
                     key={item.title}
                     {...linkProps}
                   >
-                    <span className="about__highlight-index">{String(itemIndex + 1).padStart(2, '0')}</span>
-                    {item.href && <span className="about__highlight-arrow" aria-hidden="true">↗</span>}
+                    <div className="about__highlight-top">
+                      <span className="about__highlight-index">{String(itemIndex + 1).padStart(2, '0')}</span>
+                      <span className="about__highlight-kicker">{item.kicker}</span>
+                      {item.stat && <span className="about__highlight-stat">{item.stat}</span>}
+                    </div>
                     <h3>{item.title}</h3>
-                    <p className="about__highlight-kicker">{item.kicker}</p>
                     <p className="about__highlight-desc">{item.description}</p>
+                    {item.href && (
+                      <div className="about__highlight-action">
+                        <span>{item.action || 'Explore record'}</span>
+                        <span className="about__highlight-arrow" aria-hidden="true">↗</span>
+                      </div>
+                    )}
                   </Tag>
                 );
               })}
             </div>
           </div>
 
-          <figure className="about__belief">
-            <blockquote>
-              <p className="about__belief-hi" lang="hi">{belief.hindi}</p>
-              <p className="about__belief-en">{belief.english}</p>
-            </blockquote>
-            <figcaption><span aria-hidden="true">↳</span> {belief.caption}</figcaption>
-          </figure>
-
-          <div className="about__open">
-            <div className="about__open-head">
-              <p className="about__open-kicker">Open knowledge <span>/</span> beyond the patch queue</p>
-              <h3>Code is only one way to contribute.</h3>
-              <p>
-                The Wikimedia movement shaped how I think about software: interfaces should include
-                people, knowledge should stay open, and contribution is bigger than a commit. Three
-                places where that belief becomes practice.
-              </p>
-            </div>
-
-            <div className="about__open-grid">
-              {wikimediaPillars.map((pillar) => (
-                <article className="about__open-card" key={pillar.id}>
-                  <span className="about__open-card-kicker">{pillar.kicker}</span>
-                  <h4>{pillar.title}</h4>
-                  <p>{pillar.description}</p>
-                  <ul>
-                    {pillar.tags.map((tag) => <li key={tag}>{tag}</li>)}
-                  </ul>
-                </article>
-              ))}
-            </div>
-
-            <div className="about__open-links">
-              <span>Find the receipts</span>
-              {wikimediaLinks.map((link) => (
-                <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
-                  {link.label} <span aria-hidden="true">↗</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
           <div className="about__stats">
             {stats.map((stat) => (
-              <div className="about__stat" key={stat.label}>
-                <span className="about__stat-value"><Counter value={stat.value} reduced={reduced} /></span>
+              <div className={`about__stat about__stat--${stat.theme}`} key={stat.label}>
+                <div className="about__stat-top">
+                  <span className={`about__stat-dot about__stat-dot--${stat.theme}`} />
+                  <span className={`about__stat-kicker about__stat-kicker--${stat.theme}`}>{stat.meaning}</span>
+                </div>
+                <span className={`about__stat-value about__stat-value--${stat.theme}`}>
+                  <Counter value={stat.value} reduced={reduced} />
+                </span>
                 <span className="about__stat-label">{stat.label}</span>
               </div>
             ))}

@@ -4,7 +4,6 @@ import gsap from 'gsap';
 import {
   categoryLabel,
   featuredProjects,
-  archiveProjects,
   asset,
   initials,
   profile
@@ -39,22 +38,6 @@ export default function Work({ reduced }) {
   const railRef = useRef(null);
   const barRef = useRef(null);
   const countRef = useRef(null);
-  const previewRef = useRef(null);
-  const pointerRef = useRef({ x: 0, y: 0 });
-  const [hovered, setHovered] = useState(null);
-  const [filter, setFilter] = useState('all');
-
-  const filters = [
-    { id: 'all', label: 'All work', count: archiveProjects.length },
-    ...Object.entries(categoryLabel).map(([id, label]) => ({
-      id,
-      label,
-      count: archiveProjects.filter((project) => project.category === id).length
-    }))
-  ];
-  const visibleProjects = filter === 'all'
-    ? archiveProjects
-    : archiveProjects.filter((project) => project.category === filter);
 
   useLayoutEffect(() => {
     if (reduced) return undefined;
@@ -98,44 +81,6 @@ export default function Work({ reduced }) {
     return () => mm.revert();
   }, [reduced]);
 
-  useEffect(() => {
-    if (reduced) return undefined;
-    if (window.matchMedia('(pointer: coarse)').matches) return undefined;
-    const preview = previewRef.current;
-    const section = rootRef.current;
-    if (!preview || !section) return undefined;
-
-    gsap.set(preview, { xPercent: -50, yPercent: -50, scale: 0.9 });
-    const xTo = gsap.quickTo(preview, 'x', { duration: 0.5, ease: 'power3.out' });
-    const yTo = gsap.quickTo(preview, 'y', { duration: 0.5, ease: 'power3.out' });
-
-    const move = (event) => {
-      pointerRef.current = { x: event.clientX, y: event.clientY };
-      xTo(event.clientX);
-      yTo(event.clientY);
-    };
-    section.addEventListener('mousemove', move);
-    return () => {
-      section.removeEventListener('mousemove', move);
-      gsap.killTweensOf(preview);
-    };
-  }, [reduced]);
-
-  useEffect(() => {
-    const preview = previewRef.current;
-    if (!preview) return;
-    if (hovered && pointerRef.current.x === 0) {
-      gsap.set(preview, { x: window.innerWidth / 2, y: window.innerHeight / 2 });
-    }
-    gsap.to(preview, {
-      autoAlpha: hovered ? 1 : 0,
-      scale: hovered ? 1 : 0.92,
-      duration: 0.35,
-      ease: 'power3.out',
-      overwrite: 'auto'
-    });
-  }, [hovered]);
-
   return (
     <section id="work" className="work" ref={rootRef}>
       <div className="container work__head">
@@ -146,8 +91,7 @@ export default function Work({ reduced }) {
           </h2>
           <div className="work__head-note">
             <p>
-              Eight selected builds from a longer archive of {archiveProjects.length} — AI marketplaces,
-              event platforms, community tools and shipped client work.
+              Eight selected production builds — AI marketplaces, event platforms, community tools and shipped client work.
             </p>
             {!reduced && (
               <span className="work__hint">Scroll to travel horizontally <span aria-hidden="true">→</span></span>
@@ -201,71 +145,23 @@ export default function Work({ reduced }) {
         </div>
       </div>
 
-      <div className="container work__archive">
-        <div className="archive__head">
-          <div>
-            <h3>The full archive <span>({archiveProjects.length})</span></h3>
-            <p>Every build, live product and experiment — filter by category, hover to preview.</p>
+      <div className="container work__callout-wrap">
+        <div className="bento-github-callout">
+          <div className="bento-github-callout__copy">
+            <h4>Looking for deeper commits, experimental CLI tools &amp; forks?</h4>
+            <p>All active development, upstream Gerrit patches, and research code are versioned publicly.</p>
           </div>
-          <div className="archive__filters" role="group" aria-label="Filter projects by category">
-            {filters.map((item) => (
-              <button
-                type="button"
-                key={item.id}
-                className={`archive__filter ${filter === item.id ? 'is-active' : ''}`}
-                aria-pressed={filter === item.id}
-                onClick={() => setFilter(item.id)}
-              >
-                {item.label} <span>{String(item.count).padStart(2, '0')}</span>
-              </button>
-            ))}
-          </div>
+          <a
+            className="btn btn--primary"
+            href={profile.socials.github}
+            target="_blank"
+            rel="noreferrer"
+            data-magnetic
+          >
+            <span>Explore GitHub Repositories</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
         </div>
-
-        <div className="archive__list" key={filter}>
-          {visibleProjects.map((project, index) => {
-            const dest = project.demo || project.github;
-            const internal = dest?.startsWith('/');
-            const Tag = internal ? Link : dest ? 'a' : 'div';
-            const linkProps = internal
-              ? { to: dest }
-              : dest
-                ? { href: dest, target: '_blank', rel: 'noreferrer' }
-                : {};
-            return (
-              <Tag
-                className="archive-row"
-                key={project.id}
-                style={{ '--row': index }}
-                {...linkProps}
-                onMouseEnter={() => setHovered(project)}
-                onMouseLeave={() => setHovered(null)}
-                onFocus={() => setHovered(project)}
-                onBlur={() => setHovered(null)}
-              >
-                <span className="archive-row__index">{String(index + 1).padStart(2, '0')}</span>
-                <span className="archive-row__title">{project.title}</span>
-                <span className="archive-row__cat">{categoryLabel[project.category]}</span>
-                <span className="archive-row__stack">{project.techStack.slice(0, 3).join(' · ')}</span>
-                <span className="archive-row__arrow" aria-hidden="true">{dest ? '↗' : '·'}</span>
-              </Tag>
-            );
-          })}
-        </div>
-
-        <a
-          className="archive__all"
-          href={profile.socials.github}
-          target="_blank"
-          rel="noreferrer"
-          data-magnetic
-        >
-          Explore all repositories on GitHub <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-
-      <div className="work-preview" ref={previewRef} aria-hidden="true">
-        {hovered && <Cover project={hovered} />}
       </div>
     </section>
   );

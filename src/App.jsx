@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Preloader from './components/Preloader';
+import RouteSkeleton from './components/RouteSkeleton';
 import Cursor from './components/Cursor';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -107,7 +108,7 @@ export default function App() {
       <Preloader reduced={reduced} onDone={() => setStarted(true)} />
       <Header started={started} />
       <main id="main" className="route-view" key={location.pathname}>
-        <Suspense fallback={<div className="route-loading" aria-busy="true" />}>
+        <Suspense fallback={<RouteSkeleton />}>
           <Routes>
             <Route path="/" element={<Home started={started} reduced={reduced} />} />
             <Route path="/wikimedia" element={<WikimediaPage reduced={reduced} />} />

@@ -12,6 +12,8 @@ export const skills = raw.skills;
 export const upPolice = raw.upPoliceFellowship;
 export const wikimedia = raw.wikimediaOpenSource;
 export const collaborationHub = raw.collaborationHub;
+export const uccEvents = raw.uccEvents || [];
+export const uccGallery = raw.assetsCatalog?.uccGallery || [];
 
 export const asset = (path) => (path ? `/${path.replace(/^\.?\//, '')}` : null);
 
@@ -52,7 +54,7 @@ export const navLinks = [
   { id: 'about', label: 'About', index: '01' },
   { id: 'work', label: 'Work', index: '02' },
   { id: 'dossiers', label: 'Dossiers', index: '03' },
-  { id: 'timeline', label: 'Trajectory', index: '04' },
+  { id: 'timeline', label: 'Milestones', index: '04' },
   { id: 'stack', label: 'Stack', index: '05' },
   { id: 'credentials', label: 'Proof', index: '06' }
 ];
@@ -80,63 +82,76 @@ export const aboutRich = (() => {
 
 export const aboutHighlights = [
   {
-    tone: 'amber',
-    title: '600+ Students',
-    kicker: 'Community & Events',
-    description: 'Gemini Builder event with GSA UIT.',
+    tone: 'blue',
+    stat: '500+ Coders',
+    title: 'UIT Coding Club (UCC)',
+    kicker: 'Code Aarambh, Utsav & Gyan',
+    description: 'Executive Council member organizing Code Aarambh (500+ first years), Code Utsav DSA challenge, and Code Gyan 4.0 with faculty leadership.',
+    action: 'Explore UCC Events & Ledger',
     href: '/hackathons'
   },
   {
     tone: 'blue',
+    stat: 'Cohort 9',
     title: 'Samsung Fellowship',
-    kicker: 'ISWDP Cohort 9',
-    description: 'Selected for Samsung Fellowship.',
+    kicker: 'Samsung ISWDP Selection',
+    description: 'Selected for competitive industry software engineering fellowship program.',
+    action: 'Inspect Credentials',
     href: '/resume'
   },
   {
-    tone: 'green',
+    tone: 'amber',
+    stat: 'Core Lead',
     title: 'SIH Core Organizer',
     kicker: 'Smart India Hackathon',
-    description: 'Hackathon operations & tech setup.',
+    description: 'Directed end-to-end hackathon technical setup, participant desks & evaluation pipelines.',
+    action: 'See Operations Ledger',
     href: '/hackathons'
   },
   {
     tone: 'amber',
-    title: 'Vindhya Millets',
-    kicker: 'Digital Media Exec',
-    description: 'Web & ops · Indian Army supplier.',
+    stat: 'Citiblock FPC',
+    title: 'Vindhya Millets Platform',
+    kicker: 'Web & Digital Strategy',
+    description: 'Architected brand website, digital product catalog & multi-channel campaign communication.',
+    action: 'Visit Brand Platform',
     href: 'https://lnkd.in/p/gvAK4ghJ',
     external: true
   },
   {
     tone: 'blue',
-    title: 'Rohit Pal — Software Developer and Open Source Contributor',
-    kicker: 'Marketing Lead',
-    description: 'prayagrajrooms.in',
+    stat: 'Live Startup',
+    title: 'Prayagraj Rooms',
+    kicker: 'Founder & Web Architect',
+    description: 'Production student accommodation discovery engine with verified local property listings.',
+    action: 'Launch prayagrajrooms.in',
     href: 'https://prayagrajrooms.in',
     external: true
   },
   {
     tone: 'amber',
-    title: 'APCSIP-2026',
-    kicker: 'UP Police Fellow',
-    description: 'Read the fellowship case study',
+    stat: 'Law Enforcement',
+    title: 'UP Police Cyber Fellow',
+    kicker: 'APCSIP-2026 Fellowship',
+    description: '15-day state cyber crime cell fellowship under DSP Anjali Kataria · OSINT & Digital Forensics.',
+    action: 'Read Police Case File',
     href: '/fellowship'
   },
   {
     tone: 'green',
-    title: 'Wikimedia',
-    kicker: 'Gerrit Contributor',
-    description: 'Explore the open-source contributions',
+    stat: '20+ Merges',
+    title: 'Wikimedia & WikiClub Tech',
+    kicker: 'Gerrit & Hacktoberfest',
+    description: '20+ merged upstream Gerrit patches in MediaWiki/Codex, WikiClub Tech team member & Hack Day Co-Organizer.',
+    action: 'Explore Open Source Dossier',
     href: '/wikimedia'
   }
 ];
 
 export const belief = {
-  hindi: 'ज्ञान वह दीपक है जो जितने लोगों में बाँटा जाए, उतना ही अधिक प्रकाश फैलाता है।',
-  english:
-    'Knowledge is a lamp that illuminates wider horizons the more it is shared with the world.',
-  caption: 'The idea behind my Wikimedia work'
+  quote:
+    'Code in the open, built for everyone. Upstream contribution is about maintaining software that millions rely on daily for free knowledge.',
+  caption: 'Wikimedia & Open Source Principles'
 };
 
 export const wikimediaPillars = [
@@ -167,10 +182,14 @@ export const wikimediaPillars = [
 ];
 
 export const wikimediaLinks = [
-  { label: 'Meta-Wiki profile', href: profile.socials.meta },
-  { label: 'Gerrit dashboard', href: profile.socials.gerrit },
-  { label: 'Phabricator', href: profile.socials.phabricator },
-  { label: 'Commons uploads', href: profile.socials.commons }
+  { label: 'WikiClub Tech UIT Team', href: 'https://meta.wikimedia.org/wiki/WikiClub_Tech_%E2%80%93_UIT/Team' },
+  { label: 'Hacktoberfest Hack Day 3.0', href: 'https://meta.wikimedia.org/wiki/WikiClub_Tech_%E2%80%93_UIT/Events/Hacktoberfest_Hack_Day_3.0' },
+  { label: 'Hacktoberfest Hack Day 2.0', href: 'https://meta.wikimedia.org/wiki/WikiClub_Tech_%E2%80%93_UIT/Events/Hacktoberfest_Hack_Day_2.0' },
+  { label: 'Hacktoberfest Hack Day 1.0', href: 'https://meta.wikimedia.org/wiki/WikiClub_Tech_%E2%80%93_UIT/Events/Hacktoberfest_Hack_Day_1.0' },
+  { label: 'Gerrit 20+ Merges Dashboard', href: profile.socials.gerrit },
+  { label: 'Meta-Wiki User Profile', href: profile.socials.meta },
+  { label: 'Phabricator Workspace', href: profile.socials.phabricator },
+  { label: 'Commons Uploads Gallery', href: profile.socials.commons }
 ];
 
 export const dossiers = [
@@ -179,16 +198,16 @@ export const dossiers = [
     index: '01',
     tone: 'green',
     eyebrow: 'Open source',
-    title: 'Wikimedia',
-    subtitle: 'Code, Commons and community.',
+    title: 'Wikimedia & WikiClub Tech',
+    subtitle: 'Code, Commons, and Hacktoberfest.',
     summary:
-      'Accessibility-first patches across MediaWiki, Codex and community skins — alongside free photography and Hindi Wikipedia participation.',
+      '20+ merged upstream Gerrit patches across MediaWiki core and Codex, WikiClub Tech UIT core team member, Hacktoberfest Hack Day co-organizer, and Commons documentation.',
     stats: [
-      { value: 'PR #88', label: 'merged' },
-      { value: '9+', label: 'patchsets' },
-      { value: 'Rank 6', label: 'Road to Wiki' }
+      { value: '20+', label: 'Gerrit merges' },
+      { value: 'Organizer', label: 'Hacktoberfest' },
+      { value: 'Core Team', label: 'WikiClub Tech' }
     ],
-    tags: ['Codex', 'MediaWiki', 'Commons', 'Hindi Wikipedia'],
+    tags: ['MediaWiki', 'Codex', 'WikiClub Tech', 'Hacktoberfest', 'Gerrit'],
     href: '/wikimedia'
   },
   {
@@ -229,103 +248,124 @@ export const dossiers = [
 
 export const timeline = [
   {
+    id: 'ucc-lead',
+    date: '2025 — Present',
+    category: 'work',
+    type: 'Leadership',
+    title: 'Executive Council & Flagship Event Lead',
+    org: 'UIT Coding Club (UCC) · United Institute of Technology',
+    summary:
+      'Executive lead organizing Code Aarambh 2026 (500+ participants across 3 computer labs), Code Utsav 2026, and Code Gyan 4.0. Mentoring student coders in DSA, full-stack development, and hackathons.',
+    tags: ['Leadership', '500+ Coders', 'Code Aarambh', 'Mentorship'],
+    link: '/hackathons'
+  },
+  {
     id: 'shilpsetu-sih',
     date: 'Nov 2026 — Present',
+    category: 'hackathon',
+    type: 'National Build',
     title: 'ShilpSetu — SIH 2026 & SPARK 2 SCALE',
-    org: 'Team CyberEye · United Institute of Technology',
+    org: 'Team CyberEye · Smart India Hackathon',
     summary:
       'Leading a voice-first, offline-first artisan marketplace across two national problem statements, built with Flutter, FastAPI, Gemini 2.5 and Groq.',
     tags: ['SIH 2026', 'Flutter', 'FastAPI', 'Gemini 2.5'],
-    link: 'https://github.com/rohitpal00015-prog/shilpsetu',
-    type: 'Build'
+    link: 'https://github.com/rohitpal00015-prog/shilpsetu'
   },
   {
     id: 'vindhya',
     date: 'Sept 2026 — Present',
-    title: 'Digital & Brand Executive — Vindhya Millets',
-    org: 'Citiblock Farmer Producer Company',
+    category: 'work',
+    type: 'Strategy & Web',
+    title: 'Web & Digital Strategy Lead — Vindhya Millets',
+    org: 'Citiblock Farmer Producer Company (Indian Army Supplier)',
     summary:
-      'Directing brand, web and content for a millet brand now supplied to the Indian Army. Built the official site and campaign roadmap from scratch.',
-    tags: ['Brand', 'Web', 'Content'],
-    link: 'https://lnkd.in/p/gvAK4ghJ',
-    type: 'Role'
-  },
-  {
-    id: 'gdg-vibe',
-    date: '31 July 2026',
-    title: 'GDG Vibe-Coding Hackathon Winner',
-    org: 'Google Developer Group Prayagraj',
-    summary:
-      'Built and shipped a working prototype under time pressure with the Google Student Ambassador cohort, earning the Certificate of Achievement.',
-    tags: ['GDG', 'Hackathon', 'Certificate'],
-    link: '/certificates',
-    type: 'Award'
+      'Architected the brand website, digital product catalog, and campaign assets for Citiblock FPC (Vindhya Millets) to support regional agricultural outreach.',
+    tags: ['Brand', 'Web Architecture', 'Catalog', 'Army Supplier'],
+    link: 'https://lnkd.in/p/gvAK4ghJ'
   },
   {
     id: 'heisyn',
     date: 'June 2026 — Present',
+    category: 'work',
+    type: 'Internship',
     title: 'Full-Stack Developer Intern',
     org: 'Heisyn Pvt. Ltd. · Remote',
     summary:
       'Shipping responsive production interfaces and scalable Node.js APIs across React UI, REST integrations and code reviews inside agile sprints.',
-    tags: ['React', 'Node.js', 'REST'],
-    link: 'https://github.com/rohitpal00015-prog',
-    type: 'Role'
+    tags: ['React', 'Node.js', 'REST', 'Agile'],
+    link: 'https://github.com/rohitpal00015-prog'
   },
   {
     id: 'up-police',
     date: 'June 2026',
-    title: 'UP Police Cyber Security Fellow — APCSIP',
+    category: 'opensource',
+    type: 'Govt. Fellowship',
+    title: 'UP Police Cyber Security Fellow — APCSIP-2026',
     org: 'Amroha Police Cyber Crime Cell, UP Police',
     summary:
-      'Selected for a 15-day official government fellowship covering OSINT, digital forensics, cybercrime response and field operations with UP Police officers.',
-    tags: ['Cyber Security', 'OSINT', 'Govt. of UP'],
-    link: '/fellowship',
-    type: 'Fellowship'
-  },
-  {
-    id: 'srm-builds',
-    date: 'Verge 2026',
-    title: 'SRM BUILDS 7.0 — National Finalist',
-    org: 'SRM University, Sonipat',
-    summary:
-      'Reached the national finals of a 36-hour offline build sprint with a working product and a live judging round against teams from across India.',
-    tags: ['Hackathon', 'Finalist', '36h'],
-    link: '/hackathons',
-    type: 'Award'
+      'Selected for an official 15-day government fellowship covering OSINT, digital forensics, cybercrime response, CDR analysis and field operations with police officers.',
+    tags: ['Cyber Security', 'OSINT', 'Govt. of UP', 'Forensics'],
+    link: '/fellowship'
   },
   {
     id: 'wikimedia',
     date: '2025 — Present',
-    title: 'Wikimedia — Code, Commons & Community',
-    org: 'Wikimedia Foundation ecosystem',
+    category: 'opensource',
+    type: 'Open Source',
+    title: 'Wikimedia & WikiClub Tech UIT — Code & Community',
+    org: 'Wikimedia Foundation Ecosystem · Gerrit',
     summary:
-      'Contributing across MediaWiki, Codex and community tools with accessibility at the centre — merged Wikitermbase PR #88 and ContentTranslation patch #1347603, alongside Commons photography and Hindi Wikipedia participation.',
-    tags: ['Codex', 'A11y', 'Commons', 'Hindi Wikipedia'],
-    link: '/wikimedia',
-    type: 'Open Source'
+      '20+ merged Gerrit patches across MediaWiki, Codex and Community tools. Co-organizer of Hacktoberfest Hack Day 1.0, 2.0 & 3.0 at UIT. Merged Wikitermbase PR #88 and ContentTranslation patch #1347603.',
+    tags: ['20+ Merged Patches', 'Codex', 'MediaWiki', 'Gerrit', 'Commons'],
+    link: '/wikimedia'
+  },
+  {
+    id: 'gdg-vibe',
+    date: '31 July 2026',
+    category: 'hackathon',
+    type: 'Winner (1st)',
+    title: 'GDG Vibe-Coding Hackathon Winner',
+    org: 'Google Developer Group Prayagraj',
+    summary:
+      'Built and shipped a working prototype under time pressure with the Google Student Ambassador cohort, earning the Certificate of Achievement.',
+    tags: ['GDG', 'Hackathon Winner', 'Google Ambassador'],
+    link: '/certificates'
+  },
+  {
+    id: 'srm-builds',
+    date: 'Verge 2026',
+    category: 'hackathon',
+    type: 'Finalist',
+    title: 'SRM BUILDS 7.0 — National Finalist',
+    org: 'SRM University, Sonipat',
+    summary:
+      'Reached the national finals of a 36-hour offline build sprint with a working product and a live judging round against teams from across India.',
+    tags: ['Hackathon', 'Finalist', '36h Sprint'],
+    link: '/hackathons'
   },
   {
     id: 'techsprint',
     date: '2025',
+    category: 'hackathon',
+    type: 'Top 10',
     title: 'TechSprint Hackathon — Top 10',
     org: 'GDG on Campus REC Ramgarh',
     summary:
       'Placed in the national top ten with an engineering-focused build, alongside a Codefront 2.0 merit award and a TechSprint NCU appreciation.',
-    tags: ['Hackathon', 'Top 10'],
-    link: '/certificates',
-    type: 'Award'
+    tags: ['Hackathon', 'Top 10', 'REC Ramgarh'],
+    link: '/certificates'
   },
   {
     id: 'uhack',
     date: 'March 2025',
+    category: 'hackathon',
+    type: 'Finalist',
     title: 'UHack 4.0 — Top 65 Grand Finale',
     org: 'University Hackathon',
     summary:
       'Cleared multiple evaluation rounds to reach the grand finale, shipping a complete prototype with a small team.',
-    tags: ['Hackathon', 'Top 65'],
-    link: '/hackathons',
-    type: 'Award'
+    tags: ['Hackathon', 'Top 65', 'Grand Finale'],
+    link: '/hackathons'
   }
 ];
 
