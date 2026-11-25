@@ -1535,24 +1535,21 @@ em {
 
 .about__body .hl {
   font-weight: 600;
-  background-repeat: no-repeat;
-  background-position: 0 88%;
-  background-size: 100% 0.4em;
+  background: none;
+  text-decoration: none;
+  border: none;
 }
 
 .about__body .hl--blue {
-  color: #2f55c8;
-  background-image: linear-gradient(rgba(95, 140, 255, 0.2), rgba(95, 140, 255, 0.2));
+  color: #2850c8;
 }
 
 .about__body .hl--amber {
-  color: #866000;
-  background-image: linear-gradient(rgba(255, 196, 0, 0.26), rgba(255, 196, 0, 0.26));
+  color: #926400;
 }
 
 .about__body .hl--green {
-  color: #147a51;
-  background-image: linear-gradient(rgba(61, 220, 151, 0.2), rgba(61, 220, 151, 0.2));
+  color: #117a4e;
 }
 
 .about__now {
