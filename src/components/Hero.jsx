@@ -254,14 +254,16 @@ export default function Hero({ started, reduced }) {
                 <div className="hero__cta">
                   <a
                     href="#work"
-                    className="btn btn--primary"
+                    className="glow-btn"
                     data-magnetic
                     onClick={(event) => {
                       event.preventDefault();
                       scrollToTarget('#work');
                     }}
                   >
-                    Explore selected work <span aria-hidden="true">↘</span>
+                    <span className="glow-btn__surface">
+                      Explore selected work <span aria-hidden="true">↘</span>
+                    </span>
                   </a>
                   <Link className="btn btn--ghost" to="/resume">
                     Résumé &amp; dossier <span aria-hidden="true">↗</span>
@@ -332,8 +334,10 @@ export default function Hero({ started, reduced }) {
                 </p>
 
                 <div className="hero__cta">
-                  <Link className="btn btn-oss--primary" to="/wikimedia" data-magnetic>
-                    Explore Wikimedia dossier <span aria-hidden="true">↗</span>
+                  <Link className="glow-btn glow-btn--oss" to="/wikimedia" data-magnetic>
+                    <span className="glow-btn__surface">
+                      Explore Wikimedia dossier <span aria-hidden="true">↗</span>
+                    </span>
                   </Link>
                   <a
                     className="btn btn-oss--ghost"

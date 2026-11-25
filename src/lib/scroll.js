@@ -10,10 +10,15 @@ let lockCount = 0;
 export function initSmoothScroll() {
   if (lenis) return lenis;
   lenis = new Lenis({
-    duration: 1.1,
+    duration: 1.25,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // exponential easeOut for authentic inertia
+    orientation: 'vertical',
+    gestureOrientation: 'vertical',
     smoothWheel: true,
-    wheelMultiplier: 0.95,
-    touchMultiplier: 1.4
+    smoothTouch: false, // native touch on mobile for zero input lag
+    wheelMultiplier: 1.0,
+    touchMultiplier: 1.8,
+    infinite: false
   });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((time) => lenis.raf(time * 1000));

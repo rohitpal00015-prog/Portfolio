@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { asset, certificates } from '../data';
 import { lockScroll, unlockScroll } from '../lib/scroll';
+import { useCardTilt } from '../lib/useCardTilt';
 
 export default function Credentials({ reduced }) {
   const rootRef = useRef(null);
@@ -12,6 +13,8 @@ export default function Credentials({ reduced }) {
   const closeRef = useRef(null);
   const lastFocus = useRef(null);
   const closingRef = useRef(false);
+
+  useCardTilt('.cert-card');
 
   useLayoutEffect(() => {
     if (reduced) return undefined;
@@ -145,6 +148,7 @@ export default function Credentials({ reduced }) {
               key={cert.id}
               onClick={() => setIndex(certIndex)}
               aria-label={`Open ${cert.title} certificate`}
+              data-tilt
             >
               <span className="cert-card__media">
                 <img

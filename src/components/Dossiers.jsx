@@ -2,9 +2,11 @@ import { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { dossiers } from '../data';
+import { useCardTilt } from '../lib/useCardTilt';
 
 export default function Dossiers({ reduced }) {
   const rootRef = useRef(null);
+  useCardTilt('.dossier-card');
 
   useLayoutEffect(() => {
     if (reduced) return undefined;
@@ -58,7 +60,7 @@ export default function Dossiers({ reduced }) {
 
         <div className="dossiers__grid">
           {dossiers.map((item) => (
-            <Link className={`dossier-card dossier-card--${item.tone}`} key={item.id} to={item.href}>
+            <Link className={`dossier-card dossier-card--${item.tone}`} key={item.id} to={item.href} data-tilt>
               <div className="dossier-card__top">
                 <span className="dossier-card__index">{item.index}</span>
                 <span className="dossier-card__open">Open case file <span aria-hidden="true">↗</span></span>

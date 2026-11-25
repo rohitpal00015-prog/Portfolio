@@ -113,8 +113,10 @@ export default function Header({ started }) {
 
         <div className="header-actions">
           <span className="availability"><i /> Open to work</span>
-          <a className="btn btn--mini" href="mailto:rohitpal00015@gmail.com" data-magnetic>
-            Let's talk <span aria-hidden="true">↗</span>
+          <a className="glow-btn glow-btn--mini" href="mailto:rohitpal00015@gmail.com" data-magnetic>
+            <span className="glow-btn__surface">
+              Let's talk <span aria-hidden="true">↗</span>
+            </span>
           </a>
           <button
             type="button"
